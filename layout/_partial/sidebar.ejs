@@ -16,8 +16,25 @@
             <span><%= item %></span>
         <% }) %>
     </div>
-    <div class="my-division"></div>
-    <div class="my-social-account"></div>
+    <div class="my-division">
+        <span class="division"></span>
+        <span class="text">社交账号</span>
+    </div>
+    <div class="my-social-account">
+    <% if(theme.siderbar.social.bilibili) { %>
+        <div class="icon-box">
+            <a href="<%- theme.siderbar.social.bilibili %>">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-bilibili-line"></use>
+                </svg>
+            </a>
+            <span>bilibili</span>
+        </div>
+    <% } %>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 </div>
 
 

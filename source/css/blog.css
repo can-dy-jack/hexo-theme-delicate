@@ -188,6 +188,7 @@ h6, .h6 {
     width: 100%;
     margin-bottom: 40px;
     box-shadow: 0 0 6px rgba(0,128,128,.2);
+    font-family: microsoft yahei, sans-serif;
 }
 .sidebar-about .my-img{
     display: flex;
@@ -197,7 +198,7 @@ h6, .h6 {
 .sidebar-about .my-img>div{
     width: 50%;
     border-radius: 50%;
-    border: 2px solid #dff8f8;
+    border: 2px dashed teal;
     overflow: hidden;
 }
 .sidebar-about .my-img img{
@@ -212,12 +213,13 @@ h6, .h6 {
 .sidebar-about .my-logo{
     color: #1b5a5a;
     text-align: center;
-    margin: 10px 0;
+    margin: 5px 0 10px 0;
 }
 .sidebar-about .my-tag{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 10px;
 }
 .sidebar-about .my-tag span{
     padding: 3px 8px;
@@ -228,6 +230,26 @@ h6, .h6 {
     font-size: 14px;
     border-radius: 4px;
 }
+.sidebar-about .my-division{
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.sidebar-about .my-division .division{
+    height: 1px;
+    width: 100%;
+    background-color: teal;
+    display: block;
+}
+.sidebar-about .my-division .text{
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 2px 8px;
+    color: #111;
+}
+
+
 /* 暂时-pre code */
 pre{
     background-color: #F6F8FA;
