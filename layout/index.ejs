@@ -1,4 +1,8 @@
-<%# 遍历文章 %>
+
 <% page.posts.each(function(item){ %>
     <%- partial('_partial/article-excerpt', {item: item}) %>
 <% }); %>
+
+<%# 分页 %>
+<%- partial('_partial/pagination.ejs') %>
+

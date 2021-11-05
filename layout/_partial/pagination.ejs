@@ -1,0 +1,13 @@
+
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        <% if (page.prev){ %>
+            <li class="page-item"><a class="page-link" href="<%- config.root %><%- page.prev_link %>">Previous</a></li>
+        <% } %>
+        <% if (page.next){ %>
+            <li class="page-item"><a class="page-link" href="<%- config.root %><%- page.next_link %>">Next</a></li>
+        <% } %>
+    </ul>
+</nav>
+
+

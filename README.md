@@ -1,6 +1,5 @@
-## delicate
+# delicate
 
-a theme for hexo.
+[README-EN.md](/README-EN.md)
 
-### 待解决
-- 
+依据bootstrap设计的一款hexo主题

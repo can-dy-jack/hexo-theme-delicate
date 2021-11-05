@@ -29,7 +29,7 @@ h6, .h6 {
 
 @media (min-width: 1200px) {
     .container {
-        width: 970px;
+        width: 1040px;
     }
 }
 
@@ -45,11 +45,11 @@ h6, .h6 {
     display: inline-block;
     padding: 10px;
     font-weight: 500;
-    color: #cdddeb;
+    color: #fff;
 }
 .blog-nav-item:hover,
 .blog-nav-item:focus {
-    color: #fff;
+    color: #cdddeb;
     text-decoration: none;
 }
 /* Active state gets a caret at the bottom */
@@ -108,26 +108,46 @@ h6, .h6 {
 .sidebar-module-inset ol:last-child {
     margin-bottom: 0;
 }
+/* .sidebar-to-top */
+.sidebar-to-top{
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    cursor: pointer;
+    background-color: #fff;
+    width: 48px;height: 48px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(10,30,100,.2);
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.sidebar-to-top a{
+    text-decoration: none;
+    font-size: 30px;
+}
+@keyframes toTopMove {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(50px);
+    }
+}
 
 /* Pagination */
-.pager {
-    margin-bottom: 60px;
-    text-align: left;
+.pagination{
+    justify-content: center;
 }
-.pager > li > a {
-    width: 140px;
-    padding: 10px 20px;
-    text-align: center;
-    border-radius: 30px;
-}
-
 
 /* 主页文章列表 */
 .blog-post {
     margin-bottom: 60px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    box-shadow: 0 0 10px rgba(0,128,128,.2);
     border-radius: 10px;
     padding: 15px 15px 5px 15px;
 }
@@ -138,6 +158,7 @@ h6, .h6 {
 .blog-post-meta {
     margin-bottom: 20px;
     color: #999;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
