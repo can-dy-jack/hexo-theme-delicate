@@ -9,3 +9,20 @@ menu:
 # Read More text
 excerpt_link: 阅读更多
 
+# siderbar infomation
+## sidebar-about
+siderbar:
+  name: 陈科衡
+  logo: Time wait for no one.
+  tag: 
+    - 学生
+    - 前端开发者
+    - hexo开发者
+    - 海洋测绘专业
+    - 上海海洋大学
+  social: 
+    bilibili: 
+    github: 
+    qq: 
+    weichat: 
+
