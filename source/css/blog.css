@@ -99,21 +99,6 @@ h6, .h6 {
     line-height: 1.5;
 }
 
-/* Sidebar modules for boxing content */
-.sidebar-module {
-    padding: 15px;
-    margin: 0 -15px 15px;
-}
-.sidebar-module-inset {
-    padding: 15px;
-    background-color: #f5f5f5;
-    border-radius: 4px;
-}
-.sidebar-module-inset p:last-child,
-.sidebar-module-inset ul:last-child,
-.sidebar-module-inset ol:last-child {
-    margin-bottom: 0;
-}
 /* .sidebar-to-top */
 .sidebar-to-top{
     position: fixed;
@@ -307,10 +292,29 @@ h6, .h6 {
     border-color: transparent transparent #080808 transparent;
 }
 
+/* 标签及分类样式 */
+.blog-tags-container, .blog-categories-container {
+    margin-top: 30px;
+    font-size: 20px;
+}
+.blog-tags-container span.glyphicon, .blog-categories-container span.glyphicon {
+    margin-right: 20px;
+}
+
+.blog-archive-title {
+    margin-bottom: 50px;
+}.blog-archive-title {
+    margin-bottom: 50px;
+}
+.blog-post-title-archive {
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
 /* 暂时-pre code */
 pre{
-    background-color: #F6F8FA;
-    border-left: 6px solid #90c5fa;
+    background-color: #f1f7a8;
+    /* border-left: 6px solid #90c5fa; */
     padding: 6px 12px;
     border-radius: 5px;
 }

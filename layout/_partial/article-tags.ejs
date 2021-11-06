@@ -1,0 +1,16 @@
+<% if (item.tags && item.tags.length){ %>
+<%
+    var tags = [];
+    item.tags.forEach(function(tag){
+        tags.push('<a href="' + config.root + tag.path + '">#' + tag.name + '</a>');
+    });
+%>
+<div class="blog-tags-container">
+    <span class="glyphicon glyphicon-tags">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-tag"></use>
+        </svg>
+    </span>
+    <%- tags.join(' ') %>
+</div>
+<% } %>
