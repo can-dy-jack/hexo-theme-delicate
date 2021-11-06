@@ -1,6 +1,6 @@
 # delicate
 
-![Demo](/img/look.png)
+![Demo](/source/img/look.png)
 
 [README.md](/README.md)
 
