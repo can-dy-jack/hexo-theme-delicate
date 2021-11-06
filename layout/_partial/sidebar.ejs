@@ -7,7 +7,7 @@
 
 <div class="sidebar-about">
     <div class="my-img">
-        <div><img src="/img/avatar.png" alt="Fluid-img"></div>
+        <div><img src="favicon/logo2-128.ico" alt="Fluid-img"></div>
         <span class="name"><%- (theme.siderbar.name) %></span>
     </div>
     <div class="my-logo"><%- (theme.siderbar.logo) %></div>
@@ -31,9 +31,46 @@
             <span>bilibili</span>
         </div>
     <% } %>
-        <div></div>
-        <div></div>
-        <div></div>
+    <% if(theme.siderbar.social.github) { %>
+        <div class="icon-box">
+            <a href="<%- theme.siderbar.social.github %>">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            </a>
+            <span>Github</span>
+        </div>
+    <% } %>
+    <% if(theme.siderbar.social.twitter) { %>
+        <div class="icon-box">
+            <a href="<%- theme.siderbar.social.twitter %>">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-tuite"></use>
+                </svg>
+            </a>
+            <span>twitter</span>
+        </div>
+    <% } %>
+    <% if(theme.siderbar.social.CSDN) { %>
+        <div class="icon-box">
+            <a href="<%- theme.siderbar.social.CSDN %>">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-csdn1"></use>
+                </svg>
+            </a>
+            <span>CSDN</span>
+        </div>
+    <% } %>
+    <% if(theme.siderbar.social.codepen) { %>
+        <div class="icon-box">
+            <a href="<%- theme.siderbar.social.codepen %>">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-codepen"></use>
+                </svg>
+            </a>
+            <span>CodePen</span>
+        </div>
+    <% } %>
     </div>
 </div>
 
