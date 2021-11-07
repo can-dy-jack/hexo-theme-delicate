@@ -30,3 +30,19 @@ siderbar:
     CSDN: https://blog.csdn.net/qq_46590483?spm=1000.2115.3001.5343
     codepen: https://codepen.io/Kartjim
 
+# --------------------------- #
+## 背景                      ##
+# --------------------------- #
+background: 
+  # meditation | point | line 
+  ## 如果不填或填其它值，就是默认的白色背景
+  default: line
+
+  # three.js
+  # 如需要添加背景three.js，需要defaut: false
+  ## 还没做好！
+  threeJs: 
+    enable: false
+    ## 3D模型 / 
+    type: 
+

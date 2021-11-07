@@ -6,7 +6,7 @@
     
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="/favicon/logo2.ico">
+    <link rel="icon" href="<%- config.root %>/favicon/logo2.ico">
 
     <title>delicate</title>
     <!-- Bootstrap core CSS -->
@@ -14,6 +14,23 @@
 
     <!-- Custom styles for this template -->
     <%- css('css/blog.css') %>
+    <!-- 默认背景 -->
+    <% if(theme.background.default == 'meditation') { %>
+        <%- css('css/meditation.css') %>
+    <% } else if(theme.background.default == 'point'){ %>
+        <style>
+            body {
+                background: radial-gradient(rgb(9, 153, 153,.7) 20%, #fff 40%) repeat;
+                background-size: 12px 12px;
+            }
+        </style>
+    <% } else if(theme.background.default == 'line'){ %>
+        <style>
+            body {
+                background-image: url('<%- config.root %>/img/line.png');
+            }
+        </style>
+    <% } %>
 
     <style type="text/css">
         .icon {
