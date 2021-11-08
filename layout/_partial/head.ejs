@@ -1,4 +1,3 @@
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +13,8 @@
 
     <!-- Custom styles for this template -->
     <%- css('css/blog.css') %>
+    <%- css('css/floatbar.css') %>
+
     <!-- 默认背景 -->
     <% if(theme.background.default == 'meditation') { %>
         <%- css('css/meditation.css') %>
@@ -28,6 +29,13 @@
         <style>
             body {
                 background-image: url('<%- config.root %>/img/line.png');
+            }
+        </style>
+    <% } else if(theme.background.default == 'line2'){ %>
+        <style>
+            body {
+                background-image: url('<%- config.root %>/img/line2.png');
+                background-size: 25px;
             }
         </style>
     <% } %>

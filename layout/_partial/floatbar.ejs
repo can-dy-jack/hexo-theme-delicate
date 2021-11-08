@@ -1,0 +1,43 @@
+<div class="float-box">
+    <div class="float-github" data-toggle="tooltip" data-placement="right" title="给个star~">
+        <a href="https://github.com/can-dy-jack/hexo-theme-delicate">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-github"></use>
+            </svg>
+        </a>
+    </div>
+    <div class="float-reward" data-toggle="tooltip" data-placement="right" title="打赏一下">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-dashang"></use>
+        </svg>
+        <div class="float-mark"><img src="<%- config.root %>/img/reward.jpg" alt="打赏二维码"></div>
+    </div>
+    <div class="float-feedback" data-toggle="tooltip" data-placement="right" title="反馈">
+        <svg class="icon" aria-hidden="true" data-toggle="modal" data-target="#staticBackdrop">
+            <use xlink:href="#icon-yijianfankui"></use>
+        </svg>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">吐槽 / 建议</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <label for="feedback-label">填写：</label>
+        <textarea id="feedback-label" name="feedback" class="form-control" rows='5' placeholder="反馈功能加紧制作中~~~"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-success">提交</button>
+      </div>
+    </div>
+  </div>
+</div>

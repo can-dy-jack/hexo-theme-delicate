@@ -1,0 +1,67 @@
+.float-box{
+    position: fixed;top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.float-box a{
+    text-decoration: none;
+}
+.float-box>div{
+    background-color: #fff;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    transition: all 0.2s linear;
+
+    /* overflow: hidden; */
+}
+.float-box>div svg{
+    fill: teal;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+.float-box>div:hover{
+    background-color: teal;
+    color: white;
+    border-radius: 50%;
+}
+.float-box>div:hover svg{
+    fill: white;
+}
+
+.float-box>div:active{
+    background-color: rgb(2, 73, 73);
+}
+
+
+/* float-reward */
+.float-reward{
+    position: relative;
+}
+.float-reward .float-mark{
+    width: 240px;height: 240px;
+    box-shadow: 5px 2px 10px 5px rgba(0,0,0,.2);
+    position: absolute;top: 0;
+    right: -250px;
+    border: 3px solid #fff;
+    overflow: hidden;
+    text-align: center;
+    border: 5px;
+    transform-origin: left;
+    transform: translateY(-40%);
+    display: none;
+}
+.float-reward .float-mark img{
+    width: 100%;
+}
+@media screen and (max-width: 650px){
+    .float-box{
+        display: none;
+    }
+}

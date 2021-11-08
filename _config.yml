@@ -11,7 +11,10 @@ menu:
 # Read More text
 excerpt_link: 阅读更多
 
-# siderbar infomation
+
+# --------------------------- #
+##  siderbar infomation      ##
+# --------------------------- #
 ## sidebar-about
 siderbar:
   name: 陈科衡
@@ -34,15 +37,15 @@ siderbar:
 ## 背景                      ##
 # --------------------------- #
 background: 
-  # meditation | point | line 
+  # meditation | point | line | line2
   ## 如果不填或填其它值，就是默认的白色背景
-  default: line
+  default: meditation
 
   # three.js
   # 如需要添加背景three.js，需要defaut: false
   ## 还没做好！
   threeJs: 
     enable: false
-    ## 3D模型 / 
+    ## 3D模型
     type: 
 

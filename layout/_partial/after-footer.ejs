@@ -1,13 +1,19 @@
 
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <%- js('bootstrap/js/bootstrap.min.js') %>
+<%# bootstrap.bundle.min.js replace popper.js cdn %>
+<%- js('bootstrap/js/bootstrap.bundle.min.js') %>
+
 
 <%- js('js/to_top.js') %>
 <%# 图标 %>
-<script src="https://at.alicdn.com/t/font_2918710_vdfqh6kvrk.js"></script>
+<script src="https://at.alicdn.com/t/font_2918710_8kenv9okurb.js"></script>
 
 <%# 添加three.js %>
 <% if(theme.background.threeJs.enable == true){ %>
     <script src="https://cdn.bootcdn.net/ajax/libs/three.js/r128/three.min.js"></script>
     <%- js('js/three-map.js') %>
 <% }%>
+
+<%- js('js/floatbar.js') %>
