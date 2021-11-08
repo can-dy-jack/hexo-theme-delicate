@@ -23,7 +23,6 @@ siderbar:
     - 学生
     - 前端开发者
     - hexo开发者
-    - 海洋测绘专业
     - 上海海洋大学
     - delicate主题开发者
   social: 
@@ -39,7 +38,7 @@ siderbar:
 background: 
   # meditation | point | line | line2
   ## 如果不填或填其它值，就是默认的白色背景
-  default: meditation
+  default: line2
 
   # three.js
   # 如需要添加背景three.js，需要defaut: false

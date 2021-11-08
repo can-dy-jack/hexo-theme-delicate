@@ -172,8 +172,24 @@ h6, .h6 {
 }
 
 /* 
- * sidebar-about
+ * sidebar
  */
+.sidebar-top{
+    margin-bottom: 30px;
+}
+.sidebar-top h3{
+    text-align: center;
+}
+.sidebar-top .sidebar-top-part{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.sidebar-top .sidebar-top-part>div{
+    margin-right: 10px;
+}
+
 .sidebar-about{
     background-color: #fff;
     border: 1px solid #dff8f8;

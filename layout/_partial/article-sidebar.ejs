@@ -1,0 +1,12 @@
+<% if(item.top == true) { %>
+<div class="sidebar-top-part">
+    <div>
+        <a href="<%- config.root %><%- item.path %>">
+            <%- item.title %>
+        </a>
+    </div>
+    <div>
+        <%= item.date.format(config.date_format) %>
+    </div>
+</div>
+<% } %>

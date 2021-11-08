@@ -7,6 +7,16 @@
 
 [Demo site](https://kartjim.top/delicate)
 
+## 教程
+
+### 本主题自定义 front-matter
+
+1. 置顶文章
+
+```yml
+top: true
+```
+
 ## 参考项目
 
 - [stevenlei/CSS Dynamic Background](https://codepen.io/stevenlei/pen/ZEJxXGL?editors=1100)
