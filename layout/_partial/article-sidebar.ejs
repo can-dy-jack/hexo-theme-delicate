@@ -4,14 +4,18 @@
         <a href="<%- config.root %><%- item.path %>">
             <%- item.title %>
         </a>
+    </div>
+    <div>
         <% if (item.tags && item.tags.length){ %>
         <%
-            var tags = [];
+            var t = [];
             item.tags.forEach(function(tag){
-                tags.push(tag.name);
+                t.push(tag.name);
             });
         %>
-        <span class="badge badge-pill badge-primary"><%- tags.join(' ') %></span>
+            <% t.forEach(function(i){ %>
+                <span class="badge badge-pill badge-primary"><%- i %></span>
+            <% }) %>
         <% } %>
     </div>
     <div>
