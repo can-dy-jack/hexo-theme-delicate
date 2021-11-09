@@ -38,7 +38,7 @@ siderbar:
 background: 
   # meditation | point | line | line2
   ## 如果不填或填其它值，就是默认的白色背景
-  default: line2
+  default: meditation
 
   # three.js
   # 如需要添加背景three.js，需要defaut: false

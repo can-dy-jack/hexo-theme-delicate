@@ -1,0 +1,17 @@
+.post-archives-head{
+    color: teal;
+    text-shadow: 0 4px 4px red,2px 2px 3px blue;
+}
+.post-archives{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 5px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.post-archives:hover{
+    background-color: #F8F9FA;
+}

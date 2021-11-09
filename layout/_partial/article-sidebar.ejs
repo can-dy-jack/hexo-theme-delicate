@@ -4,9 +4,19 @@
         <a href="<%- config.root %><%- item.path %>">
             <%- item.title %>
         </a>
+        <% if (item.tags && item.tags.length){ %>
+        <%
+            var tags = [];
+            item.tags.forEach(function(tag){
+                tags.push(tag.name);
+            });
+        %>
+        <span class="badge badge-pill badge-primary"><%- tags.join(' ') %></span>
+        <% } %>
     </div>
     <div>
         <%= item.date.format(config.date_format) %>
     </div>
 </div>
 <% } %>
+
