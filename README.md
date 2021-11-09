@@ -3,7 +3,10 @@
 > 依据bootstrap设计的一款hexo主题  
 > [Demo site](https://kartjim.top/delicate)
 
-![Demo](https://z3.ax1x.com/2021/11/09/IYrYo4.png)
+windows:
+![Demo](https://z3.ax1x.com/2021/11/09/IYRVcd.jpg)
+phone:
+![Demo-phone](https://z3.ax1x.com/2021/11/09/IYRh4O.jpg)
 
 <div align="center">
 
