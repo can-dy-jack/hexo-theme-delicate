@@ -6,7 +6,8 @@
 windows:
 ![Demo](https://z3.ax1x.com/2021/11/09/IYRVcd.jpg)
 phone:
-![Demo-phone](https://z3.ax1x.com/2021/11/09/IYRh4O.jpg)
+<img src="https://z3.ax1x.com/2021/11/09/IYRh4O.jpg" width=300/>
+
 
 <div align="center">
 
