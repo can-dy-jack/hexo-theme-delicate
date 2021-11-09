@@ -7,6 +7,5 @@ floatReward.addEventListener('click',()=>{
 })
 
 // 提示框 - bootstrap + popper
-$('.float-reward').tooltip();
 $('.float-feedback').tooltip();
 $('.float-github').tooltip();

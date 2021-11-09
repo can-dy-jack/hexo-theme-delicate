@@ -2,10 +2,11 @@ title: delicate
 
 # Header
 menu:
-  主页: /
-  归档: /archives
-  # 分类: /categories
-  标签: /tags
+  Home: /
+  Archives: /archives
+  # 未实现
+  # Categories: /categorie
+  # 标签: /tags
   # 关于: /about
 
 # Read More text
