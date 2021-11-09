@@ -12,6 +12,10 @@
             <use xlink:href="#icon-categories"></use>
         </svg>
     </span>
-    <%- categories.join(' / ') %>
+    <% categories.forEach(function(i){ %>
+        <span class="blog-text">
+            <%- i %>
+        </span>
+    <% }) %>
 </div>
 <% } %>

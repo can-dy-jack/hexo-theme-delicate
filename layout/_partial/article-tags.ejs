@@ -11,6 +11,10 @@
             <use xlink:href="#icon-tag"></use>
         </svg>
     </span>
-    <%- tags.join(' ') %>
+    <% tags.forEach(function(i){ %>
+        <span class="blog-text">
+        <%- i %>
+        </span>
+    <% }) %>
 </div>
 <% } %>
