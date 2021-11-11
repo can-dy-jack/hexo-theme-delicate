@@ -56,3 +56,4 @@ top: true
 ## 计划
 
 - 将delicate主题提交到 hexo主题
+- 使用bootstrap面包屑导航

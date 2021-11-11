@@ -18,9 +18,15 @@
     <!-- Only display the Read More link if we are displaying an excerpt -->
     <% if(item.excerpt) { %>
         <p>
-            <a href="<%- config.root %><%- item.path %>" class="btn btn-primary">
+            <% if(theme.style.button){ %>
+            <a href="<%- config.root %><%- item.path %>" class="<%- theme.style.button %>">
                 <%= theme.excerpt_link %>
             </a>
+            <% } else {%>
+            <a href="<%- config.root %><%- item.path %>" class="btn btn-outline-primary">
+                <%= theme.excerpt_link %>
+            </a>
+            <% } %>
         </p>
     <% } %>
 </div>

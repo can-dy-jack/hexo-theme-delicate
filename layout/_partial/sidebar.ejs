@@ -1,13 +1,22 @@
-<div class="alert alert-success shadow-sm sidebar-top">
+<% if(theme.style.top){ %>
+<div class="<%- theme.style.top %> shadow-sm sidebar-top">
     <h3>置顶文章</h3>
     <% site.posts.each(function(item){ %>
         <%- partial('_partial/article-sidebar', {item: item}) %>
     <% }); %>
 </div>
+<% } else {%>
+<div class="alert alert-info shadow-sm sidebar-top">
+    <h3>置顶文章</h3>
+    <% site.posts.each(function(item){ %>
+        <%- partial('_partial/article-sidebar', {item: item}) %>
+    <% }); %>
+</div>
+<% } %>
 
 <div class="sidebar-about">
     <div class="my-img">
-        <div><img src="<%- config.root %>/favicon/logo2-128.ico" alt="Fluid-img"></div>
+        <div><img src="<%- config.root %>favicon/logo2-128.ico" alt="Fluid-img"></div>
         <span class="name"><%- (theme.siderbar.name) %></span>
     </div>
     <div class="my-logo"><%- (theme.siderbar.logo) %></div>

@@ -1,4 +1,4 @@
-<h2 class="post-archives-head">Archives</h2>
+<h2 class="post-archives-head">Archives <span class="badge badge-primary"><%- site.posts.length %> </span></h2>
 <div class="alert alert-info" role="alert">
     <% page.posts.each(function(item){ %>
         <%- partial('_partial/article-archive', {item: item}) %>

@@ -32,6 +32,11 @@ siderbar:
     twitter: https://twitter.com/kartjim
     CSDN: https://blog.csdn.net/qq_46590483?spm=1000.2115.3001.5343
     codepen: https://codepen.io/Kartjim
+  siderimg:
+    # 侧边图片轮播
+    enable: true
+    img:
+      - 
 
 # --------------------------- #
 ## 背景                      ##
@@ -50,6 +55,20 @@ background:
     type: 
 
 
-
+# --------------------------- #
+##   样式                     ##
+# --------------------------- #
+style: 
+  # '阅读更多' 的按钮样式
+  ## 基于bootstrap，可选项即为bootstrap的按钮样式
+  ## btn-primary | btn-secondary | btn-secondary | btn-outline-success  and so on.
+  ## more: https://v4.bootcss.com/docs/components/buttons/
+  ## use,just like: 'btn btn-success';如果要使用默认，则设置为 '',不要加空格！' '
+  button: ''
+  # 置顶文章的样式
+  ## 基于bootstrap，可选项即为bootstrap的alert样式;默认：'alert alert-light'
+  ### more：https://v4.bootcss.com/docs/components/alerts/
+  ## use,just like: 'alert alert-primary'
+  top: ''
 
 
