@@ -72,3 +72,14 @@ style:
   top: ''
 
 
+
+# --------------------------- #
+##   评论系统                 ##
+# --------------------------- #
+
+utterance: 
+## 仓库需要安装utterances https://github.com/apps/utterances
+  enable: true
+  repo: 'can-dy-jack/delicate'
+  issue_term: 'title'
+

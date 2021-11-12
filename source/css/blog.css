@@ -138,6 +138,9 @@ nav {
     color: #999;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+.blog-post img{
+    max-width: 100% !important; /* 解决图片溢出 */
+}
 /* 文章下的标签 和 分类*/
 .blog-tag-and-cate{
     display: flex;
@@ -169,6 +172,19 @@ nav {
 .blog-categories-container .blog-text:hover{
     background-color: #f2f4f6;
 }
+
+.blog-post-change{
+    padding: 0 10px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+.blog-post-change .blog-post-pre{
+    float: left;
+}
+.blog-post-change .blog-post-next{
+    float: right;
+}
+
 
 /* footer */
 

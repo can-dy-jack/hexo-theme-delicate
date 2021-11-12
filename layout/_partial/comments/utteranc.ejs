@@ -1,0 +1,12 @@
+<%# 引入 utteranc 评论 %>
+<% if (theme.utterance && theme.utterance.enable){ %>
+<section id="comments" class="comments">
+    <script src="https://utteranc.es/client.js"
+            repo="<%= theme.utterance.repo %>"
+            issue-term="<%= theme.utterance.issue_term %>"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+</section>
+<% } %>
