@@ -32,7 +32,7 @@ h6, .h6 {
 }
 
 /* blog menu */
-nav {
+nav.navbar {
     font-family: JetBrains Mono,Helvetica,sans-serif;
     -webkit-box-shadow: inset 0 -2px 6px rgba(0,0,0,.2);
     box-shadow: inset 0 -2px 6px rgba(0,0,0,.2);
@@ -338,16 +338,17 @@ nav {
     border-color: transparent transparent #080808 transparent;
 }
 
-/* 暂时-pre code */
+/* code */
+figure.highlight{
+    width: calc(100% + 30px);transform: translateX(-15px);
+    margin: 8px 0;
+    overflow: auto;
+    background-color: #e3f2fd;
+}
+
 pre{
-    background-color: #f1f7a8;
-    /* border-left: 6px solid #90c5fa; */
+    /* background-color: #f1f7a8; */
     padding: 6px 12px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
-pre code .keyword{
-    color: rgb(35, 35, 197);
-}
-pre code .builtin{
-    color: rgb(230, 55, 55);
-}
+

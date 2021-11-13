@@ -4,14 +4,15 @@ title: delicate
 menu:
   Home: /
   Archives: /archives
+  ## page 需要您自建文件 `hexo new page "page name"`
+  page: /page/
   # 未实现
-  # Categories: /categorie
+  # Categories: /categories
   # 标签: /tags
   # 关于: /about
 
-# Read More text
-excerpt_link: 阅读更多
-
+# Read More text 
+excerpt_link: more
 
 # --------------------------- #
 ##  siderbar infomation      ##

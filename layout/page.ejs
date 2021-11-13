@@ -1,2 +1,16 @@
 
-<%- partial('_partial/article-full', {item: page}) %>
+<div class="blog-post">
+    <!-- Title -->
+    <h2 class="blog-post-title">
+            <%- page.title %>
+    </h2>
+    <!-- Content -->
+    <%- page.content %>
+    <hr />
+    <div class="alert alert-warning" style="margin: 15px 5px;">
+    这是page页面；
+    <br>
+    不会有时间限制
+    </div>
+</div>
+

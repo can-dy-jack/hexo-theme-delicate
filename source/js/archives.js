@@ -1,7 +1,7 @@
 const Archives = document.querySelectorAll('.post-archives');
 
-function clearActive(){
-    Archives.forEach(function(i){
+function clearActive(d){
+    d.forEach(function(i){
         if(i.classList.contains('active')){
            i.classList.remove('active'); 
         }
@@ -9,7 +9,8 @@ function clearActive(){
 }
 Archives.forEach(function(i){
     i.addEventListener('click',()=>{
-        clearActive();
+        clearActive(Archives);
         i.classList.add('active');
     });
 })
+

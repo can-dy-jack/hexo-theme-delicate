@@ -53,10 +53,15 @@ top: true
 
 - [stevenlei/CSS Dynamic Background](https://codepen.io/stevenlei/pen/ZEJxXGL?editors=1100)
 
+## 打赏
+
+![打赏](/img/reward.jpg)
+
 ## 计划
 
-- 将delicate主题提交到 hexo主题
-- 搜索功能
+- [ ] 将delicate主题提交到 hexo主题
+- [ ] 搜索功能
+- [ ] 反馈功能
 
 ### 已完成
 
