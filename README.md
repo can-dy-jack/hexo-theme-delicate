@@ -55,7 +55,7 @@ top: true
 
 ## 打赏
 
-![打赏](/img/reward.jpg)
+![打赏](/source/img/reward.jpg)
 
 ## 计划
 
