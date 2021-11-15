@@ -21,6 +21,7 @@ h6, .h6 {
     color: #333;
 }
 
+
 /*
  * Override Bootstrap's default container.
  */
@@ -336,19 +337,5 @@ nav.navbar {
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent #080808 transparent;
-}
-
-/* code */
-figure.highlight{
-    width: calc(100% + 30px);transform: translateX(-15px);
-    margin: 8px 0;
-    overflow: auto;
-    background-color: #e3f2fd;
-}
-
-pre{
-    /* background-color: #f1f7a8; */
-    padding: 6px 12px;
-    /* border-radius: 5px; */
 }
 

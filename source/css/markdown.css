@@ -1,0 +1,230 @@
+/* 文本样式 */
+del {
+    color: rgb(255, 84, 84);
+}
+
+/* blockquote */
+blockquote p {
+    border-left: 4px solid #aaa;
+    padding: 4px 10px;
+    color: #999;
+}
+
+blockquote footer {
+    text-align: right;
+    word-wrap: break-word;
+    font-size: 0.9em;
+    color: #999;
+    margin-top: -1em;
+    /* 消除上面p标签的margin */
+}
+
+blockquote footer::before {
+    content: '--';
+}
+
+/* 代码块 */
+figure {
+    width: 100%;
+    background-color: #efefef;
+    overflow: auto;
+    border-radius: 3px;
+}
+
+figure table td.code {
+    width: 100%;
+    /* 非常重要的属性设置！ */
+}
+
+figure table td pre {
+    margin-bottom: 0;
+    /* 非常重要的属性设置！ */
+}
+
+figure table td.gutter pre {
+    padding: 0 10px;
+    margin: 10px 0;
+    color: #aaa;
+    text-align: center;
+    border-right: 1px solid #999;
+}
+
+figure table td.code pre {
+    padding: 0 10px 0 5px;
+}
+
+p>code {
+    /* 内联代码块 */
+    background-color: #efefef;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+/* 标题 */
+h2,
+.h2 {
+    margin: 40px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    cursor: default;
+    font-size: 34px;
+}
+
+h2:not(.blog-post-title):after,
+.h2::after {
+    content: ' #2';
+    opacity: 0;
+    color: #3594d8;
+}
+
+h2:not(.blog-post-title):hover:after,
+.h2:hover::after {
+    opacity: 1;
+}
+
+h3,
+.h3 {
+    margin: 35px 0;
+    cursor: default;
+    font-size: 28px;
+}
+
+h3:after,
+.h3::after {
+    content: ' #3';
+    opacity: 0;
+    color: #3594d8;
+}
+
+h3:hover:after,
+.h3:hover::after {
+    opacity: 1;
+}
+
+h4,
+.h4 {
+    margin: 20px 0 15px 0;
+    cursor: default;
+    font-size: 24px;
+}
+
+h4:after,
+.h4::after {
+    content: ' #4';
+    opacity: 0;
+    color: #3594d8;
+}
+
+h4:hover:after,
+.h4:hover::after {
+    opacity: 1;
+}
+
+h5,
+.h5 {
+    margin: 15px 0;
+    cursor: default;
+    font-size: 20px;
+}
+
+h5:after,
+.h5::after {
+    content: ' #5';
+    opacity: 0;
+    color: #3594d8;
+}
+
+h5:hover:after,
+.h5:hover::after {
+    opacity: 1;
+}
+
+/* 代码高亮主题 */
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/
+.hljs {
+    color: #24292e;
+    /* background: #fff; */
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+    color: #d73a49
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+    color: #6f42c1
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-variable {
+    color: #005cc5
+}
+.hljs-meta .hljs-string,
+.hljs-regexp,
+.hljs-string {
+    color: #032f62
+}
+.hljs-built_in,
+.hljs-symbol {
+    color: #e36209
+}
+.hljs-code,
+.hljs-comment,
+.hljs-formula {
+    color: #6a737d
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-pseudo,
+.hljs-selector-tag {
+    color: #22863a
+}
+.hljs-subst {
+    color: #24292e
+}
+.hljs-section {
+    color: #005cc5;
+    font-weight: 700
+}
+.hljs-bullet {
+    color: #735c0f
+}
+.hljs-emphasis {
+    color: #24292e;
+    font-style: italic
+}
+.hljs-strong {
+    color: #24292e;
+    font-weight: 700
+}
+.hljs-addition {
+    color: #22863a;
+    background-color: #f0fff4
+}
+.hljs-deletion {
+    color: #b31d28;
+    background-color: #ffeef0
+}
+

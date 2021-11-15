@@ -49,19 +49,31 @@ theme: delicate
 top: true
 ```
 
+### 标签插件（Tag Plugins）
+
+
+
+
 ## 参考项目
 
 - [stevenlei/CSS Dynamic Background](https://codepen.io/stevenlei/pen/ZEJxXGL?editors=1100)
 
 ## 打赏
 
-![打赏](/source/img/reward.jpg)
+![打赏](https://z3.ax1x.com/2021/11/15/IgcqH0.jpg)
 
 ## 计划
 
 - [ ] 将delicate主题提交到 hexo主题
 - [ ] 搜索功能
 - [ ] 反馈功能
+- [ ] 多语言
+- [ ] markdown样式 —— 代码块样式、复制按钮、没有代码高亮？
+- [ ] Tag Plugins
+
+#### 细节
+
+- 标题后面的`#2`设置为选项？
 
 ### 已完成
 
