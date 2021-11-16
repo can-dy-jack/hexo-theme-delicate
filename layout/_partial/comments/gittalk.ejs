@@ -1,0 +1,14 @@
+<div id="gitalk-container"></div>
+<script>
+const gitalk = new Gitalk({
+  clientID: "<%= theme.gittalk.clientID %>",
+  clientSecret: "<%= theme.gittalk.clientSecret %>",
+  repo: "<%= theme.gittalk.repo %>",
+  owner: "<%= theme.gittalk.owner %>",
+  admin: "<%= theme.gittalk.admin %>",
+  // 要把评论放到每个文章下保证评论不一样，必须解决id问题
+  id: 'delicate-gittalk',
+  distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
+</script>

@@ -17,7 +17,12 @@
         </div>
     </div>
     <div class="container-fluid">
+    <% if (theme.utterance && theme.utterance.enable){ %>
         <%- partial('_partial/comments/utteranc') %>
+    <% } %>
+    <% if (theme.gittalk && theme.gittalk.enable){ %>
+        <%- partial('_partial/comments/gittalk') %>
+    <% } %>
     </div>
 <%- partial('_partial/floatbar') %>
 <%- partial('_partial/footer') %>

@@ -6,3 +6,22 @@
 }
 /* .utterances */
 
+
+/* gittalk */
+@media (min-width: 1000px) {
+    #gitalk-container{
+        width: 800px;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 600px) and (max-width: 999px){
+    #gitalk-container{
+        width: 500px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 599px){
+    #gitalk-container{
+        margin: 0 10px;
+    }
+}

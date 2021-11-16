@@ -12,7 +12,7 @@ menu:
   # 关于: /about
 
 # Read More text 
-excerpt_link: more
+excerpt_link: 'Read More'
 
 # --------------------------- #
 ##  siderbar infomation      ##
@@ -33,11 +33,7 @@ siderbar:
     twitter: https://twitter.com/kartjim
     CSDN: https://blog.csdn.net/qq_46590483?spm=1000.2115.3001.5343
     codepen: https://codepen.io/Kartjim
-  siderimg:
-    # 侧边图片轮播
-    enable: true
-    img:
-      - 
+
 
 # --------------------------- #
 ## 背景                      ##
@@ -70,7 +66,7 @@ style:
   ## 基于bootstrap，可选项即为bootstrap的alert样式;默认：'alert alert-light'
   ### more：https://v4.bootcss.com/docs/components/alerts/
   ## use,just like: 'alert alert-primary'
-  top: ''
+  top: 'alert alert-info'
 
 
 
@@ -80,10 +76,33 @@ style:
 
 utterance: 
 ## 仓库需要安装utterances https://github.com/apps/utterances
-  enable: true
-  repo: 'can-dy-jack/delicate'
-  issue_term: 'title'
+  enable: false
+  repo: 
+  issue_term: delicate-utterance
   # github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light | gruvbox-dark
   ## 在线观看每个主题效果：https://utteranc.es/
   theme: 'github-light'
+
+gittalk: 
+  ## Firstly, you need choose a public github repository for store comment.
+  ## A GitHub Application : https://github.com/settings/applications/new
+  ### more: https://github.com/gitalk/gitalk
+  enable: false
+  # 您的评论存放的仓库名字
+  repo: delicate
+  owner: can-dy-jack
+  admin: ['can-dy-jack',]
+  # GitHub Application Client ID and Client Secret
+  clientID: '40bf1e48c10c21aabbda'
+  clientSecret: 'fdc4482c982f1004c3b4efb436ba839da373723a'
+
+
+
+
+# --------------------------- #
+##   widget                  ##
+# --------------------------- #
+widget:
+  tags: true
+  tagsTheme: 'alert alert-warning'
 
