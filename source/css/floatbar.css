@@ -21,13 +21,13 @@
     /* overflow: hidden; */
 }
 .float-box>div svg{
-    fill: teal;
+    fill: #2d342d;
     height: 30px;
     width: 30px;
     margin: 10px;
 }
 .float-box>div:hover{
-    background-color: teal;
+    background-color: #2d342d;
     color: white;
     border-radius: 50%;
 }
@@ -36,7 +36,7 @@
 }
 
 .float-box>div:active{
-    background-color: rgb(2, 73, 73);
+    background-color: #454545;
 }
 
 

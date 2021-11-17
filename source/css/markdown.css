@@ -35,6 +35,7 @@ figure {
 figure table td.code {
     width: 100%;
     /* 非常重要的属性设置！ */
+    position: relative;
 }
 
 figure table td pre {
@@ -53,6 +54,23 @@ figure table td.gutter pre {
 figure table td.code pre {
     padding: 0 10px 0 5px;
 }
+figure table td.code .code-span{
+    /* copy button */
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+figure table td.code .code-span img{
+    width: 20px;
+    height: 20px;
+    opacity: 0.3;
+    transition: opacity 0.2s ease;
+}
+figure table td.code .code-span:hover img{
+    opacity: 1;
+}
+
 
 p>code {
     /* 内联代码块 */
@@ -102,41 +120,41 @@ p>code {
     opacity: 1;
 }
 
-h4,
-.h4 {
+.blog-post h4,
+.blog-post .h4 {
     margin: 20px 0 10px 0;
     cursor: default;
     font-size: 24px;
 }
 
-h4:after,
-.h4::after {
+.blog-post h4:after,
+.blog-post .h4::after {
     content: ' #4';
     opacity: 0;
     color: #3594d8;
 }
 
-h4:hover:after,
-.h4:hover::after {
+.blog-post h4:hover:after,
+.blog-post .h4:hover::after {
     opacity: 1;
 }
 
-h5,
-.h5 {
+.blog-post h5,
+.blog-post .h5 {
     margin: 15px 0 8px 0;
     cursor: default;
     font-size: 20px;
 }
 
-h5:after,
-.h5::after {
+.blog-post h5:after,
+.blog-post .h5::after {
     content: ' #5';
     opacity: 0;
     color: #3594d8;
 }
 
-h5:hover:after,
-.h5:hover::after {
+.blog-post h5:hover:after,
+.blog-post .h5:hover::after {
     opacity: 1;
 }
 

@@ -1,18 +1,8 @@
+# header
 title: delicate
-
-# Header
 menu:
   Home: /
   Archives: /archives
-  ## page 需要您自建文件 `hexo new page "page name"`
-  page: /page/
-  # 未实现
-  # Categories: /categories
-  # 标签: /tags
-  # 关于: /about
-
-# Read More text 
-excerpt_link: 'Read More'
 
 # --------------------------- #
 ##  siderbar infomation      ##
@@ -25,15 +15,14 @@ siderbar:
     - 学生
     - 前端开发者
     - hexo开发者
-    - 上海海洋大学
     - delicate主题开发者
   social: 
-    bilibili: https://space.bilibili.com/481922596
+    ## 社交账户主页
+    bilibili: https://space.bilibili.com
     github: https://github.com/can-dy-jack
-    twitter: https://twitter.com/kartjim
-    CSDN: https://blog.csdn.net/qq_46590483?spm=1000.2115.3001.5343
-    codepen: https://codepen.io/Kartjim
-
+    twitter: https://twitter.com
+    CSDN: 
+    codepen: 
 
 # --------------------------- #
 ## 背景                      ##
@@ -41,7 +30,7 @@ siderbar:
 background: 
   # meditation | point | line | line2
   ## 如果不填或填其它值，就是默认的白色背景
-  default: point
+  default: 'meditation'
 
   # three.js
   # 如需要添加背景three.js，需要defaut: false
@@ -55,18 +44,21 @@ background:
 # --------------------------- #
 ##   样式                     ##
 # --------------------------- #
+# Read More text 
+excerpt_link: 'Read More'
 style: 
-  # '阅读更多' 的按钮样式
-  ## 基于bootstrap，可选项即为bootstrap的按钮样式
-  ## btn-primary | btn-secondary | btn-secondary | btn-outline-success  and so on.
-  ## more: https://v4.bootcss.com/docs/components/buttons/
-  ## use,just like: 'btn btn-success';如果要使用默认，则设置为 '',不要加空格！' '
-  button: ''
   # 置顶文章的样式
   ## 基于bootstrap，可选项即为bootstrap的alert样式;默认：'alert alert-light'
   ### more：https://v4.bootcss.com/docs/components/alerts/
   ## use,just like: 'alert alert-primary'
   top: 'alert alert-info'
+  # '阅读更多' 的按钮样式
+  ## 基于bootstrap，可选项即为bootstrap的按钮样式
+  ## btn-primary | btn-secondary | btn-secondary | btn-outline-success  and so on.
+  ## more: https://v4.bootcss.com/docs/components/buttons/
+  ## just like: 'btn btn-outline-success';
+  button: ''
+  
 
 
 
@@ -89,20 +81,9 @@ gittalk:
   ### more: https://github.com/gitalk/gitalk
   enable: false
   # 您的评论存放的仓库名字
-  repo: delicate
-  owner: can-dy-jack
-  admin: ['can-dy-jack',]
+  repo: ''
+  owner: ''
+  admin: ['',]
   # GitHub Application Client ID and Client Secret
-  clientID: '40bf1e48c10c21aabbda'
-  clientSecret: 'fdc4482c982f1004c3b4efb436ba839da373723a'
-
-
-
-
-# --------------------------- #
-##   widget                  ##
-# --------------------------- #
-widget:
-  tags: true
-  tagsTheme: 'alert alert-warning'
-
+  clientID: ''
+  clientSecret: ''

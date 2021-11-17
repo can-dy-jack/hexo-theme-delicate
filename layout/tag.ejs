@@ -1,9 +1,9 @@
 
-<div class="<%= theme.widget.tagsTheme%> shadow sidebar-top">
+<div class="alert alert-secondary shadow tag-box">
     <h3>标签</h3>
-    <p>
+    <span class="tag-span">
         <% site.tags.sort('name').each(function(item){ %>
-            <a href="<%- config.root %>archives/" style="font-size: <%- Math.min(item.posts.length * 2 + 20, 45) %>px"><%= item.name %></a>
+            <a href="<%- config.root %>archives/" style="font-size: <%- Math.min((item.posts.length + 3)* 2 + 12, 40) %>px"><%= item.name %></a>
         <% }); %>
-    </p>
+    </span>
 </div>
