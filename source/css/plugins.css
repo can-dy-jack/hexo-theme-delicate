@@ -1,0 +1,57 @@
+/* 代码块 - 附加说明和网址 */
+figure figcaption{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* test */
+    /* background-color: bisque; */
+    padding: 5px 10px;
+    border-bottom: 1px solid #ddd;
+}
+figure figcaption a,figure figcaption span{
+    font-size: 0.8rem;
+}
+
+/* pullquote */
+blockquote.pullquote p{
+    border: none;
+    position: relative;
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+blockquote.pullquote p::before{
+    content: '“';
+    position: absolute;left: -5px;top: -8px;
+    font-size: 20px;
+}
+blockquote.pullquote p::after{
+    content: '”';
+    position: absolute;right: -5px;bottom: -18px;
+    font-size: 20px;
+}
+blockquote.center p{
+    text-align: center;
+}
+blockquote.information p{
+    background-color: rgba(0, 128, 128, .2);
+    color: teal;
+}
+blockquote.danger p{
+    background-color: rgba(255, 255, 0, .2);
+    color: rgb(167, 167, 1);
+}
+blockquote.red p{
+    background-color: rgba(255, 0, 0, .2);
+    color: red;
+}
+blockquote.blue p{
+    background-color: rgba(0, 0, 255, .2);
+    color: #0000ff;
+}
+
+/* note */
+.note p{
+    background-color: #dfdfdf;
+    padding: 8px 12px;
+}

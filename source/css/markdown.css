@@ -95,8 +95,8 @@ p>code {
 }
 
 /* 标题 */
-.blog-post h2,
-.blog-post .h2 {
+.blog-post h2:not(.blog-post-title),
+.blog-post .h2:not(.blog-post-title) {
     margin: 40px 0;
     padding: 10px 0;
     border-bottom: 1px solid #eee;

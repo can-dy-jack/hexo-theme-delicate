@@ -49,10 +49,13 @@ theme: delicate
 top: true
 ```
 
+### markdown
+
+[markdown样式](https://kartjim.top/delicate/2021/11/14/markdown%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/)
+
 ### 标签插件（Tag Plugins）
 
-
-
+[Tag Plugins](https://kartjim.top/delicate/2021/11/12/code-test/)
 
 ## 参考项目
 
@@ -69,12 +72,14 @@ top: true
 - [ ] 搜索功能
 - [ ] 多语言
 - [ ] 代码块 —— 复制按钮
-- [ ] Tag Plugins
-- [ ] 把评论放在每篇文章下
-- [ ] 文章侧边导航栏
+- [ ] 文章侧边标题导航栏！！！
+- [ ] note 提示块标签
 - [ ] 更新展示图片
-
 - [ ] 标签页面 / 标签小组件
+
+### bug
+
+- [ ] 把评论放在每篇文章下
 
 ### 细节
 
@@ -90,3 +95,4 @@ top: true
 - [x] 标签页面和分类页面逻辑
 - [x] 测试文件
 - [x] 反馈功能
+- [x] Tag Plugins
