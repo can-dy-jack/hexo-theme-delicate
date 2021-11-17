@@ -65,12 +65,27 @@ figure table td.code .code-span img{
     width: 20px;
     height: 20px;
     opacity: 0.3;
-    transition: opacity 0.2s ease;
+    transition: all 0.2s ease;
 }
 figure table td.code .code-span:hover img{
     opacity: 1;
 }
-
+figure table td.code .code-span:active img{
+    transform: scale(0.9);
+}
+/* 复制提醒文本 */
+/* figure table td.code .code-span::before{
+    content: 'copy success!';
+    position: absolute;
+    bottom: -2px;
+    right: 25px;
+    width: 110px;height: 25px;line-height: 25px;
+    background-color: #2d302d;
+    color: white;
+    font-size: 12px;
+    text-align: center;border-radius: 5px;
+    display: none;
+} */
 
 p>code {
     /* 内联代码块 */
