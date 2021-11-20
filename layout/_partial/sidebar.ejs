@@ -27,56 +27,7 @@
         <span class="text">社交账号</span>
     </div>
     <div class="my-social-account">
-    <% if(theme.siderbar.social.bilibili) { %>
-        <div class="icon-box">
-            <a href="<%- theme.siderbar.social.bilibili %>">
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-bilibili-line"></use>
-                </svg>
-            </a>
-            <span>bilibili</span>
-        </div>
-    <% } %>
-    <% if(theme.siderbar.social.github) { %>
-        <div class="icon-box">
-            <a href="<%- theme.siderbar.social.github %>">
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-github"></use>
-                </svg>
-            </a>
-            <span>Github</span>
-        </div>
-    <% } %>
-    <% if(theme.siderbar.social.twitter) { %>
-        <div class="icon-box">
-            <a href="<%- theme.siderbar.social.twitter %>">
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-tuite"></use>
-                </svg>
-            </a>
-            <span>twitter</span>
-        </div>
-    <% } %>
-    <% if(theme.siderbar.social.CSDN) { %>
-        <div class="icon-box">
-            <a href="<%- theme.siderbar.social.CSDN %>">
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-csdn1"></use>
-                </svg>
-            </a>
-            <span>CSDN</span>
-        </div>
-    <% } %>
-    <% if(theme.siderbar.social.codepen) { %>
-        <div class="icon-box">
-            <a href="<%- theme.siderbar.social.codepen %>">
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-codepen"></use>
-                </svg>
-            </a>
-            <span>CodePen</span>
-        </div>
-    <% } %>
+        <%- partial('_partial/social-account') %>
     </div>
 </div>
 

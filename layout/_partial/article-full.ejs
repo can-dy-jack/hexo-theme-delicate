@@ -1,4 +1,3 @@
-
 <div class="blog-post">
     <!-- Title -->
     <h2 class="blog-post-title">
@@ -25,11 +24,11 @@
 
     <div class="blog-post-change">
         <% if (item.prev){ %>
-            <a class="blog-post-pre" href="<%- url_for(item.prev.path) %>">&#8668;<%- item.prev.title %></a>
+            <a class="blog-post-pre" href="<%- url_for(item.prev.path) %>">&#8612; <%- item.prev.title %></a>
         <% } %>
         
         <% if (item.next){ %>
-            <a class="blog-post-next" href="<%- url_for(item.next.path) %>"><%= item.next.title %>&#8669;</a>
+            <a class="blog-post-next" href="<%- url_for(item.next.path) %>"><%= item.next.title %> &#8614;</span></a>
         <% } %>
     </div>
     <hr>

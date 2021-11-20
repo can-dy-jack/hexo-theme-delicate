@@ -6,7 +6,7 @@ del {
 /* blockquote */
 blockquote p {
     border-left: 4px solid #aaa;
-    padding: 4px 10px;
+    padding: 0 10px;
     color: #999;
 }
 
@@ -103,19 +103,16 @@ p>code {
     cursor: default;
     font-size: 34px;
 }
-
 .blog-post h2:not(.blog-post-title):after,
 .blog-post .h2::after {
-    content: ' #2';
+    content: ' ❡2';
     opacity: 0;
     color: #3594d8;
 }
-
 .blog-post :not(.blog-post-title):hover:after,
 .blog-post .h2:hover::after {
     opacity: 1;
 }
-
 .blog-post h3,
 .blog-post .h3 {
     margin: 35px 0 25px 0;
@@ -125,7 +122,7 @@ p>code {
 
 .blog-post h3:after,
 .blog-post .h3::after {
-    content: ' #3';
+    content: ' ❡3';
     opacity: 0;
     color: #3594d8;
 }
@@ -144,7 +141,7 @@ p>code {
 
 .blog-post h4:after,
 .blog-post .h4::after {
-    content: ' #4';
+    content: ' ❡4';
     opacity: 0;
     color: #3594d8;
 }
@@ -163,7 +160,7 @@ p>code {
 
 .blog-post h5:after,
 .blog-post .h5::after {
-    content: ' #5';
+    content: ' ❡5';
     opacity: 0;
     color: #3594d8;
 }
@@ -190,6 +187,11 @@ table td:not(.gutter):not(.code){
 }
 table tr:nth-child(2n){
     background-color: #f1f9ff;
+}
+/* img */
+.blog-post p>img,.blog-post>img{
+    margin: 0.5rem;
+    box-shadow: 0 0 12px rgba(0,0,0,.15),0 0 15px rgba(0,0,0,.2);
 }
 
 

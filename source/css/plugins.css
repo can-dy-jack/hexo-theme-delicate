@@ -54,4 +54,47 @@ blockquote.blue p{
 .note p{
     background-color: #dfdfdf;
     padding: 8px 12px;
+    border-left: 5px solid #2d2d2d;
+    border-radius: 5px;
+    color: #111;
+}
+.note-info p{
+    background-color: #daeeee;
+    color: teal;
+    border-color: teal;
+}
+.note-primary p{
+    background-color: #e1e1fa;
+    color: blue;
+    border-color: blue;
+}
+.note-success p{
+    background-color: #e0fae0;
+    color: green;
+    border-color: green;
+}
+.note-warning p{
+    background-color: rgb(252, 248, 216);
+    color: rgb(255, 180, 0);
+    border-color: rgb(255, 180, 0);
+}
+.note-danger p{
+    background-color: #ffdbdb;
+    color: rgb(253, 13, 13);
+    border-color: rgb(253, 13, 13);
+}
+.note-light p{
+    background-color: #fafafa;
+    color: #2d2d2d;
+    border-color: #fff;
+}
+.note-cyan p{
+    background-color: rgba(0, 255, 157, .1);
+    color: rgb(0, 228, 140);
+    border-color: rgb(0, 255, 157);
+}
+.note-purple p{
+    background-color: rgb(252, 232, 252);
+    color: purple;
+    border-color: purple;
 }

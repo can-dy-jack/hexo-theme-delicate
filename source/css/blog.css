@@ -1,12 +1,10 @@
-/*
- * Globals
- * 基本布局样式
- */
+/* 基本布局样式 */
 html{
     scroll-behavior: smooth;
 }
+
 body {
-    font-family: 'JetBrains Mono',microsoft yahei,Georgia, "Times New Roman", Times, serif;
+    font-family: 'PTSans', 'JetBrains Mono',microsoft yahei,Georgia, "Times New Roman", Times, serif;
     color: #555;
 }
 h1, .h1,
@@ -175,15 +173,43 @@ nav.navbar {
 }
 
 .blog-post-change{
+    min-height: 30px;
     padding: 0 10px;
-    height: 30px;
     margin-bottom: 15px;
 }
 .blog-post-change .blog-post-pre{
     float: left;
+    color: #111;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.blog-post-change .blog-post-pre:hover{
+    color: #007bff;
+    text-decoration: none;
+    background-color: #eff4f8;
+    transform: translateX(-5px);
+}
+.blog-post-change .blog-post-pre:active{
+    color: #025ab8;
+    background-color: #dae8f3;
 }
 .blog-post-change .blog-post-next{
     float: right;
+    color: #111;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.blog-post-change .blog-post-next:hover{
+    color: #007bff;
+    text-decoration: none;
+    background-color: #eff4f8;
+    transform: translateX(5px);
+}
+.blog-post-change .blog-post-next:active{
+    color: #025ab8;
+    background-color: #dae8f3;
 }
 
 
@@ -220,15 +246,15 @@ nav.navbar {
 }
 
 .sidebar-about{
-    background-color: #fff;
-    border: 1px solid #dff8f8;
-    padding: 5px 10px;
-    border-radius: 3px;
     position: sticky;
     top: 5px;left: 0;
-    width: 100%;
-    margin-bottom: 40px;
     box-shadow: 0 0 6px rgba(0,128,128,.2);
+    border: 1px solid #dff8f8;
+    background-color: #fff;
+    margin-bottom: 40px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    width: 100%;
     font-family: microsoft yahei, sans-serif;
 }
 .sidebar-about .my-img{
@@ -294,11 +320,12 @@ nav.navbar {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 10px;
 }
 .sidebar-about .my-social-account .icon-box{
     display: flex;
     flex-direction: column;
-    margin: 0 10px 30px 10px;
+    margin: 5px 10px;
     position: relative;
 }
 .sidebar-about .my-social-account .icon-box a{
@@ -313,6 +340,7 @@ nav.navbar {
 }
 .sidebar-about .my-social-account .icon-box a:hover + span{
     opacity: 1;
+    z-index: 10;
 }
 .sidebar-about .my-social-account .icon-box span{
     position: absolute;
@@ -338,6 +366,9 @@ nav.navbar {
     border-style: solid;
     border-color: transparent transparent #080808 transparent;
 }
+
+
+
 
 .tag-box h3{
     text-align: center;

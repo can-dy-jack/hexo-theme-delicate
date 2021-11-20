@@ -8,13 +8,15 @@
 <%- js('js/to_top.js') %>
 
 <%# 图标 %>
-<script src="https://at.alicdn.com/t/font_2918710_f7bdcvf0tv5.js"></script>
+<script src="https://at.alicdn.com/t/font_2918710_jucubmd07u.js"></script>
 
 <%# 添加three.js %>
 <% if(theme.background.threeJs.enable == true){ %>
     <script src="https://cdn.bootcdn.net/ajax/libs/three.js/r128/three.min.js"></script>
     <%- js('js/three-map.js') %>
-<% }%>
+<% } else if(theme.background.canvas){ %>
+    <%- js('js/canvas.js') %>
+<% } %>
 
 <%- js('js/floatbar.js') %>
 <%- js('js/archives.js') %>

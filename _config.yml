@@ -9,20 +9,33 @@ menu:
 # --------------------------- #
 ## sidebar-about
 siderbar:
-  name: 陈科衡
+  name: Kart · Jim
   logo: Time wait for no one.
   tag: 
     - 学生
     - 前端开发者
-    - hexo开发者
+    - hexo菜鸟开发者
     - delicate主题开发者
   social: 
-    ## 社交账户主页
+    ## 社交账户链接
     bilibili: https://space.bilibili.com
     github: https://github.com/can-dy-jack
     twitter: https://twitter.com
     CSDN: 
     codepen: 
+    google: http://localhost:4000
+    facebook: 
+    stackoverflow: 
+    linkedin: 
+    slack: http://localhost:4000
+    instagram: 
+    gitlab: 
+    贴吧: 
+    知乎: 
+    微博: 
+    博客园: 
+    掘金: 
+    dingding: 
 
 # --------------------------- #
 ## 背景                      ##
@@ -30,8 +43,10 @@ siderbar:
 background: 
   # meditation | point | line | line2
   ## 如果不填或填其它值，就是默认的白色背景
-  default: 'meditation'
-
+  default: ''
+  # canvas制作的动态3D背景
+  ## canvas线的颜色可以去文件(delicate/source/js/canvas.js)内去手动修改！
+  canvas: true
   # three.js
   # 如需要添加背景three.js，需要defaut: false
   ## 还没做好！
@@ -58,8 +73,8 @@ style:
   ## more: https://v4.bootcss.com/docs/components/buttons/
   ## just like: 'btn btn-outline-success';
   button: ''
-  
 
+  
 
 
 # --------------------------- #
