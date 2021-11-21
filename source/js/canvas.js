@@ -1,20 +1,16 @@
 !function() {
-    function o(w, v, i) {
+    function get(w, v, i) {
         return w.getAttribute(v) || i
     }
-    function j(i) {
-        return document.getElementsByTagName(i)
-    }
     function l() {
-        var i = j("script"),
-        w = i.length,
-        v = i[w - 1];
+        // 获取本文件的script标签dom
+        var i = document.getElementsByTagName("script"),
+        v = i[i.length - 1];
         return {
-            l: w,
-            z: o(v, "zIndex", -2),
-            o: o(v, "opacity", 0.8),
-            c: o(v, "color", "50,50,250"),
-            n: o(v, "count", 500)
+            z: get(v, "zIndex", -2),
+            o: get(v, "opacity", 0.8),
+            c: get(v, "color", "50,50,250"),
+            n: get(v, "count", 500)
         }
     }
     function k() {
@@ -24,14 +20,14 @@
     function b() {
         e.clearRect(0, 0, r, n);
         var w = [f].concat(t);
-        var x, v, A, B, z, y;
+        var x, A, B, z, y;
         t.forEach(function(i) {
             i.x += i.xa,
             i.y += i.ya,
             i.xa *= i.x > r || i.x < 0 ? -1 : 1,
             i.ya *= i.y > n || i.y < 0 ? -1 : 1,
             e.fillRect(i.x - 0.5, i.y - 0.5, 1, 1);
-            for (v = 0; v < w.length; v++) {
+            for (let v = 0; v < w.length; v++) {
                 x = w[v];
                 if (i !== x && null !== x.x && null !== x.y) {
                     B = i.x - x.x,
@@ -45,25 +41,20 @@
         m(b)
     }
     var u = document.createElement("canvas"),
-    s = l(),
-    c = "c_n" + s.l,
-    e = u.getContext("2d"),
-    r,
-    n,
-    m = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+    s = l(),e = u.getContext("2d"),r,n,
+    m = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame ||
     function(i) {
         window.setTimeout(i, 1000 / 45)
     },
-    a = Math.random,
     f = {
         x: null,
         y: null,
         max: 20000
     };
-    u.id = c;
+    u.id = 'canvas-line';
     u.style.cssText = "position:fixed;top:0;left:0;z-index:" + s.z + ";opacity:" + s.o;
-    j("body")[0].appendChild(u);
-    k(),
+    document.querySelector("body").appendChild(u);
+    k();
     window.onresize = k;
     window.onmousemove = function(i) {
         i = i || window.event,
@@ -75,10 +66,10 @@
         f.y = null
     };
     for (var t = [], p = 0; s.n > p; p++) {
-        var h = a() * r,
-        g = a() * n,
-        q = 2 * a() - 1,
-        d = 2 * a() - 1;
+        var h = Math.random() * r,
+        g = Math.random() * n,
+        q = 2 * Math.random() - 1,
+        d = 2 * Math.random() - 1;
         t.push({
             x: h,
             y: g,

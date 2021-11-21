@@ -15,7 +15,13 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/three.js/r128/three.min.js"></script>
     <%- js('js/three-map.js') %>
 <% } else if(theme.background.canvas){ %>
-    <%- js('js/canvas.js') %>
+    <%- 
+        a = theme.background.canvas.color,
+        b = theme.background.canvas.zIndex,
+        c = theme.background.canvas.opacity,
+        d = theme.background.canvas.count
+    %>
+    <%- js({ src: 'js/canvas.js', color: a ,zIndex: b,opacity: c,count: d}) %>
 <% } %>
 
 <%- js('js/floatbar.js') %>

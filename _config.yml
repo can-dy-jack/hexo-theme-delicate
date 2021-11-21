@@ -4,6 +4,7 @@ menu:
   Home: /
   Archives: /archives
 
+
 # --------------------------- #
 ##  siderbar infomation      ##
 # --------------------------- #
@@ -12,24 +13,26 @@ siderbar:
   name: Kart · Jim
   logo: Time wait for no one.
   tag: 
-    - 学生
-    - 前端开发者
-    - hexo菜鸟开发者
-    - delicate主题开发者
+    - student
+    - front-end developer
+    - hexo primary developer
+    - hexo-theme-delicate developer
   social: 
-    ## 社交账户链接
-    bilibili: https://space.bilibili.com
+    # social account link
+    ## if the value is none or '',it does not apear.
     github: https://github.com/can-dy-jack
     twitter: https://twitter.com
-    CSDN: 
-    codepen: 
+    codepen: ''
     google: http://localhost:4000
-    facebook: 
+    facebook: ''
     stackoverflow: 
     linkedin: 
     slack: http://localhost:4000
-    instagram: 
-    gitlab: 
+    instagram: ''
+    gitlab: ''
+    # for China
+    bilibili: https://space.bilibili.com
+    CSDN: 
     贴吧: 
     知乎: 
     微博: 
@@ -37,16 +40,24 @@ siderbar:
     掘金: 
     dingding: 
 
+
 # --------------------------- #
-## 背景                      ##
+##       background          ##
 # --------------------------- #
 background: 
-  # meditation | point | line | line2
-  ## 如果不填或填其它值，就是默认的白色背景
+  # available values: meditation | point | line | line2
+  ## If you don't fill in or fill in other values, it will be the default white background.
   default: ''
   # canvas制作的动态3D背景
-  ## canvas线的颜色可以去文件(delicate/source/js/canvas.js)内去手动修改！
-  canvas: true
+  canvas: 
+    # use rgb color,the value must be like '255,10,10'
+    color: '50,180,180'
+    # z-index
+    zIndex: '-5'
+    opacity: '0.8'
+    # canvas line count
+    count: '500'
+    
   # three.js
   # 如需要添加背景three.js，需要defaut: false
   ## 还没做好！
@@ -57,7 +68,7 @@ background:
 
 
 # --------------------------- #
-##   样式                     ##
+##   style setting           ##
 # --------------------------- #
 # Read More text 
 excerpt_link: 'Read More'
@@ -74,13 +85,10 @@ style:
   ## just like: 'btn btn-outline-success';
   button: ''
 
-  
-
 
 # --------------------------- #
 ##   评论系统                 ##
 # --------------------------- #
-
 utterance: 
 ## 仓库需要安装utterances https://github.com/apps/utterances
   enable: false
