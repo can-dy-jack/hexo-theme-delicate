@@ -49,6 +49,27 @@ theme: delicate
 top: true
 ```
 
+### 本主题内置tag
+
+1. note
+
+```ejs
+{% note [class] %}
+note-info
+{% endnote %}
+```
+
+2. color
+
+> 用于设定文字颜色
+> 文字颜色可以随便设置，颜色名称 | HEX | rgb() | rgba() | HSL() 等等均可。
+> 需要注意的是，前面的颜色值和后面的文字中间不能有空格！
+> 如果真的需要空格，那就使用两个及以上的color tag！
+
+```ejs
+{% color [color] 文字 %}
+```
+
 ### markdown
 
 [markdown样式](https://kartjim.top/delicate/2021/11/14/markdown%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/)
@@ -67,15 +88,17 @@ top: true
 
 ## 计划
 
+- [ ] 给个别 note tag 添加svg提示图标！
 - [ ] 将delicate主题提交到 hexo主题
 - [ ] 搜索功能
 - [ ] 多语言
 - [ ] 文章侧边标题导航栏
-- [ ] 更新展示图片
-- [ ] 标签页面 / 标签小组件
+- [ ] 展示图片?
 - [ ] README.md其它语言版本
-
+- [ ] 小组件
 - [ ] 更多背景样式
+- [ ] 更多canvas炫酷3D背景
+- [ ] [官方API](https://hexo.io/zh-cn/api/) - 更多定制内容
 
 ### bug
 
@@ -94,5 +117,6 @@ top: true
 - [x] 反馈功能
 - [x] 更多的社交账户选项
 - [x] Tag Plugins
+- [x] 标签页面
 - [x] 主题内置 note 提示块标签
-
+- [x] canvas炫酷3D背景 其1

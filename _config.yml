@@ -50,16 +50,17 @@ background:
   default: ''
   # canvas制作的动态3D背景
   canvas: 
-    # use rgb color,the value must be like '255,10,10'
-    color: '50,180,180'
+    enable: false
+    # use rgb color,the value must be like "50,50,250"
+    color: ''
     # z-index
     zIndex: '-5'
     opacity: '0.8'
     # canvas line count
     count: '500'
-    
+
   # three.js
-  # 如需要添加背景three.js，需要defaut: false
+  # 如需要添加背景three.js，需要关闭canvas背景
   ## 还没做好！
   threeJs: 
     enable: false

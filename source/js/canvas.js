@@ -41,7 +41,9 @@
         m(b)
     }
     var u = document.createElement("canvas"),
-    s = l(),e = u.getContext("2d"),r,n,
+    s = l(),e = u.getContext("2d"),
+    r,
+    n,
     m = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame ||
     function(i) {
         window.setTimeout(i, 1000 / 45)

@@ -95,6 +95,8 @@ blockquote.blue p{
 }
 .note-purple p{
     background-color: rgb(252, 232, 252);
-    color: purple;
+    color: hsl(300, 100%, 25%);
     border-color: purple;
 }
+
+
