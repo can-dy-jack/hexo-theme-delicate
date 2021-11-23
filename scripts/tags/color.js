@@ -1,5 +1,3 @@
-'use strict';
-
 const color = (args) => {
   const color = (args[0] || '').trim();
   const text = (args[1] || '').trim();

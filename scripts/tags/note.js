@@ -1,5 +1,3 @@
-'use strict';
-
 const note = (args, content)=>{
   if (!args || !args[0]) {
     args = ['default'];

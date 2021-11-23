@@ -51,24 +51,34 @@ blockquote.blue p{
 }
 
 /* note */
-.note p{
+.note>p{
     background-color: #dfdfdf;
     padding: 8px 12px;
     border-left: 5px solid #2d2d2d;
     border-radius: 5px;
     color: #111;
 }
-.note-info p{
+.note>ol{
+    background-color: #dfdfdf;
+    padding: 5px 10px 2px 30px;
+    border-left: 5px solid #2d2d2d;
+    border-radius: 5px;
+    color: #111;
+}
+/* .note ol,.note ul{
+    padding-inline-start: 20px;
+} */
+.note-info>p{
     background-color: #daeeee;
     color: teal;
     border-color: teal;
 }
-.note-primary p{
+.note-primary>p{
     background-color: #e1e1fa;
     color: blue;
     border-color: blue;
 }
-.note-success p{
+.note-success>p{
     background-color: #e0fae0;
     color: green;
     border-color: green;
@@ -78,7 +88,7 @@ blockquote.blue p{
     color: rgb(255, 180, 0);
     border-color: rgb(255, 180, 0);
 }
-.note-danger p{
+.note-danger>p{
     background-color: #ffdbdb;
     color: rgb(253, 13, 13);
     border-color: rgb(253, 13, 13);
