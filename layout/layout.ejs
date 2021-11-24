@@ -4,13 +4,10 @@
 <body>
     <%- partial('_partial/menu') %>
     <div class="container">
-        <%# partial('_partial/header') %>
         <div class="row">
-
             <div class="col-sm-8 blog-main">
                 <%- body %>
             </div>
-
             <div class="col-sm-4 col-sm-offset-1 blog-sidebar">
                 <%- partial('_partial/sidebar') %>
             </div>
@@ -26,8 +23,6 @@
     </div>
 <%- partial('_partial/floatbar') %>
 <%- partial('_partial/footer') %>
-
-
     <%- partial('_partial/after-footer') %>
 </body>
 </html>

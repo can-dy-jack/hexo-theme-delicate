@@ -29,5 +29,3 @@ pre.forEach(function(item){
 $('.code-span').tooltip();
 
 
-
-

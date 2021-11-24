@@ -11,6 +11,11 @@
     <!-- Bootstrap core CSS -->
     <%- css('bootstrap/css/bootstrap.min.css') %>
 
+    <%# fancybox %>
+    <% if(theme.fancybox.enable){ %>
+        <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    <% } %>
+
     <!-- Custom styles for this template -->
     <%- css('css/blog.css') %>
     <%- css('css/floatbar.css') %>

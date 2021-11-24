@@ -24,8 +24,32 @@
     <%- js({ src: 'js/canvas.js', color: a ,zIndex: b,opacity: c,count: d}) %>
 <% } %>
 
+<%# fancybox%>
+<% if(theme.fancybox.enable){ %>
+        <script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script>
+// fancybox
+/* 
+* 最笨的方法：用js给img套上a标签，得以使用fancybox。
+*/
+var imgs = document.querySelectorAll('.blog-post img');
+imgs.forEach(function (img){
+    var el = document.createElement('a');
+    el.className = 'fancybox-group';
+    el.setAttribute('data-fancybox','gallery');
+    el.href = img.getAttribute('src');
+    img.parentNode.replaceChild(el,img);
+    el.appendChild(img);
+})
+
+$(document).ready(function() {
+	/* This is basic - uses default settings */
+	$("a.fancybox-group").fancybox();
+});
+</script>
+<% } %>
+
+
 <%- js('js/floatbar.js') %>
 <%- js('js/archives.js') %>
 <%- js('js/index.js') %>
-
-

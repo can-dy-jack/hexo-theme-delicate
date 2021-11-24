@@ -109,6 +109,11 @@ style:
     headerBoxShadow: ''
 
 
+fancybox:
+  enable: true
+
+
+
 
 # --------------------------- #
 ##   评论系统                 ##

@@ -86,7 +86,7 @@ note-info
 
 <img src="https://i.loli.net/2021/11/23/AKlzU5R7wNdHSpo.jpg" width=300 alt="打赏"/>
 
-## 计划
+## 开发计划
 
 - [ ] 开放更多主题设置给用户
 - [ ] 添加bootstrap的alert样式 - new tag!
@@ -110,6 +110,10 @@ note-info
 - [ ] 更多canvas炫酷3D背景
 - [ ] 根据[hexo官方API](https://hexo.io/zh-cn/api/) - 更多定制内容
 
+### 待完善
+
+- [ ] [fancybox](https://fancyapps.com/docs/ui/fancybox/api)更多功能
+
 ### bug
 
 - 把评论放在每篇文章下
@@ -117,20 +121,3 @@ note-info
 - 一个note tag内只能有一个列表
 - 上、下文章太长会导致错位溢出
 - 侧边社交账户图标中文自动换行？
-
-### 已完成
-
-- [x] 使用bootstrap面包屑导航
-- [x] 评论系统
-- [x] 优化markdown基本语法样式
-- [x] 代码块样式与代码高亮
-- [x] 代码块复制按钮
-- [x] 标签页面和分类页面逻辑
-- [x] 测试文件
-- [x] 反馈功能
-- [x] 更多的社交账户选项
-- [x] Tag Plugins
-- [x] 标签页面
-- [x] 主题内置 note 提示块标签
-- [x] canvas炫酷3D背景 其1
-- [x] 开放更多主题设置给用户
