@@ -1,14 +1,18 @@
 /* 参考：https://codepen.io/stevenlei/pen/ZEJxXGL?editors=1100
 */
-body {
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;left: 0;right: 0;bottom: 0;
+    z-index: -20;
     /* 不用transparent，而用透明度为0 是因为transparent在safari上会有bug  */
     background-color: #e493d0;
     background-image:
-        radial-gradient(closest-side, rgba(10, 0, 86,1), rgba(10, 0, 86, 0)),
-        radial-gradient(closest-side, rgba(48, 26, 199,1), rgba(48, 26, 199, 0)),
-        radial-gradient(closest-side, rgba(0,128,128, 1), rgba(0,128,128, 0)),
-        radial-gradient(closest-side, rgba(169, 73, 198,1), rgba(169, 73, 198, 0)),
-        radial-gradient(closest-side, rgba(137, 137, 137,1), rgba(137, 137, 137, 0));
+        radial-gradient(closest-side, rgba(255, 105, 178, 1), rgba(235, 105, 78, 0)),
+        radial-gradient(closest-side, rgba(43, 211, 164, 1), rgba(243, 11, 164, 0)),
+        radial-gradient(closest-side, rgba(254, 234, 131, 1), rgba(254, 234, 131, 0)),
+        radial-gradient(closest-side, rgba(170, 142, 245, 1), rgba(170, 142, 245, 0)),
+        radial-gradient(closest-side, rgba(248, 192, 147, 1), rgba(248, 192, 147, 0));
     background-size:
         130vmax 130vmax,
         80vmax 80vmax,
@@ -22,7 +26,7 @@ body {
         -30vmax -10vmax,
         50vmax 50vmax;
     background-repeat: no-repeat;
-    animation: 10s movement linear infinite;
+    animation: 6s movement linear infinite;
 }
 
 @keyframes movement {
@@ -88,4 +92,17 @@ body {
             40vmax 60vmax;
     }
 }
-
+/* 毛玻璃 */
+.blog-header,.blog-post{
+    background-color: rgba(255,255,255,.6);
+}
+.blog-header,.blog-post,.sidebar-top,sidebar-about,footer,
+.sidebar-about .my-division .text,nav.navbar,.float-box>div{
+    backdrop-filter: blur(10px);
+}
+footer,nav.navbar,.float-box>div{
+    opacity: 0.7;
+}
+.sidebar-about,.container-fluid,.sidebar-top,.sidebar-about .my-division .text{
+    background-color: rgba(255,255,255,.6);
+}

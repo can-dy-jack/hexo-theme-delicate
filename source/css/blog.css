@@ -31,6 +31,7 @@ h6, .h6 {
 /* blog menu */
 nav.navbar {
     font-size: 1.2rem;
+    margin-bottom: 15px;
 }
 
 /* Active state gets a caret at the bottom */
@@ -218,6 +219,7 @@ nav.navbar {
  */
 .sidebar-top{
     margin-bottom: 30px;
+    z-index: 50;
 }
 .sidebar-top h3{
     text-align: center;
@@ -235,8 +237,6 @@ nav.navbar {
 .sidebar-about{
     position: sticky;
     top: 5px;left: 0;
-    box-shadow: 0 0 6px rgba(0,128,128,.2);
-    border: 1px solid #dff8f8;
     background-color: #fff;
     margin-bottom: 40px;
     padding: 5px 10px;

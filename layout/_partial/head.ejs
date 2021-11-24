@@ -21,14 +21,14 @@
 
     <!-- 默认背景 -->
     <% 
-        var headerColor = theme.background.color.header || '#fff',
-        headerBorderRadius = theme.background.color.headerBorderRadius || 0,
-        headerBoxShadow = theme.background.color.headerBoxShadow || 'none',
-        bodyColor = theme.background.color.body || '#fafafa',
-        postColor = theme.background.color.post || '#fff',
-        postBoxShadow = theme.background.color.postBoxShadow || 'none',
-        menuColor = theme.background.color.menu || '#fff',
-        menuBoxShadow = theme.background.color.menuBoxShadow || 'none';
+        var headerColor = theme.style.color.header || '#fff',
+        headerBorderRadius = theme.style.color.headerBorderRadius || 0,
+        headerBoxShadow = theme.style.color.headerBoxShadow || 'none',
+        bodyColor = theme.style.color.body || '#fafafa',
+        postColor = theme.style.color.post || '#fff',
+        postBoxShadow = theme.style.color.postBoxShadow || 'none',
+        menuColor = theme.style.color.menu || '#fff',
+        menuBoxShadow = theme.style.color.menuBoxShadow || 'none';
     %>
     <style>
         body {
@@ -42,7 +42,7 @@
         }
         .blog-header {
             background-color: <%= headerColor %>;
-            border-radius: 0 0 <%= headerBorderRadius %> <%= headerBorderRadius %>;
+            border-radius: <%= headerBorderRadius %>;
             box-shadow: <%= headerBoxShadow %>;
         }
         .blog-post {
@@ -51,22 +51,22 @@
         }
     </style>
     <!-- 背景 -->
-    <% if(theme.background.style == 'meditation') { %>
+    <% if(theme.backgroundStyle == 'meditation') { %>
         <%- css('css/meditation.css') %>
-    <% } else if(theme.background.style == 'point'){ %>
+    <% } else if(theme.backgroundStyle == 'point'){ %>
         <style>
             body {
                 background: radial-gradient(rgb(80, 153, 153,.3) 20%, #fff 40%) repeat;
                 background-size: 12px 12px;
             }
         </style>
-    <% } else if(theme.background.style == 'line'){ %>
+    <% } else if(theme.backgroundStyle == 'line'){ %>
         <style>
             body {
                 background-image: url('<%- config.root %>/img/line.png');
             }
         </style>
-    <% } else if(theme.background.style == 'line2'){ %>
+    <% } else if(theme.backgroundStyle == 'line2'){ %>
         <style>
             body {
                 background-image: url('<%- config.root %>/img/line2.png');

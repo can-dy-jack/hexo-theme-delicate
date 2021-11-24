@@ -45,34 +45,11 @@ siderbar:
 ##       background          ##
 # --------------------------- #
 background: 
-  color:
-    # body's background-color,default is #fafafa;
-    body: '#fafafa'
-
-    # menu's background-color,default is #fff;
-    menu: ''
-    # menu's box-shadow,default is none;
-    menuBoxShadow: '0 -2px 12px 2px rgba(0,0,0,.05)'
-
-    # post's background-color,default is #fff;
-    post: '#fff'
-    ## post's box-shadow
-    postBoxShadow: '2px 4px 18px rgba(30,30,30,.05)'
-
-    # header's background-color,default is #fff;
-    header: ''
-    # header's border-radius,default is 0px;
-    headerBorderRadius: ''
-    # header's box-shadow,default is none;
-    headerBoxShadow: ''
-
-  # available values: meditation | point | line | line2
-  style: 'point'
   # canvas制作的动态3D背景
   canvas: 
     enable: false
     # use rgb color,the value must be like "50,50,250"
-    color: ''
+    color: '128,64,64'
     # z-index
     zIndex: '-5'
     opacity: '0.8'
@@ -86,6 +63,10 @@ background:
     enable: false
     ## 3D模型
     type: 
+
+# available values: meditation | point | line | line2
+backgroundStyle: 'meditation'
+
 
 
 # --------------------------- #
@@ -105,6 +86,28 @@ style:
   ## more: https://v4.bootcss.com/docs/components/buttons/
   ## just like: 'btn btn-outline-success';
   button: ''
+  ## 各个组件的样式设置
+  color:
+    # body's background-color,default is #fafafa;
+    body: '#fafafa'
+
+    # menu's background-color,default is #fff;
+    menu: ''
+    # menu's box-shadow,default is none;
+    menuBoxShadow: '0 -2px 12px 2px rgba(0,0,0,.1)'
+
+    # post's background-color,default is #fff;
+    post: ''
+    ## post's box-shadow
+    postBoxShadow: '2px 4px 18px rgba(30,30,30,.05)'
+
+    # header's background-color,default is #fff;
+    header: ''
+    # header's border-radius,default is 0px;
+    headerBorderRadius: ''
+    # header's box-shadow,default is none;
+    headerBoxShadow: ''
+
 
 
 # --------------------------- #

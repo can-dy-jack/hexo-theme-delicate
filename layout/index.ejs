@@ -1,3 +1,4 @@
+<%- partial('_partial/header') %>
 <% page.posts.each(function(item){ %>
     <%- partial('_partial/article-excerpt', {item: item}) %>
 <% }); %>
