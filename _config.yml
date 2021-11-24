@@ -109,9 +109,13 @@ style:
     headerBoxShadow: ''
 
 
+
+# --------------------------- #
+##   plugins                 ##
+# --------------------------- #
+# 图片查看插件
 fancybox:
   enable: true
-
 
 
 
