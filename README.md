@@ -3,10 +3,10 @@
 > 依据bootstrap设计的一款hexo主题  
 > [Demo site](https://kartjim.top/delicate)
 
-windows:
-![Demo](https://z3.ax1x.com/2021/11/09/IYRVcd.jpg)
-phone:
-<img src="https://z3.ax1x.com/2021/11/09/IYRh4O.jpg" width=300/>
+windows:  
+![Demo](https://z3.ax1x.com/2021/11/24/oPyYtg.png)
+phone:  
+<img src="https://z3.ax1x.com/2021/11/24/oPyr7T.jpg" width=300/>
 
 
 <div align="center">
@@ -84,7 +84,7 @@ note-info
 
 ## 打赏
 
-![打赏](https://i.loli.net/2021/11/23/AKlzU5R7wNdHSpo.jpg)
+<img src="https://i.loli.net/2021/11/23/AKlzU5R7wNdHSpo.jpg" width=300 alt="打赏"/>
 
 ## 计划
 
