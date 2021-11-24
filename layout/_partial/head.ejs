@@ -20,22 +20,53 @@
     <%- css('css/plugins.css') %>
 
     <!-- 默认背景 -->
-    <% if(theme.background.default == 'meditation') { %>
+    <% 
+        var headerColor = theme.background.color.header || '#fff',
+        headerBorderRadius = theme.background.color.headerBorderRadius || 0,
+        headerBoxShadow = theme.background.color.headerBoxShadow || 'none',
+        bodyColor = theme.background.color.body || '#fafafa',
+        postColor = theme.background.color.post || '#fff',
+        postBoxShadow = theme.background.color.postBoxShadow || 'none',
+        menuColor = theme.background.color.menu || '#fff',
+        menuBoxShadow = theme.background.color.menuBoxShadow || 'none';
+    %>
+    <style>
+        body {
+            background-color: <%= bodyColor %>;
+        }
+        /* blog menu */
+        nav.navbar {
+            -webkit-box-shadow: <%= menuBoxShadow %>;
+            box-shadow: <%= menuBoxShadow %>;
+            background-color: <%= menuColor %>;
+        }
+        .blog-header {
+            background-color: <%= headerColor %>;
+            border-radius: 0 0 <%= headerBorderRadius %> <%= headerBorderRadius %>;
+            box-shadow: <%= headerBoxShadow %>;
+        }
+        .blog-post {
+            background-color: <%= postColor %>;
+            box-shadow: <%= postBoxShadow %>;
+        }
+    </style>
+    <!-- 背景 -->
+    <% if(theme.background.style == 'meditation') { %>
         <%- css('css/meditation.css') %>
-    <% } else if(theme.background.default == 'point'){ %>
+    <% } else if(theme.background.style == 'point'){ %>
         <style>
             body {
                 background: radial-gradient(rgb(80, 153, 153,.3) 20%, #fff 40%) repeat;
                 background-size: 12px 12px;
             }
         </style>
-    <% } else if(theme.background.default == 'line'){ %>
+    <% } else if(theme.background.style == 'line'){ %>
         <style>
             body {
                 background-image: url('<%- config.root %>/img/line.png');
             }
         </style>
-    <% } else if(theme.background.default == 'line2'){ %>
+    <% } else if(theme.background.style == 'line2'){ %>
         <style>
             body {
                 background-image: url('<%- config.root %>/img/line2.png');

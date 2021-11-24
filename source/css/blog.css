@@ -4,8 +4,7 @@ html{
 }
 
 body {
-    font-family: 'PTSans', 'JetBrains Mono',microsoft yahei,Georgia, "Times New Roman", Times, serif;
-    color: #555;
+    font-family: 'PTSans', 'JetBrains Mono',microsoft yahei, serif;
 }
 h1, .h1,
 h2, .h2,
@@ -19,7 +18,6 @@ h6, .h6 {
     color: #333;
 }
 
-
 /*
  * Override Bootstrap's default container.
  */
@@ -32,9 +30,7 @@ h6, .h6 {
 
 /* blog menu */
 nav.navbar {
-    font-family: JetBrains Mono,Helvetica,sans-serif;
-    -webkit-box-shadow: inset 0 -2px 6px rgba(0,0,0,.1);
-    box-shadow: inset 0 -2px 6px rgba(0,0,0,.1);
+    font-size: 1.2rem;
 }
 
 /* Active state gets a caret at the bottom */
@@ -58,12 +54,8 @@ nav.navbar {
 /* Blog name and description */
 .blog-header {
     padding: 20px;
-    background-color: #e3f2fd;
     margin-bottom: 20px;
-    border-radius: 0 0 10px 10px;
-    box-shadow: inset 0 -3px 12px rgba(190,90,90,.05),
-                inset 2px 0 10px rgba(90,190,90,.04),
-                inset -3px 0 12px rgba(90,90,190,.1);
+    z-index: 10;
 }
 .blog-title {
     margin-top: 30px;
@@ -120,8 +112,6 @@ nav.navbar {
 /* 主页文章列表 */
 .blog-post {
     margin-bottom: 60px;
-    background-color: #fff;
-    box-shadow: 2px 4px 18px rgba(30,30,30,.05);
     border-radius: 10px;
     padding: 15px 15px 5px 15px;
 }

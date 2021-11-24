@@ -45,9 +45,29 @@ siderbar:
 ##       background          ##
 # --------------------------- #
 background: 
+  color:
+    # body's background-color,default is #fafafa;
+    body: '#fafafa'
+
+    # menu's background-color,default is #fff;
+    menu: ''
+    # menu's box-shadow,default is none;
+    menuBoxShadow: '0 -2px 12px 2px rgba(0,0,0,.05)'
+
+    # post's background-color,default is #fff;
+    post: '#fff'
+    ## post's box-shadow
+    postBoxShadow: '2px 4px 18px rgba(30,30,30,.05)'
+
+    # header's background-color,default is #fff;
+    header: ''
+    # header's border-radius,default is 0px;
+    headerBorderRadius: ''
+    # header's box-shadow,default is none;
+    headerBoxShadow: ''
+
   # available values: meditation | point | line | line2
-  ## If you don't fill in or fill in other values, it will be the default white background.
-  default: ''
+  style: 'point'
   # canvas制作的动态3D背景
   canvas: 
     enable: false
