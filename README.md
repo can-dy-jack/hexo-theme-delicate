@@ -110,9 +110,16 @@ note-info
 - [ ] 更多canvas炫酷3D背景
 - [ ] 根据[hexo官方API](https://hexo.io/zh-cn/api/) - 更多定制内容
 
+### 功能
+
+- [ ] 统计文章字数
+- [ ] 文章阅读时间
+- [ ] 段落伍、柒。。。。
+
 ### 待完善
 
 - [ ] [fancybox](https://fancyapps.com/docs/ui/fancybox/api)更多功能
+- [ ] 博客主题优化
 
 ### bug
 
