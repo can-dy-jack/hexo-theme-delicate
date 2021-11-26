@@ -15,30 +15,29 @@ siderbar:
   tag: 
     - student
     - front-end developer
-    - hexo primary developer
-    - hexo-theme-delicate developer
+    - hexo-theme-delicate
   social: 
     # social account link
     ## if the value is none or '',it does not apear.
     github: https://github.com/can-dy-jack
-    twitter: https://twitter.com
+    twitter: 'http://localhost:4000/delicate/'
     codepen: ''
-    google: http://localhost:4000
+    google: ''
     facebook: ''
-    stackoverflow: 
-    linkedin: 
-    slack: http://localhost:4000
-    instagram: ''
+    stackoverflow: ''
+    linkedin: ''
+    slack: ''
+    instagram: 'http://localhost:4000/delicate/'
     gitlab: ''
     # for China
-    bilibili: https://space.bilibili.com
-    CSDN: 
-    贴吧: http://localhost:4000
-    知乎: 
-    微博: 
-    博客园: 
-    掘金: 
-    dingding: 
+    bilibili: 
+    CSDN: https://blog.csdn.net/qq_46590483?spm=1001.2100.3001.5343
+    贴吧: ''
+    知乎: ''
+    微博: ''
+    博客园: 'http://localhost:4000/delicate/'
+    掘金: ''
+    dingding: ''
 
 
 # --------------------------- #
@@ -107,6 +106,10 @@ style:
     headerBorderRadius: ''
     # header's box-shadow,default is none;
     headerBoxShadow: ''
+  siderbar: 
+    # sidebar social-icon color and hover-color
+    color: '#999'
+    hoverColor: '#008080'
 
 
 

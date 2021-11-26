@@ -33,7 +33,9 @@
         postColor = theme.style.color.post || '#fff',
         postBoxShadow = theme.style.color.postBoxShadow || 'none',
         menuColor = theme.style.color.menu || '#fff',
-        menuBoxShadow = theme.style.color.menuBoxShadow || 'none';
+        menuBoxShadow = theme.style.color.menuBoxShadow || 'none',
+        scolor = theme.style.siderbar.color || '#aaa',
+        hscolor = theme.style.siderbar.hoverColor || 'teal';
     %>
     <style>
         body {
@@ -53,6 +55,12 @@
         .blog-post {
             background-color: <%= postColor %>;
             box-shadow: <%= postBoxShadow %>;
+        }
+        .sidebar-about .my-social-account .icon-box a svg{
+            fill: <%= scolor %>;
+        }
+        .sidebar-about .my-social-account .icon-box a:hover svg{
+            fill: <%= hscolor %>;
         }
     </style>
     <!-- 背景 -->

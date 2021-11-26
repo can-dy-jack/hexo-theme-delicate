@@ -170,6 +170,7 @@ p>code {
 /* 表格 */
 table{
     border-collapse: collapse;
+    width: 100%;
 }
 table thead{
     background-color: #454545;

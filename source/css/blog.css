@@ -319,43 +319,6 @@ nav.navbar {
     text-decoration: none;
     
 }
-.sidebar-about .my-social-account .icon-box a svg{
-    fill: #aaa;
-}
-.sidebar-about .my-social-account .icon-box a:hover svg{
-    fill: teal;
-}
-.sidebar-about .my-social-account .icon-box a:hover + span{
-    opacity: 1;
-    z-index: 10;
-}
-.sidebar-about .my-social-account .icon-box span{
-    position: absolute;
-    display: block;
-    padding: 3px 8px;
-    background-color: #080808;
-    color: white;
-    top: 35px;
-    left: 0;
-    font-size: 12px;
-    border-radius: 4px;
-    text-align: center;
-    transform: translateX(-25%);
-    opacity: 0;
-    transition: opacity 0.2s ease-in;
-}
-.sidebar-about .my-social-account .icon-box span::before{
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 45%;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent #080808 transparent;
-}
-
-
-
 
 .tag-box h3{
     text-align: center;
