@@ -26,6 +26,42 @@ pre.forEach(function(item){
 
     item.appendChild(span);
 })
+
+/**
+ *  tooltip
+ * */
 $('.code-span').tooltip();
 // siderbar-icon
 $('.icon-box').tooltip();
+
+/**
+ * 鼠标点击文字效果
+ */
+var txt_idx = 0;
+jQuery(document).ready(function($){
+    $('body').click(function(e) {
+        var txt = new Array("HTML","css","JavaScript","Hexo","Bootsrtap");
+        var $span = $("<span/>").text(txt[txt_idx]);
+        txt_idx = (txt_idx + 1) % txt.length;
+        var xp = e.pageX,yp = e.pageY;
+        $span.css({
+            "z-index": 5,
+            "top": yp-20,
+            "left": xp,
+            "transform": 'translateX(-50%)',
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": "#008080"
+        });
+        $('body').append($span);
+        $span.animate({
+            "top": yp - 180,
+            "opacity": 0
+        },3000,
+        function(){
+            $span.remove();
+        });
+    });
+})
+
+

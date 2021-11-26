@@ -2,6 +2,17 @@
 del {
     color: rgb(255, 84, 84);
 }
+.btn{
+    margin: 5px;
+}
+/* 列表 */
+/* ol{
+    list-style-type: simp-chinese-formal;
+} */
+ol li::marker{
+    color: #999;
+}
+
 
 /* blockquote */
 blockquote p {
@@ -186,10 +197,10 @@ table td:not(.gutter):not(.code){
     border: 1px solid #ccc;
 }
 table tbody tr:nth-child(2n){
-    background-color: #f1f1f1;
+    background-color: #fff;
 }
 table tbody tr:nth-child(2n+1){
-    background-color: #fff;
+    background-color: #f2f2f2;
 }
 /* img */
 .blog-post p>img,.blog-post>img{
