@@ -1,4 +1,3 @@
-
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <%- js('bootstrap/js/bootstrap.min.js') %>
@@ -49,7 +48,17 @@ $(document).ready(function() {
 </script>
 <% } %>
 
-
 <%- js('js/floatbar.js') %>
 <%- js('js/archives.js') %>
 <%- js('js/index.js') %>
+
+<%# 添加鼠标点击出现文字效果%>
+<% if(theme.showText.enable){ %>
+    <% 
+        var txt = theme.showText.text,
+        ShowColor = theme.showText.color;
+    %>
+    <%- js({ src: 'js/show_text.js', text: txt, id: 'showText', color:ShowColor}) %>
+<% } else if(theme.showHeart.enable){ %>
+    <%- js({ src: 'js/show_heart.js'}) %>
+<% } %>

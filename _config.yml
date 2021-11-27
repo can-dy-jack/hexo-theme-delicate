@@ -119,8 +119,15 @@ style:
 # 图片查看插件
 fancybox:
   enable: true
-
-
+# 点击出现文字效果
+showText:
+  enable: false
+  text: ['css','HTMl','JavaScript','Hexo','ejs']
+  color: 'red'
+# 鼠标点击 出现心形，需要showText设置为false
+## 心是随机颜色。
+showHeart:
+  enable: true
 
 # --------------------------- #
 ##   评论系统                 ##
