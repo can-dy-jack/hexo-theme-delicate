@@ -51,6 +51,9 @@ $(document).ready(function() {
 <%- js('js/floatbar.js') %>
 <%- js('js/archives.js') %>
 <%- js('js/index.js') %>
+<script>
+    calculateTime("<%= theme.startTime %>");
+</script>
 
 <%# 添加鼠标点击出现文字效果%>
 <% if(theme.showText.enable){ %>

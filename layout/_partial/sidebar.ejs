@@ -11,6 +11,11 @@
 <%# tags %>
 <%# partial('widget/tags') %>
 
+<%# 诗词 %>
+<% if(theme.widget.poem){ %>
+    <%- partial('widget/poem') %>
+<% } %>
+
 <div class="sidebar-about">
     <div class="my-img">
         <div><img src="<%- config.root %>favicon/logo2-128.ico" alt="Fluid-img"></div>

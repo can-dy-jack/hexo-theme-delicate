@@ -8,10 +8,12 @@
     </h2>
     <!-- Date and Author -->
     <p class="blog-post-meta">
-        <%= item.date.format(config.date_format) %>
-        <% if(item.author) { %>
-            by <%- item.author %>
-        <% } %>
+        <span><%= item.date.format(config.date_format) %></span>
+        <span>
+            <% if(item.author) { %>
+                | <%- item.author %>
+            <% } %>
+        </span>
     </p>
     <!-- Content -->
     <%- item.excerpt || item.content %>

@@ -4,6 +4,11 @@ menu:
   Home: /
   Archives: /archives
 
+# footer - 建站起始时间
+## 格式：
+##- "2021-11-01T00:00:00"（默认本地时区）
+##- "01 Nov 2021 00:00:00 +0800"（东八区，偏离格林威治8个小时）
+startTime: "2021-11-01T00:00:00"
 
 # --------------------------- #
 ##  siderbar infomation      ##
@@ -48,12 +53,12 @@ background:
   canvas: 
     enable: false
     # use rgb color,the value must be like "50,50,250"
-    color: '128,64,64'
+    color: '128,64,224'
     # z-index
     zIndex: '-5'
-    opacity: '0.8'
+    opacity: '0.7'
     # canvas line count
-    count: '500'
+    count: '300'
 
   # three.js
   # 如需要添加背景three.js，需要关闭canvas背景
@@ -64,7 +69,7 @@ background:
     type: 
 
 # available values: meditation | point | line | line2
-backgroundStyle: 'meditation'
+backgroundStyle: ''
 
 
 
@@ -110,6 +115,15 @@ style:
     # sidebar social-icon color and hover-color
     color: '#999'
     hoverColor: '#008080'
+
+
+# --------------------------- #
+##   widget                 ##
+# --------------------------- #
+widget:
+  # 颜色和诗句随机生成
+  poem: true
+
 
 
 
