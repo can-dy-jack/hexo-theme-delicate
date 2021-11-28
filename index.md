@@ -53,7 +53,7 @@ top: true
 
 1. note
 
-```ejs
+```txt
 {% note [class] %}
 note-info
 {% endnote %}
@@ -66,7 +66,7 @@ note-info
 > 需要注意的是，前面的颜色值和后面的文字中间不能有空格！
 > 如果真的需要空格，那就使用两个及以上的color tag！
 
-```ejs
+```txt
 {% color [color] 文字 %}
 ```
 
