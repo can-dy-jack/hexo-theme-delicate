@@ -53,22 +53,12 @@ top: true
 
 1. note
 
-```txt
-{% note [class] %}
-note-info
-{% endnote %}
-```
-
 2. color
 
 > 用于设定文字颜色
 > 文字颜色可以随便设置，颜色名称 | HEX | rgb() | rgba() | HSL() 等等均可。
-> 需要注意的是，前面的颜色值和后面的文字中间不能有空格！
-> 如果真的需要空格，那就使用两个及以上的color tag！
+> 需要注意的是，前面的颜色值和后面的文字中间如果有空格，需要加上引号。
 
-```txt
-{% color [color] 文字 %}
-```
 
 ### markdown
 
