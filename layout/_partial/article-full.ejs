@@ -7,10 +7,14 @@
     </h2>
     <!-- Date and Author -->
     <p class="blog-post-meta">
-        <%= item.date.format(config.date_format) %>
-        <% if(item.author) { %>
-            by <%- item.author %>
-        <% } %>
+        <span><%= item.date.format(config.date_format) %></span>
+        <span>
+            <% if(item.author) { %>
+                | <%- item.author %>
+            <% } %>
+        </span>
+        <span class="post-count"><%= wordcount(item.content) %>字</span>
+        <span class="post-count"><%= min2read(item.content) %>分钟</span>
     </p>
     <!-- Content -->
     <%- item.content %>
@@ -23,13 +27,18 @@
     <div class="alert alert-danger" style="margin: 15px 5px;">本博客所有文章均采用 CC BY-SA 4.0 协议 ，转载请注明出处。</div>
 
     <div class="blog-post-change">
-        <% if (item.prev){ %>
-            <a class="blog-post-pre" href="<%- url_for(item.prev.path) %>">&#8612; <%- item.prev.title %></a>
-        <% } %>
-        
-        <% if (item.next){ %>
-            <a class="blog-post-next" href="<%- url_for(item.next.path) %>"><%= item.next.title %> &#8614;</span></a>
-        <% } %>
+        <div class="blog-post-pre">
+            <% if (item.prev){ %>
+                <span class="blog-post-pre-icon">&#60;</span>
+                <a href="<%- url_for(item.prev.path) %>"> <%- item.prev.title %></a>
+            <% } %>
+        </div>
+        <div class="blog-post-next">
+            <% if (item.next){ %>
+                <a href="<%- url_for(item.next.path) %>"> <%- item.next.title %></a>
+                <span class="blog-post-next-icon">&#62;</span>
+            <% } %>
+        </div>
     </div>
     <hr>
 </div>

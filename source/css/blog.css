@@ -123,7 +123,23 @@ nav.navbar {
 .blog-post-meta {
     margin-bottom: 20px;
     color: #999;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.blog-post-meta span{
+    margin-right: 5px;
+}
+.blog-post-meta .post-count{
+    padding: 0 8px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.blog-post-meta .post-count:hover{
+    background-color: #f2f3f4;
 }
 .blog-post img{
     max-width: 100% !important; /* 解决图片溢出 */
@@ -161,46 +177,38 @@ nav.navbar {
 }
 
 .blog-post-change{
-    min-height: 30px;
-    padding: 0 10px;
-    margin-bottom: 15px;
+    padding: 0 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .blog-post-change .blog-post-pre{
-    float: left;
-    color: #111;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    margin: 5px 0;
 }
-.blog-post-change .blog-post-pre:hover{
+.blog-post-change .blog-post-pre:hover a,
+.blog-post-change .blog-post-next:hover a{
     color: #007bff;
     text-decoration: none;
-    background-color: #eff4f8;
-    transform: translateX(-5px);
-}
-.blog-post-change .blog-post-pre:active{
-    color: #025ab8;
-    background-color: #dae8f3;
+    cursor: pointer;
 }
 .blog-post-change .blog-post-next{
-    float: right;
-    color: #111;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    margin: 5px 0;
 }
-.blog-post-change .blog-post-next:hover{
+.blog-post-change .blog-post-pre a
+,.blog-post-change .blog-post-next a{
+    color: #1d1d1d;
+    transition: all 0.2s ease;
+}
+.blog-post-pre-icon,.blog-post-next-icon{
+    font-size: 20px;
+    font-weight: 900;
+    color: #1d1d1d;
+    transition: all 0.2s ease;
+}
+.blog-post-next:hover .blog-post-next-icon,
+.blog-post-pre:hover .blog-post-pre-icon{
     color: #007bff;
-    text-decoration: none;
-    background-color: #eff4f8;
-    transform: translateX(5px);
 }
-.blog-post-change .blog-post-next:active{
-    color: #025ab8;
-    background-color: #dae8f3;
-}
-
-
 /* footer */
 
 .blog-footer {

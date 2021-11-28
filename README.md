@@ -108,11 +108,6 @@ note-info
 - [ ] 更多canvas炫酷3D背景
 - [ ] 根据[hexo官方API](https://hexo.io/zh-cn/api/) - 更多定制内容
 
-### 功能
-
-- [ ] 统计文章字数
-- [ ] 文章阅读时间
-
 ### 待完善
 
 - [ ] [fancybox](https://fancyapps.com/docs/ui/fancybox/api)更多功能
@@ -123,7 +118,10 @@ note-info
 - 把评论放在每篇文章下
 - 代码块复制按钮 位置
 - 一个note tag内只能有一个列表
-- 上、下文章太长会导致错位溢出
+
+### more
+
+- [ ] 多个鼠标样式
 
 ### 已解决
 
@@ -132,3 +130,5 @@ note-info
 - [x] 添加bootstrap的折叠内容 - collapase tag
 - [x] 添加鼠标点击效果 - 文字
 - [x] 添加鼠标点击效果 - 心
+- [x] 统计文章字数+文章阅读时间 - 使用hexo-wordcount
+- [x] 修复因上、下文章标题太长而导致的错位溢出
