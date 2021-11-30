@@ -80,6 +80,7 @@ note-info
 ## 参考项目
 
 - [stevenlei/CSS Dynamic Background](https://codepen.io/stevenlei/pen/ZEJxXGL?editors=1100)
+- [juejin-全面改造属于你的个性化博客](https://juejin.cn/post/6997775533840793614#heading-5)
 
 ## 打赏
 
@@ -87,16 +88,8 @@ note-info
 
 ## 开发计划
 
-- [ ] 添加404页面 —— 要是在域名根路径下才行
-- [ ] 看板娘
-- [ ] 添加音乐
-- [ ] 添加鼠标点击效果 - 文字、心形、烟花爆炸效果（用户可选项）
-- [ ] 雪花飘落
 - [ ] 给个别 note tag 添加svg提示图标！
 - [ ] 将delicate主题提交到 hexo主题 + 上传到npm！
-- [ ] 搜索功能
-- [ ] 多语言
-- [ ] 展示图片?
 - [ ] 添加更多评论系统
 - [ ] 更多小组件
 - [ ] 更多背景样式
@@ -108,6 +101,8 @@ note-info
 - [ ] [fancybox](https://fancyapps.com/docs/ui/fancybox/api)更多功能
 - [ ] 博客主题优化
 - [ ] 优化/更改 hexo-wordcount.js 算法
+- [ ] 优化 firework.js
+- [ ] 迁移博客里的图标
 
 ### bug
 
@@ -119,9 +114,18 @@ note-info
 
 - [ ] 多个鼠标样式
 - [ ] 文章侧边标题导航栏
+- [ ] 添加404页面 —— 要是在域名根路径下才行
+
+### 主攻
+
+- [ ] 雪花飘落效果
+- [ ] 优化 floatbar
+- [ ] 小组件 - 天气？音乐？
+- [ ] Bootstrap轮播图片
+- [ ] 整理背景样式
+- [ ] 搜索功能
+- [ ] 多语言
 
 ### 已解决
 
-- [x] 底部添加网站运营时间
-- [x] 小组件——今日诗词
-- [x] README.md其它语言版本
+- [x] 添加鼠标点击效果 - 文字、心形、烟花爆炸效果（用户可选项）

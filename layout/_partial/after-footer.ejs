@@ -55,13 +55,19 @@ $(document).ready(function() {
     calculateTime("<%= theme.startTime %>");
 </script>
 
-<%# 添加鼠标点击出现文字效果%>
-<% if(theme.showText.enable){ %>
+<%# 添加鼠标点击 效果%>
+<% if(theme.mouseClick.showText.enable){ %>
     <% 
-        var txt = theme.showText.text,
-        ShowColor = theme.showText.color;
+        var txt = theme.mouseClick.showText.text,
+        ShowColor = theme.mouseClick.showText.color;
     %>
     <%- js({ src: 'js/show_text.js', text: txt, id: 'showText', color:ShowColor}) %>
-<% } else if(theme.showHeart.enable){ %>
+<% } else if(theme.mouseClick.showHeart){ %>
     <%- js({ src: 'js/show_heart.js'}) %>
+<% } else if(theme.mouseClick.firework){ %>
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <%- js('js/firework.js') %>
 <% } %>
+
+
+
