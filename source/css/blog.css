@@ -367,3 +367,67 @@ nav.navbar {
     }
 }
 
+/* widget-weather */
+.widget-weather{
+    background: #fff;
+    background: radial-gradient(ellipse at top,#d49ce0,transparent),
+                radial-gradient(ellipse at right,#5ab3ee,transparent),
+                radial-gradient(farthest-corner at 10px 10px,#FF6B6B 0%,transparent 100%);
+    margin-bottom: 20px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    color: #fbffec;
+}
+.weather-today{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.weather-today .wtt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fbffec;
+}
+
+.weather-info{
+    height: 30px;
+    width: 100%;
+    background-color: rgba(255,255,255,.2);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    --textLength: 0;
+}
+.weather-info .weather-info-icon{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    text-align: right;
+}
+.weather-info .weather-info-icon svg{
+    margin-top: 3px;
+}
+.weather-info .weather-info-text{
+    height: 24px;line-height: 24px;
+    width: calc(100% - 50px);
+    white-space: nowrap;
+    margin: 3px 10px;
+    overflow: hidden;
+    position: relative;
+}
+.weather-info .weather-info-text span{
+    position: absolute;
+    left: 10px;
+    top: 0;
+    animation: weatherInfo 10s linear 1s infinite;
+}
+@keyframes weatherInfo {
+    0%{
+        left: 10px;
+    }
+    100%{
+        left: -270px;
+    }
+}

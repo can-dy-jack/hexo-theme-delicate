@@ -179,27 +179,27 @@ p>code {
 
 
 /* 表格 */
-table{
+.blog-post table{
     border-collapse: collapse;
     width: 100%;
 }
-table thead{
+.blog-post table thead{
     background-color: #454545;
     color: white;
 }
-table thead th{
+.blog-post table tr th{
     padding: 5px 10px;
     border: 1px solid #ccc;
     text-align: center;
 }
-table td:not(.gutter):not(.code){
+.blog-post table td:not(.gutter):not(.code){
     padding: 5px 10px;
     border: 1px solid #ccc;
 }
-table tbody tr:nth-child(2n){
+.blog-post table tbody tr:nth-child(2n){
     background-color: #fff;
 }
-table tbody tr:nth-child(2n+1){
+.blog-post table tbody tr:nth-child(2n+1){
     background-color: #f2f2f2;
 }
 /* img */

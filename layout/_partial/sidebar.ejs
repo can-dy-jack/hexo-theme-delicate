@@ -15,6 +15,11 @@
 <% if(theme.widget.poem){ %>
     <%- partial('widget/poem') %>
 <% } %>
+<%# 实时天气 %>
+<% if(theme.widget.weather.enable){ %>
+    <%- partial('widget/weather') %>
+<% } %>
+
 
 <div class="sidebar-about">
     <div class="my-img">
