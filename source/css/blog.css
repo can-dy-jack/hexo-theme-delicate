@@ -431,3 +431,36 @@ nav.navbar {
         left: -280px;
     }
 }
+
+/* widget-music */
+.widget-music{
+    margin-bottom: 30px;
+    padding: 15px 0;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    background: radial-gradient(ellipse at top,#d9aee2,transparent),
+                radial-gradient(ellipse at right,#96d5ff,transparent),
+                radial-gradient(farthest-corner at 10px 10px,#eea9a9 0%,transparent 100%);
+}
+.widget-music h4{
+    text-align: center;
+}
+.widget-music .control-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 20px;
+    background-color: rgba(255,255,255,.2);
+}
+.widget-music .control-info #qqMusic-info{
+    font-size: 20px;
+    color: rgb(11, 104, 91);
+}
+
+/* widget-carousel */
+.widget-carousel{
+    margin-bottom: 30px;
+    background-color: #fff;
+}

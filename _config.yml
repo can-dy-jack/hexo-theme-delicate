@@ -146,8 +146,35 @@ widget:
     openBroadcast: false
   music: 
     enable: true
-
-
+    # music可以通过插件hexo-tag-aplayer，加入到您的文章中。(https://github.com/MoePlayer/hexo-tag-aplayer)
+    netease:
+      enable: true 
+      songID: '1457707546'
+      songListID: ''
+    QQMusic: 
+      enable: true
+      # Ed Sheeran's Shivers: 0002kI4i1KS8eh | 童话: 004aupsp1RFXAN | Fire: 000iDpGB4NlS0D
+      songID: '003vHUPK1DKmFv'
+      songListID: ''
+  carousel:
+    # 图片尺寸尽量一致！
+    enable: true
+    img1: 'https://i.loli.net/2021/12/01/KOUbM67fjIShi5r.jpg'
+    img1Alt: 'img1'
+    img1Text: 
+      header: 'first slide'
+      content: 'content for the first slide.'
+    img2: 'https://i.loli.net/2021/12/01/A3fyD1zwqti4JPB.jpg'
+    img2Alt: 'img2'
+    img2Text: 
+      header: 'Second slide label'
+      content: 'content for the second slide.'
+    img3: 'https://i.loli.net/2021/12/01/X1pkv9ShmeDWZ25.jpg'
+    img3Alt: 'img3'
+    img3Text: 
+      header: 'Third slide label'
+      content: 'content for the third slide.'
+    
 
 # --------------------------- #
 ##   plugins                 ##
