@@ -425,9 +425,9 @@ nav.navbar {
 }
 @keyframes weatherInfo {
     0%{
-        left: 10px;
+        left: 50px;
     }
     100%{
-        left: -270px;
+        left: -280px;
     }
 }

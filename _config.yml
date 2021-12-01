@@ -136,13 +136,16 @@ mouseClick:
 # --------------------------- #
 widget:
   # 诗句 - 颜色和诗句随机生成
-  poem: true
-  # 显示实时天气和预报天气
+  poem: false
+  # 显示实时天气
   ## 仅限于 中国地区城市
   weather: 
-    enable: true
+    enable: false
     # 直接打城市名字即可
-    city: '浦东新区'
+    city: '上海'
+    openBroadcast: false
+  music: 
+    enable: true
 
 
 

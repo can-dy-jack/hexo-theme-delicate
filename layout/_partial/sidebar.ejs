@@ -8,9 +8,6 @@
 <% } %>
 
 <%# 小组件 %>
-<%# tags %>
-<%# partial('widget/tags') %>
-
 <%# 诗词 %>
 <% if(theme.widget.poem){ %>
     <%- partial('widget/poem') %>
@@ -19,7 +16,10 @@
 <% if(theme.widget.weather.enable){ %>
     <%- partial('widget/weather') %>
 <% } %>
-
+<%# music %>
+<% if(theme.widget.music.enable){ %>
+    <%- partial('widget/music') %>
+<% } %>
 
 <div class="sidebar-about">
     <div class="my-img">
