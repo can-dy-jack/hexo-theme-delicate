@@ -4,10 +4,6 @@
 > A hexo theme designed according to bootstrap.  
 > [Demo site](https://kartjim.top/delicate)
 
-Picture display：
-![windows.png](https://i.loli.net/2021/12/03/GA4w2UKWH5eTztq.png)
-<img src="https://i.loli.net/2021/12/03/PfuclAIjFxDqvwJ.jpg" width=300/>
-
 <div align="center">
 
 [Chinses](/README.md)| [Français](/README_fr.md)

@@ -3,11 +3,6 @@
 > 依据bootstrap设计的一款hexo主题  
 > [Demo site](https://kartjim.top/delicate)
 
-windows:  
-![windows.png](https://i.loli.net/2021/12/03/GA4w2UKWH5eTztq.png)
-phone:  
-<img src="https://i.loli.net/2021/12/03/PfuclAIjFxDqvwJ.jpg" width=300/>
-
 <div align="center">
 
 [English](/README-EN.md) | [Français](/README_fr.md)
