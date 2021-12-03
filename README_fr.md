@@ -23,13 +23,7 @@ Par défaut, vous avez créé un projet [hexo](https://hexo.io)
 
 ### Utilisation
 
-Copiez le Code de cet entrepôt dans votre projet `hexo`:
-
-```bash
-$ git clone https://github.com/can-dy-jack/hexo-theme-delicate themes/delicate
-```
-
-Ou vous pouvez télécharger le Code de cet entrepôt et le décompresser sous le dossier thème
+vous pouvez télécharger le Code de cet entrepôt et le décompresser sous le dossier thème
 Il suffit de modifier la configuration après `_config.yml`：
 
 ```yml

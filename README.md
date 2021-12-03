@@ -21,13 +21,7 @@
 
 ### 使用
 
-将本仓库的代码复制到您的hexo项目:
-
-```bash
-$ git clone https://github.com/can-dy-jack/hexo-theme-delicate themes/delicate
-```
-
-或者可以下载本仓库的代码，解压到theme文件夹之下。
+下载本仓库的代码，解压到theme文件夹之下，重命名文件夹为`delicate`。
 
 之后只需更改配置 `_config.yml`：
 
@@ -105,12 +99,15 @@ note-info
   - 侧边音乐仅支持一个歌曲？
   - 接入其它音乐
   - 歌词？
+- git clone本仓库后直接用的方法？
+  - 解决仓库太大问题
 
 ### bug
 
 - 把评论放在每篇文章下
 - 代码块复制按钮 位置
 - 一个note tag内只能有一个列表
+- 置顶文章为0时，置顶还在
 
 ### more
 

@@ -22,13 +22,7 @@ By default, you have created a [hexo](https://hexo.io) project
 
 ### use
 
-Copy the code to your hexo project:
-
-```bash
-$ git clone https://github.com/can-dy-jack/hexo-theme-delicate themes/delicate
-```
-
-or you can download the zip file and unzip it to the theme folder
+you can download the zip file and unzip it to the theme folder
 
 After that, just change `_config.yml`：
 
