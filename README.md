@@ -4,10 +4,9 @@
 > [Demo site](https://kartjim.top/delicate)
 
 windows:  
-![Demo](https://z3.ax1x.com/2021/11/24/oPyYtg.png)
+![windows.png](https://i.loli.net/2021/12/03/GA4w2UKWH5eTztq.png)
 phone:  
-<img src="https://z3.ax1x.com/2021/11/24/oPyr7T.jpg" width=300/>
-
+<img src="https://i.loli.net/2021/12/03/PfuclAIjFxDqvwJ.jpg" width=300/>
 
 <div align="center">
 
@@ -89,7 +88,7 @@ note-info
 ## 开发计划
 
 - [ ] 给个别 note tag 添加svg提示图标！
-- [ ] 将delicate主题提交到 hexo主题 + 上传到npm！
+- [ ] 多语言 - 国际化（i18n）
 - [ ] 添加更多评论系统
 - [ ] 更多背景样式 - 添加黑暗模式
 - [ ] 更多canvas炫酷3D背景
@@ -105,6 +104,12 @@ note-info
 - [ ] 优化雪花飘落效果 + 用户选项
 - [ ] 优化天气组件
 - [ ] 迁移博客里的图标
+- [ ] 小组件 - 音乐
+  - QQ音乐歌曲列表
+  - QQ音乐更多功能，[参考官网接口](https://y.qq.com/m/api/open/index.html)
+  - 侧边音乐仅支持一个歌曲？
+  - 接入其它音乐
+  - 歌词？
 
 ### bug
 
@@ -117,24 +122,5 @@ note-info
 - js重写雪花飘落特效
 - js重写firework.js
 - 文章侧边标题导航栏
-
-### 主攻
-
-- [ ] 小组件 - 音乐
-  - QQ音乐歌曲列表
-  - QQ音乐更多功能，[参考官网接口](https://y.qq.com/m/api/open/index.html)
-  - 侧边音乐仅支持一个歌曲？
-  - 接入其它音乐
-  - 歌词？
-- [ ] 搜索功能
-- [ ] 添加404页面 —— 要是在域名根路径下才行
-- [ ] 多语言!!!
-
-### 已解决
-
-- [x] 雪花飘落特效
-- [x] Bootstrap轮播图片
-- [x] 修复to_top的bug和返回顶部逻辑
-- [x] 去除floatbar，添加到footer
-- [x] 优化样式
-- [x] 整理背景样式
+- 搜索功能
+- 添加404页面 —— 要是在域名根路径下才行

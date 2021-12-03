@@ -63,7 +63,7 @@ background:
     enable: false
     size: 5
   line2:
-    enable: true
+    enable: false
     size: 10
   
 # 3D背景
@@ -154,7 +154,7 @@ widget:
     city: '上海'
     openBroadcast: true
   music: 
-    enable: false
+    enable: true
     # music可以通过插件hexo-tag-aplayer，加入到您的文章中。(https://github.com/MoePlayer/hexo-tag-aplayer)
     netease:
       enable: true 

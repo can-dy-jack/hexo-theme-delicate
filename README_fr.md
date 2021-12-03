@@ -6,9 +6,9 @@
 > [Demo site](https://kartjim.top/delicate)
 
 windows:  
-![Demo](https://z3.ax1x.com/2021/11/24/oPyYtg.png)
+![windows.png](https://i.loli.net/2021/12/03/GA4w2UKWH5eTztq.png)
 phone:  
-<img src="https://z3.ax1x.com/2021/11/24/oPyr7T.jpg" width=300/>
+<img src="https://i.loli.net/2021/12/03/PfuclAIjFxDqvwJ.jpg" width=300/>
 
 <div align="center">
 
