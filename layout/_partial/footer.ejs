@@ -2,5 +2,38 @@
 <footer class="blog-footer">
     <p><span id="times">载入时间...</span></p>
     <p>According to <a href="http://getbootstrap.com">Bootstrap v4.6.1</a> by <a href="https://github.com/can-dy-jack">@can-dy-jack</a>.</p>
+    
     <p><a href="https://hexo.io/">Hexo</a> &#9825; <a href="https://github.com/can-dy-jack/hexo-theme-delicate">Delicate</a></p>
+    <p>
+        Copyright &#9400; 2021 can-dy-jack. All rights reserved. |  
+        <span id="feedback" data-toggle="tooltip" data-placement="top" title="feedback">
+            <a href="#" aria-hidden="true" data-toggle="modal" data-target="#staticBackdrop">feedback</a>
+        </span>
+    </p>
 </footer>
+
+
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">吐槽 / 建议</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <script src="https://utteranc.es/client.js"
+                repo="can-dy-jack/hexo-theme-delicate"
+                issue-term="反馈"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>

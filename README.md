@@ -91,7 +91,7 @@ note-info
 - [ ] 给个别 note tag 添加svg提示图标！
 - [ ] 将delicate主题提交到 hexo主题 + 上传到npm！
 - [ ] 添加更多评论系统
-- [ ] 更多背景样式
+- [ ] 更多背景样式 - 添加黑暗模式
 - [ ] 更多canvas炫酷3D背景
 - [ ] 多个鼠标样式
 - [ ] 更多小组件
@@ -100,7 +100,6 @@ note-info
 ### 待完善
 
 - [ ] [fancybox](https://fancyapps.com/docs/ui/fancybox/api)更多功能
-- [ ] 博客主题优化
 - [ ] 优化/更改 hexo-wordcount.js 算法
 - [ ] 优化 firework.js
 - [ ] 优化雪花飘落效果 + 用户选项
@@ -121,19 +120,21 @@ note-info
 
 ### 主攻
 
-- [ ] 优化 floatbar
 - [ ] 小组件 - 音乐
   - QQ音乐歌曲列表
   - QQ音乐更多功能，[参考官网接口](https://y.qq.com/m/api/open/index.html)
   - 侧边音乐仅支持一个歌曲？
   - 接入其它音乐
   - 歌词？
-- [ ] Bootstrap轮播图片
-- [ ] 整理背景样式
 - [ ] 搜索功能
 - [ ] 添加404页面 —— 要是在域名根路径下才行
 - [ ] 多语言!!!
 
 ### 已解决
 
-- [ ] 雪花飘落特效
+- [x] 雪花飘落特效
+- [x] Bootstrap轮播图片
+- [x] 修复to_top的bug和返回顶部逻辑
+- [x] 去除floatbar，添加到footer
+- [x] 优化样式
+- [x] 整理背景样式

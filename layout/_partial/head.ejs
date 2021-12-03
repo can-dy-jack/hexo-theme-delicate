@@ -19,7 +19,6 @@
     <% } %>
 
     <!-- Custom styles for this template -->
-    <%- css('css/floatbar.css') %>
     <%- css('css/archive.css') %>
     <%- css('css/comments.css') %>
     <%- css('css/markdown.css') %>
@@ -65,26 +64,32 @@
         }
     </style>
     <!-- 背景 -->
-    <% if(theme.backgroundStyle == 'meditation') { %>
+    <% if(theme.background.meditation.enable) { %>
         <%- css('css/meditation.css') %>
-    <% } else if(theme.backgroundStyle == 'point'){ %>
+    <% } else if(theme.background.point.enable){ %>
+    <% var pointColor = theme.background.point.color,
+        pointSize = theme.background.point.size + 8;
+     %>
         <style>
             body {
-                background: radial-gradient(rgb(80, 153, 153,.3) 20%, #fff 40%) repeat;
-                background-size: 12px 12px;
+                background: radial-gradient(<%= pointColor %> 20%, #fff 40%) repeat;
+                background-size: <%= pointSize %>px <%= pointSize %>px;
             }
         </style>
-    <% } else if(theme.backgroundStyle == 'line'){ %>
+    <% } else if(theme.background.line.enable){ %>
+    <% var lineSize = theme.background.line.size + 30;%>
         <style>
             body {
                 background-image: url('<%- config.root %>/img/line.png');
+                background-size: <%= lineSize %>px <%= lineSize %>px;
             }
         </style>
-    <% } else if(theme.backgroundStyle == 'line2'){ %>
+    <% } else if(theme.background.line2.enable){ %>
+    <% var line2Size = theme.background.line2.size + 20;%>
         <style>
             body {
                 background-image: url('<%- config.root %>/img/line2.png');
-                background-size: 25px;
+                background-size: <%= line2Size %>px <%= line2Size %>px;
             }
         </style>
     <% } %>

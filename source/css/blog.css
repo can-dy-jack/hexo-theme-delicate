@@ -76,7 +76,7 @@ nav.navbar {
 }
 
 /* .sidebar-to-top */
-.sidebar-to-top{
+#sidebar-to-top{
     position: fixed;
     bottom: 15px;
     right: 20px;
@@ -85,25 +85,16 @@ nav.navbar {
     width: 48px;height: 48px;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(10,30,100,.2);
-
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: all 0.3s ease;
 }
-.sidebar-to-top a{
+#sidebar-to-top a{
     text-decoration: none;
     font-size: 30px;
 }
-@keyframes toTopMove {
-    0%{
-        transform: translateY(0);
-    }
-    100%{
-        transform: translateY(50px);
-    }
-}
+
 
 /* Pagination */
 .pagination{
@@ -112,7 +103,7 @@ nav.navbar {
 
 /* 主页文章列表 */
 .blog-post {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     border-radius: 10px;
     padding: 15px 15px 5px 15px;
 }
@@ -366,7 +357,6 @@ nav.navbar {
         opacity: 0;
     }
 }
-
 /* widget-weather */
 .widget-weather{
     background: #fff;

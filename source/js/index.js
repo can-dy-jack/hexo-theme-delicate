@@ -31,10 +31,13 @@ pre.forEach(function (item) {
 
 /**
  *  tooltip
+ * 提示框 - bootstrap + popper
  * */
+$('#feedback').tooltip();
 $('.code-span').tooltip();
 // siderbar-icon
 $('.icon-box').tooltip();
+
 
 /**
  * 网站运行时间计算 - 函数

@@ -9,11 +9,7 @@
 <%# 图标 %>
 <script src="https://at.alicdn.com/t/font_2918710_jucubmd07u.js"></script>
 
-<%# 添加three.js %>
-<% if(theme.background.threeJs.enable == true){ %>
-    <script src="https://cdn.bootcdn.net/ajax/libs/three.js/r128/three.min.js"></script>
-    <%- js('js/three-map.js') %>
-<% } else if(theme.background.canvas.enable){ %>
+<% if(theme.canvas.enable){ %>
     <% 
         var a = theme.background.canvas.color,
         b = theme.background.canvas.zIndex,
@@ -48,7 +44,6 @@ $(document).ready(function() {
 </script>
 <% } %>
 
-<%- js('js/floatbar.js') %>
 <%- js('js/archives.js') %>
 <%- js('js/index.js') %>
 <script>
