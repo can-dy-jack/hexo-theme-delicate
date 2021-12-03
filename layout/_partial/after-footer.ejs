@@ -70,4 +70,7 @@ $(document).ready(function() {
 <% } %>
 
 
-
+<%# 添加 雪花飘落效果 %>
+<% if(theme.snowFlake.enable){ %>
+    <%- js({src: 'js/snowflake.js'}) %>
+<% } %>
