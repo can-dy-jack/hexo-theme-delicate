@@ -1,13 +1,12 @@
-<% if(theme.style.top){ %>
-<div class="<%- theme.style.top %> shadow-sm sidebar-top">
+<%# 小组件 %>
+<% if(theme.widget.top.enable){ %>
+<div class="<%- theme.widget.top.topStyle %> shadow-sm sidebar-top">
     <h3>置顶文章</h3>
     <% site.posts.each(function(item){ %>
         <%- partial('_partial/article-sidebar', {item: item}) %>
     <% }); %>
 </div>
 <% } %>
-
-<%# 小组件 %>
 <%# 诗词 %>
 <% if(theme.widget.poem){ %>
     <%- partial('widget/poem') %>

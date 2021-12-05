@@ -6,7 +6,7 @@
 
 <div align="center">
 
-[Chinses](/README.md)| [Français](/README_fr.md)
+[Chinses](/README.md)
 
 </div>
 
@@ -20,11 +20,29 @@
 
 By default, you have created a [hexo](https://hexo.io) project
 
-### use
+### Quick Start
 
-you can download the zip file and unzip it to the theme folder
+### Install
 
-After that, just change `_config.yml`：
+#### npm or yarn
+
+```bash
+yarn add hexo-theme-delicate
+```
+
+```bash
+npm install --save hexo-theme-fluid
+```
+
+Then create it in the blog directory  `_config.fluid.yml`, Copy the the theme `_config.yml` content to it。
+
+#### release
+
+Download the code of this repo，unzip to `theme` folder，and rename to `delicate`。
+
+### Use
+
+change  `_config.yml`：
 
 ```yml
 theme: delicate
@@ -33,6 +51,8 @@ theme: delicate
 ### this theme custom front-matter
 
 1. Top posts
+
+need posts' Front-matter add: `top: true`。
 
 ```yml
 top: true

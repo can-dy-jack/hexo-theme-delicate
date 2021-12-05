@@ -134,6 +134,7 @@ nav.navbar {
 }
 .blog-post img{
     max-width: 100% !important; /* 解决图片溢出 */
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
 }
 /* 文章下的标签 和 分类*/
 .blog-tag-and-cate{

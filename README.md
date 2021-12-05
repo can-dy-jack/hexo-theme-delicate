@@ -5,7 +5,7 @@
 
 <div align="center">
 
-[English](/README-EN.md) | [Français](/README_fr.md)
+[English](/README-EN.md)
 
 </div>
 
@@ -19,9 +19,25 @@
 
 使用主题默认您已创建过[hexo](https://hexo.io)项目
 
-### 使用
+### 下载
+
+#### npm or yarn
+
+```bash
+yarn add hexo-theme-delicate
+```
+
+```bash
+npm install --save hexo-theme-fluid
+```
+
+然后在博客目录下创建 `_config.fluid.yml`，将主题的 _config.yml 内容复制进去。
+
+#### release
 
 下载本仓库的代码，解压到theme文件夹之下，重命名文件夹为`delicate`。
+
+### 使用
 
 之后只需更改配置 `_config.yml`：
 
@@ -32,6 +48,8 @@ theme: delicate
 ### 本主题自定义 front-matter
 
 1. 置顶文章
+
+在文章的Front-matter添加: `top: true`即可置顶文章
 
 ```yml
 top: true
@@ -76,9 +94,14 @@ note-info
 
 ## 开发计划
 
-- [ ] 给个别 note tag 添加svg提示图标！
+- [ ] 标签页面
+- [ ] 搜索功能
+- [ ] 添加404页面 —— 要是在域名根路径下才行
+- [ ] 给个别 note tag 添加svg提示图标
 - [ ] 多语言 - 国际化（i18n）
+- [ ] 文章分享功能
 - [ ] 添加更多评论系统
+- [ ] 文章标题导航栏？
 - [ ] 更多背景样式 - 添加黑暗模式
 - [ ] 更多canvas炫酷3D背景
 - [ ] 多个鼠标样式
@@ -88,7 +111,7 @@ note-info
 ### 待完善
 
 - [ ] [fancybox](https://fancyapps.com/docs/ui/fancybox/api)更多功能
-- [ ] 优化/更改 hexo-wordcount.js 算法
+- [ ] 优化/更改 wordcount.js 算法
 - [ ] 优化 firework.js
 - [ ] 优化雪花飘落效果 + 用户选项
 - [ ] 优化天气组件
@@ -99,20 +122,8 @@ note-info
   - 侧边音乐仅支持一个歌曲？
   - 接入其它音乐
   - 歌词？
-- git clone本仓库后直接用的方法？
-  - 解决仓库太大问题
-
-### bug
-
 - 把评论放在每篇文章下
-- 代码块复制按钮 位置
-- 一个note tag内只能有一个列表
-- 置顶文章为0时，置顶还在
 
-### more
+### 更新
 
-- js重写雪花飘落特效
-- js重写firework.js
-- 文章侧边标题导航栏
-- 搜索功能
-- 添加404页面 —— 要是在域名根路径下才行
+- [x] 给文章内的图片加上一定的阴影

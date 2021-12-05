@@ -84,11 +84,6 @@ canvas:
 # Read More text 
 excerpt_link: 'Read More'
 style: 
-  # 置顶文章的样式
-  ## 基于bootstrap，可选项即为bootstrap的alert样式;默认：'alert alert-light'
-  ### more：https://v4.bootcss.com/docs/components/alerts/
-  ## use,just like: 'alert alert-primary'
-  top: 'alert alert-info'
   # '阅读更多' 的按钮样式
   ## 基于bootstrap，可选项即为bootstrap的按钮样式
   ## btn-primary | btn-secondary | btn-secondary | btn-outline-success  and so on.
@@ -144,6 +139,12 @@ snowFlake:
 ##   widget                 ##
 # --------------------------- #
 widget:
+  # 置顶文章
+  # need posts' Front-matter add: `top: true`
+  ## 基于bootstrap，可选项即为bootstrap的alert样式; more：https://v4.bootcss.com/docs/components/alerts/
+  top:
+    enable: true
+    topStyle: 'alert alert-light'
   # 诗句 - 颜色和诗句随机生成
   poem: true
   # 显示实时天气
