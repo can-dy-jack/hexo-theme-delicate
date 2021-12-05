@@ -23,6 +23,8 @@
 
 #### npm or yarn
 
+！暂时还没发布到npm！
+
 ```bash
 yarn add hexo-theme-delicate
 ```
@@ -127,3 +129,4 @@ note-info
 ### 更新
 
 - [x] 给文章内的图片加上一定的阴影
+xymN7-Kj58
