@@ -158,13 +158,10 @@ nav.navbar {
 }
 .blog-tags-container .blog-text,
 .blog-categories-container .blog-text{
-    margin-right: 0;
+    margin-right: 5px;
     font-size: 16px;
     padding: 5px 10px;
     border-radius: 5px;
-}
-.blog-tags-container .blog-text:hover,
-.blog-categories-container .blog-text:hover{
     background-color: #f2f4f6;
 }
 

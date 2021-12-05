@@ -143,3 +143,8 @@ blockquote.blue p{
     color: hsl(300, 100%, 25%);
     border-color: purple;
 }
+
+/* alert */
+.alert p{
+    margin-bottom: 0;
+}

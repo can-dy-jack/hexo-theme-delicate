@@ -21,13 +21,8 @@
 
 ### 下载
 
-#### npm or yarn
-
+1. npm
 ！暂时还没发布到npm！
-
-```bash
-yarn add hexo-theme-delicate
-```
 
 ```bash
 npm install --save hexo-theme-fluid
@@ -35,9 +30,7 @@ npm install --save hexo-theme-fluid
 
 然后在博客目录下创建 `_config.fluid.yml`，将主题的 _config.yml 内容复制进去。
 
-#### release
-
-下载本仓库的代码，解压到theme文件夹之下，重命名文件夹为`delicate`。
+2. 或者你可以**下载本仓库的代码，解压到theme文件夹之下，重命名文件夹为`delicate`。**
 
 ### 使用
 

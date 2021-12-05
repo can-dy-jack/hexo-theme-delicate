@@ -31,7 +31,7 @@ const weatherTodayType = document.getElementById('weather-today-type');
 const weatherTodayWind = document.getElementById('weather-today-wind');
 
 var ajaxWeather = new XMLHttpRequest();
-ajaxWeather.open('get',"http://wthrcdn.etouch.cn/weather_mini?city=" + city);
+ajaxWeather.open('get',"http://wthrcdn.etouch.cn/weather_mini?city=" + city,true);
 ajaxWeather.send();
 ajaxWeather.onreadystatechange = function(){
     if(ajaxWeather.readyState == 4 && ajaxWeather.status == 200){
