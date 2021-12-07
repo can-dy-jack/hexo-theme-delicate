@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg navbar-light">
   <a class="navbar-brand" href="<%- config.root %>">
     <img src="<%- config.root %>favicon/logo2-128.ico" width="30" height="30" alt="logo">
@@ -10,12 +9,33 @@
   
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <% for(item in theme.menu){ %>
       <li class="nav-item">
-        <a class="nav-link" href="<%- config.root %>">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<%- config.root %><%= theme.menu[item] %>"><%= item %></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<%- config.root %>archives/">Archives</a>
+      <% } %>
+      <% if(theme.friend.enable){ %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+          Friend
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <% for(item in theme.friend){ %>
+            <% if(item != 'enable' && item != 'divider'){ %>
+            <a class="dropdown-item" href="<%= theme.friend[item] %>"><%= item %></a>
+            <% } else if(item == 'divider'){ %>
+            <div class="dropdown-divider"></div>
+            <% } %>
+          <% } %>
+        </div>
       </li>
+      <% } %>
     </ul>
+    <% if(theme.search.enable){ %>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    <% } %>
   </div>
 </nav>

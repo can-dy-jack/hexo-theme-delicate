@@ -66,3 +66,11 @@ function calculateTime(startTime) {
     document.getElementById("times").innerHTML =
         "本站已运行 " + dnum + " 天 " + hnum + " 小时 " + mnum + " 分，共" + Math.floor(interval/1000/60/60)+ "小时";
 }
+
+
+// fetch API test codes
+// fetch('https://api.github.com/users/can-dy-jack')
+//   .then(response => response.json())
+//   .then(json => console.log(json))
+//   .catch(error => console.log('Request Failed', error));
+

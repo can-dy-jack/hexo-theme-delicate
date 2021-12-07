@@ -1,8 +1,21 @@
 # header
 title: delicate
 menu:
-  Home: /
-  Archives: /archives
+  主页: /
+  存档: /archives
+  关于: /about
+# 友链，下面的属性和它的可以随便设置，`divider: true`是分隔符
+friend: 
+  enable: true
+  Hexo: 'https://hexo.io/'
+  divider: true
+  GitHub: 'https://github.com/'
+  GitLab: 'https://gitlab.com/'
+# 搜索控件
+## ！搜索功能还没做好！
+search: 
+  enable: false
+
 
 # footer - 建站起始时间
 ## 格式：
