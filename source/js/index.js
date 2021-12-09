@@ -21,9 +21,9 @@ pre.forEach(function (item) {
     span.addEventListener('click', () => {
         navigator.clipboard
             .writeText(item.innerText)
-            .then(() => {
-                console.log('copy success!');
-            })
+            // .then(() => {
+                // console.log('copy success!');
+            // })
     })
 
     item.appendChild(span);

@@ -95,6 +95,7 @@ note-info
 - [ ] 给个别 note tag 添加svg提示图标
 - [ ] 多语言 - 国际化（i18n）
 - [ ] 文章分享功能
+- [ ] 永久连接问题
 - [ ] 添加更多评论系统
 - [ ] 文章标题导航栏？
 - [ ] 更多背景样式 - 添加黑暗模式
@@ -103,7 +104,7 @@ note-info
 - [ ] 更多小组件
 - [ ] 根据[hexo官方API](https://hexo.io/zh-cn/api/) - 更多定制内容
 
-### 待完善
+### 优化
 
 - [ ] [fancybox](https://fancyapps.com/docs/ui/fancybox/api)更多功能
 - [ ] 优化/更改 wordcount.js 算法

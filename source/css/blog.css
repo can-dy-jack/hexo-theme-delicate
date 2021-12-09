@@ -33,6 +33,29 @@ nav.navbar {
     font-size: 1.2rem;
     margin-bottom: 15px;
 }
+nav.navbar .nav-item .nav-link{
+    padding: 5px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+nav.navbar .nav-item .nav-link:hover{
+    background-color: #efefef;
+}
+nav.navbar .nav-item .nav-link:hover::after{
+    animation: menuAfter 1s ease infinite;
+}
+@keyframes menuAfter {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
 
 /* Active state gets a caret at the bottom */
 .blog-nav .active {

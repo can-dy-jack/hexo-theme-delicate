@@ -1,7 +1,7 @@
 # header
 title: delicate
 menu:
-  主页: /
+  主页: 
   存档: /archives
   关于: /about
 # 友链，下面的属性和它的可以随便设置，`divider: true`是分隔符
@@ -168,7 +168,7 @@ widget:
     city: '上海'
     openBroadcast: true
   music: 
-    enable: true
+    enable: false
     # music可以通过插件hexo-tag-aplayer，加入到您的文章中。(https://github.com/MoePlayer/hexo-tag-aplayer)
     netease:
       enable: true 

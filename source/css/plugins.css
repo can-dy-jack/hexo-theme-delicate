@@ -148,3 +148,41 @@ blockquote.blue p{
 .alert p{
     margin-bottom: 0;
 }
+
+/* description */
+.description{
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 8px 2px;
+}
+.description .description-title{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.description.dark{
+    border: 1px solid #dfdfdf;
+    border-left: 6px solid rgb(31, 2, 2);
+}
+.description.info{
+    border: 1px solid #b6d4ff;
+    border-left: 6px solid #4191ff;
+}
+.description.info .description-title{
+    color: #4191ff;
+}
+.description.success{
+    border: 1px solid #c5ffb6;
+    border-left: 6px solid #2ac02a;
+}
+.description.success .description-title{
+    color: #2ac02a;
+}
+.description.danger{
+    border: 1px solid #ffcbb6;
+    border-left: 6px solid rgb(248, 70, 0);
+}
+.description.danger .description-title{
+    color: rgb(248, 70, 0);
+}
