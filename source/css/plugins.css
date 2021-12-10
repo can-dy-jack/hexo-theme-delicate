@@ -64,24 +64,24 @@ blockquote.blue p{
     color: #111;
 }
 .note-info>p{
-    background-color: #daeeee;
-    color: teal;
-    border-color: teal;
+    background-color: #fffbf0;
+    color: #ae7000;
+    border-color: #ae7000;
 }
 .note-info>ol,.note-info>ul{
-    background-color: #daeeee;
-    color: teal;
-    border-color: teal;
+    background-color: #fffbf0;
+    color: #ae7000;
+    border-color: #ae7000;
 }
 .note-primary>p{
-    background-color: #e1e1fa;
-    color: blue;
-    border-color: blue;
+    background-color: #e6eff8;
+    color: #007bff;
+    border-color: #007bff;
 }
 .note-primary>ol,.note-primary>ul{
-    background-color: #e1e1fa;
-    color: blue;
-    border-color: blue;
+    background-color: #e6eff8;
+    color: #007bff;
+    border-color: #007bff;
 }
 .note-success>p{
     background-color: #e0fae0;
@@ -154,6 +154,7 @@ blockquote.blue p{
     padding: 10px 15px;
     border-radius: 5px;
     margin: 8px 2px;
+    color: #2d2d2d;
 }
 .description .description-title{
     display: block;
@@ -167,20 +168,20 @@ blockquote.blue p{
 }
 .description.info{
     border: 1px solid #b6d4ff;
-    border-left: 6px solid #4191ff;
+    border-left: 6px solid #7eb1f8;
 }
 .description.info .description-title{
     color: #4191ff;
 }
 .description.success{
-    border: 1px solid #c5ffb6;
+    border: 1px solid #cefdc2;
     border-left: 6px solid #2ac02a;
 }
 .description.success .description-title{
     color: #2ac02a;
 }
 .description.danger{
-    border: 1px solid #ffcbb6;
+    border: 1px solid #f8d0c1;
     border-left: 6px solid rgb(248, 70, 0);
 }
 .description.danger .description-title{
