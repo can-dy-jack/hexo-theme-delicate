@@ -56,6 +56,39 @@ nav.navbar .nav-item .nav-link:hover::after{
         transform: translateY(0);
     }
 }
+/* toc */
+#toc{
+    height: 24px;width: 24px;
+}
+#toc svg{
+    width: 24px;height: 24px;
+    cursor: pointer;
+    fill: #ddd;
+    transition: fill 0.2s linear;
+}
+#toc svg:hover{
+    fill: #333;
+}
+.toast{
+    position: sticky;
+    top: 10px;float: right;
+    /* position: fixed;
+    right: 50px;top: 100px; */
+    z-index: 800;
+}
+.toast .toast-header{
+    cursor: move;
+}
+.toast .toast-color{
+    width:20px;height:20px;
+    background-color: #007aff;
+    border-radius:4px;
+    margin-right: 10px;
+}
+.toast .toast-body ol{
+    margin: 0 10px;padding-left: 15px;
+    list-style: none;
+}
 
 /* Active state gets a caret at the bottom */
 .blog-nav .active {

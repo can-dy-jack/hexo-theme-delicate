@@ -1,5 +1,5 @@
 /**
- * 为代码块 添加复制按钮
+ * 为代码块复制按钮
  */
 const pre = document.querySelectorAll('figure td.code');
 
@@ -66,11 +66,11 @@ function calculateTime(startTime) {
     document.getElementById("times").innerHTML =
         "本站已运行 " + dnum + " 天 " + hnum + " 小时 " + mnum + " 分，共" + Math.floor(interval/1000/60/60)+ "小时";
 }
-
-
-// fetch API test codes
-// fetch('https://api.github.com/users/can-dy-jack')
-//   .then(response => response.json())
-//   .then(json => console.log(json))
-//   .catch(error => console.log('Request Failed', error));
+/**
+ * TOC
+ */
+$('.toast').toast('show'); // 默认出现
+$('#toc').click(function(){
+    $('.toast').toast('show');
+})
 
