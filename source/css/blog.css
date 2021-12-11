@@ -384,6 +384,9 @@ nav.navbar .nav-item .nav-link:hover::after{
     text-align: center;
     margin: 15px 0;
 }
+.tag-box a{
+    margin: 2px 5px;
+}
 
 .heart{
     width: 16px;

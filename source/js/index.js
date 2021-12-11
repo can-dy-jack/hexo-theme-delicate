@@ -73,4 +73,4 @@ $('.toast').toast('show'); // 默认出现
 $('#toc').click(function(){
     $('.toast').toast('show');
 })
-
+$('#toc').tooltip();

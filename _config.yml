@@ -11,10 +11,9 @@ friend:
   divider: true
   GitHub: 'https://github.com/'
   GitLab: 'https://gitlab.com/'
-# 搜索控件
-## ！搜索功能还没做好！
+# Google搜索
 search: 
-  enable: false
+  enable: true
 
 
 # footer - 建站起始时间
@@ -128,6 +127,15 @@ style:
     # sidebar social-icon color and hover-color
     color: '#999'
     hoverColor: '#008080'
+# tagcloud 标签云
+tags:
+  tagsBackStyle: 'alert alert-light'
+  minFont: 16
+  maxFont: 35
+  color: 
+    enable: true
+    startColor: '#aa0000'
+    endColor: '#aa00aa'
 
 # 鼠标点击效果；
 ## showText / showHeart / firework 只能打开一个！否则 鼠标点击效果为最靠上的那一个。

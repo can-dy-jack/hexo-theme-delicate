@@ -1,9 +1,13 @@
 
-<div class="alert alert-secondary shadow tag-box">
+<div class="<%= theme.tags.tagsBackStyle %> shadow tag-box">
     <h3>标签</h3>
-    <span class="tag-span">
-        <% site.tags.sort('name').each(function(item){ %>
-            <a href="<%- config.root %>archives/" style="font-size: <%- Math.min((item.posts.length + 3)* 2 + 12, 40) %>px"><%= item.name %></a>
-        <% }); %>
-    </span>
+
+    <%- tagcloud(site.tags,{
+        min_font: theme.tags.minFont,
+        max_font: theme.tags.maxFont,
+        color: theme.tags.color.enable,
+        start_color: theme.tags.color.startColor,
+        end_color: theme.tags.color.endColor
+        })
+    %>
 </div>
