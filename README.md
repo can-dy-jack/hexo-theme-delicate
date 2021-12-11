@@ -60,6 +60,9 @@ note-info
 {% endnote %}
 ```
 
+效果：
+![image.png](https://s2.loli.net/2021/12/11/d74VfQNhG9ELW1P.png)
+
 2. color
 
 > 用于设定文字颜色
@@ -70,13 +73,59 @@ note-info
 {% color [color] 文字 %}
 ```
 
+3. alert
+
+> 基于Bootstrap的alert
+
+使用：
+
+```ejs
+{% alert [class] %}
+A simple primary alert—check it out!
+{% endalert %}
+```
+
+可选值：
+
+- primary
+- secondary
+- success
+- danger
+- warning
+- info
+- light
+- dark
+
+4. collapse
+
+> bootstrap collapse
+
+```ejs
+{% collapse [class] [按钮文字] [id] %}
+折叠内容
+{% endcollapse %}
+```
+
+{% color red 三个参数均不可少！%}
+|参数|注意事项|
+|:---:|:---|
+|[class]|按钮的样式，选项为[boostrap的按钮样式](https://v4.bootcss.com/docs/components/buttons/)|
+|[按钮文字]|按钮上面显示的文字|
+|[id]|在同一篇文章里，每个collapse的id需要唯一，即每个collapse的id需要设定不同的值；值随意，不同就行。|
+
+例子：
+
+```ejs
+{% collapse info '点击显示折叠内容' id1 %}
+这里写需要隐藏的文字。
+{% endcollapse %}
+```
+
+More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12/code-test)
+
 ### markdown
 
-[markdown样式](https://kartjim.top/delicate/2021/11/14/markdown%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/)
-
-### 标签插件（Tag Plugins）
-
-[Tag Plugins](https://kartjim.top/delicate/2021/11/12/code-test/)
+[markdown样式](https://kartjim.cn/delicate/2021/11/14/markdown%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/)
 
 ## 参考项目
 
@@ -94,26 +143,20 @@ note-info
 - [ ] 文章分享功能
 - [ ] 永久链接问题
 - [ ] 添加更多评论系统
-- [ ] 更多背景样式 - 添加黑暗模式
-- [ ] 更多canvas炫酷3D背景
-- [ ] 多个鼠标样式
 - [ ] 更多小组件
 - [ ] 根据[hexo官方API](https://hexo.io/zh-cn/api/) - 更多定制内容
 
 ### 优化
 
-- [ ] [fancybox](https://fancyapps.com/docs/ui/fancybox/api)更多功能
-- [ ] 优化/更改 wordcount.js 算法
-- [ ] 优化 firework.js
-- [ ] 优化雪花飘落效果 + 用户选项
 - [ ] 优化天气组件
-- [ ] 迁移博客里的图标
+- 把评论放在每篇文章下
+
+### processing
+
 - [ ] 小组件 - 音乐
   - QQ音乐歌曲列表
   - QQ音乐更多功能，[参考官网接口](https://y.qq.com/m/api/open/index.html)
   - 侧边音乐仅支持一个歌曲？
   - 接入其它音乐
   - 歌词？
-- 把评论放在每篇文章下
-
-### processing
+- [ ] 优化雪花飘落效果 + 用户选项
