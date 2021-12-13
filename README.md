@@ -50,6 +50,17 @@ theme: delicate
 top: true
 ```
 
+2. 是否为原创文章
+
+在文章的Front-matter添加 `original: true` 即可标志为原创文章，当然你也可以添加 `original: false` 标注为搬运文章。
+
+```yml
+# 原创
+original: true
+# 搬运
+# original: false
+```
+
 ### 本主题内置tag
 
 1. note

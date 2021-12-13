@@ -38,6 +38,8 @@ $('.code-span').tooltip();
 // siderbar-icon
 $('.icon-box').tooltip();
 
+$('.origin').tooltip();
+
 
 /**
  * 网站运行时间计算 - 函数

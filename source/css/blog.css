@@ -188,6 +188,22 @@ nav.navbar .nav-item .nav-link:hover::after{
 .blog-post-meta .post-count:hover{
     background-color: #f2f3f4;
 }
+.blog-post-meta .origin{
+    padding: 0 8px;
+    margin: 0 5px;
+    border-radius: 3px;
+    background-color: rgb(242, 253, 242);
+    border: 1px dashed green;
+    color: green;
+}
+.blog-post-meta .not-origin{
+    padding: 0 8px;
+    margin: 0 5px;
+    border-radius: 3px;
+    background-color: rgb(255, 224, 224);
+    border: 1px dashed rgb(240, 0, 112);
+    color: rgb(247, 22, 108);
+}
 .blog-post img{
     max-width: 100% !important; /* 解决图片溢出 */
     box-shadow: 0 4px 12px rgba(0,0,0,.1);
