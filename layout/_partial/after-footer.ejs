@@ -10,7 +10,7 @@
 <script src="//at.alicdn.com/t/font_2918710_naseliyedfg.js"></script>
 
 <% if(theme.canvas.enable){ %>
-    <% 
+    <%
         var a = theme.background.canvas.color,
         b = theme.background.canvas.zIndex,
         c = theme.background.canvas.opacity,
@@ -24,7 +24,7 @@
         <script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <script>
 // fancybox
-/* 
+/*
 * 最笨的方法：用js给img套上a标签，得以使用fancybox。
 */
 var imgs = document.querySelectorAll('.blog-post img');
@@ -52,7 +52,7 @@ $(document).ready(function() {
 
 <%# 添加鼠标点击 效果%>
 <% if(theme.mouseClick.showText.enable){ %>
-    <% 
+    <%
         var txt = theme.mouseClick.showText.text,
         ShowColor = theme.mouseClick.showText.color;
     %>
@@ -60,7 +60,7 @@ $(document).ready(function() {
 <% } else if(theme.mouseClick.showHeart){ %>
     <%- js({ src: 'js/show_heart.js'}) %>
 <% } else if(theme.mouseClick.firework){ %>
-    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
     <%- js('js/firework.js') %>
 <% } %>
 
@@ -69,3 +69,12 @@ $(document).ready(function() {
 <% if(theme.snowFlake.enable){ %>
     <%- js({src: 'js/snowflake.js'}) %>
 <% } %>
+
+<%# 添加 mermaid %>
+<% if(theme.mermaid.enable){ %>
+<script src='https://unpkg.com/mermaid@<%- theme.mermaid.version %>/dist/mermaid.min.js'></script>
+<script>
+    mermaid.initialize({startOnLoad:true});
+</script>
+<% } %>
+

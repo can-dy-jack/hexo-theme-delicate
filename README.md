@@ -156,9 +156,6 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 - [ ] 添加更多评论系统
 - [ ] 更多小组件
 - [ ] 根据[hexo官方API](https://hexo.io/zh-cn/api/) - 更多定制内容
-
-### 优化
-
 - [ ] 优化天气组件
 - 把评论放在每篇文章下
 
@@ -171,3 +168,6 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
   - 接入其它音乐
   - 歌词？
 - [ ] 优化雪花飘落效果 + 用户选项
+- [ ] 支持Mermaid
+- [ ] 支持MathJax
+

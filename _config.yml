@@ -1,18 +1,18 @@
 # header
 title: delicate
 menu:
-  主页: 
+  主页:
   存档: /archives
   关于: /about
 # 友链，下面的属性和它的可以随便设置，`divider: true`是分隔符
-friend: 
+friend:
   enable: true
   Hexo: 'https://hexo.io/'
   divider: true
   GitHub: 'https://github.com/'
   GitLab: 'https://gitlab.com/'
 # Google搜索
-search: 
+search:
   enable: true
 
 
@@ -23,17 +23,29 @@ search:
 startTime: "2021-11-01T00:00:00"
 
 # --------------------------- #
+##  Mermaid   |   MathJax    ##
+# --------------------------- #
+# mermaid chart
+## 安装mermaid插件  `yarn add hexo-filter-mermaid-diagrams`
+mermaid: ## mermaid url https://github.com/knsv/mermaid
+  enable: true
+  version: "8.8.0"
+  options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
+  #startOnload: true  // default true
+
+
+# --------------------------- #
 ##  siderbar infomation      ##
 # --------------------------- #
 ## sidebar-about
 siderbar:
   name: Kart · Jim
   logo: Time wait for no one.
-  tag: 
+  tag:
     - student
     - front-end developer
     - hexo-theme-delicate
-  social: 
+  social:
     # social account link
     ## if the value is none or '',it does not apear.
     github: https://github.com/can-dy-jack
@@ -47,7 +59,7 @@ siderbar:
     instagram: 'http://localhost:4000'
     gitlab: ''
     # for China
-    bilibili: 
+    bilibili:
     CSDN: https://blog.csdn.net/qq_46590483?spm=1001.2100.3001.5343
     贴吧: ''
     知乎: ''
@@ -60,7 +72,7 @@ siderbar:
 # --------------------------- #
 ##       background          ##
 # --------------------------- #
-# background style 
+# background style
 ## background 样式互不相容！优先级为从上往下
 background:
   meditation:
@@ -77,9 +89,9 @@ background:
   line2:
     enable: false
     size: 10
-  
+
 # 3D背景
-canvas: 
+canvas:
   enable: false
   # use rgb color,the value must be like "50,50,250"
   color: '128,64,224'
@@ -93,9 +105,9 @@ canvas:
 # --------------------------- #
 ##   style setting           ##
 # --------------------------- #
-# Read More text 
+# Read More text
 excerpt_link: 'Read More'
-style: 
+style:
   # '阅读更多' 的按钮样式
   ## 基于bootstrap，可选项即为bootstrap的按钮样式
   ## btn-primary | btn-secondary | btn-secondary | btn-outline-success  and so on.
@@ -123,7 +135,7 @@ style:
     headerBorderRadius: ''
     # header's box-shadow,default is none;
     headerBoxShadow: ''
-  siderbar: 
+  siderbar:
     # sidebar social-icon color and hover-color
     color: '#999'
     hoverColor: '#008080'
@@ -132,14 +144,14 @@ tags:
   tagsBackStyle: 'alert alert-light'
   minFont: 16
   maxFont: 35
-  color: 
+  color:
     enable: true
     startColor: '#aa0000'
     endColor: '#aa00aa'
 
 # 鼠标点击效果；
 ## showText / showHeart / firework 只能打开一个！否则 鼠标点击效果为最靠上的那一个。
-mouseClick: 
+mouseClick:
   # 点击出现文字效果
   showText:
     enable: true
@@ -170,19 +182,19 @@ widget:
   poem: true
   # 显示实时天气
   ## 仅限于 中国地区城市
-  weather: 
+  weather:
     enable: false
     # 直接打城市名字即可
     city: '上海'
     openBroadcast: true
-  music: 
+  music:
     enable: false
     # music可以通过插件hexo-tag-aplayer，加入到您的文章中。(https://github.com/MoePlayer/hexo-tag-aplayer)
     netease:
-      enable: true 
+      enable: true
       songID: '1457707546'
       songListID: ''
-    QQMusic: 
+    QQMusic:
       enable: true
       # Ed Sheeran's Shivers: 0002kI4i1KS8eh | 童话: 004aupsp1RFXAN | Fire: 000iDpGB4NlS0D
       songID: '000iDpGB4NlS0D'
@@ -192,20 +204,20 @@ widget:
     enable: false
     img1: 'https://i.loli.net/2021/12/01/KOUbM67fjIShi5r.jpg'
     img1Alt: 'img1'
-    img1Text: 
+    img1Text:
       header: 'first slide'
       content: 'content for the first slide.'
     img2: 'https://i.loli.net/2021/12/01/A3fyD1zwqti4JPB.jpg'
     img2Alt: 'img2'
-    img2Text: 
+    img2Text:
       header: 'Second slide label'
       content: 'content for the second slide.'
     img3: 'https://i.loli.net/2021/12/01/X1pkv9ShmeDWZ25.jpg'
     img3Alt: 'img3'
-    img3Text: 
+    img3Text:
       header: 'Third slide label'
       content: 'content for the third slide.'
-    
+
 
 # --------------------------- #
 ##   plugins                 ##
@@ -218,16 +230,16 @@ fancybox:
 # --------------------------- #
 ##   评论系统                 ##
 # --------------------------- #
-utterance: 
+utterance:
 ## 仓库需要安装utterances https://github.com/apps/utterances
   enable: false
-  repo: 
+  repo:
   issue_term: delicate-utterance
   # github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light | gruvbox-dark
   ## 在线观看每个主题效果：https://utteranc.es/
   theme: 'github-light'
 
-gittalk: 
+gittalk:
   ## Firstly, you need choose a public github repository for store comment.
   ## A GitHub Application : https://github.com/settings/applications/new
   ### more: https://github.com/gitalk/gitalk
