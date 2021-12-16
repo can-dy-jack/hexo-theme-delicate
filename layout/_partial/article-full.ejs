@@ -32,10 +32,10 @@
         </span>
         <span class="post-count"><%= wordcount(item.content) %>字</span>
         <span class="post-count"><%= min2read(item.content) %>分钟</span>
-    
-    <% if(item.original) { %>
+
+    <% if(item.original === true) { %>
         <span class="origin" data-toggle="tooltip" data-placement="bottom" title="搬运请注明出处">原创</span>
-    <% } else { %>
+    <% } else if(item.original === false) { %>
         <span class="not-origin">搬运</span>
     <% } %>
 

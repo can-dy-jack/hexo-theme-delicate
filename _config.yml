@@ -22,16 +22,11 @@ search:
 ##- "01 Nov 2021 00:00:00 +0800"（东八区，偏离格林威治8个小时）
 startTime: "2021-11-01T00:00:00"
 
-# --------------------------- #
-##  Mermaid   |   MathJax    ##
-# --------------------------- #
 # mermaid chart
-## 安装mermaid插件  `yarn add hexo-filter-mermaid-diagrams`
+## 需要安装mermaid插件  `yarn add hexo-filter-mermaid-diagrams`
 mermaid: ## mermaid url https://github.com/knsv/mermaid
   enable: true
   version: "8.8.0"
-  options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
-  #startOnload: true  // default true
 
 
 # --------------------------- #

@@ -61,6 +61,12 @@ original: true
 # original: false
 ```
 
+3. 开启MathJax
+```yml
+mathjax: true
+```
+**文章没有公式请不要添加，会影响页面加载速度。**
+
 ### 本主题内置tag
 
 1. note
@@ -168,6 +174,3 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
   - 接入其它音乐
   - 歌词？
 - [ ] 优化雪花飘落效果 + 用户选项
-- [ ] 支持Mermaid
-- [ ] 支持MathJax
-

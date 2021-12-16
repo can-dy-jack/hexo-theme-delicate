@@ -531,5 +531,13 @@ nav.navbar .nav-item .nav-link:hover::after{
     background-color: #fff;
 }
 
-/* snow */
-
+/* mermaid and mathjax */
+.mermaid svg{
+    max-width: none !important;
+    max-height: 400px;
+}
+.has-jax{
+    max-width: 100%;
+    overflow: auto;
+    /*background-color: #fafafa;*/
+}
