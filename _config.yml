@@ -43,19 +43,18 @@ siderbar:
   social:
     # social account link
     ## if the value is none or '',it does not apear.
-    github: https://github.com/can-dy-jack
-    twitter: 'http://localhost:4000'
-    codepen: ''
-    google: ''
-    facebook: 'http://localhost:4000'
+    github: '#'
+    twitter: '#'
+    codepen: '#'
+    google: '#'
+    facebook: '#'
     stackoverflow: ''
     linkedin: ''
-    slack: ''
-    instagram: 'http://localhost:4000'
+    instagram: ''
     gitlab: ''
     # for China
-    bilibili:
-    CSDN: https://blog.csdn.net/qq_46590483?spm=1001.2100.3001.5343
+    bilibili: ''
+    CSDN: ''
     贴吧: ''
     知乎: ''
     微博: ''
