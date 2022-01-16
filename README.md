@@ -121,7 +121,8 @@ A simple primary alert—check it out!
 {% endcollapse %}
 ```
 
-{% color red 三个参数均不可少！%}
+color red 三个参数均不可少
+
 |参数|注意事项|
 |:---:|:---|
 |[class]|按钮的样式，选项为[boostrap的按钮样式](https://v4.bootcss.com/docs/components/buttons/)|
@@ -147,6 +148,13 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 - [stevenlei/CSS Dynamic Background](https://codepen.io/stevenlei/pen/ZEJxXGL?editors=1100)
 - [juejin-全面改造属于你的个性化博客](https://juejin.cn/post/6997775533840793614#heading-5)
 
+### 参考网址
+
+- [utteranc](https://utteranc.es/)
+- [gitalk](https://github.com/gitalk/gitalk)
+- [网易云音乐](https://music.163.com)
+- [qmplayer](https://xingqiao.gitbooks.io/qmplayer)
+
 ## 打赏
 
 您的支持是我坚持开发的动力！
@@ -167,9 +175,5 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 ### processing
 
 - [ ] 小组件 - 音乐
-  - QQ音乐歌曲列表
-  - QQ音乐更多功能，[参考官网接口](https://y.qq.com/m/api/open/index.html)
-  - 侧边音乐仅支持一个歌曲？
   - 接入其它音乐
-  - 歌词？
 - [ ] 优化雪花飘落效果 + 用户选项

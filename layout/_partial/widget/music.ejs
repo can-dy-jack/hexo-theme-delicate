@@ -35,23 +35,32 @@
             <button id="parse" class="btn btn-warning">暂停</button>
         </div>
     </div>
+    <div class="song-info">
+        <button id="prev" class="btn btn-sm btn-outline-primary">上一首</button>
+        <button id="next" class="btn btn-sm btn-outline-primary">下一首</button>
+    </div>
 <script src="//y.gtimg.cn/music/h5/player/player.js?max_age=2592000"></script>
 <script>
 const qqMusicInfo = document.getElementById('qqMusic-info');
 var player = new QMplayer();
 player.on("play", function (e) {
-    console.log('QQ音乐 success!');
-    qqMusicInfo.innerText = e.song.name;
+    qqMusicInfo.innerText = e.song.name + ' - ' + e.song.singer[0].name;
 })
 const play = document.getElementById('play');
 const parse = document.getElementById('parse');
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
 play.addEventListener('click',()=>{
-    console.log('play');
-    player.play("<%= theme.widget.music.QQMusic.songID %>"); // 003IPDsn4ZWb5H 只能用免费的音乐
+    player.play("<%= theme.widget.music.QQMusic.songID %>");
 })
 parse.addEventListener('click',()=>{
-    // console.log('pause');
     player.pause();
+})
+prev.addEventListener('click',()=>{
+    player.playPrev();
+})
+next.addEventListener('click',()=>{
+    player.playNext();
 })
 </script>
 <% } %>

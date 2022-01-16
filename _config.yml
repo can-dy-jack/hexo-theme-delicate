@@ -195,9 +195,12 @@ widget:
       songListID: ''
     QQMusic:
       enable: true
-      # Ed Sheeran's Shivers: 0002kI4i1KS8eh | 童话: 004aupsp1RFXAN | Fire: 000iDpGB4NlS0D
-      songID: '004aupsp1RFXAN'
-      songListID: ''
+      # 支持多个songID，将按顺序播放
+      ## 童话: 004aupsp1RFXAN | Fire: 000iDpGB4NlS0D | 
+      songID: 
+        - '000iDpGB4NlS0D'
+        - '004aupsp1RFXAN'
+        - '0029dqHX0nuawd'
   carousel:
     # 图片尺寸尽量一致！
     enable: false
