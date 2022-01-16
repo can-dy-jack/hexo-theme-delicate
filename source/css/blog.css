@@ -2,6 +2,24 @@
 html{
     scroll-behavior: smooth;
 }
+::selection{
+    background-color: rgba(90, 196, 245, 0.45);
+}
+::-moz-selection{
+    background-color: rgba(90, 196, 245, 0.45);
+}
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-clip: padding-box; /* important */
+    width: 6px;
+    background-color: rgba(120, 134, 150, 0.6);
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+
 h1, .h1,
 h2, .h2,
 h3, .h3,
