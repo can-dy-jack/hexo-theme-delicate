@@ -1,31 +1,37 @@
+// Archives
+const Archives = document.querySelectorAll('.post-archives');
+function clearActive(d){
+    d.forEach(function(i){
+        if(i.classList.contains('active')){
+           i.classList.remove('active'); 
+        }
+    });
+}
+Archives.forEach(function(i){
+    i.addEventListener('click',()=>{
+        clearActive(Archives);
+        i.classList.add('active');
+    });
+})
+
 /**
  * 为代码块复制按钮
  */
 const pre = document.querySelectorAll('figure td.code');
-
 pre.forEach(function (item) {
-    // copy button dom
     span = document.createElement('span');
     span.className = 'code-span';
     spanImg = document.createElement('img');
     spanImg.setAttribute('src', 'https://z3.ax1x.com/2021/11/17/I4qDrd.png');
     spanImg.setAttribute('alt', 'copy');
     span.appendChild(spanImg);
-
     span.setAttribute('data-toggle', 'tooltip');
     span.setAttribute('data-placement', 'left');
     span.setAttribute('title', '点击复制');
-
     // 复制功能
-    // item.innerText可以直接获取pre内的文本！！！
     span.addEventListener('click', () => {
-        navigator.clipboard
-            .writeText(item.innerText)
-            // .then(() => {
-                // console.log('copy success!');
-            // })
+        navigator.clipboard.writeText(item.innerText)
     })
-
     item.appendChild(span);
 })
 
@@ -37,16 +43,10 @@ $('#feedback').tooltip();
 $('.code-span').tooltip();
 // siderbar-icon
 $('.icon-box').tooltip();
-
 $('.origin').tooltip();
-
 
 /**
  * 网站运行时间计算 - 函数
- *
- * getTime()返回从'1970-1-1 00:00:00 UTC'到该日期对象（该日期对象的UTC时间）的毫秒数
- * 
- * 1s = 1000ms
  */
 var now = new Date();
 function calculateTime(startTime) {

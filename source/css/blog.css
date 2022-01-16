@@ -477,12 +477,13 @@ nav.navbar .nav-item .nav-link:hover::after{
     margin: 3px 10px;
     overflow: hidden;
     position: relative;
+    user-select: none;
 }
 .weather-info .weather-info-text span{
     position: absolute;
     left: 10px;
     top: 0;
-    animation: weatherInfo 10s linear 1s infinite;
+    animation: weatherInfo 10s ease-in-out 1s infinite;
 }
 @keyframes weatherInfo {
     0%{

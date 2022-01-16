@@ -41,7 +41,6 @@ $(document).ready(function() {
 </script>
 <% } %>
 
-<%- js('js/archives.js') %>
 <%- js('js/index.js') %>
 <script>
     calculateTime("<%= theme.startTime %>");
@@ -110,7 +109,5 @@ $(document).ready(function() {
     });
 </script>
     <!-- 通过连接CDN加载MathJax的js代码 -->
-    <script type="text/javascript" async
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <% } %>

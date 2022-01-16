@@ -162,7 +162,6 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 - [ ] 添加更多评论系统
 - [ ] 更多小组件
 - [ ] 根据[hexo官方API](https://hexo.io/zh-cn/api/) - 更多定制内容
-- [ ] 优化天气组件
 - 把评论放在每篇文章下
 
 ### processing

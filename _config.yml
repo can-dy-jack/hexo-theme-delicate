@@ -179,10 +179,12 @@ widget:
   # 显示实时天气
   ## 仅限于 中国地区城市
   weather:
-    enable: false
+    enable: true
     # 直接打城市名字即可
-    city: '上海'
+    city: '合肥'
+    # Broadcast
     openBroadcast: true
+    BroadcastText: "感冒多发期，适当减少外出频率，适量补充水分，适当增减衣物。"
   music:
     enable: false
     # music可以通过插件hexo-tag-aplayer，加入到您的文章中。(https://github.com/MoePlayer/hexo-tag-aplayer)
