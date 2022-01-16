@@ -16,7 +16,7 @@
     <!-- Bootstrap 图标 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-    <%# fancybox %>
+    <!-- fancybox -->
     <% if(theme.fancybox.enable){ %>
         <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
     <% } %>
@@ -43,6 +43,7 @@
     <style>
         body {
             background-color: <%= bodyColor %>;
+            font-family: <%= theme.font %>;
         }
         /* blog menu */
         nav.navbar {

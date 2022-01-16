@@ -101,6 +101,8 @@ canvas:
 # --------------------------- #
 # Read More text
 excerpt_link: 'Read More'
+# 字体设置
+font: "Roboto Mono,JetBrains Mono,microsoft yahei, serif"
 style:
   # '阅读更多' 的按钮样式
   ## 基于bootstrap，可选项即为bootstrap的按钮样式

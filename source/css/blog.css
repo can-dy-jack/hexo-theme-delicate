@@ -2,9 +2,6 @@
 html{
     scroll-behavior: smooth;
 }
-body {
-    font-family: Roboto Mono,'JetBrains Mono',microsoft yahei, serif;
-}
 h1, .h1,
 h2, .h2,
 h3, .h3,
