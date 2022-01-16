@@ -38,6 +38,15 @@ git clone https://github.com/can-dy-jack/hexo-theme-delicate.git
 theme: delicate
 ```
 
+### 多语言 - 国际化（i18n）
+
+- en
+- zh-CN
+- Japanese
+- spanish
+- portuguese
+- korean
+
 ### 本主题自定义 front-matter
 
 1. 置顶文章
@@ -163,17 +172,10 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 
 ## 开发计划
 
-- [ ] 添加404页面 —— 要是在域名根路径下才行
-- [ ] 多语言 - 国际化（i18n）
+- [ ] 添加404页面
+
 - [ ] 文章分享功能
 - [ ] 永久链接问题
+- [ ] 把评论放在每篇文章下
 - [ ] 添加更多评论系统
-- [ ] 更多小组件
-- [ ] 根据[hexo官方API](https://hexo.io/zh-cn/api/) - 更多定制内容
-- 把评论放在每篇文章下
-
-### processing
-
-- [ ] 小组件 - 音乐
-  - 接入其它音乐
 - [ ] 优化雪花飘落效果 + 用户选项

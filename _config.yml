@@ -1,10 +1,6 @@
 # header
 title: delicate
-menu:
-  主页:
-  存档: /archives
-  关于: /about
-# 友链，下面的属性和它的可以随便设置，`divider: true`是分隔符
+# 友链，`divider: true`是分隔符
 friend:
   enable: true
   Hexo: 'https://hexo.io/'
@@ -14,7 +10,6 @@ friend:
 # Google搜索
 search:
   enable: true
-
 
 # footer - 建站起始时间
 ## 格式：
