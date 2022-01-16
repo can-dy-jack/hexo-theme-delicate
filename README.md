@@ -22,10 +22,9 @@
 ### 下载
 
 1. git
-克隆仓库到 `theme` 文件夹下，并重命名为 `delicate`
 
 ```git
-git clone https://github.com/can-dy-jack/hexo-theme-delicate.git
+git clone https://github.com/can-dy-jack/hexo-theme-delicate.git theme/delicate
 ```
 
 2. 或者你可以**下载本仓库的代码，解压到theme文件夹之下，重命名文件夹为`delicate`。**
