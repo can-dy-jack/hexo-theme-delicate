@@ -1,5 +1,3 @@
-/* 参考：https://codepen.io/stevenlei/pen/ZEJxXGL?editors=1100
-*/
 body::before {
     content: '';
     position: fixed;
