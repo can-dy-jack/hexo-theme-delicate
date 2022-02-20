@@ -47,13 +47,18 @@ nav.navbar {
     margin-bottom: 15px;
 }
 nav.navbar .nav-item .nav-link{
-    padding: 5px 12px;
+    padding: 5px 8px;
     border-radius: 5px;
     transition: all 0.3s ease;
     position: relative;
+    text-transform: capitalize;
+}
+nav.navbar .nav-item .dropdown-menu{
+    box-shadow: 0 10px 20px 8px rgba(0,0,0,.04);
 }
 nav.navbar .nav-item .nav-link:hover{
     background-color: #efefef;
+    color: #222;
 }
 nav.navbar .nav-item .nav-link:hover::after{
     animation: menuAfter 1s ease infinite;
@@ -70,38 +75,46 @@ nav.navbar .nav-item .nav-link:hover::after{
     }
 }
 /* toc */
-#toc{
-    height: 24px;width: 24px;
-}
-#toc svg{
-    width: 24px;height: 24px;
-    cursor: pointer;
-    fill: #ddd;
-    transition: fill 0.2s linear;
-}
-#toc svg:hover{
-    fill: #333;
-}
-.toast{
-    position: sticky;
-    top: 10px;float: right;
-    /* position: fixed;
-    right: 50px;top: 100px; */
+.toc-box{
+    background-color: rgba(240, 240, 240, .6);
+    position: sticky;top: 5px;
+    right: 5px;
     z-index: 800;
+    border-radius: 5px;
+    height: 35px;
+    /* height: fit-content; */
+    overflow: hidden;
+    width: calc(100% + 20px);
+    transform: translate(-10px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 12px rgba(0,0,0,.06);
+    user-select: none;
+    transition: height 300ms linear;
 }
-.toast .toast-header{
-    cursor: move;
+.open{
+    height: 240px;
+    overflow: auto;
 }
-.toast .toast-color{
-    width:20px;height:20px;
-    background-color: #007aff;
-    border-radius:4px;
-    margin-right: 10px;
-}
-.toast .toast-body ol{
-    margin: 0 10px;padding-left: 15px;
+.toc-box ol {
     list-style: none;
+    padding: 5px 10px 5px 20px;
+    margin-bottom: 0;
 }
+.toc-box .arrow{
+    position: absolute;
+    top: -3px;
+    right: 12px;
+    display: block;height: 40px;width: 35px;
+    transform: rotate(90deg);
+    cursor: pointer;
+    font-size: 30px;line-height: 35px;
+    text-align: center;
+    color: #3594d8;
+    z-index: 801;
+    transition: transform 300ms linear;
+}
+
+
 
 /* Active state gets a caret at the bottom */
 .blog-nav .active {

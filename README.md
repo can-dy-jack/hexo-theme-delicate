@@ -175,6 +175,8 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 
 - [ ] 文章分享功能
 - [ ] 永久链接问题
-- [ ] 把评论放在每篇文章下
-- [ ] 添加更多评论系统
+- [ ] 优化评论系统
 - [ ] 优化雪花飘落效果 + 用户选项
+
+- [ ] 去掉feedback!
+- [ ] TOC外面加个div，把span和当前浏览位置固定显示；

@@ -71,8 +71,18 @@ function calculateTime(startTime) {
 /**
  * TOC
  */
-$('.toast').toast('show'); // 默认出现
-$('#toc').click(function(){
-    $('.toast').toast('show');
+const Toc = document.querySelector('.toc-box');
+const arrow = document.querySelector('.toc-box .arrow');
+let arrowOpen = true;
+arrow.addEventListener('click',function(){
+    if(arrowOpen){
+        arrowOpen = false;
+        Toc.classList.add('open');
+        arrow.style.transform = 'rotate(-90deg)';
+    } else {
+        arrowOpen = true;
+        Toc.classList.remove('open');
+        arrow.style.transform = 'rotate(90deg)';
+    }
 })
-$('#toc').tooltip();
+

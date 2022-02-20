@@ -106,8 +106,10 @@ p>code {
 }
 
 /* 标题 */
-.blog-post h2:not(.blog-post-title),
-.blog-post .h2:not(.blog-post-title) {
+.blog-post-title{
+    margin: 10px 0;
+}
+.blog-post h2:not(.blog-post-title){
     margin: 40px 0;
     padding: 10px 0;
     border-bottom: 1px solid #eee;
@@ -117,11 +119,11 @@ p>code {
 .blog-post h2:not(.blog-post-title)::after,
 .blog-post .h2::after {
     content: 'h2';
-    color: #3594d8;
+    color: #3594d8aa;
     font-size: 14px;
     border-radius: 2px;
     padding: 2px 3px;
-    margin: 0 10px;
+    margin: 0 7px;
 }
 .blog-post h3,
 .blog-post .h3 {
@@ -136,7 +138,7 @@ p>code {
     border-radius: 2px;
     padding: 2px 3px;
     margin: 0 10px;
-    color: #3594d8;
+    color: #3594d8aa;
 }
 
 .blog-post h4,
@@ -153,7 +155,7 @@ p>code {
     border-radius: 2px;
     padding: 2px 3px;
     margin: 0 10px;
-    color: #3594d8;
+    color: #3594d8aa;
 }
 
 .blog-post h5,
@@ -170,7 +172,7 @@ p>code {
     border-radius: 2px;
     padding: 2px 3px;
     margin: 0 10px;
-    color: #3594d8;
+    color: #3594d8aa;
 }
 
 
