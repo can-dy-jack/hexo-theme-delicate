@@ -74,48 +74,6 @@ nav.navbar .nav-item .nav-link:hover::after{
         transform: translateY(0);
     }
 }
-/* toc */
-.toc-box{
-    background-color: rgba(240, 240, 240, .6);
-    position: sticky;top: 5px;
-    right: 5px;
-    z-index: 800;
-    border-radius: 5px;
-    height: 35px;
-    /* height: fit-content; */
-    overflow: hidden;
-    width: calc(100% + 20px);
-    transform: translate(-10px);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 12px rgba(0,0,0,.06);
-    user-select: none;
-    transition: height 300ms linear;
-}
-.open{
-    height: 240px;
-    overflow: auto;
-}
-.toc-box ol {
-    list-style: none;
-    padding: 5px 10px 5px 20px;
-    margin-bottom: 0;
-}
-.toc-box .arrow{
-    position: absolute;
-    top: -3px;
-    right: 12px;
-    display: block;height: 40px;width: 35px;
-    transform: rotate(90deg);
-    cursor: pointer;
-    font-size: 30px;line-height: 35px;
-    text-align: center;
-    color: #3594d8;
-    z-index: 801;
-    transition: transform 300ms linear;
-}
-
-
-
 /* Active state gets a caret at the bottom */
 .blog-nav .active {
     color: #fff;

@@ -163,12 +163,6 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 - [网易云音乐](https://music.163.com)
 - [qmplayer](https://xingqiao.gitbooks.io/qmplayer)
 
-## 打赏
-
-您的支持是我坚持开发的动力！
-
-<img src="https://i.loli.net/2021/11/23/AKlzU5R7wNdHSpo.jpg" width=300 alt="打赏"/>
-
 ## 开发计划
 
 - [ ] 添加404页面

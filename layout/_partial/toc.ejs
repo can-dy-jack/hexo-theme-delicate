@@ -1,0 +1,121 @@
+<!-- Web Components -->
+<template id="tocTemplate">
+<style scoped>
+    :host{
+        display: block;
+        z-index: 800;
+        border-radius: 5px;
+        position: sticky;top: 5px;
+        width: calc(100% + 20px);
+        transform: translateX(-10px);
+        box-shadow: 0 0 8px rgba(0,0,0,.05);
+    }
+    ::-webkit-scrollbar{
+        width: 10px;
+        height: 10px;
+    }
+    ::-webkit-scrollbar-thumb{
+        background-clip: padding-box; /* important */
+        width: 6px;
+        background-color: rgba(120, 134, 150, 0.6);
+        border-radius: 10px;
+        border: 2px solid transparent;
+    }
+    .toc-header{
+        user-select: none;
+        background-color: rgba(240, 240, 240, .5);
+        backdrop-filter: blur(20px);
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #eee;
+        color: #3594d8;
+        padding: 0 15px;
+        border-radius: 5px;
+    }
+    .toc-header .toc-arrow{
+        display: block;height: 40px;width: 40px;
+        cursor: pointer;
+        font-size: 26px;line-height: 40px;
+        text-align: center;
+        z-index: 801;
+        transition: transform 300ms linear;
+    }
+    .toc-body {
+        background-color: #fefefe99;
+        backdrop-filter: blur(20px);
+        border-radius: 0 0 5px 5px;
+        transition: height 300ms linear;
+        height: 0;
+        overflow: hidden;
+        position: absolute;top:41px;left:0;right:0;
+    }
+    .toc-body ol {
+        list-style: none;
+        padding: 0 10px 5px 20px;
+        margin-bottom: 0;
+    }
+    .toc-body::selection{
+        background-color: rgba(90, 150, 190);
+        color: #fff;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    .open{
+        height: 240px;
+        overflow: auto;
+        border: 1px solid #efefef;
+        box-shadow: 0 4px 4px rgba(0,0,0,.04);
+    }
+    .border{
+        border-radius: 5px 5px 0 0;
+        border-bottom-color: transparent;
+    }
+</style>
+    <div class="toc-header">
+        <div class="toc-currentText"> 目    录 </div>
+        <div class="toc-arrow" style="transform: rotate(90deg);"> > </div>
+    </div>
+    <div class="toc-body">
+        <%- toc(item.content,{max_depth: 3}) %>
+    </div>
+</template>
+
+<!-- TOC -->
+<delicate-toc></delicate-toc>
+
+<script>
+class delicateTOC extends HTMLElement{
+    constructor () {
+        super();
+        this.shadow = this.attachShadow({mode: 'open'});
+        const tocTemplate = document.getElementById("tocTemplate");
+        this.shadow.appendChild(tocTemplate.content);
+
+        const body = this.shadow.querySelector('.toc-body');
+        const head = this.shadow.querySelector('.toc-header');
+        const arrow = this.shadow.querySelector('.toc-arrow');
+        let arrowOpen = true;
+        arrow.addEventListener('click',function(){
+            if(arrowOpen){
+                arrowOpen = false;
+                body.classList.add('open');
+                head.classList.add('border');
+                arrow.style.transform = 'rotate(-90deg)';
+            } else {
+                arrowOpen = true;
+                body.classList.remove('open');
+                head.classList.remove('border');
+                arrow.style.transform = 'rotate(90deg)';
+            }
+        })
+    }
+}
+customElements.define("delicate-toc", delicateTOC);
+
+</script>

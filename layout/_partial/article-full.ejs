@@ -1,9 +1,6 @@
 <div class="blog-post">
     <!-- TOC -->
-    <div class="toc-box">
-        <%- toc(item.content,{max_depth: 3}) %>
-        <span class="arrow">></span>
-    </div>
+    <%- partial('toc') %>
     <!-- Title -->
     <h2 class="blog-post-title">
         <a href="<%- config.root %><%- item.path %>">
