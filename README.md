@@ -172,5 +172,3 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 - [ ] 优化评论系统
 - [ ] 优化雪花飘落效果 + 用户选项
 
-- [ ] 去掉feedback!
-- [ ] TOC外面加个div，把span和当前浏览位置固定显示；

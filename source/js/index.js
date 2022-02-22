@@ -46,7 +46,7 @@ $('.icon-box').tooltip();
 $('.origin').tooltip();
 
 /**
- * 网站运行时间计算 - 函数
+ * 网站运行时间计算函数
  */
 var now = new Date();
 function calculateTime(startTime) {
@@ -62,14 +62,7 @@ function calculateTime(startTime) {
     }
     minutes = interval/1000/60 - 24*60*dnum - hnum*60;
     mnum = Math.floor(minutes);
-    if(mnum.toString().length == 1){
-        mnum = '0' + mnum;
-    }
-    document.getElementById("times").innerHTML =
-        "本站已运行 " + dnum + " 天 " + hnum + " 小时 " + mnum + " 分，共" + Math.floor(interval/1000/60/60)+ "小时";
+    if(mnum.toString().length == 1){ mnum = '0' + mnum;}
+    document.getElementById("times").innerHTML ="本站已运行 " + dnum + " 天 " + hnum + " 小时 " + mnum + " 分，共" + Math.floor(interval/1000/60/60)+ "小时";
 }
-/**
- * TOC
- */
-
 
