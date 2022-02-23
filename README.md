@@ -156,13 +156,6 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 - [stevenlei/CSS Dynamic Background](https://codepen.io/stevenlei/pen/ZEJxXGL?editors=1100)
 - [juejin-全面改造属于你的个性化博客](https://juejin.cn/post/6997775533840793614#heading-5)
 
-### 参考网址
-
-- [utteranc](https://utteranc.es/)
-- [gitalk](https://github.com/gitalk/gitalk)
-- [网易云音乐](https://music.163.com)
-- [qmplayer](https://xingqiao.gitbooks.io/qmplayer)
-
 ## 开发计划
 
 - [ ] 添加404页面
@@ -170,5 +163,3 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 - [ ] 永久链接问题
 - [ ] 优化评论系统
 - [ ] 优化雪花飘落效果 + 用户选项
-
-- [ ] 评论系统valine
