@@ -218,7 +218,6 @@ nav.navbar .nav-item .nav-link:hover::after{
     font-size: 16px;
     padding: 5px 10px;
     border-radius: 5px;
-    background-color: #f2f4f6;
 }
 
 .blog-post-change{
@@ -230,28 +229,24 @@ nav.navbar .nav-item .nav-link:hover::after{
 .blog-post-change .blog-post-pre,
 .blog-post-change .blog-post-next{
     margin: 5px 0;
-    border-radius: 2px;
-    padding: 0 5px;
     transition: all 0.2s linear;
 }
 .blog-post-change .blog-post-pre:hover a,
 .blog-post-change .blog-post-next:hover a{
-    color: #007bff;
     text-decoration: none;
     cursor: pointer;
 }
 .blog-post-change .blog-post-pre a
 ,.blog-post-change .blog-post-next a{
-    color: #007bff;
+    color: #7dbcff;
 }
 .blog-post-pre-icon,.blog-post-next-icon{
     font-size: 20px;
     font-weight: 900;
-    color: #007bff;
+    color: #7dbcff;
 }
 .blog-post-next:hover,
 .blog-post-pre:hover{
-    background-color: rgba(0, 123, 255, .2);
     transform: scale(1.02);
 }
 .blog-post-next:active,

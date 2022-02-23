@@ -166,9 +166,9 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 ## 开发计划
 
 - [ ] 添加404页面
-
 - [ ] 文章分享功能
 - [ ] 永久链接问题
 - [ ] 优化评论系统
 - [ ] 优化雪花飘落效果 + 用户选项
 
+- [ ] 评论系统valine
