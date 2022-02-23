@@ -525,3 +525,11 @@ nav.navbar .nav-item .nav-link:hover::after{
     overflow: auto;
     /*background-color: #fafafa;*/
 }
+
+/* comment styles */
+.comment-valine .leancloud_visitors{
+    text-align: center;
+}
+.comment-valine .comment-head{
+    margin-bottom: 10px;
+}

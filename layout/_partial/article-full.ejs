@@ -26,7 +26,6 @@
     <!-- Content -->
     <%- item.content %>
     <hr />
-    <!-- Tags and Categories links -->
     <div class="blog-tag-and-cate">
         <%- partial('article-tags', {item: item}) %>
         <%- partial('article-categories', {item: item}) %>
@@ -47,5 +46,10 @@
             <% } %>
         </div>
     </div>
-    <hr>
+    <% if(theme.valine.enable){ %>
+        <section class="comment-valine">
+        <!-- valine评论,基于LeanCloud -->
+            <%- partial('comments/valine', {item: item}) %>
+        </section>
+    <% } %>
 </div>
