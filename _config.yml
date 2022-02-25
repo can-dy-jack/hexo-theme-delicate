@@ -1,5 +1,6 @@
 # header
-title: delicate
+titleLogo: '/favicon/logo2.ico'
+title: delicate主题
 # 友链，`divider: true`是分隔符
 friend:
   enable: true
@@ -228,9 +229,18 @@ fancybox:
 ##   评论系统                 ##
 # --------------------------- #
 valine:
-  enable: true
-  id: 'hdaW9uaYaxJSxUV25qnTklcl-gzGzoHsz'
-  key: 'LNVM14E2XykcTyqqYyxbIswp'
+  enable: false
+  id: ''
+  key: ''
   # textarea's placeholder
   placeholder: "请发表您的意见和建议（支持 markdown 语法）"
   lang: 'zh-CN'
+
+
+# --------------------------- #
+##    analytic               ##
+# --------------------------- #
+baidu_analytic: 
+  enable: false
+  key: ''
+
