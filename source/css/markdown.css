@@ -109,15 +109,15 @@ p>code {
 .blog-post-title{
     margin: 10px 0;
 }
-.blog-post h2:not(.blog-post-title){
+.blog-post>h2:not(.blog-post-title){
     margin: 40px 0;
     padding: 10px 0;
     border-bottom: 1px solid #eee;
     cursor: default;
     font-size: 34px;
 }
-.blog-post h2:not(.blog-post-title)::after,
-.blog-post .h2::after {
+.blog-post>h2:not(.blog-post-title)::after,
+.blog-post>.h2::after {
     content: 'h2';
     color: #3594d8aa;
     font-size: 14px;
@@ -125,14 +125,14 @@ p>code {
     padding: 2px 3px;
     margin: 0 7px;
 }
-.blog-post h3,
-.blog-post .h3 {
+.blog-post>h3,
+.blog-post>.h3 {
     margin: 35px 0 25px 0;
     cursor: default;
     font-size: 28px;
 }
-.blog-post h3:after,
-.blog-post .h3::after {
+.blog-post>h3:after,
+.blog-post>.h3::after {
     content: 'h3';
     font-size: 12px;
     border-radius: 2px;
@@ -141,15 +141,15 @@ p>code {
     color: #3594d8aa;
 }
 
-.blog-post h4,
-.blog-post .h4 {
+.blog-post>h4,
+.blog-post>.h4 {
     margin: 20px 0 10px 0;
     cursor: default;
     font-size: 24px;
 }
 
-.blog-post h4:after,
-.blog-post .h4::after {
+.blog-post>h4:after,
+.blog-post>.h4::after {
     content: 'h4';
     font-size: 10px;
     border-radius: 2px;
@@ -158,15 +158,15 @@ p>code {
     color: #3594d8aa;
 }
 
-.blog-post h5,
-.blog-post .h5 {
+.blog-post>h5,
+.blog-post>.h5 {
     margin: 15px 0 8px 0;
     cursor: default;
     font-size: 20px;
 }
 
-.blog-post h5:after,
-.blog-post .h5::after {
+.blog-post>h5:after,
+.blog-post>.h5::after {
     content: 'h5';
     font-size: 10px;
     border-radius: 2px;
@@ -201,9 +201,9 @@ p>code {
     background-color: #f2f2f2;
 }
 /* img */
-.blog-post p>img,.blog-post>img{
+.blog-post p>img:not(.vemoji),.blog-post>img:not(.vemoji){
     margin: 0.5rem;
-    box-shadow: 0 0 12px rgba(0,0,0,.05);
+    /* box-shadow: 0 0 12px rgba(0,0,0,.05); */
 }
 
 

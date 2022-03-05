@@ -146,12 +146,12 @@ tags:
 mouseClick:
   # 点击出现文字效果
   showText:
-    enable: true
+    enable: false
     text: ['富强','民主','文明','和谐','美丽']
     color: 'red'
   # 鼠标点击 - 心形
   ## 心是随机颜色。
-  showHeart: false
+  showHeart: true
   # 鼠标点击 - 烟花爆炸效果
   firework: false
 

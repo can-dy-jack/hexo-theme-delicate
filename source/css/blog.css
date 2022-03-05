@@ -220,7 +220,7 @@ nav.navbar .nav-item .nav-link:hover::after{
     border: 1px dashed rgb(240, 0, 112);
     color: rgb(247, 22, 108);
 }
-.blog-post img{
+.blog-post img:not(.vemoji){
     max-width: 100% !important; /* 解决图片溢出 */
     box-shadow: 0 4px 12px rgba(0,0,0,.1);
 }
