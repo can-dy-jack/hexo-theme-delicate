@@ -333,6 +333,14 @@ nav.navbar .nav-item .nav-link:hover::after{
     width: 100%;
     font-family: microsoft yahei, sans-serif;
 }
+.sidebar-about::after{
+    content: '';
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;left: 0;
+    background: repeating-linear-gradient(-45deg, transparent,transparent 8px,#3b91f3 8px,#3b91f3 25px);
+}
 .sidebar-about .my-img{
     display: flex;
     flex-direction: column;
