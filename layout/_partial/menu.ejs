@@ -34,6 +34,13 @@
         </div>
       </li>
       <% } %>
+      <li class="nav-item">
+        <a class="nav-link" href="<%- config.root %>atom.xml">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-feed"></use>
+          </svg>
+        </a>
+      </li>
     </ul>
     <% if(theme.search.enable){ %>
       <form class="form-inline my-2 my-lg-0">
