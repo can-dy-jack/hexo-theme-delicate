@@ -92,6 +92,15 @@ canvas:
   # canvas line count
   count: '300'
 
+tags:
+  tagsBackStyle: 'alert alert-light'
+  minFont: 16
+  maxFont: 35
+  color:
+    enable: true
+    startColor: '#aa0000'
+    endColor: '#aa00aa'
+
 
 # --------------------------- #
 ##   style setting           ##
