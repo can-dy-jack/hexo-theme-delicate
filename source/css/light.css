@@ -1,0 +1,40 @@
+::selection{
+    background-color: rgba(90, 196, 245, 0.45);
+}
+::-moz-selection{
+    background-color: rgba(90, 196, 245, 0.45);
+}
+body {
+    background-color: #fafafa;
+}
+nav.navbar {
+    -webkit-box-shadow: 0 -2px 12px 2px rgba(0,0,0,.1);
+    box-shadow: 0 -2px 12px 2px rgba(0,0,0,.1);
+    background-color: #fff;
+}
+nav.navbar .nav-item .nav-link:hover{
+    background-color: #efefef;
+    color: #222;
+}
+.blog-header {
+    background-color: #fff;
+    box-shadow: 2px 4px 18px rgba(30,30,30,.05);
+}
+.blog-post {
+    background-color: #fff;
+}
+nav.navbar .nav-item .dropdown-menu{
+    box-shadow: 0 10px 20px 8px rgba(0,0,0,.04);
+}
+.blog-footer {
+    color: #999;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    -webkit-box-shadow: 0 -3px 8px rgba(0,0,0,.06);
+    box-shadow: 0 -3px 8px rgba(0,0,0,.06);
+}
+
+/* plugins */
+.description{
+    color: #2d2d2d;
+}

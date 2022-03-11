@@ -1,12 +1,13 @@
-
+<%
+    var excerpt_link_text = theme.excerpt_link.text,
+        excerpt_link_style = theme.excerpt_link.style;
+%>
 <div class="blog-post">
-    <!-- Title -->
     <h2 class="blog-post-title">
         <a href="<%- config.root %><%- item.path %>">
             <%- item.title %>
         </a>
     </h2>
-    <!-- Date and Author -->
     <p class="blog-post-meta">
         <span><%= item.date.format(config.date_format) %></span>
         <span>
@@ -15,20 +16,12 @@
             <% } %>
         </span>
     </p>
-    <!-- Content -->
     <%- item.excerpt || item.content %>
-    <!-- Only display the Read More link if we are displaying an excerpt -->
     <% if(item.excerpt) { %>
         <p>
-            <% if(theme.style.button){ %>
-            <a href="<%- config.root %><%- item.path %>" class="<%- theme.style.button %>">
-                <%= theme.excerpt_link %>
+            <a href="<%- config.root %><%- item.path %>" class="<%- excerpt_link_style %>">
+                <%= excerpt_link_text %>
             </a>
-            <% } else {%>
-            <a href="<%- config.root %><%- item.path %>" class="btn btn-outline-primary">
-                <%= theme.excerpt_link %>
-            </a>
-            <% } %>
         </p>
     <% } %>
 </div>

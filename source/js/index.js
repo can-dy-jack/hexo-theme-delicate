@@ -66,3 +66,28 @@ function calculateTime(startTime) {
     document.getElementById("times").innerHTML ="本站已运行 " + dnum + " 天 " + hnum + " 小时 " + mnum + " 分，共" + Math.floor(interval/1000/60/60)+ "小时";
 }
 
+// theme light-dark
+const theme = document.getElementById('theme');
+const themeToggle = document.getElementById('theme-toggle');
+const themeLink = document.getElementById('theme-link');
+ // 使用sesseionStorage保存当前页面的主题
+if(window.sessionStorage.theme === "dark"){
+    theme.style.transform = 'rotate(180deg)';
+    theme.style.fill = "#eee";
+    themeLink.href = themeLink.href.replace('light','dark');
+    window.sessionStorage.theme = "dark";
+}
+themeToggle.addEventListener('click',()=>{
+    if(window.sessionStorage.theme === "light"){
+        theme.style.transform = 'rotate(180deg)';
+        theme.style.fill = "#eee";
+        themeLink.href = themeLink.href.replace('light','dark');
+        window.sessionStorage.theme = "dark";
+    } else {
+        theme.style.transform = 'rotate(0)';
+        theme.style.fill = "#111";
+        themeLink.href = themeLink.href.replace('dark','light');
+        window.sessionStorage.theme = "light";
+    }
+})
+

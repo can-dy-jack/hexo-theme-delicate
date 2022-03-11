@@ -1,6 +1,7 @@
 # header
-titleLogo: '/favicon/logo2.ico'
+titleLogo: 'favicon/logo2.ico'
 title: delicate主题
+lang: zh
 # 友链，`divider: true`是分隔符
 friend:
   enable: true
@@ -95,51 +96,14 @@ canvas:
 # --------------------------- #
 ##   style setting           ##
 # --------------------------- #
-# Read More text
-excerpt_link: 'Read More'
-# 字体设置
-font: "Roboto Mono,JetBrains Mono,microsoft yahei, serif"
-style:
+# Read More
+excerpt_link:
+  # Read More text
+  text: 'Read More'
   # '阅读更多' 的按钮样式
-  ## 基于bootstrap，可选项即为bootstrap的按钮样式
   ## btn-primary | btn-secondary | btn-secondary | btn-outline-success  and so on.
   ## more: https://v4.bootcss.com/docs/components/buttons/
-  ## just like: 'btn btn-outline-success';
-  button: ''
-  ## 各个组件的样式设置
-  color:
-    # body's background-color,default is #fafafa;
-    body: '#fafafa'
-
-    # menu's background-color,default is #fff;
-    menu: ''
-    # menu's box-shadow,default is none;
-    menuBoxShadow: '0 -2px 12px 2px rgba(0,0,0,.1)'
-
-    # post's background-color,default is #fff;
-    post: ''
-    ## post's box-shadow
-    postBoxShadow: '2px 4px 18px rgba(30,30,30,.05)'
-
-    # header's background-color,default is #fff;
-    header: ''
-    # header's border-radius,default is 0px;
-    headerBorderRadius: ''
-    # header's box-shadow,default is none;
-    headerBoxShadow: ''
-  siderbar:
-    # sidebar social-icon color and hover-color
-    color: '#999'
-    hoverColor: '#008080'
-# tagcloud 标签云
-tags:
-  tagsBackStyle: 'alert alert-light'
-  minFont: 16
-  maxFont: 35
-  color:
-    enable: true
-    startColor: '#aa0000'
-    endColor: '#aa00aa'
+  style: 'btn btn-outline-primary'
 
 # 鼠标点击效果；
 ## showText / showHeart / firework 只能打开一个！否则 鼠标点击效果为最靠上的那一个。
@@ -151,7 +115,7 @@ mouseClick:
     color: 'red'
   # 鼠标点击 - 心形
   ## 心是随机颜色。
-  showHeart: true
+  showHeart: false
   # 鼠标点击 - 烟花爆炸效果
   firework: false
 
@@ -243,4 +207,3 @@ valine:
 baidu_analytic: 
   enable: false
   key: ''
-

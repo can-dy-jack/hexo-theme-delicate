@@ -1,0 +1,48 @@
+::selection{
+    background-color: rgb(63, 126, 155);
+}
+::-moz-selection{
+    background-color: rgb(63, 126, 155);
+}
+body {
+    background-color: var(--dark-bg2);
+}
+nav.navbar {
+    -webkit-box-shadow: 0 -2px 12px 2px rgba(255,255,255,.1);
+    box-shadow: 0 -2px 12px 2px rgba(255,255,255,.1);
+    background-color: #454545;
+}
+nav.navbar .nav-item .nav-link,
+nav.navbar .navbar-brand{
+    color: white;
+}
+nav.navbar .nav-item .nav-link:hover{
+    background-color: #888;
+    color: #eee;
+}
+nav.navbar .navbar-brand:hover{
+    color: #eee;
+}
+.blog-header {
+    background-color: var(--dark-bg3);
+    box-shadow: 2px 4px 18px rgba(230,230,230,.05);
+    color: white;
+}
+.blog-post {
+    background-color: var(--dark-bg3);
+    color: white;
+}
+nav.navbar .nav-item .dropdown-menu{
+    box-shadow: 0 10px 20px 8px rgba(255,255,255,.04);
+}
+.blog-footer {
+    color: #fff;
+    background-color: #343434;
+    border-top: 1px solid #e5e5e5;
+}
+
+
+/* plugins */
+.description{
+    color: #fff;
+}

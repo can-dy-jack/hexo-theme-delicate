@@ -34,6 +34,23 @@
         </div>
       </li>
       <% } %>
+      <% if(theme.background.meditation.enable) { %>
+        <li class="nav-item" id="theme-toggle" style="display:none;">
+          <a class="nav-link" href="#">
+            <svg class="icon" aria-hidden="true" id="theme" style='transition: transform 0.3s ease;'>
+              <use xlink:href="#icon-light"></use>
+            </svg>
+          </a>
+        </li>
+      <% } else { %>
+        <li class="nav-item" id="theme-toggle">
+          <a class="nav-link" href="#">
+            <svg class="icon" aria-hidden="true" id="theme" style='transition: transform 0.3s ease;'>
+              <use xlink:href="#icon-light"></use>
+            </svg>
+          </a>
+        </li>
+      <% } %>
       <li class="nav-item">
         <a class="nav-link" href="<%- config.root %>atom.xml">
           <svg class="icon" aria-hidden="true">

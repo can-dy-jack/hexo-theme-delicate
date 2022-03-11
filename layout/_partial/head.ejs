@@ -1,58 +1,22 @@
-<head>
+<head lang="<%= theme.lang %>">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta name="description" content="<%- config.description %>">
     <meta name="author" content="<%- config.author %>">
+
     <link rel="icon" href="<%- config.root %><%- theme.titleLogo %>">
-    <title><%- config.title %> <%- page.title %></title>
-    <%- css('css/blog.css') %>
+    <title><%- config.title %><%- page.title %></title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- fancybox -->
     <% if(theme.fancybox.enable){ %>
         <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
     <% } %>
+    <%- css('css/blog.css') %>
+    <link rel="stylesheet" href="<%- config.root %>css/light.css" id="theme-link">
     <%- css('css/markdown.css') %>
     <%- css('css/plugins.css') %>
-    <!-- 默认背景 -->
-    <% 
-        var headerColor = theme.style.color.header || '#fff',
-        headerBorderRadius = theme.style.color.headerBorderRadius || 0,
-        headerBoxShadow = theme.style.color.headerBoxShadow || 'none',
-        bodyColor = theme.style.color.body || '#fafafa',
-        postColor = theme.style.color.post || '#fff',
-        postBoxShadow = theme.style.color.postBoxShadow || 'none',
-        menuColor = theme.style.color.menu || '#fff',
-        menuBoxShadow = theme.style.color.menuBoxShadow || 'none',
-        scolor = theme.style.siderbar.color || '#aaa',
-        hscolor = theme.style.siderbar.hoverColor || 'teal';
-    %>
-    <style>
-        body {
-            background-color: <%= bodyColor %>;
-            font-family: <%= theme.font %>;
-        }
-        /* blog menu */
-        nav.navbar {
-            -webkit-box-shadow: <%= menuBoxShadow %>;
-            box-shadow: <%= menuBoxShadow %>;
-            background-color: <%= menuColor %>;
-        }
-        .blog-header {
-            background-color: <%= headerColor %>;
-            border-radius: <%= headerBorderRadius %>;
-            box-shadow: <%= headerBoxShadow %>;
-        }
-        .blog-post {
-            background-color: <%= postColor %>;
-            box-shadow: <%= postBoxShadow %>;
-        }
-        .sidebar-about .my-social-account .icon-box a svg{
-            fill: <%= scolor %>;
-        }
-        .sidebar-about .my-social-account .icon-box a:hover svg{
-            fill: <%= hscolor %>;
-        }
-    </style>
     <!-- 背景 -->
     <% if(theme.background.meditation.enable) { %>
         <%- css('css/meditation.css') %>

@@ -1,12 +1,13 @@
-/* 基本布局样式 */
 html{
     scroll-behavior: smooth;
 }
-::selection{
-    background-color: rgba(90, 196, 245, 0.45);
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji", sans-serif;
 }
-::-moz-selection{
-    background-color: rgba(90, 196, 245, 0.45);
+:root {
+    --dark-bg: #0d1117;
+    --dark-bg2: #15141a;
+    --dark-bg3: #2b2a33;
 }
 ::-webkit-scrollbar{
     width: 10px;
@@ -15,33 +16,15 @@ html{
 ::-webkit-scrollbar-thumb{
     background-clip: padding-box; /* important */
     width: 6px;
-    background-color: rgba(120, 134, 150, 0.6);
+    background-color: rgba(120, 134, 150, 0.8);
     border-radius: 10px;
     border: 2px solid transparent;
 }
-
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-    margin-top: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: normal;
-    color: #333;
-}
-/*
- * Override Bootstrap's default container.
- */
-
 @media (min-width: 1200px) {
     .container {
         width: 1040px;
     }
 }
-
-/* blog menu */
 nav.navbar {
     font-size: 1.2rem;
     margin-bottom: 15px;
@@ -53,27 +36,31 @@ nav.navbar .nav-item .nav-link{
     position: relative;
     text-transform: capitalize;
 }
-nav.navbar .nav-item .dropdown-menu{
-    box-shadow: 0 10px 20px 8px rgba(0,0,0,.04);
+/* footer */
+.blog-footer {
+    padding: 20px 0;
+    text-align: center;
 }
-nav.navbar .nav-item .nav-link:hover{
-    background-color: #efefef;
-    color: #222;
+.blog-footer p{
+    margin: 0 10px;
 }
-nav.navbar .nav-item .nav-link:hover::after{
-    animation: menuAfter 1s ease infinite;
+.blog-footer p:last-child {
+    margin-bottom: 0;
 }
-@keyframes menuAfter {
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(5px);
-    }
-    100%{
-        transform: translateY(0);
-    }
+
+
+
+
+
+
+
+.sidebar-about .my-social-account .icon-box a svg{
+    fill: '#aaa';
 }
+.sidebar-about .my-social-account .icon-box a:hover svg{
+    fill: 'teal';
+}
+
 /* Active state gets a caret at the bottom */
 .blog-nav .active {
     color: #fff;
@@ -284,23 +271,6 @@ nav.navbar .nav-item .nav-link:hover::after{
 .blog-post-next:active,
 .blog-post-pre:active{
     transform: scale(0.99);
-}
-/* footer */
-
-.blog-footer {
-    padding: 20px 0;
-    color: #999;
-    text-align: center;
-    background-color: #fff;
-    border-top: 1px solid #e5e5e5;
-    -webkit-box-shadow: 0 -3px 8px rgba(0,0,0,.06);
-    box-shadow: 0 -3px 8px rgba(0,0,0,.06);
-}
-.blog-footer p{
-    margin: 0 10px;
-}
-.blog-footer p:last-child {
-    margin-bottom: 0;
 }
 
 /*
