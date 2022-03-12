@@ -50,9 +50,9 @@ blockquote.blue p{
 
 /* note */
 .note>p{
-    background-color: #efefef;
+    background-color: #efefefaa;
     padding: 8px 12px;
-    border-left: 5px solid #2d2d2d;
+    border-left: 5px solid #111;
     border-radius: 5px;
     color: #111;
 }
@@ -64,62 +64,62 @@ blockquote.blue p{
     color: #111;
 }
 .note-info>p{
-    background-color: #fffbf0;
+    background-color: #ffefd288;
     color: #ae7000;
     border-color: #ae7000;
 }
 .note-info>ol,.note-info>ul{
-    background-color: #fffbf0;
+    background-color: #fffbf088;
     color: #ae7000;
     border-color: #ae7000;
 }
 .note-primary>p{
-    background-color: #e6eff8;
+    background-color: #e6eff8aa;
     color: #007bff;
     border-color: #007bff;
 }
 .note-primary>ol,.note-primary>ul{
-    background-color: #e6eff8;
+    background-color: #e6eff8aa;
     color: #007bff;
     border-color: #007bff;
 }
 .note-success>p{
-    background-color: #e0fae0;
+    background-color: #e0fae0aa;
     color: green;
     border-color: green;
 }
 .note-success>ol,.note-success>ul{
-    background-color: #e0fae0;
+    background-color: #e0fae0aa;
     color: green;
     border-color: green;
 }
 .note-warning p{
-    background-color: rgb(252, 248, 216);
-    color: rgb(255, 180, 0);
+    background-color: #fcf8d8aa;
+    color: rgb(207, 145, 0);
     border-color: rgb(255, 180, 0);
 }
 .note-warning>ol,.note-warning>ul{
-    background-color: rgb(252, 248, 216);
-    color: rgb(255, 180, 0);
+    background-color: #fcf8d8aa;
+    color: rgb(207, 145, 0);
     border-color: rgb(255, 180, 0);
 }
 .note-danger>p{
-    background-color: #ffdbdb;
+    background-color: #ffdbdbaa;
     color: rgb(253, 13, 13);
     border-color: rgb(253, 13, 13);
 }
 .note-danger>ol,.note-danger>ul{
-    background-color: #ffdbdb;
+    background-color: #ffdbdbaa;
     color: rgb(253, 13, 13);
     border-color: rgb(253, 13, 13);
 }
 .note-light p{
-    background-color: #fafafa;
+    background-color: #fafafaaa;
     color: #2d2d2d;
     border-color: #fff;
 }
 .note-light>ol,.note-light>ul{
-    background-color: #fafafa;
+    background-color: #fafafaaa;
     color: #2d2d2d;
     border-color: #fff;
 }
@@ -134,12 +134,12 @@ blockquote.blue p{
     border-color: rgb(0, 255, 157);
 }
 .note-purple p{
-    background-color: rgb(252, 232, 252);
+    background-color: #fce8fcaa;
     color: hsl(300, 100%, 25%);
     border-color: purple;
 }
 .note-purple>ol,.note-purple>ul{
-    background-color: rgb(252, 232, 252);
+    background-color: #fce8fcaa;
     color: hsl(300, 100%, 25%);
     border-color: purple;
 }
@@ -147,6 +147,9 @@ blockquote.blue p{
 /* alert */
 .alert p{
     margin-bottom: 0;
+}
+.collapse{
+    color: #111;
 }
 
 /* description */
@@ -162,8 +165,8 @@ blockquote.blue p{
     font-weight: bold;
 }
 .description.dark{
-    border: 1px solid #dfdfdf;
-    border-left: 6px solid rgb(31, 2, 2);
+    border: 1px solid #eee;
+    border-left: 6px solid rgb(31, 30, 30);
 }
 .description.info{
     border: 1px solid #b6d4ff;
@@ -188,7 +191,6 @@ blockquote.blue p{
 }
 /* toasts */
 .toasts{
-    background-color: #fff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0 ,0.12), 0 3px 1px -2px rgb(0, 0, 0,0.2),0 -1px 4px 1px rgb(0, 0, 0,0.1);
     margin: 5px 0 10px 0;
     color: #121212;
@@ -207,28 +209,27 @@ blockquote.blue p{
 .toasts .toasts-content{
     padding: 10px;
 }
-
 .toasts-tip .toasts-title{
-    background-color: #40d884;
+    background-color: #40d884aa;
 }
 .toasts-tip .toasts-content{
-    background-color: #e2faed;
+    background-color: #e2faedaa;
 }
 .toasts-note .toasts-title{
-    background-color: #78bef3;
+    background-color: #78bef3aa;
 }
 .toasts-note .toasts-content{
-    background-color: #dce9f3;
+    background-color: #dce9f3aa;
 }
 .toasts-danger .toasts-title{
-    background-color: #f37575;
+    background-color: #f37575aa;
 }
 .toasts-danger .toasts-content{
-    background-color: #f7e0e0;
+    background-color: #f7e0e0aa;
 }
 .toasts-warning .toasts-title{
-    background-color: #e7d049;
+    background-color: #e7d049aa;
 }
 .toasts-warning .toasts-content{
-    background-color: #f5efd4;
+    background-color: #f5efd4aa;
 }
