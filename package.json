@@ -1,0 +1,28 @@
+{
+  "name": "hexo-theme-delicate",
+  "version": "2.0.0",
+  "description": "依据bootstrap设计的一款hexo主题",
+  "main": "package.js",
+  "files": [
+    "language",
+    "layout",
+    "scripts",
+    "source",
+    "_config.yml"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "can-dy-jack/hexo-theme-delicate",
+  "author": "kartjim",
+  "keywords": [
+    "hexo",
+    "theme",
+    "delicate"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/can-dy-jack/hexo-theme-delicate/issues"
+  },
+  "homepage": "https://kartjim.top/delicate"
+}
