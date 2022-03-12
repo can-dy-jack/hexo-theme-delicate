@@ -33,8 +33,29 @@ nav.navbar .nav-item .dropdown-menu{
     -webkit-box-shadow: 0 -3px 8px rgba(0,0,0,.06);
     box-shadow: 0 -3px 8px rgba(0,0,0,.06);
 }
+#sidebar-to-top{
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(10,30,100,.2);
+}
+.sidebar-about{
+    background-color: #fff;
+}
+.sidebar-about .my-tag span{
+    background-color: rgba(191, 238, 238,.2);
+}
+.sidebar-about .my-division .text{
+    background-color: #fff;
+    color: #111;
+}
+.blog-post-meta .post-count:hover{
+    background-color: #f2f3f4;
+}
+.blog-post img:not(.vemoji){
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
 
 /* plugins */
 .description{
     color: #2d2d2d;
 }
+

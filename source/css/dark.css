@@ -40,6 +40,23 @@ nav.navbar .nav-item .dropdown-menu{
     background-color: #343434;
     border-top: 1px solid #e5e5e5;
 }
+#sidebar-to-top{
+    background-color: var(--dark-bg3);
+    color: white;
+    fill: white;
+    box-shadow: 0 0 10px rgba(210,230,200,.2);
+}
+.sidebar-about{
+    background-color: var(--dark-bg3);
+}
+.sidebar-about .my-division .text{
+    background-color: #2b2a33;
+    color: white;
+}
+.blog-post-meta .post-count:hover{
+    background-color: #666;
+    color: white;
+}
 
 
 /* plugins */
