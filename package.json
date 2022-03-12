@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-delicate",
-  "version": "2.0.3",
+  "version": "2.0.5",
   "description": "依据bootstrap设计的一款hexo主题",
   "main": "package.js",
   "files": [
@@ -26,6 +26,6 @@
   },
   "homepage": "https://kartjim.cn/delicate",
   "devDependencies": {
-    "hexo-cli": "4.3.0"
+    "hexo": "4.3.0"
   }
 }

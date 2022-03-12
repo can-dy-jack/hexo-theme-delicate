@@ -1,15 +1,9 @@
-# delicate
+# hexo-theme-delicate
 
 > 依据bootstrap设计的一款hexo主题  
 > [Demo site](https://kartjim.top/delicate)
 
-<div align="center">
-
-[English](/README-EN.md)
-
-</div>
-
-<div align="center">
+<div style="display:flex;justify-content: space-evenly;">
 <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E%3D10.9.0-blue"></a>
 <a href="https://hexo.io"><img src="https://img.shields.io/badge/hexo-4.3.0-brightgreen"></a>
 <a href="https://github.com/can-dy-jack/hexo-theme-delicate/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-orange"></a>
@@ -21,13 +15,21 @@
 
 ### 下载
 
-1. git
+1. npm
+
+```bash
+npm i hexo-theme-delicate
+```
+
+然后去 `node_modules` 文件夹找到 `hexo-theme-delicate` 文件夹，将其剪切到目录下的 `themes` 文件夹下。
+
+2. git
 
 ```git
 git clone https://github.com/can-dy-jack/hexo-theme-delicate.git theme/delicate
 ```
 
-2. 或者你可以**下载本仓库的代码，解压到theme文件夹之下，重命名文件夹为`delicate`。**
+3. 或者你可以**下载本仓库的代码，解压到theme文件夹之下，重命名文件夹为`delicate`。**
 
 ### 使用
 
@@ -37,15 +39,6 @@ git clone https://github.com/can-dy-jack/hexo-theme-delicate.git theme/delicate
 theme: delicate
 ```
 
-### 多语言 - 国际化（i18n）
-
-- en
-- zh-CN
-- Japanese
-- spanish
-- portuguese
-- korean
-
 ### 本主题自定义 front-matter
 
 1. 置顶文章
@@ -54,17 +47,6 @@ theme: delicate
 
 ```yml
 top: true
-```
-
-2. 是否为原创文章
-
-在文章的Front-matter添加 `original: true` 即可标志为原创文章，当然你也可以添加 `original: false` 标注为搬运文章。
-
-```yml
-# 原创
-original: true
-# 搬运
-# original: false
 ```
 
 3. 开启MathJax
@@ -145,6 +127,27 @@ color red 三个参数均不可少
 {% endcollapse %}
 ```
 
+5. toasts
+
+
+例子：
+```markdown
+{% toasts tip 提示 %}
+**Markdown** is supported, Text can be bold, italic, or strikethrough. 
+Links should be blue with no underlinesinline codeinline code inside link
+{% endtoasts %}
+```
+效果：
+
+![b71Rxg.png](https://s1.ax1x.com/2022/03/12/b71Rxg.png)
+
+可选值：
+
+- tip
+- note
+- danger
+- warning
+
 More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12/code-test)
 
 ### markdown
@@ -158,8 +161,8 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 
 ## 开发计划
 
-- [ ] 添加404页面
-- [ ] 文章分享功能
-- [ ] 永久链接问题
-- [ ] 优化评论系统
-- [ ] 优化雪花飘落效果 + 用户选项
+- 添加404页面
+- 文章分享功能
+- 永久链接问题
+- 优化评论系统
+- 优化雪花飘落效果 + 用户选项
