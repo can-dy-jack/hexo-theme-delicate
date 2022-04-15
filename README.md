@@ -71,7 +71,7 @@ note-info
 ```
 
 效果：
-![image.png](https://s2.loli.net/2021/12/11/d74VfQNhG9ELW1P.png)
+![note.png](https://s2.loli.net/2022/04/15/LXfJoPzmxYDMcq8.png)
 
 2. color
 
@@ -94,6 +94,9 @@ note-info
 A simple primary alert—check it out!
 {% endalert %}
 ```
+
+效果：
+![alert.png](https://s2.loli.net/2022/04/15/hyon6jNGHbBrEOv.png)
 
 可选值：
 
@@ -132,16 +135,20 @@ color red 三个参数均不可少
 {% endcollapse %}
 ```
 
+效果：
+![coll1.png](https://s2.loli.net/2022/04/15/4Pyn685xhrXHRSt.png)
+
 5. toasts
 
-
 例子：
+
 ```markdown
 {% toasts tip 提示 %}
 **Markdown** is supported, Text can be bold, italic, or strikethrough. 
 Links should be blue with no underlinesinline codeinline code inside link
 {% endtoasts %}
 ```
+
 效果：
 
 ![b71Rxg.png](https://s1.ax1x.com/2022/03/12/b71Rxg.png)
@@ -152,6 +159,26 @@ Links should be blue with no underlinesinline codeinline code inside link
 - note
 - danger
 - warning
+
+6. description
+
+使用：
+
+```markdown
+{% description dark 提示 %}
+本博客所有文章均采用 CC BY-SA 4.0 协议 ，转载请注明出处。
+{% enddescription %}
+```
+
+效果：
+![description.png](https://s2.loli.net/2022/04/15/Wu2bfERP69SIAkL.png)
+
+可选值：
+
+- danger
+- info
+- success
+- dark
 
 More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12/code-test)
 
@@ -166,6 +193,7 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 
 ## 开发计划
 
+- collapse展开式按钮文字变化？！
 - 404页面
 - 文章分享功能
 - 永久链接问题

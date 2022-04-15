@@ -1,7 +1,6 @@
 # header
 titleLogo: 'favicon/logo2.ico'
 title: delicate主题
-lang: zh
 # 友链，`divider: true`是分隔符
 friend:
   enable: true
