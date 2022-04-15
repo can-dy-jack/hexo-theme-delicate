@@ -1,11 +1,9 @@
 <div class="blog-post shadow">
     <%- partial('toc') %>
     <!-- Title -->
-    <h2 class="blog-post-title">
-        <a href="<%- config.root %><%- item.path %>">
-            <%- item.title || item.link %>
-        </a>
-    </h2>
+    <div class="blog-post-title">
+        <%- item.title || item.link %>
+    </div>
     <p class="blog-post-meta">
         <span><%= item.date.format(config.date_format) %></span>
         <span>

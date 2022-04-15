@@ -143,18 +143,18 @@ widget:
     enable: true
     topStyle: 'alert alert-dark'
   # 诗句 - 颜色和诗句随机生成
-  poem: true
+  poem: false
   # 显示实时天气
   ## 仅限于 中国地区城市
   weather:
-    enable: false
+    enable: true
     # 直接打城市名字即可
-    city: '合肥'
+    city: '上海'
     # Broadcast
     openBroadcast: true
     BroadcastText: "感冒多发期，适当减少外出频率，适量补充水分，适当增减衣物。"
   music:
-    enable: true
+    enable: false
     netease:
       enable: false
       songID: 

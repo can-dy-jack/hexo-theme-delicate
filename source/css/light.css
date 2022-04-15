@@ -12,10 +12,7 @@ nav.navbar {
     box-shadow: 0 -2px 12px 2px rgba(0,0,0,.1);
     background-color: #fff;
 }
-nav.navbar .nav-item .nav-link:hover{
-    background-color: #efefef;
-    color: #222;
-}
+
 .blog-header {
     background-color: #fff;
     box-shadow: 2px 4px 18px rgba(30,30,30,.05);
@@ -46,9 +43,6 @@ nav.navbar .nav-item .dropdown-menu{
 .sidebar-about .my-division .text{
     background-color: #fff;
     color: #111;
-}
-.blog-post-meta .post-count:hover{
-    background-color: #f2f3f4;
 }
 .blog-post img:not(.vemoji){
     box-shadow: 0 4px 12px rgba(0,0,0,.1);

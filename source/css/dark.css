@@ -16,10 +16,7 @@ nav.navbar .nav-item .nav-link,
 nav.navbar .navbar-brand{
     color: white;
 }
-nav.navbar .nav-item .nav-link:hover{
-    background-color: #888;
-    color: #eee;
-}
+
 nav.navbar .navbar-brand:hover{
     color: #eee;
 }
@@ -53,11 +50,6 @@ nav.navbar .nav-item .dropdown-menu{
     background-color: #2b2a33;
     color: white;
 }
-.blog-post-meta .post-count:hover{
-    background-color: #666;
-    color: white;
-}
-
 
 /* plugins */
 .description{
