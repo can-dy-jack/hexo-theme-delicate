@@ -81,7 +81,7 @@ nav.navbar .nav-item .nav-link{
     width: fit-content;
     flex-direction: column;
     padding: 10px 24px;
-    box-shadow: 5px 2px 22px#fff,
+    box-shadow: 5px 2px 22px #fff,
                 -5px -2px 22px #a9bfc3;
     margin: 5px auto;
 }
