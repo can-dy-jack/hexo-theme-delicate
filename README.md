@@ -9,7 +9,7 @@
 <a href="https://github.com/can-dy-jack/hexo-theme-delicate/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-orange"></a>
 </div>
 
-## 教程
+## 使用指南
 
 使用主题默认您已创建过[hexo](https://hexo.io)项目
 
@@ -18,12 +18,15 @@
 1. npm
 
 ```bash
+# use npm
 npm i hexo-theme-delicate
+# or use yarn
+yarn add hexo-theme-delicate
 ```
 
 然后去 `node_modules` 文件夹找到 `hexo-theme-delicate` 文件夹，将其剪切到目录下的 `themes` 文件夹下。
 
-2. git
+2. 推荐使用git
 
 ```git
 git clone https://github.com/can-dy-jack/hexo-theme-delicate.git theme/delicate
@@ -39,7 +42,7 @@ git clone https://github.com/can-dy-jack/hexo-theme-delicate.git theme/delicate
 theme: delicate
 ```
 
-### 本主题自定义 front-matter
+### front-matter
 
 1. 置顶文章
 
@@ -49,10 +52,12 @@ theme: delicate
 top: true
 ```
 
-3. 开启MathJax
+2. 支持MathJax
+
 ```yml
 mathjax: true
 ```
+
 **文章没有公式请不要添加，会影响页面加载速度。**
 
 ### 本主题内置tag
@@ -165,4 +170,5 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 - 文章分享功能
 - 永久链接问题
 - 优化评论系统
+- 搜索功能
 - 优化雪花飘落效果 + 用户选项
