@@ -8,10 +8,10 @@
 
 <% if(theme.canvas.enable){ %>
     <%
-        var a = theme.background.canvas.color,
-        b = theme.background.canvas.zIndex,
-        c = theme.background.canvas.opacity,
-        d = theme.background.canvas.count;
+        var a = theme.canvas.color,
+        b = theme.canvas.zIndex,
+        c = theme.canvas.opacity,
+        d = theme.canvas.count;
     %>
     <%- js({ src: 'js/canvas.js', color: a ,zIndex: b,opacity: c,count: d}) %>
 <% } %>

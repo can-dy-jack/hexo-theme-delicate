@@ -6,19 +6,15 @@ del {
     margin: 5px;
 }
 /* 列表 */
-/* ol{
-    list-style-type: simp-chinese-formal;
-} */
-ol li::marker{
-    color: #999;
+ul,ol{
+    padding-left: 20px;
 }
 
 
 /* blockquote */
 blockquote p {
-    border-left: 4px solid #aaa;
-    padding: 0 10px;
-    color: #999;
+    border-left: 4px solid gray;
+    padding: 5px 15px;
 }
 
 blockquote footer {
@@ -180,10 +176,10 @@ p>code {
 .blog-post table{
     border-collapse: collapse;
     width: 100%;
+    margin: 5px 0;
 }
 .blog-post table thead{
-    background-color: #454545;
-    color: white;
+    background-color: #dfdfdf;
 }
 .blog-post table tr th{
     padding: 5px 10px;
@@ -195,10 +191,7 @@ p>code {
     border: 1px solid #ccc;
 }
 .blog-post table tbody tr:nth-child(2n){
-    background-color: #fff;
-}
-.blog-post table tbody tr:nth-child(2n+1){
-    background-color: #f2f2f2;
+    background-color: #fafafa;
 }
 /* img */
 .blog-post p>img:not(.vemoji),.blog-post>img:not(.vemoji){

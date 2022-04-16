@@ -195,9 +195,9 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 
 - collapse展开式按钮文字变化？！
 - 标题打字机效果
+- 优化黑暗模式
 - 404页面
 - 文章分享功能
 - 永久链接问题
 - 优化评论系统
 - 搜索功能
-- 优化雪花飘落效果 + 用户选项

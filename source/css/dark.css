@@ -14,33 +14,36 @@ nav.navbar {
 }
 nav.navbar .nav-item .nav-link,
 nav.navbar .navbar-brand{
-    color: white;
+    color: #ddd;
 }
 
 nav.navbar .navbar-brand:hover{
     color: #eee;
 }
+nav.navbar ul li::before{
+    background-color: #eee;
+}
 .blog-header {
     background-color: var(--dark-bg3);
     box-shadow: 2px 4px 18px rgba(230,230,230,.05);
-    color: white;
+    color: #ddd;
 }
 .blog-post {
     background-color: var(--dark-bg3);
-    color: white;
+    color: #ddd;
 }
 nav.navbar .nav-item .dropdown-menu{
     box-shadow: 0 10px 20px 8px rgba(255,255,255,.04);
 }
 .blog-footer {
-    color: #fff;
+    color: #ddd;
     background-color: #343434;
     border-top: 1px solid #e5e5e5;
 }
 #sidebar-to-top{
     background-color: var(--dark-bg3);
-    color: white;
-    fill: white;
+    color: #ddd;
+    fill: #ddd;
     box-shadow: 0 0 10px rgba(210,230,200,.2);
 }
 .sidebar-about{
@@ -48,10 +51,10 @@ nav.navbar .nav-item .dropdown-menu{
 }
 .sidebar-about .my-division .text{
     background-color: #2b2a33;
-    color: white;
+    color: #ddd;
 }
 
 /* plugins */
 .description{
-    color: #fff;
+    color:#ddd;
 }

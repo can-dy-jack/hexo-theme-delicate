@@ -94,9 +94,9 @@ blockquote.blue p{
     border-color: green;
 }
 .note-warning p{
-    background-color: #fcf8d8aa;
-    color: rgb(207, 145, 0);
-    border-color: rgb(255, 180, 0);
+    background-color: rgba(255, 193, 7, .06);
+    color: #ffc107;
+    border-color: #ffc107;
 }
 .note-warning>ol,.note-warning>ul{
     background-color: #fcf8d8aa;

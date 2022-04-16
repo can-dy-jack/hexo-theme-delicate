@@ -39,7 +39,6 @@ nav.navbar ul li {
 }
 nav.navbar ul li::before{
     content: '';
-    background-color: #f3f8fc;
     width: 100%;
     height: 4rem;
     position: absolute;
@@ -160,7 +159,7 @@ nav.navbar ul li:hover::before{
     width: 100%;
     position: absolute;
     bottom: 0;left: 0;
-    background: repeating-linear-gradient(-45deg, transparent,transparent 8px,#3b91f3 8px,#3b91f3 25px);
+    background: repeating-linear-gradient(-45deg, transparent,transparent 8px,#454545 8px,#454545 25px);
 }
 .sidebar-about .my-img{
     display: flex;
@@ -170,7 +169,7 @@ nav.navbar ul li:hover::before{
 .sidebar-about .my-img>div{
     width: 50%;
     border-radius: 50%;
-    border: 2px dashed teal;
+    border: 2px dashed #777;
     overflow: hidden;
 }
 .sidebar-about .my-img img{
@@ -179,11 +178,11 @@ nav.navbar ul li:hover::before{
 }
 .sidebar-about .my-img .name{
     margin: 5px 0;
-    color: teal;
+    color: #777;
     font-weight: bold;
 }
 .sidebar-about .my-logo{
-    color: #1b5a5a;
+    color: #777;
     text-align: center;
     margin: 5px 0 10px 0;
 }
@@ -196,8 +195,8 @@ nav.navbar ul li:hover::before{
 .sidebar-about .my-tag span{
     padding: 3px 8px;
     margin: 2px 3px;
-    border: 1px dashed teal;
-    color: teal;
+    border: 1px dashed #777;
+    color: #777;
     font-size: 14px;
     border-radius: 4px;
 }
@@ -210,7 +209,7 @@ nav.navbar ul li:hover::before{
 .sidebar-about .my-division .division{
     height: 1px;
     width: 100%;
-    background-color: teal;
+    background-color: #777;
     display: block;
 }
 .sidebar-about .my-division .text{
@@ -232,6 +231,11 @@ nav.navbar ul li:hover::before{
 }
 .sidebar-about .my-social-account .icon-box a{
     text-decoration: none;
+    color: gray;
+}
+.sidebar-about .my-social-account .icon-box a:hover{
+    text-decoration: none;
+    color: #555;
 }
 .pagination{
     justify-content: center;
@@ -316,6 +320,7 @@ nav.navbar ul li:hover::before{
 .blog-post-change .blog-post-next{
     margin: 5px 0;
     transition: all 0.2s linear;
+    cursor: pointer;
 }
 .blog-post-change .blog-post-pre:hover a,
 .blog-post-change .blog-post-next:hover a{

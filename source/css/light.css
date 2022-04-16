@@ -23,6 +23,9 @@ nav.navbar {
 nav.navbar .nav-item .dropdown-menu{
     box-shadow: 0 10px 20px 8px rgba(0,0,0,.04);
 }
+nav.navbar ul li::before{
+    background-color: #f3f8fc;
+}
 .blog-footer {
     color: #999;
     background-color: #fff;
@@ -42,7 +45,7 @@ nav.navbar .nav-item .dropdown-menu{
 }
 .sidebar-about .my-division .text{
     background-color: #fff;
-    color: #111;
+    color: #777;
 }
 .blog-post img:not(.vemoji){
     box-shadow: 0 4px 12px rgba(0,0,0,.1);
