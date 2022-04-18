@@ -3,6 +3,7 @@ html{
 }
 body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji", sans-serif;
+    background-color: #fafafa;
 }
 :root {
     --dark-bg: #0d1117;
@@ -23,6 +24,12 @@ body {
     border-radius: 10px;
     border: 2px solid transparent;
 }
+::selection{
+    background-color: rgba(90, 196, 245, 0.45);
+}
+::-moz-selection{
+    background-color: rgba(90, 196, 245, 0.45);
+}
 @media (min-width: 1200px) {
     .container {
         width: 1040px;
@@ -31,6 +38,9 @@ body {
 nav.navbar {
     font-size: 1.2rem;
     margin-bottom: 15px;
+    -webkit-box-shadow: 0 -2px 12px 2px rgba(0,0,0,.1);
+    box-shadow: 0 -2px 12px 2px rgba(0,0,0,.1);
+    background-color: #fff;
 }
 nav.navbar .nav-item .nav-link{
     transition: all 0.25s ease-in-out;
@@ -49,15 +59,21 @@ nav.navbar ul li::before{
     transition: all 0.25s ease;
     transform: scaleY(0);
     transform-origin: bottom;
+    background-color: #fafafa;
 }
 nav.navbar ul li:hover::before{
     transform: scaleY(1);
+}
+nav.navbar .nav-item .dropdown-menu{
+    box-shadow: 0 10px 20px 8px rgba(0,0,0,.04);
 }
 
 .blog-header {
     padding: 20px;
     margin-bottom: 20px;
     z-index: 10;
+    background-color: #fff;
+    box-shadow: 2px 4px 18px rgba(30,30,30,.05);
 }
 .blog-main {
     font-size: 18px;
@@ -155,6 +171,7 @@ nav.navbar ul li:hover::before{
     border-radius: 3px;
     width: 100%;
     font-family: microsoft yahei, sans-serif;
+    background-color: #fff;
 }
 .sidebar-about::after{
     content: '';
@@ -202,6 +219,7 @@ nav.navbar ul li:hover::before{
     color: #777;
     font-size: 14px;
     border-radius: 4px;
+    background-color: rgba(191, 238, 238,.2);
 }
 .sidebar-about .my-division{
     margin-top: 30px;
@@ -218,6 +236,8 @@ nav.navbar ul li:hover::before{
 .sidebar-about .my-division .text{
     transform: translateY(-50%);
     padding: 2px 8px;
+    background-color: #fff;
+    color: #777;
 }
 .sidebar-about .my-social-account{
     display: flex;
@@ -248,6 +268,7 @@ nav.navbar ul li:hover::before{
     margin-bottom: 30px;
     border-radius: 10px;
     padding: 15px 15px 5px 15px;
+    background-color: #fff;
 }
 .blog-post-title {
     margin: 25px 0 5px 0;
@@ -285,6 +306,7 @@ nav.navbar ul li:hover::before{
 }
 .blog-post img:not(.vemoji){
     max-width: 100% !important; /* 解决图片溢出 */
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
 }
 /* 文章下的标签 和 分类*/
 .blog-tag-and-cate{
@@ -387,6 +409,11 @@ nav.navbar ul li:hover::before{
 .blog-footer {
     padding: 20px 0;
     text-align: center;
+    color: #999;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    -webkit-box-shadow: 0 -3px 8px rgba(0,0,0,.06);
+    box-shadow: 0 -3px 8px rgba(0,0,0,.06);
 }
 .blog-footer p{
     margin: 0 10px;
