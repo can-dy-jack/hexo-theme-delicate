@@ -33,14 +33,24 @@
     <div class="blog-post-change">
         <div class="blog-post-pre">
             <% if (item.prev){ %>
-                <span class="blog-post-pre-icon">&#60;</span>
+                <span class="blog-post-pre-icon">
+                  <svg viewBox="0 0 1024 1024" version="1.1" width="20" height="20">
+                    <path d="M561.92 832a47.36 47.36 0 0 0 0-64l-256-256 256-256a47.36 47.36 0 1 0-64-64l-288.64 288.64A50.56 50.56 0 0 0 192 512a47.36 47.36 0 0 0 14.08 33.28L494.72 832a47.36 47.36 0 0 0 67.2 0z"></path>
+                    <path d="M817.92 832a47.36 47.36 0 0 0 0-64.00000001l-256-255.99999999 256-255.99999999a47.36 47.36 0 1 0-64.00000001-64.00000001l-291.83999999 286.08A50.56 50.56 0 0 0 447.99999999 512a47.36 47.36 0 0 0 14.08000001 33.28L750.72 831.99999999a47.36 47.36 0 0 0 67.2 1e-8z"></path>
+                  </svg>
+                </span>
                 <a href="<%- url_for(item.prev.path) %>"> <%- item.prev.title %></a>
             <% } %>
         </div>
         <div class="blog-post-next">
             <% if (item.next){ %>
                 <a href="<%- url_for(item.next.path) %>"> <%- item.next.title %></a>
-                <span class="blog-post-next-icon">&#62;</span>
+                <span class="blog-post-next-icon">
+                  <svg viewBox="0 0 1024 1024" version="1.1" width="20" height="20">
+                    <path d="M462.08 192a47.36 47.36 0 0 0 0 64l256 256-256 256a47.36 47.36 0 1 0 64 64l288.64-288.64A50.56 50.56 0 0 0 832 512a47.36 47.36 0 0 0-14.08-33.28L529.28 192a47.36 47.36 0 0 0-67.2 0z"></path>
+                    <path d="M206.08 192a47.36 47.36 0 0 0 0 64l256 256-256 256a47.36 47.36 0 1 0 64 64l291.84-286.08A50.56 50.56 0 0 0 576 512a47.36 47.36 0 0 0-14.08-33.28L273.28 192a47.36 47.36 0 0 0-67.2 0z"></path>
+                  </svg>
+                </span>
             <% } %>
         </div>
     </div>

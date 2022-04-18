@@ -47,27 +47,39 @@ nav.navbar .nav-item .nav-link{
     position: relative;
     text-transform: capitalize;
 }
-nav.navbar ul li {
-    position: relative;
+@media (min-width: 1000px){
+    nav.navbar ul li {
+        position: relative;
+    }
+    nav.navbar ul li::before{
+        content: '';
+        width: 100%;
+        height: 4rem;
+        position: absolute;
+        bottom: -0.5rem;
+        transition: all 0.25s ease;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        background-color: #fafafa;
+    }
+    nav.navbar ul li:hover::before{
+        transform: scaleY(1);
+    }
+    nav.navbar .nav-item .dropdown-menu{
+        box-shadow: 0 10px 20px 8px rgba(0,0,0,.04);
+    }
 }
-nav.navbar ul li::before{
-    content: '';
-    width: 100%;
-    height: 4rem;
-    position: absolute;
-    bottom: -0.5rem;
-    transition: all 0.25s ease;
-    transform: scaleY(0);
-    transform-origin: bottom;
-    background-color: #fafafa;
+@media (max-width: 999px){
+    nav.navbar ul li {
+        text-align: center;
+    }
+    nav.navbar ul li:hover{
+        background-color: #f5f5f5;
+    }
+    nav.navbar .nav-item .dropdown-menu{
+        box-shadow: 0 4px 10px 5px rgba(0,0,0,.04);
+    }
 }
-nav.navbar ul li:hover::before{
-    transform: scaleY(1);
-}
-nav.navbar .nav-item .dropdown-menu{
-    box-shadow: 0 10px 20px 8px rgba(0,0,0,.04);
-}
-
 .blog-header {
     padding: 20px;
     margin-bottom: 20px;
@@ -78,6 +90,7 @@ nav.navbar .nav-item .dropdown-menu{
 .blog-main {
     font-size: 18px;
     line-height: 1.5;
+    margin-bottom: 50px;
 }
 .blog-title {
     margin-top: 30px;
@@ -340,34 +353,17 @@ nav.navbar .nav-item .dropdown-menu{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 10px 0;
+}
+.blog-post-change svg {
+    fill: #0090FF;
+}
+.blog-post-change a{
+    text-decoration: none;
 }
 .blog-post-change .blog-post-pre,
 .blog-post-change .blog-post-next{
-    margin: 5px 0;
-    transition: all 0.2s linear;
     cursor: pointer;
-}
-.blog-post-change .blog-post-pre:hover a,
-.blog-post-change .blog-post-next:hover a{
-    text-decoration: none;
-    cursor: pointer;
-}
-.blog-post-change .blog-post-pre a
-,.blog-post-change .blog-post-next a{
-    color: #7dbcff;
-}
-.blog-post-pre-icon,.blog-post-next-icon{
-    font-size: 20px;
-    font-weight: 900;
-    color: #7dbcff;
-}
-.blog-post-next:hover,
-.blog-post-pre:hover{
-    transform: scale(1.02);
-}
-.blog-post-next:active,
-.blog-post-pre:active{
-    transform: scale(0.99);
 }
 .tag-box h3{
     text-align: center;

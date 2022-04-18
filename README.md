@@ -193,11 +193,9 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 
 ## 开发计划
 
-- collapse展开式按钮文字变化？！
 - 标题打字机效果
-- 优化黑暗模式
-- 404页面
-- 文章分享功能
 - 永久链接问题
+- 文章分享功能
+- 404页面
 - 优化评论系统
-- 搜索功能
+- 完善搜索功能
