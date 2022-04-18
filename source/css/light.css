@@ -24,7 +24,7 @@ nav.navbar .nav-item .dropdown-menu{
     box-shadow: 0 10px 20px 8px rgba(0,0,0,.04);
 }
 nav.navbar ul li::before{
-    background-color: #f3f8fc;
+    background-color: #fafafa;
 }
 .blog-footer {
     color: #999;

@@ -10,13 +10,11 @@ ul,ol{
     padding-left: 20px;
 }
 
-
 /* blockquote */
 blockquote p {
     border-left: 4px solid gray;
     padding: 5px 15px;
 }
-
 blockquote footer {
     text-align: right;
     word-wrap: break-word;
@@ -29,78 +27,12 @@ blockquote footer {
 blockquote footer::before {
     content: '--';
 }
-
-/* 代码块 */
-figure {
-    width: 100%;
-    background-color: #efefef;
-    overflow: auto;
-    border-radius: 3px;
-    position: relative;
-}
-
-figure table td.code {
-    width: 100%;
-    /* 非常重要的属性设置！ */
-    position: relative;
-}
-
-figure table td pre {
-    margin-bottom: 0;
-    /* 非常重要的属性设置！ */
-}
-
-figure table td.gutter pre {
-    padding: 0 10px;
-    margin: 10px 0;
-    color: #aaa;
-    text-align: center;
-    border-right: 1px solid #999;
-}
-
-figure table td.code pre {
-    padding: 0 10px 0 5px;
-}
-figure table td.code .code-span{
-    /* copy button */
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-}
-figure table td.code .code-span img{
-    width: 20px;
-    height: 20px;
-    opacity: 0.3;
-    transition: all 0.2s ease;
-}
-figure table td.code .code-span:hover img{
-    opacity: 1;
-}
-figure table td.code .code-span:active img{
-    transform: scale(0.9);
-}
-/* 复制提醒文本 */
-/* figure table td.code .code-span::before{
-    content: 'copy success!';
-    position: absolute;
-    bottom: -2px;
-    right: 25px;
-    width: 110px;height: 25px;line-height: 25px;
-    background-color: #2d302d;
-    color: white;
-    font-size: 12px;
-    text-align: center;border-radius: 5px;
-    display: none;
-} */
-
 p>code {
     /* 内联代码块 */
     background-color: #efefef;
     padding: 3px 5px;
     border-radius: 3px;
 }
-
 /* 标题 */
 .blog-post>h1{
     margin: 24px 0;
@@ -198,6 +130,80 @@ p>code {
     margin: 0.5rem;
     /* box-shadow: 0 0 12px rgba(0,0,0,.05); */
 }
+/* 代码块 */
+figure {
+    width: calc(100% + 30px);
+    background-color: #f5f5f5;
+    overflow: auto;
+    position: relative;
+    margin: 10px 0;
+    transform: translateX(-15px);
+}
+figure .code-info {
+    position: sticky;left: 0;right: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #fafafa;
+    border-top: 1px solid #ddd;
+}
+figure .code-info .btn-copy {
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+figure .code-info .btn-copy:active{
+    transform: scale(0.9);
+}
+figure .code-info .btn-copy svg {
+    fill: gray;
+    transition: all 0.2s ease;
+}
+figure .code-info .btn-copy svg:hover {
+    fill: #444;
+}
+figure table td pre {
+    margin-bottom: 0;
+    /* 非常重要的属性设置！ */
+}
+figure table td.code {
+    width: 100%;
+    /* 非常重要的属性设置！ */
+    position: relative;
+}
+figure table td.gutter pre {
+    padding: 0 10px;
+    margin: 10px 0;
+    color: #aaa;
+    text-align: center;
+    border-right: 1px solid #999;
+}
+figure table td.code pre {
+    padding: 0 10px;
+}
+
+/* figure table td.code .code-span{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+figure table td.code .code-span img{
+    width: 20px;
+    height: 20px;
+    opacity: 0.3;
+    
+}
+figure table td.code .code-span:hover img{
+    opacity: 1;
+}
+figure table td.code .code-span:active img{
+    transform: scale(0.9);
+} */
 
 
 /* 代码高亮主题 */

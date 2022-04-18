@@ -64,9 +64,9 @@ blockquote.blue p{
     color: #111;
 }
 .note-info>p{
-    background-color: #ffefd288;
-    color: #ae7000;
-    border-color: #ae7000;
+    background-color: rgba(23, 162, 184, 0.05);
+    color: #17a2b8;
+    border-color: #17a2b8;
 }
 .note-info>ol,.note-info>ul{
     background-color: #fffbf088;
@@ -99,9 +99,9 @@ blockquote.blue p{
     border-color: #ffc107;
 }
 .note-warning>ol,.note-warning>ul{
-    background-color: #fcf8d8aa;
-    color: rgb(207, 145, 0);
-    border-color: rgb(255, 180, 0);
+    background-color: rgba(255, 193, 7, .06);
+    color: #ffc107;
+    border-color: #ffc107;
 }
 .note-danger>p{
     background-color: #ffdbdbaa;
@@ -122,16 +122,6 @@ blockquote.blue p{
     background-color: #fafafaaa;
     color: #2d2d2d;
     border-color: #fff;
-}
-.note-cyan p{
-    background-color: rgba(0, 255, 157, .1);
-    color: rgb(0, 228, 140);
-    border-color: rgb(0, 255, 157);
-}
-.note-cyan>ol,.note-cyan>ul{
-    background-color: rgba(0, 255, 157, .1);
-    color: rgb(0, 228, 140);
-    border-color: rgb(0, 255, 157);
 }
 .note-purple p{
     background-color: #fce8fcaa;

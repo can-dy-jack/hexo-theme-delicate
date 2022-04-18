@@ -193,6 +193,7 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 
 ## 开发计划
 
+- 复制成功提示文字
 - collapse展开式按钮文字变化？！
 - 标题打字机效果
 - 优化黑暗模式
