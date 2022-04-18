@@ -193,9 +193,9 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 
 ## 开发计划
 
+- 添加更多分享
 - 标题打字机效果
 - 永久链接问题
-- 文章分享功能
 - 404页面
 - 优化评论系统
 - 完善搜索功能

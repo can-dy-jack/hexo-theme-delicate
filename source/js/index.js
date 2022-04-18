@@ -2,7 +2,7 @@
  * copy button
  */
 const codeSpans = document.querySelectorAll('figure');
-codeSpans.forEach(function(code){
+codeSpans.forEach(function (code) {
     // 代码块提示信息div
     const codeInfo = document.createElement('div');
     codeInfo.classList.add("code-info");
@@ -21,15 +21,16 @@ codeSpans.forEach(function(code){
     codeButton.setAttribute('data-toggle', 'popover');
     codeButton.setAttribute('data-placement', 'top');
     codeButton.setAttribute('data-content', '复制成功');
-    codeInfo.appendChild(codeButton);2
-    
+    codeInfo.appendChild(codeButton);
+    2
+
     code.appendChild(codeInfo);
 
-    codeButton.addEventListener('click',()=>{
+    codeButton.addEventListener('click', () => {
         navigator.clipboard.writeText(code.children[0].children[0].children[0].children[1].innerText)
-        setTimeout(()=>{
+        setTimeout(() => {
             $('.btn-copy').popover('hide');
-        },2000);
+        }, 2000);
     });
 })
 
@@ -46,19 +47,41 @@ $('.origin').tooltip();
  * 网站运行时间计算函数
  */
 var now = new Date();
+
 function calculateTime(startTime) {
     now.setTime(now.getTime() + 1000);
     stime = new Date(startTime);
     interval = now.getTime() - stime.getTime();
-    days = interval/1000/60/60/24;
+    days = interval / 1000 / 60 / 60 / 24;
     dnum = Math.floor(days);
-    hours = interval/1000/60/60 - 24*dnum;
+    hours = interval / 1000 / 60 / 60 - 24 * dnum;
     hnum = Math.floor(hours);
-    if(hnum.toString().length == 1){
+    if (hnum.toString().length == 1) {
         hnum = '0' + hnum;
     }
-    minutes = interval/1000/60 - 24*60*dnum - hnum*60;
+    minutes = interval / 1000 / 60 - 24 * 60 * dnum - hnum * 60;
     mnum = Math.floor(minutes);
-    if(mnum.toString().length == 1){ mnum = '0' + mnum;}
-    document.getElementById("times").innerHTML ="本站已运行 " + dnum + " 天 " + hnum + " 小时 " + mnum + " 分，共" + Math.floor(interval/1000/60/60)+ "小时";
+    if (mnum.toString().length == 1) {
+        mnum = '0' + mnum;
+    }
+    document.getElementById("times").innerHTML = "本站已运行 " + dnum + " 天 " + hnum + " 小时 " + mnum + " 分，共" + Math.floor(interval / 1000 / 60 / 60) + "小时";
+}
+function douban() {
+    var d = document,
+        e = encodeURIComponent,
+        s1 = window.getSelection,
+        s2 = d.getSelection,
+        s3 = d.selection,
+        s = s1 ? s1() : s2 ? s2() : s3 ? s3.createRange().text : '',
+        r = 'https://www.douban.com/recommend/?url=' + e(d.location.href) + '&title=' + e(d.title) + '&sel=' + e(s) + '&v=1',
+        w = 450,
+        h = 450,
+        x = function () {
+            if (!window.open(r, 'douban', 'toolbar=0,resizable=1,scrollbars=yes,status=1,width=' + w + ',height=' + h + ',left=' + (screen.width - w) / 2 + ',top=' + (screen.height - h) / 2)) location.href = r + '&r=1'
+        };
+    if (/Firefox/.test(navigator.userAgent)) {
+        setTimeout(x, 0)
+    } else {
+        x()
+    }
 }

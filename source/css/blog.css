@@ -365,6 +365,18 @@ nav.navbar .nav-item .nav-link{
 .blog-post-change .blog-post-next{
     cursor: pointer;
 }
+.share {
+    display: flex;
+    justify-content: flex-end;
+}
+.share a {
+    margin: 5px;
+    opacity: 0.6;
+    transition: all 0.2s ease;
+}
+.share a:hover {
+    opacity: 1;
+}
 .tag-box h3{
     text-align: center;
     margin: 15px 0;
