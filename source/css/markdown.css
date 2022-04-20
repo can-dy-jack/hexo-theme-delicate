@@ -13,6 +13,7 @@ ul,ol{
 /* blockquote */
 blockquote p {
     border-left: 4px solid gray;
+    color: gray;
     padding: 5px 15px;
 }
 blockquote footer {

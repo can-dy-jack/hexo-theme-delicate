@@ -1,14 +1,14 @@
 # hexo-theme-delicate
 
 > 依据bootstrap设计的一款hexo主题  
-> [Demo site](https://kartjim.top/delicate)
+> [Demo site](https://kartjim.top/delicate)  
+> 加入QQ交流群：`499080703`
 
 <div style="display:flex;justify-content: space-evenly;">
 <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E%3D10.9.0-blue"></a>
 <a href="https://hexo.io"><img src="https://img.shields.io/badge/hexo-4.3.0-brightgreen"></a>
 <a href="https://github.com/can-dy-jack/hexo-theme-delicate/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-orange"></a>
 </div>
-
 ## 使用指南
 
 使用主题默认您已创建过[hexo](https://hexo.io)项目
@@ -194,6 +194,7 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 ## 开发计划
 
 - 添加更多分享
+- 图标全换成svg代码
 - 标题打字机效果
 - 永久链接问题
 - 404页面
