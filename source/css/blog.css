@@ -46,6 +46,13 @@ nav.navbar .nav-item .nav-link{
     transition: all 0.25s ease-in-out;
     position: relative;
     text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav.navbar .nav-item .nav-link svg {
+    margin-right: 3px;
+    fill: gray;
 }
 @media (min-width: 1000px){
     nav.navbar ul li {
