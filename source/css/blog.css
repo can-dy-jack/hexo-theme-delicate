@@ -148,21 +148,25 @@ nav.navbar .nav-item .nav-link svg {
     background-color: #fff;
     width: 40px;height: 40px;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(10,30,100,.1);
+    box-shadow: 0 0 8px rgba(10,30,100,.1);
     text-align: center;
     transition: all 0.3s ease;
-}
-#sidebar-to-top:hover{
-    background-color: #3b91f3;
-}
-#sidebar-to-top:hover a{
-    color: white;
+    overflow: hidden;
 }
 #sidebar-to-top a{
     text-decoration: none;
-    font-size: 32px;
-    line-height: 40px;
-    font-weight: bold;
+    display: block;
+    width: 40px;height: 40px;
+}
+#sidebar-to-top:hover{
+    background-color: #0090FF;
+}
+#sidebar-to-top a svg {
+    fill: #0090FF;
+    margin-top: 9px;
+}
+#sidebar-to-top:hover a svg {
+    fill: white;
 }
 /*
  * sidebar
@@ -239,7 +243,7 @@ nav.navbar .nav-item .nav-link svg {
     color: #777;
     font-size: 14px;
     border-radius: 4px;
-    background-color: rgba(191, 238, 238,.2);
+    background-color: rgba(90, 90, 90,.1);
 }
 .sidebar-about .my-division{
     margin-top: 30px;
@@ -274,11 +278,12 @@ nav.navbar .nav-item .nav-link svg {
 }
 .sidebar-about .my-social-account .icon-box a{
     text-decoration: none;
-    color: gray;
 }
-.sidebar-about .my-social-account .icon-box a:hover{
-    text-decoration: none;
-    color: #555;
+.sidebar-about .my-social-account .icon-box a svg{
+    fill: #999;
+}
+.sidebar-about .my-social-account .icon-box a:hover svg{
+    fill: #555;
 }
 .pagination{
     justify-content: center;
@@ -340,20 +345,17 @@ nav.navbar .nav-item .nav-link svg {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    padding: 3px 5px;
 }
 .blog-tags-container .glyphicon svg,
 .blog-categories-container .glyphicon svg{
-    font-size: 14px;
     fill: #0090FF;
     margin: 0 5px;
 }
 .blog-tags-container .blog-text,
 .blog-categories-container .blog-text{
-    margin-right: 5px;
+    margin-right: 3px;
     font-size: 16px;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 5px;
 }
 .blog-post-change{
     padding: 0 5px;

@@ -40,22 +40,22 @@ siderbar:
     # social account link
     ## if the value is none or '',it does not apear.
     github: '#'
-    twitter: '#'
-    codepen: '#'
-    google: '#'
-    facebook: '#'
+    twitter: ''
+    codepen: ''
+    google: ''
+    facebook: ''
     stackoverflow: ''
     linkedin: ''
     instagram: ''
     gitlab: ''
     # for China
-    bilibili: ''
+    bilibili: '#'
     CSDN: ''
     贴吧: ''
     知乎: ''
     微博: ''
     博客园: ''
-    掘金: ''
+    掘金: '#'
     dingding: ''
 
 
