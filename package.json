@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-delicate",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "description": "依据bootstrap设计的一款hexo主题",
   "main": "package.js",
   "files": [
