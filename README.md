@@ -194,6 +194,7 @@ More details Read：[kartjim.cn/delicate](https://kartjim.cn/delicate/2021/11/12
 ## 开发计划
 
 - 添加更多分享
+- 插入视频（哔哩哔哩）
 - 标题打字机效果
 - 永久链接问题
 - 404页面

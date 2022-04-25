@@ -28,7 +28,7 @@ blockquote footer {
 blockquote footer::before {
     content: '--';
 }
-p>code {
+p>code,li>code{
     /* 内联代码块 */
     background-color: #efefef;
     padding: 3px 5px;
@@ -186,38 +186,7 @@ figure table td.gutter pre {
 figure table td.code pre {
     padding: 0 10px;
 }
-
-/* figure table td.code .code-span{
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-}
-figure table td.code .code-span img{
-    width: 20px;
-    height: 20px;
-    opacity: 0.3;
-    
-}
-figure table td.code .code-span:hover img{
-    opacity: 1;
-}
-figure table td.code .code-span:active img{
-    transform: scale(0.9);
-} */
-
-
 /* 代码高亮主题 */
-/*!
-  Theme: GitHub
-  Description: Light theme as seen on github.com
-  Author: github.com
-  Maintainer: @Hirse
-  Updated: 2021-05-15
-
-  Outdated base version: https://github.com/primer/github-syntax-light
-  Current colors taken from GitHub's CSS
-*/
 .hljs {
     color: #24292e;
     /* background: #fff; */
