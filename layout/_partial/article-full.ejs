@@ -4,7 +4,7 @@
     <div class="blog-post-title">
         <%- item.title || item.link %>
     </div>
-    <aside class="blog-post-meta">
+    <aside class="blog-post-info">
       <span><%= item.date.format(config.date_format) %></span>
       <% if(item.author) { %>
         <span><%- item.author %></span>  

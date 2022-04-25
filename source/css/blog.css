@@ -301,7 +301,7 @@ nav.navbar .nav-item .nav-link svg {
     text-align: center;
     font-weight: bold;
 }
-.blog-post-meta {
+.blog-post-info {
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -314,11 +314,11 @@ nav.navbar .nav-item .nav-link svg {
     overflow: hidden;
     box-shadow: 0 -2px 12px rgba(0,0,0,.01);
 }
-.blog-post-meta span{
+.blog-post-info span{
     cursor: default;
     padding: 2px 5px;
 }
-.blog-post-meta span:hover {
+.blog-post-info span:hover {
     background-color: #ebebeb;
 }
 .blog-post img:not(.vemoji){
