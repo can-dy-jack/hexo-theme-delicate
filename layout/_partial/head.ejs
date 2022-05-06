@@ -1,63 +1,27 @@
-<head lang="<%= config.language %>">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="<%- config.description %>">
-    <meta name="author" content="<%- config.author %>">
+    <meta name="description" content="<%= config.description %>">
+    <meta name="keywords" content="<%= config.keywords %>">
+    <meta name="author" content="<%= config.author %>">
 
-    <link rel="icon" href="<%- config.root %><%- theme.titleLogo %>">
+    <meta name="generator" content="hexo">
+    <meta name="theme-color" content="#fafafa">
+
+    <meta name="color-scheme" content="light dark">
+
+    <meta name="creator" content="<%= theme.creator %>">
+    <meta name="publisher" content="<%= theme.publisher %>">
+
+    <%# test %> 
     <title><%- page.title || config.title %></title>
+    <%# icon %> 
+    <%- favicon_tag(theme.icon) %>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- fancybox -->
-    <% if(theme.fancybox.enable){ %>
-        <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
-    <% } %>
-    <%- css('css/blog.css') %>
+    <%# css link %> 
+    <%- css('css/public.css') %>
     <%- css('css/markdown.css') %>
     <%- css('css/plugins.css') %>
-    <!-- 背景 -->
-    <% if(theme.background.meditation.enable) { %>
-        <%- css('css/meditation.css') %>
-    <% } else if(theme.background.point.enable){ %>
-    <% var pointColor = theme.background.point.color,
-        pointSize = theme.background.point.size + 8;
-     %>
-        <style>
-            body {
-                background: radial-gradient(<%= pointColor %> 20%, #fff 40%) repeat;
-                background-size: <%= pointSize %>px <%= pointSize %>px;
-            }
-        </style>
-    <% } else if(theme.background.line.enable){ %>
-    <% var lineSize = theme.background.line.size + 30;%>
-        <style>
-            body {
-                background-image: url('<%- config.root %>/img/line.png');
-                background-size: <%= lineSize %>px <%= lineSize %>px;
-            }
-        </style>
-    <% } else if(theme.background.line2.enable){ %>
-    <% var line2Size = theme.background.line2.size + 20;%>
-        <style>
-            body {
-                background-image: url('<%- config.root %>/img/line2.png');
-                background-size: <%= line2Size %>px <%= line2Size %>px;
-            }
-        </style>
-    <% } %>
-    <style type="text/css">
-        @font-face{
-            font-family: 'PTSans';
-            src: url('<%- config.root %>font/PT_Sans-Web-Regular.ttf'); 
-        }
-    </style>
-<% if (theme.gittalk && theme.gittalk.enable){ %>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<% } %>
-
-<% if (theme.baidu_analytic.enable){ %>
-    <%- partial('baidu-analytics') %>
-<% } %>
+    <%- css('css/index.css') %>
 </head>

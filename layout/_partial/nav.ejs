@@ -1,0 +1,21 @@
+<div class="nav-left">
+  <a class="navbar-brand" href="<%- config.root %>">
+    <img src="<%- config.root %><%- theme.icon128 %>" width="30" height="30" alt="logo">
+    <%= config.title %>
+  </a>
+  <div class="navbar-link">
+    <span class="nav-item">
+      <a href="<%- config.root %>">
+        主页
+      </a>
+    </span>
+    <span class="nav-item">
+      <a href="<%- config.root %>archives">
+        存档
+      </a>
+    </span>
+  </div>
+</div>
+<div class="nav-right">
+  <%- search_form() %>
+</div>

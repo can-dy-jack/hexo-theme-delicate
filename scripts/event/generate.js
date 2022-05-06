@@ -1,8 +1,7 @@
 // hexo g 时输出
-hexo.on('generateAfter',()=>{
-    hexo.log.info('感谢使用 delicate 主题 !');
-})
-
+// hexo.on('generateAfter',()=>{
+//     hexo.log.info('感谢使用 delicate 主题 !');
+// })
 
 /*
 ________________________________________________

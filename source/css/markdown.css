@@ -1,196 +1,193 @@
-/* 文本样式 */
-del {
-    color: rgb(255, 84, 84);
-}
-.btn{
-    margin: 5px;
-}
-u{
-    background-color: rgb(255, 243, 229);
-    text-decoration: 3px underline solid rgb(255, 181, 91);
-}
-/* 列表 */
-ul,ol{
-    padding-left: 20px;
+a {
+    color: inherit;
+    /* border-bottom: 1px solid #aaa; */
+    text-decoration: none;
+    transition: all 0.25s ease;
 }
 
-/* blockquote */
-blockquote p {
-    border-left: 4px solid gray;
-    color: gray;
-    padding: 5px 15px;
-}
-blockquote footer {
-    text-align: right;
-    word-wrap: break-word;
-    font-size: 0.9em;
-    color: #999;
-    margin-top: -1em;
-    /* 消除上面p标签的margin */
+a:hover {
+    color: blue;
+    /* border-bottom: none; */
 }
 
-blockquote footer::before {
-    content: '--';
+img {
+    max-width: 100%;
 }
-p>code,li>code{
-    /* 内联代码块 */
-    background-color: #efefef;
-    padding: 3px 5px;
-    border-radius: 3px;
+
+p {
+    margin: 10px 0;
 }
-/* 标题 */
-.blog-post>h1{
-    margin: 24px 0;
+
+/* u {} */
+hr {
+    border: none;
+    border-top: 3px double #aaa;
+    color: #aaa;
+    overflow: visible;
     text-align: center;
-    font-size: 2.2rem;
-    font-weight: bold;
-}
-.blog-post>h2,
-.blog-post>.h2{
-    margin: 20px 0 14px 0;
-    padding: 3px 0;
-    border-bottom: 1px solid #eee;
-    font-size: 2rem;
-    font-weight: bold;
-}
-.blog-post>h2::after,
-.blog-post>.h2::after {
-    /* § | # | ❡ */
-    content: '§';
-    color: #3594d8;
-    margin-left: 10px;
-    transition: all 0.25s ease;
-    display: none;
-}
-.blog-post>h2:hover::after,
-.blog-post>.h2:hover::after {
-    display: inline;
-}
-.blog-post>h3,
-.blog-post>.h3 {
-    margin: 18px 0 14px 0;
-    font-size: 1.6rem;
-    font-weight: bold;
-}
-.blog-post>h3:after,
-.blog-post>.h3::after {
-    content: '❡';
-    margin-left: 10px;
-    color: #3594d8;
-    transition: all 0.25s ease;
-    display: none;
-}
-.blog-post>h3:hover::after,
-.blog-post>.h3:hover::after {
-    display: inline;
-}
-.blog-post>h4,
-.blog-post>.h4, 
-.blog-post>h5,
-.blog-post>.h5{
-    margin: 15px 0 12px 0;
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-.blog-post>h4:after,
-.blog-post>.h4::after,
-.blog-post>h5:after,
-.blog-post>.h5::after {
-    content: '#';
-    margin-left: 10px;
-    color: #3594d8;
-    transition: all 0.25s ease;
-    display: none;
-}
-.blog-post>h4:hover:after,
-.blog-post>.h4:hover::after,
-.blog-post>h5:hover:after,
-.blog-post>.h5:hover::after {
-    display: inline;
-}
-
-/* 表格 */
-.blog-post table{
-    border-collapse: collapse;
-    width: 100%;
+    height: 5px;
     margin: 5px 0;
 }
-.blog-post table thead{
-    background-color: #dfdfdf;
+hr:after {
+    background: #fff;
+    content: '§';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
 }
-.blog-post table tr th{
-    padding: 5px 10px;
-    border: 1px solid #ccc;
+
+
+/* post markdown */
+.post .post-title {
+    font-size: 26px;
     text-align: center;
 }
-.blog-post table td:not(.gutter):not(.code){
-    padding: 5px 10px;
-    border: 1px solid #ccc;
+
+.post .blog-post-info {
+    text-align: center;
+    color: gray;
+    margin-bottom: 20px;
 }
-.blog-post table tbody tr:nth-child(2n){
+
+.post h2 {
+    font-size: 24px;
+}
+
+.post h3 {
+    font-size: 20px;
+}
+
+.post h4,
+.post h5,
+.post h6 {
+    font-size: 18px;
+}
+
+.post p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.post a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(248, 229, 175, .3);
+    color: #1a1a1a;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.post a:hover {
+    background-color: #f8e5af;
+    border-bottom-color: #1a1a1a;
+}
+
+.post a[rel="noopener"]::after {
+    content: "\1F517";
+}
+
+.post ul,
+.post ol {
+    padding-left: 25px;
+}
+
+.post ul li,
+.post ol li {
+    margin-bottom: 3px;
+}
+
+.post img {
+    box-shadow: 0 0 14px 4px rgba(0, 0, 0, .03);
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.post blockquote {
+    border-left: 4px solid #ccc;
+    margin: 10px 0;
+    padding: 8px 15px;
+}
+
+.post blockquote p {
+    margin: 0;
+    padding: 0;
+    color: gray;
+}
+
+.post>table {
+    border-collapse: collapse;
+    max-width: 100%;
+}
+
+.post>table thead {
+    background-color: #bbb;
+}
+
+.post>table tr td,
+.post>table tr th {
+    border: 1px solid #bbb;
+    padding: 5px;
+}
+
+.post>table tbody tr:nth-child(2n) {
     background-color: #fafafa;
 }
-/* img */
-.blog-post p>img:not(.vemoji),.blog-post>img:not(.vemoji){
-    margin: 0.5rem;
-    /* box-shadow: 0 0 12px rgba(0,0,0,.05); */
+
+.post li>code,
+.post p>code {
+    color: rgb(241, 42, 42);
+    background-color: rgba(0, 0, 0, .05);
+    padding: 1px 3px;
+    border-radius: 3px;
+    font-family: consolas, sans-serif;
+    margin: 0 2px;
 }
+
 /* 代码块 */
 figure {
-    width: calc(100% + 30px);
-    background-color: #f5f5f5;
+    background-color: #f1f1f1;
     overflow: auto;
-    position: relative;
     margin: 10px 0;
-    transform: translateX(-15px);
 }
-figure .code-info {
-    position: sticky;left: 0;right: 0;
-    bottom: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 5px 10px;
-    font-size: 14px;
-    background: #fafafa;
-    border-top: 1px solid #ddd;
+
+figure table {
+    padding: 6px;
 }
-figure .code-info .btn-copy {
-    outline: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    user-select: none;
+
+figure table tr pre {
+    margin: 0;
+    padding: 0;
 }
-figure .code-info .btn-copy:active{
-    transform: scale(0.9);
-}
-figure .code-info .btn-copy svg {
-    fill: gray;
-    transition: all 0.2s ease;
-}
-figure .code-info .btn-copy svg:hover {
-    fill: #444;
-}
-figure table td pre {
-    margin-bottom: 0;
-    /* 非常重要的属性设置！ */
-}
-figure table td.code {
-    width: 100%;
-    /* 非常重要的属性设置！ */
-    position: relative;
-}
-figure table td.gutter pre {
-    padding: 0 10px;
-    margin: 10px 0;
+
+figure table tr td.gutter pre {
+    padding-right: 8px;
     color: #aaa;
     text-align: center;
     border-right: 1px solid #999;
+    line-height: 20px;
 }
-figure table td.code pre {
+
+figure table tr td.code {
     padding: 0 10px;
 }
-/* 代码高亮主题 */
+
+figure table pre code {
+    font-family: consolas, sans-serif;
+}
+
+figure::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+figure::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    height: 6px;
+    width: 6px;
+    background-color: rgba(120, 134, 150, 0.4);
+    border: 2px solid transparent;
+}
+
+/* 代码高亮 */
 .hljs {
     color: #24292e;
     /* background: #fff; */

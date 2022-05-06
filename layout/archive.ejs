@@ -1,7 +1,35 @@
-<h2 class="post-archives-head"><%= __('menu.archives') %> <span class="badge badge-primary"><%- site.posts.length %> </span></h2>
-<div class="alert alert-info" role="alert">
+<%# 归档 (archive)：与 index 布局相同! %> 
+<h2 class="archives-head">
+    <%= __('menu.archives') %>
+    <span><%- site.posts.length %> </span>
+</h2>
+<div class="post-list">
     <% page.posts.each(function(item){ %>
-        <%- partial('_partial/article-archive', {item: item}) %>
+    <div class="post-archives">
+        <a href="<%- config.root %><%- item.path %>">
+            <%- item.title || item.link %>
+        </a>
+        <span>
+            <%= item.date.format(config.date_format) %>
+        </span>
+    </div>
     <% }); %>
 </div>
-<%- partial('_partial/pagination') %>
+
+
+<%# test %> 
+<%# 分页 %>
+<aside class="excerpt-pagination">
+    <ul>
+        <% if (page.prev){ %>
+            <li class="page-item"><a class="page-link" href="<%- config.root %><%- page.prev_link %>">Previous</a></li>
+        <% } %>
+        <% if (page.next){ %>
+            <li class="page-item"><a class="page-link" href="<%- config.root %><%- page.next_link %>">Next</a></li>
+        <% } %>
+    </ul>
+    <div><%- page.total %></div>
+    <div>
+        <a href="<%- page.current_url %>">当前页数<%- page.current %></a>
+    </div>
+</aside>

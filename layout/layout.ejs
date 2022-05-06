@@ -1,19 +1,16 @@
-<html>
+<!DOCTYPE html>
+<html lang="<%= config.language %>">
     <%- partial('_partial/head') %>
 <body>
-    <%- partial('_partial/menu') %>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 blog-main">
-                <%- body %>
-            </div>
-            <div class="col-sm-4 col-sm-offset-1 blog-sidebar">
-                <%- partial('_partial/sidebar') %>
-            </div>
-        </div>
-    </div>
-<%- partial('_partial/footer') %>
-<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-    <%- partial('_partial/after-footer') %>
+    <nav class="navbar">
+        <%- partial('_partial/nav') %>
+    </nav>
+    <main>
+      <%- body %>
+    </main>
+    <footer>
+        <%- partial('_partial/footer') %>
+    </footer>
+    <%- partial('_partial/script') %>
 </body>
 </html>

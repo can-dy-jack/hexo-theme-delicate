@@ -1,53 +1,5 @@
-/**
- * copy button
- */
-const codeSpans = document.querySelectorAll('figure');
-codeSpans.forEach(function (code) {
-    // 代码块提示信息div
-    const codeInfo = document.createElement('div');
-    codeInfo.classList.add("code-info");
-    // 代码类型
-    const codeName = code.classList[1];
-    const codeNameSpan = document.createElement("span");
-    codeNameSpan.style.color = "#007bff";
-    codeNameSpan.textContent = codeName;
-    codeInfo.appendChild(codeNameSpan);
-    // 复制按钮
-    const codeButton = document.createElement("span");
-
-    codeButton.innerHTML = '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path d="M853.333333 981.333333h-384c-72.533333 0-128-55.466667-128-128v-384c0-72.533333 55.466667-128 128-128h384c72.533333 0 128 55.466667 128 128v384c0 72.533333-55.466667 128-128 128z m-384-554.666666c-25.6 0-42.666667 17.066667-42.666666 42.666666v384c0 25.6 17.066667 42.666667 42.666666 42.666667h384c25.6 0 42.666667-17.066667 42.666667-42.666667v-384c0-25.6-17.066667-42.666667-42.666667-42.666666h-384z" p-id="2583"></path><path d="M213.333333 682.666667H170.666667c-72.533333 0-128-55.466667-128-128V170.666667c0-72.533333 55.466667-128 128-128h384c72.533333 0 128 55.466667 128 128v42.666666c0 25.6-17.066667 42.666667-42.666667 42.666667s-42.666667-17.066667-42.666667-42.666667V170.666667c0-25.6-17.066667-42.666667-42.666666-42.666667H170.666667c-25.6 0-42.666667 17.066667-42.666667 42.666667v384c0 25.6 17.066667 42.666667 42.666667 42.666666h42.666666c25.6 0 42.666667 17.066667 42.666667 42.666667s-17.066667 42.666667-42.666667 42.666667z"></path></svg>';
-    codeButton.className = "btn-copy";
-    codeButton.setAttribute('data-container', 'body');
-    codeButton.setAttribute('data-toggle', 'popover');
-    codeButton.setAttribute('data-placement', 'top');
-    codeButton.setAttribute('data-content', '复制成功');
-    codeInfo.appendChild(codeButton);
-    2
-
-    code.appendChild(codeInfo);
-
-    codeButton.addEventListener('click', () => {
-        navigator.clipboard.writeText(code.children[0].children[0].children[0].children[1].innerText)
-        setTimeout(() => {
-            $('.btn-copy').popover('hide');
-        }, 2000);
-    });
-})
-
-/**
- *  tooltip
- * 提示框 - bootstrap + popper
- * */
-$('#feedback').tooltip();
-$('.btn-copy').popover();
-$('.icon-box').tooltip();
-$('.origin').tooltip();
-
-/**
- * 网站运行时间计算函数
- */
-var now = new Date();
-
+let now = new Date();
+// 计算网站运算时间的函数
 function calculateTime(startTime) {
     now.setTime(now.getTime() + 1000);
     stime = new Date(startTime);
@@ -66,22 +18,186 @@ function calculateTime(startTime) {
     }
     document.getElementById("times").innerHTML = "本站已运行 " + dnum + " 天 " + hnum + " 小时 " + mnum + " 分，共" + Math.floor(interval / 1000 / 60 / 60) + "小时";
 }
-function douban() {
-    var d = document,
-        e = encodeURIComponent,
-        s1 = window.getSelection,
-        s2 = d.getSelection,
-        s3 = d.selection,
-        s = s1 ? s1() : s2 ? s2() : s3 ? s3.createRange().text : '',
-        r = 'https://www.douban.com/recommend/?url=' + e(d.location.href) + '&title=' + e(d.title) + '&sel=' + e(s) + '&v=1',
-        w = 450,
-        h = 450,
-        x = function () {
-            if (!window.open(r, 'douban', 'toolbar=0,resizable=1,scrollbars=yes,status=1,width=' + w + ',height=' + h + ',left=' + (screen.width - w) / 2 + ',top=' + (screen.height - h) / 2)) location.href = r + '&r=1'
-        };
-    if (/Firefox/.test(navigator.userAgent)) {
-        setTimeout(x, 0)
+/* 
+ * 主页轮播图 
+ * bug - 文章数小于等于3的情况
+ */
+const articles = document.querySelectorAll("main .article-container article");
+const artLeft = document.getElementById("article-left");
+const artRight = document.getElementById("article-right");
+// 初始为第一篇文章
+var now_article = 0;
+
+// 控制轮播图的位置
+function showArticles(i){
+    // 防止其他页面报错
+    if(!articles.length || articles.length === 1) return;
+    if(i === 0){
+        articles[i].classList.add('now');
+        articles[articles.length-1].classList.add('left');
+        articles[1].classList.add('right');
+    } else if(i === articles.length-1){ 
+        articles[i].classList.add('now');
+        articles[i-1].classList.add('left');
+        articles[0].classList.add('right');
     } else {
-        x()
+        articles[i].classList.add('now');
+        articles[i-1].classList.add('left');
+        articles[i+1].classList.add('right');
     }
 }
+// 调用函数进行初始化
+showArticles(now_article);
+// 按钮变换文章
+function changeArcticle(direct){
+    if(articles.length <= 3) return;
+    if(direct === 'left'){
+        if(now_article === 0) {
+            // 清除负影响
+            articles[now_article].classList.remove('now');
+            articles[articles.length-1].classList.remove('left');
+            articles[1].classList.remove('right');
+            // 转换
+            now_article = articles.length-1;
+        } else if(now_article === articles.length-1) {
+            // 清除负影响
+            articles[now_article].classList.remove('now');
+            articles[now_article-1].classList.remove('left');
+            articles[0].classList.remove('right');
+            // 转换
+            now_article--;
+        } else {
+            // 清除负影响
+            articles[now_article].classList.remove('now');
+            articles[now_article-1].classList.remove('left');
+            articles[now_article+1].classList.remove('right');
+            now_article--;
+        }
+    } else if(direct === 'right'){
+        if(now_article === 0) {
+            // 清除负影响
+            articles[now_article].classList.remove('now');
+            articles[articles.length-1].classList.remove('left');
+            articles[1].classList.remove('right');
+            // 转换
+            now_article++;
+        } else if(now_article === articles.length-1) {
+            // 清除负影响
+            articles[now_article].classList.remove('now');
+            articles[now_article-1].classList.remove('left');
+            articles[0].classList.remove('right');
+            // 转换
+            now_article = 0;
+        } else {
+            // 清除负影响
+            articles[now_article].classList.remove('now');
+            articles[now_article-1].classList.remove('left');
+            articles[now_article+1].classList.remove('right');
+            now_article++;
+        }
+    } else {
+        return;
+    }
+    showArticles(now_article);
+}
+
+// 按钮行为
+if(artLeft !== null){
+    artLeft.addEventListener('click',()=>{
+        changeArcticle('left');
+    });
+}
+if(artRight !== null){
+    artRight.addEventListener('click',()=>{
+        changeArcticle('right');
+    });
+}
+
+/** 
+ * 打字机效果
+ * 利用js的 split() 函数能更好的把不同文字按照各自语言的标准，将最小字符分开
+ */
+const indexTitleBox = document.getElementById("index-title-box");
+if(indexTitleBox != null){
+    const chars = indexTitleBox.textContent.split('');
+    // 清空文字
+    indexTitleBox.textContent = '';
+    // 将分开后的字符外层加个span标签，再加进去
+    for(let i = 0;i < chars.length;i++){
+        setTimeout(()=>{
+            const span = document.createElement('span');
+            span.classList.add('transition');
+            span.innerText = chars[i];
+            indexTitleBox.appendChild(span);
+        },200*i);
+    }
+}
+
+// 滚动监听 + to_top返回顶端
+// toc
+const toc = document.querySelector(".post-toc .toc");
+// h2 tags
+const header2 = document.querySelectorAll('.post>h2');
+// toc tags
+const tocLinks = document.querySelectorAll('.toc>.toc-item>.toc-link');
+// to_top
+const to_top = document.getElementById('to_top');
+
+function clearActive(nodes){
+    nodes.forEach(item => {
+        item.classList.remove("active");
+    });
+}
+if(header2.length){
+    // 获取h2分布范围
+    const header2_ranges = new Array(header2.length).fill(0).map(()=>[]);
+    for(let i = 0;i<header2.length-1;i++){
+        header2_ranges[i].push(header2[i].offsetTop,header2[i+1].offsetTop)
+    }
+    header2_ranges[header2.length-1] = [header2[header2.length-1].offsetTop,Number.MAX_VALUE];
+    // 跳转到h2后，toc样式对应变换
+    function tocTransfrom(){
+        // header2[i].offsetTop | document.documentElement.scrollTop
+        for(let i = 0;i<header2.length;i++){
+            if(document.documentElement.scrollTop > header2_ranges[i][0] && document.documentElement.scrollTop <= header2_ranges[i][1]){
+                clearActive(tocLinks);
+                tocLinks[i].classList.add("active");
+                break;
+            }
+        }
+        // to_top
+        if(scrollY <= screen.availHeight){
+            to_top.style.transform = 'translateY(70px)';
+        }else{
+            to_top.style.transform = 'translateY(0)';
+        }
+    }
+} else {
+    function tocTransfrom(){
+        // to_top
+        if(scrollY <= screen.availHeight){
+            to_top.style.transform = 'translateY(70px)';
+        }else{
+            to_top.style.transform = 'translateY(0)';
+        }
+    }
+}
+to_top.addEventListener('click',()=>{
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    window.onscroll = null;
+    to_top.style.transform = 'translateY(70px)';
+    setTimeout(()=>{
+        window.onscroll = tocTransfrom;
+        tocTransfrom();
+    },1000);
+});
+
+
+// 初始化
+window.onscroll = tocTransfrom;
+tocTransfrom();
+
+

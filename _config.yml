@@ -1,120 +1,33 @@
-# header
-titleLogo: 'favicon/logo2.ico'
-title: delicate主题
-# 友链，`divider: true`是分隔符
-friend:
-  enable: true
-  Hexo: 'https://hexo.io/'
-  divider: true
-  GitHub: 'https://github.com/'
-  GitLab: 'https://gitlab.com/'
-# Google搜索
-search:
-  enable: true
+# --------------------------------------------------------- #
+# 
+#                      head and footer
+# 
+# --------------------------------------------------------- #
+## meta
+# 当前文档的创建者
+creator: ''
+# 当前文档的发布者/出版者
+publisher: ''
 
-# footer - 建站起始时间
-## 格式：
-##- "2021-11-01T00:00:00"（默认本地时区）
-##- "01 Nov 2021 00:00:00 +0800"（东八区，偏离格林威治8个小时）
+## link
+# icon
+icon: '/img/logo.ico'
+icon128: '/img/logo128.ico'
+
+## footer - 建站起始时间
+# 格式：- "2021-11-01T00:00:00"（默认本地时区）
+# - "01 Nov 2021 00:00:00 +0800"（东八区，偏离格林威治8个小时）
 startTime: "2021-11-01T00:00:00"
 
-# mermaid chart
-## 需要安装mermaid插件  `yarn add hexo-filter-mermaid-diagrams`
-mermaid: ## mermaid url https://github.com/knsv/mermaid
-  enable: true
-  version: "8.8.0"
 
+# --------------------------------------------------------- #
+# 
+#                        styles
+# 
+# --------------------------------------------------------- #
 
-# --------------------------- #
-##  siderbar infomation      ##
-# --------------------------- #
-## sidebar-about
-siderbar:
-  name: Kart · Jim
-  logo: Time wait for no one.
-  tag:
-    - student
-    - front-end developer
-    - hexo-theme-delicate
-  social:
-    # social account link
-    ## if the value is none or '',it does not apear.
-    github: '#'
-    twitter: ''
-    codepen: ''
-    google: ''
-    facebook: ''
-    stackoverflow: ''
-    linkedin: ''
-    instagram: ''
-    gitlab: ''
-    # for China
-    bilibili: '#'
-    CSDN: ''
-    贴吧: ''
-    知乎: ''
-    微博: ''
-    博客园: ''
-    掘金: '#'
-    dingding: ''
-
-
-# --------------------------- #
-##       background          ##
-# --------------------------- #
-# background style
-## background 样式互不相容！优先级为从上往下
-background:
-  meditation:
-    enable: false
-  point:
-    enable: false
-    # point's color
-    color: 'rgb(20, 53, 193,.3)'
-    # point's size
-    size: 4
-  line:
-    enable: false
-    size: 5
-  line2:
-    enable: false
-    size: 10
-
-# 3D背景
-canvas:
-  enable: false
-  # use rgb color,the value must be like "50,50,250"
-  color: '128,64,224'
-  # z-index
-  zIndex: '-5'
-  opacity: '0.7'
-  # canvas line count
-  count: '300'
-
-tags:
-  tagsBackStyle: 'alert alert-light'
-  minFont: 16
-  maxFont: 35
-  color:
-    enable: true
-    startColor: '#aa0000'
-    endColor: '#aa00aa'
-
-
-# --------------------------- #
-##   style setting           ##
-# --------------------------- #
-# Read More
-excerpt_link:
-  # Read More text
-  text: 'Read More'
-  # '阅读更多' 的按钮样式
-  ## btn-primary | btn-secondary | btn-secondary | btn-outline-success  and so on.
-  ## more: https://v4.bootcss.com/docs/components/buttons/
-  style: 'btn btn-outline-primary'
-
+# 未实现
 # 鼠标点击效果；
-## showText / showHeart / firework 只能打开一个！否则 鼠标点击效果为最靠上的那一个。
 mouseClick:
   # 点击出现文字效果
   showText:
@@ -122,96 +35,20 @@ mouseClick:
     text: ['富强','民主','文明','和谐','美丽']
     color: 'red'
   # 鼠标点击 - 心形
-  ## 心是随机颜色。
+  # 心是随机颜色
   showHeart: false
-  # 鼠标点击 - 烟花爆炸效果
-  firework: false
 
-# 雪花飘落
-snowFlake:
-  enable: false
-
-
-# --------------------------- #
-##   widget                 ##
-# --------------------------- #
-widget:
-  # 置顶文章
-  # need posts' Front-matter add: `top: true`
-  ## 基于bootstrap，可选项即为bootstrap的alert样式; more：https://v4.bootcss.com/docs/components/alerts/
-  top:
-    enable: true
-    topStyle: 'alert alert-light'
-  # 诗句 - 颜色和诗句随机生成
-  poem: false
-  # 显示实时天气
-  ## 仅限于 中国地区城市
-  weather:
-    enable: false
-    # 直接打城市名字即可
-    city: '上海'
-    # Broadcast
-    openBroadcast: true
-    BroadcastText: "感冒多发期，适当减少外出频率，适量补充水分，适当增减衣物。"
-  music:
-    enable: false
-    netease:
-      enable: false
-      songID: 
-        - '25638767'
-        - '1457707546'
-      songListID: ''
-    QQMusic:
-      enable: true
-      # 支持多个songID，将按顺序播放
-      ## 童话: 004aupsp1RFXAN | Fire: 000iDpGB4NlS0D | 
-      songID: 
-        - '000iDpGB4NlS0D'
-        - '004aupsp1RFXAN'
-        - '0029dqHX0nuawd'
-  carousel:
-    # 图片尺寸尽量一致！
-    enable: false
-    img1: 'https://i.loli.net/2021/12/01/KOUbM67fjIShi5r.jpg'
-    img1Alt: 'img1'
-    img1Text:
-      header: 'first slide'
-      content: 'content for the first slide.'
-    img2: 'https://i.loli.net/2021/12/01/A3fyD1zwqti4JPB.jpg'
-    img2Alt: 'img2'
-    img2Text:
-      header: 'Second slide label'
-      content: 'content for the second slide.'
-    img3: 'https://i.loli.net/2021/12/01/X1pkv9ShmeDWZ25.jpg'
-    img3Alt: 'img3'
-    img3Text:
-      header: 'Third slide label'
-      content: 'content for the third slide.'
-
-
-# --------------------------- #
-##   plugins                 ##
-# --------------------------- #
-# 图片查看插件
-fancybox:
-  enable: true
-
-
-# --------------------------- #
-##   评论系统                 ##
-# --------------------------- #
-valine:
-  enable: false
-  id: ''
-  key: ''
-  # textarea's placeholder
-  placeholder: "请发表您的意见和建议（支持 markdown 语法）"
-  lang: 'zh-CN'
-
-
-# --------------------------- #
-##    analytic               ##
-# --------------------------- #
-baidu_analytic: 
-  enable: false
-  key: ''
+# --------------------------------------------------------- #
+# 
+#                           index
+# 
+# --------------------------------------------------------- #
+# 主页配置
+index:
+  # 首页标头文字
+  title: 'hexo主题之delicate'
+  # 首页按钮文字
+  buttonText: 'go'
+  # 阅读更多按钮
+  excerpt:
+    text: 'More'

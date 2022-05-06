@@ -1,1 +1,61 @@
-<%- partial('_partial/article-full', {item: page}) %>
+<div class="post-body">
+    <%# 文章 %> 
+    <section class="post">
+        <div class="post-title">
+            <%- page.title || page.link %>
+        </div>
+
+        <p class="blog-post-info">
+        <span><%= page.date.format(config.date_format) %></span>
+        <% if(page.author) { %>
+            <span><%- page.author %></span>  
+        <% } %>
+        <span class="post-count"><%= wordcount(page.content) %>字</span>
+        <span class="post-count"><%= min2read(page.content) %>分钟</span>
+        <span class="post-count"><%= config.language %></span>
+        </p>
+
+        <%- page.content %>
+
+        <div class="post-alert">本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> 协议 ，转载请注明出处。</div>
+        <hr />
+        
+        <div class="blog-tag-and-cate">
+            <%- partial('components/tags', {item: page}) %>
+            <%- partial('components/categories', {item: page}) %>
+        </div>
+
+        <div class="post-change">
+            <div class="post-pre">
+                <% if (page.prev){ %>
+                    <a href="<%- url_for(page.prev.path) %>">
+                        <svg viewBox="0 0 1024 1024" version="1.1" width="20" height="20">
+                            <path d="M561.92 832a47.36 47.36 0 0 0 0-64l-256-256 256-256a47.36 47.36 0 1 0-64-64l-288.64 288.64A50.56 50.56 0 0 0 192 512a47.36 47.36 0 0 0 14.08 33.28L494.72 832a47.36 47.36 0 0 0 67.2 0z"></path>
+                            <path d="M817.92 832a47.36 47.36 0 0 0 0-64.00000001l-256-255.99999999 256-255.99999999a47.36 47.36 0 1 0-64.00000001-64.00000001l-291.83999999 286.08A50.56 50.56 0 0 0 447.99999999 512a47.36 47.36 0 0 0 14.08000001 33.28L750.72 831.99999999a47.36 47.36 0 0 0 67.2 1e-8z"></path>
+                        </svg>
+                        <%- page.prev.title %>
+                    </a>
+                <% } %>
+            </div>
+            <div class="post-next">
+                <% if (page.next){ %>
+                    <a href="<%- url_for(page.next.path) %>">
+                        <%- page.next.title %>
+                        <svg viewBox="0 0 1024 1024" version="1.1" width="20" height="20">
+                            <path d="M462.08 192a47.36 47.36 0 0 0 0 64l256 256-256 256a47.36 47.36 0 1 0 64 64l288.64-288.64A50.56 50.56 0 0 0 832 512a47.36 47.36 0 0 0-14.08-33.28L529.28 192a47.36 47.36 0 0 0-67.2 0z"></path>
+                            <path d="M206.08 192a47.36 47.36 0 0 0 0 64l256 256-256 256a47.36 47.36 0 1 0 64 64l291.84-286.08A50.56 50.56 0 0 0 576 512a47.36 47.36 0 0 0-14.08-33.28L273.28 192a47.36 47.36 0 0 0-67.2 0z"></path>
+                        </svg>
+                    </a>
+                <% } %>
+            </div>
+        </div>
+
+        
+    </section>
+    <%# 目录 %> 
+    <section class="post-toc transition">
+        <%- toc(page.content, {max_depth: 3}) %>
+    </section>
+</div>
+
+

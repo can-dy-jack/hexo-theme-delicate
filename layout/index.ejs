@@ -1,9 +1,62 @@
-<%- partial('_partial/header') %>
+<div class="index-header">
+    <h1 class="index-title">
+        <div id="index-title-box"><%= theme.index.title %></div>
+    </h1>
+    <p class="index-description">
+        <% if (config.subtitle){ %>
+            <%- config.subtitle %>
+        <% } %>
+    </p>
+</div>
+
+<%# 文章列表 %> 
+<div class="article-container">
+    <span class="article-left transition" id="article-left">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="40" height="40">
+            <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/>
+        </svg>
+    </span>
 <% page.posts.each(function(item){ %>
-    <%- partial('_partial/article-excerpt', {item: item}) %>
+<article class="excerpt-container blog-shadow">
+    <h1 class="excerpt-title">
+        <a href="<%- config.root %><%- item.path %>">
+            <%- item.title %>
+        </a>
+    </h1>
+    <p class="excerpt-meta">
+        <span><%= item.date.format(config.date_format) %></span>
+        <span>
+            <% if(item.author) { %>
+                | <%- item.author %>
+            <% } %>
+        </span>
+    </p>
+    <div class="excerpt"> <%- item.excerpt %> </div>
+    <div class="excerpt-more transition">
+        <a href="<%- config.root %><%- item.path %>">
+            <%= theme.index.excerpt.text %> 
+        </a>
+    </div>
+</article>
 <% }); %>
+    <span class="article-right transition" id="article-right">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="40" height="40">
+            <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/>
+        </svg>
+    </span>
+</div>
 
-
+<%# test %> 
 <%# 分页 %>
-<%- partial('_partial/pagination.ejs') %>
+<aside class="excerpt-pagination">
+    <ul>
+        <% if (page.prev){ %>
+            <li class="page-item"><a class="page-link" href="<%- config.root %><%- page.prev_link %>">Previous</a></li>
+        <% } %>
+        <% if (page.next){ %>
+            <li class="page-item"><a class="page-link" href="<%- config.root %><%- page.next_link %>">Next</a></li>
+        <% } %>
+    </ul>
+    <div><a href="<%- page.current_url %>">当前页数<%- page.current %></a> / 总页数<%- page.total %></div>
+</aside>
 
