@@ -66,3 +66,4 @@ theme: delicate
 
 更多国际化（i18n）
 
+更新hexo图片

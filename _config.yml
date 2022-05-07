@@ -19,7 +19,10 @@ icon128: '/img/logo128.ico'
 nav: 
   friends: 
     github: 'https://github.com/can-dy-jack/hexo-theme-delicate'
+    LeetCode: 'https://leetcode-cn.com/u/kartjim/'
     CSDN: 'https://blog.csdn.net/qq_46590483'
+    掘金: 'https://juejin.cn/user/1389392813630526'
+    微博: 'https://weibo.com/p/1005057198677513/home'
 
 
 ## footer - 建站起始时间
@@ -45,6 +48,12 @@ mouseClick:
   # 鼠标点击 - 心形
   # 心是随机颜色
   showHeart: false
+
+markdownColor:
+  post:
+   table: 'rgb(248, 229, 175)'
+   table_tr: 'rgba(248, 229, 175, .1)'
+   table_border: 'rgba(248, 229, 175)'
 
 # --------------------------------------------------------- #
 # 

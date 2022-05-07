@@ -18,100 +18,6 @@ function calculateTime(startTime) {
     }
     document.getElementById("times").innerHTML = "本站已运行 " + dnum + " 天 " + hnum + " 小时 " + mnum + " 分，共" + Math.floor(interval / 1000 / 60 / 60) + "小时";
 }
-/* 
- * 主页轮播图 
- * bug - 文章数小于等于3的情况
- */
-const articles = document.querySelectorAll("main .article-container article");
-const artLeft = document.getElementById("article-left");
-const artRight = document.getElementById("article-right");
-// 初始为第一篇文章
-var now_article = 0;
-
-// 控制轮播图的位置
-function showArticles(i){
-    // 防止其他页面报错
-    if(!articles.length || articles.length === 1) return;
-    if(i === 0){
-        articles[i].classList.add('now');
-        articles[articles.length-1].classList.add('left');
-        articles[1].classList.add('right');
-    } else if(i === articles.length-1){ 
-        articles[i].classList.add('now');
-        articles[i-1].classList.add('left');
-        articles[0].classList.add('right');
-    } else {
-        articles[i].classList.add('now');
-        articles[i-1].classList.add('left');
-        articles[i+1].classList.add('right');
-    }
-}
-// 调用函数进行初始化
-showArticles(now_article);
-// 按钮变换文章
-function changeArcticle(direct){
-    if(articles.length <= 3) return;
-    if(direct === 'left'){
-        if(now_article === 0) {
-            // 清除负影响
-            articles[now_article].classList.remove('now');
-            articles[articles.length-1].classList.remove('left');
-            articles[1].classList.remove('right');
-            // 转换
-            now_article = articles.length-1;
-        } else if(now_article === articles.length-1) {
-            // 清除负影响
-            articles[now_article].classList.remove('now');
-            articles[now_article-1].classList.remove('left');
-            articles[0].classList.remove('right');
-            // 转换
-            now_article--;
-        } else {
-            // 清除负影响
-            articles[now_article].classList.remove('now');
-            articles[now_article-1].classList.remove('left');
-            articles[now_article+1].classList.remove('right');
-            now_article--;
-        }
-    } else if(direct === 'right'){
-        if(now_article === 0) {
-            // 清除负影响
-            articles[now_article].classList.remove('now');
-            articles[articles.length-1].classList.remove('left');
-            articles[1].classList.remove('right');
-            // 转换
-            now_article++;
-        } else if(now_article === articles.length-1) {
-            // 清除负影响
-            articles[now_article].classList.remove('now');
-            articles[now_article-1].classList.remove('left');
-            articles[0].classList.remove('right');
-            // 转换
-            now_article = 0;
-        } else {
-            // 清除负影响
-            articles[now_article].classList.remove('now');
-            articles[now_article-1].classList.remove('left');
-            articles[now_article+1].classList.remove('right');
-            now_article++;
-        }
-    } else {
-        return;
-    }
-    showArticles(now_article);
-}
-
-// 按钮行为
-if(artLeft !== null){
-    artLeft.addEventListener('click',()=>{
-        changeArcticle('left');
-    });
-}
-if(artRight !== null){
-    artRight.addEventListener('click',()=>{
-        changeArcticle('right');
-    });
-}
 
 /** 
  * 打字机效果
@@ -195,6 +101,19 @@ to_top.addEventListener('click',()=>{
     },1000);
 });
 
+// friends-more
+const friends_more = document.getElementById("friends-more");
+const phone_nav_link = document.getElementById("phone-nav-link");
+let phone_nav_link_is_open = false;
+friends_more.addEventListener('click',()=>{
+    if(phone_nav_link_is_open) {
+        phone_nav_link.style.transform = 'scaleX(0)';
+    } else {
+       phone_nav_link.style.transform = 'scaleX(1)'; 
+    }
+    phone_nav_link_is_open = !phone_nav_link_is_open;
+})
+
 // 移动端toc
 const tocBox = document.getElementById("post-toc");
 const tocBtn = document.getElementById("open-toc");
@@ -215,9 +134,11 @@ if(tocBox !== null && tocBtn !== null) {
         } else {
             toc_open = true;
             tocBox.style.transform = 'scaleY(1)';
+            phone_nav_link.style.transform = 'scaleX(0)';
         }
     }
 }
+
 
 
 // 初始化
