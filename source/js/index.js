@@ -195,6 +195,30 @@ to_top.addEventListener('click',()=>{
     },1000);
 });
 
+// 移动端toc
+const tocBox = document.getElementById("post-toc");
+const tocBtn = document.getElementById("open-toc");
+if(tocBox !== null && tocBtn !== null) {
+    let toc_open = false;
+    tocBtn.addEventListener('click',()=>{
+        if(toc_open) {
+            tocBox.style.transform = 'scaleY(0)';
+        } else {
+            tocBox.style.transform = 'scaleY(1)';
+        }
+        toc_open = !toc_open;
+    })
+    window.onresize = ()=> {
+        if(window.innerWidth <= 800) {
+            toc_open = false;
+            tocBox.style.transform = 'scaleY(0)';
+        } else {
+            toc_open = true;
+            tocBox.style.transform = 'scaleY(1)';
+        }
+    }
+}
+
 
 // 初始化
 window.onscroll = tocTransfrom;

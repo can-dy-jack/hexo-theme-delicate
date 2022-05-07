@@ -1,43 +1,43 @@
 /* note */
 .note {
     background-color: #fafafa;
-    border-left: 6px solid #333;
-    padding: 5px 12px;
+    border-left: 8px solid #333;
+    padding: 10px 20px;
     margin: 10px 0;
     border-radius: 0 5px 5px 0;
 }
 .note-info {
     background-color: rgba(126, 209, 248, .1);
-    border-left: 6px solid rgb(126, 209, 248);
-    color: rgb(126, 209, 248);
+    border-left-color: rgb(126, 209, 248);
+    /* color: rgb(126, 209, 248); */
 }
 .note-primary {
     background-color: rgba(67, 80, 252, .1);
-    border-left: 6px solid rgb(2, 2, 252);
-    color: blue;
+    border-left-color: rgb(2, 2, 252);
+    /* color: blue; */
 }
 .note-success {
     background-color: rgba(1, 254, 1, .1);
-    border-left: 6px solid green;
-    color: green;
+    border-left-color: green;
+    /* color: green; */
 }
 .note-danger {
     background-color: rgba(255, 2, 1, .1);
-    border-left: 6px solid red;
-    color: red;
+    border-left-color: red;
+    /* color: red; */
 }
 .note-warning {
     background-color: rgba(255, 244, 1, .1);
-    border-left: 6px solid rgb(255, 230, 0);
-    color: rgb(214, 195, 24);
+    border-left-color: rgb(255, 230, 0);
+    /* color: rgb(214, 195, 24); */
 }
 .note-light {
-    border-left: 6px solid #efefef;
+    border-left-color: #efefef;
 }
 .note-purple {
     background-color: rgba(185, 0, 185, .1);
-    border-left: 6px solid rgb(185, 0, 185);
-    color: rgb(172, 6, 172);
+    border-left-color: rgb(185, 0, 185);
+    /* color: rgb(172, 6, 172); */
 }
 
 /* description */
@@ -99,32 +99,35 @@
 }
 .toasts-tip .toasts-title{
     background-color: #7eb1f8;
-    fill: white;
 }
 .toasts-tip .toasts-content {
     background-color: rgb(232, 239, 248);
 }
 .toasts-note .toasts-title{
     background-color: green;
-    fill: white;
 }
 .toasts-note .toasts-content {
     background-color: rgb(226, 255, 226);
 }
 .toasts-danger .toasts-title{
     background-color: red;
-    fill: white;
 }
 .toasts-danger .toasts-content {
     background-color: rgb(255, 228, 228);
 }
 .toasts-warning .toasts-title{
     background-color: rgb(238, 238, 4);
-    fill: #fff;
-    color: #fff;
 }
 .toasts-warning .toasts-content {
     background-color: rgb(249, 255, 205);
+}
+.toasts-book .toasts-title{
+    background-color: rgb(247, 226, 199);
+    fill: #333;
+    color: #333;
+}
+.toasts-book .toasts-content {
+    background-color: #faf5f0;
 }
 
 

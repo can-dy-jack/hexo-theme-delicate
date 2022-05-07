@@ -13,9 +13,8 @@ html {
 }
 
 body {
-    /* font-family: -apple-system, Roboto Mono, Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif; */
+    font-family: microsoft yahei, Roboto Mono,JetBrains Mono, consolas, sans-serif;
     background-color: #fcfcfc;
-    /* 浏览器不支持的时候显示 */
     background-image: radial-gradient(#ddddeeaa 12%, #fcfcfcaa 12%);
     background-size: 15px 15px;
     font-size: 16px;
@@ -82,6 +81,7 @@ footer #to_top {
     right: 20px;
     bottom: 20px;
     box-shadow: 0 0 8px 3px rgba(0,0,0,.04);
+    z-index: 20;
 }
 footer #to_top svg {
     fill: #fff;
@@ -304,11 +304,38 @@ main .excerpt-pagination {
 .post-toc .toc a.active + ol{
     background-color: rgb(238, 243, 248);
 }
+.open-toc {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    background-color: blue;
+    display: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 6px 2px rgba(0,0,0,0.05);
+    user-select: none;
+    z-index: 101;
+}
+.open-toc svg{
+    fill: white;
+    transform: translateY(13px);
+    transition: all 0.25s ease;
+}
+.open-toc:hover {
+    background-color: white;
+}
+.open-toc:hover svg{
+    fill: blue;
+}
+.open-toc:active {
+    transform: scale(0.9);
+}
 
 .post {
     overflow: hidden;
-    /* test */
-    padding: 50px;
     background-color: #fff;
 }
 /* post tag and categories */
@@ -435,7 +462,6 @@ main .excerpt-pagination {
     padding: 2px 5px;
 }
 
-
 /* 
  ~ 适配大小不同屏幕
  */
@@ -443,11 +469,17 @@ main .excerpt-pagination {
     .post-toc {
         width: 40%;
     }
+    .post {
+        padding: 50px;
+    }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
     .post-toc {
         width: 800px;
+    }
+    .post {
+        padding: 40px;
     }
 }
 
@@ -455,15 +487,37 @@ main .excerpt-pagination {
     .post-toc {
         width: 600px;
     }
+    .post {
+        padding: 40px 30px;
+    }
 }
 
 @media screen and (max-width: 800px) {
     .post-toc {
-        /* 暂时不显示 */
-        display: none;
+        width: 100%;
+        height: 70vh;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 10px 0 30px 0;
+        box-shadow: 0 -5px 20px 3px rgba(0,0,0,.1);
+        z-index: 100;
+        transform: scaleY(0);
+        overflow: auto;
+        transform-origin: bottom;
+    }
+    .post-toc .toc {
+        position: relative;top: 0;
+        width: 100%;
+        max-height: max-content;
+    }
+    .open-toc {
+        display: inline-block;
+    }
+    .post {
+        padding: 40px 10px;
     }
 }
 
-/* to top */
-
+/* // toc溢出 */
 
