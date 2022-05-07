@@ -12,7 +12,15 @@ publisher: ''
 ## link
 # icon
 icon: '/img/logo.ico'
+# 导航栏上的图标
 icon128: '/img/logo128.ico'
+
+# nav友情链接
+nav: 
+  friends: 
+    github: 'https://github.com/can-dy-jack/hexo-theme-delicate'
+    CSDN: 'https://blog.csdn.net/qq_46590483'
+
 
 ## footer - 建站起始时间
 # 格式：- "2021-11-01T00:00:00"（默认本地时区）

@@ -20,44 +20,73 @@ body {
     font-size: 16px;
 }
 /* nav */
-nav.navbar {
-    display: flex;
+nav {
+    background-color: #20232a;
+    height: 50px;
     width: 100%;
-    align-items: center;
-    background-color: #20232a;
-    color: white;
-    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
     box-sizing: border-box;
-    z-index: 100;
-    padding: 0 20px;
-    font-size: 18px;
+    z-index: 200;
+    box-shadow: 0 4px 15px rgba(0,0,0,.06);
 }
-
-nav .nav-left {
+nav .navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav .navbar .nav-left{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+}
+nav .navbar .nav-left .nav-brand {
+    height: 50px;
+    line-height: 50px;
+    margin: 0 10px;
+}
+nav .navbar .nav-left .nav-brand a {
     display: flex;
     align-items: center;
-    background-color: #20232a;
+    color: #f8e5af;
 }
-
-nav a {
-    text-decoration: none;
-    color: white;
+nav .navbar .nav-left .nav-brand img {
     margin: 0 5px;
 }
-
-nav .navbar-brand {
+nav .navbar .nav-left .nav-link a {
+    box-sizing: border-box;
+    padding: 0 8px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    color: white;
+}
+nav .navbar .nav-left .nav-link a:hover {
+    color: #f8e5af;
+}
+nav .navbar .nav-right{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding: 0 10px;
     display: flex;
     align-items: center;
 }
-
-nav .navbar-brand img {
-    margin-right: 5px;
+nav .navbar .nav-right a {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+}
+nav .navbar .nav-right a:hover {
+    color: #f8e5af;;
+}
+nav .navbar .nav-right svg{
+    fill: #ddd;
+    margin-left: 3px;
 }
 
-nav .nav-right {
-    margin-left: auto;
-    background-color: #fff;
-}
 
 /*  footer */
 footer {
@@ -243,16 +272,16 @@ main .excerpt-pagination {
 
 .post-toc {
     width: 600px;
-    padding: 40px 0;
+    padding-top: 100px;
     background-color: #fafafa;
     border-left: 1px solid #eee;
 }
 .post-toc .toc {
     position: sticky;
     width: 100%;
-    max-height: 95vh;
+    max-height: 90vh;
     overflow: auto;
-    top: 20px;
+    top: 80px;
     list-style-type: none;
     padding-left: 0;
     background-color: #fafafa;
@@ -470,7 +499,7 @@ main .excerpt-pagination {
         width: 40%;
     }
     .post {
-        padding: 50px;
+        padding: 100px 50px 40px 50px;
     }
 }
 
@@ -479,7 +508,7 @@ main .excerpt-pagination {
         width: 800px;
     }
     .post {
-        padding: 40px;
+        padding: 100px 40px 40px 40px;
     }
 }
 
@@ -488,7 +517,7 @@ main .excerpt-pagination {
         width: 600px;
     }
     .post {
-        padding: 40px 30px;
+        padding: 100px 30px 30px 30px;
     }
 }
 
@@ -515,9 +544,6 @@ main .excerpt-pagination {
         display: inline-block;
     }
     .post {
-        padding: 40px 10px;
+        padding: 100px 10px 40px 10px;
     }
 }
-
-/* // toc溢出 */
-

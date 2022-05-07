@@ -46,8 +46,23 @@ git clone https://github.com/can-dy-jack/hexo-theme-delicate.git theme/delicate
 theme: delicate
 ```
 
+## 开发idea
+
+- 好康的颜色：aquamarine
+- 手机端侧边栏（nav、toc）变成小条状，浮在屏幕右边。（参考react官网）
+- 参考其他主题（尤其是默认主题）！
 
 
-好康的颜色：aquamarine
+搜索功能暂时不做：
+- google搜索：<%- search_form() %>
+- 站内搜索：search.xml
 
-手机端侧边栏（nav、toc）变成小条状，浮在屏幕右边。（参考react官网）
+页面：
+- tag
+- categories
+- ……
+
+参考其它主题的主题配置文件使用方式（默认主题等）！
+
+更多国际化（i18n）
+
