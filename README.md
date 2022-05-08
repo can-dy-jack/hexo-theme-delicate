@@ -52,7 +52,6 @@ theme: delicate
 - 手机端侧边栏（nav、toc）变成小条状，浮在屏幕右边。（参考react官网）
 - 参考其他主题（尤其是默认主题）！
 
-
 搜索功能暂时不做：
 - google搜索：<%- search_form() %>
 - 站内搜索：search.xml
@@ -67,3 +66,13 @@ theme: delicate
 更多国际化（i18n）
 
 更新hexo图片
+
+leetcode竞赛 - 分享按钮
+
+
+适配：用户新建页面 + 页面地址导航
+
+结合官网的更多变量来实现更丰富的内容！
+
+jump_pages函数用hexo内置方法重写，写到scripts/healper里？
+

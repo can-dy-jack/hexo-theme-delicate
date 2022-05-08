@@ -140,9 +140,7 @@ if(tocBox !== null && tocBtn !== null) {
 }
 
 
-
 // 初始化
 window.onscroll = tocTransfrom;
 tocTransfrom();
-
 

@@ -2,3 +2,8 @@ nav:
   home: home
   archives: archive
   about: about
+index: 
+  pagination: 
+    prev: prev
+    next: next
+    total: total

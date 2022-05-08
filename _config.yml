@@ -64,8 +64,7 @@ markdownColor:
 index:
   # 首页标头文字
   title: 'hexo主题之delicate'
-  # 首页按钮文字
-  buttonText: 'go'
   # 阅读更多按钮
   excerpt:
-    text: 'More'
+    text: '阅读更多'
+

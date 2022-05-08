@@ -143,6 +143,16 @@ footer #to_top:hover {
 footer #to_top:hover svg{
     fill: blue;
 }
+footer a {
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+footer a:hover {
+    color: #232323;
+    border-bottom: 1px solid #232323;
+}
 
 /* 主页 */
 main .index-header {
@@ -176,18 +186,38 @@ main .index-description {
     }
 }
 
-
-main .article-container {}
-
-main .article-container article {
-
+main .article-container {
+    width: 100%;
+    box-sizing: border-box;
 }
-
-
-
+main .article-container article {
+    box-sizing: border-box;
+    padding: 20px 50px;
+}
+main .article-container article:nth-child(2n+1) {
+    background-color: #fff;
+}
+main .article-container article:nth-child(2n) {
+    background-color: #ddd;
+}
 main .excerpt-pagination {
     text-align: center;
+    padding: 20px;
 }
+.excerpt-pagination span {
+    margin: 5px 10px;
+}
+
+
+.excerpt-pagination span a {
+    display: inline-block;
+    padding: 5px 8px;
+    border: 2px solid #454545;
+}
+.excerpt-pagination span a:hover {
+    background-color: #454545;
+}
+
 /* post */
 .post-body {
     background-color: #fafafa;
@@ -426,6 +456,9 @@ main .excerpt-pagination {
     .post {
         padding: 100px 50px 40px 50px;
     }
+    main .article-container article {
+        padding: 20px 8%;
+    }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
@@ -435,6 +468,9 @@ main .excerpt-pagination {
     .post {
         padding: 100px 40px 40px 40px;
     }
+    main .article-container article {
+        padding: 20px 60px;
+    }
 }
 
 @media screen and (min-width: 800px) and (max-width: 1000px) {
@@ -443,6 +479,9 @@ main .excerpt-pagination {
     }
     .post {
         padding: 100px 30px 30px 30px;
+    }
+    main .article-container article {
+        padding: 20px 40px;
     }
 }
 
@@ -477,6 +516,9 @@ main .excerpt-pagination {
     }
     nav .navbar .nav-right a {
         display: none;
+    }
+    main .article-container article {
+        padding: 20px;
     }
 }
 

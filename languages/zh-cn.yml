@@ -2,3 +2,8 @@ nav:
   home: 主页
   archives: 存档
   about: 关于
+index: 
+  pagination: 
+    prev: 上一页
+    next: 下一页
+    total: 总页数
