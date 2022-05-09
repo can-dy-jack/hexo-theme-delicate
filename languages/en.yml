@@ -1,9 +1,13 @@
-nav: 
+nav:
   home: home
   archives: archive
   about: about
-index: 
-  pagination: 
+index:
+  pagination:
     prev: prev
     next: next
     total: total
+archive:
+  title: "%d posts in total."
+post:
+  share: share

@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="<%= config.language %>">
-    <%- partial('_partial/head') %>
+<%- partial('_partial/head') %>
+
 <body>
-    <nav>
-        <%- partial('_partial/nav') %>
-    </nav>
-    <main>
-        <%- body %>  
-    </main>
-    <footer>
-        <%- partial('_partial/footer') %>
-    </footer>
-    <%- partial('_partial/script') %>
+  <nav>
+    <%- partial('_partial/nav') %>
+  </nav>
+  <main>
+    <%- body %>
+  </main>
+  <footer>
+    <%- partial('_partial/footer') %>
+  </footer>
+  <%- partial('_partial/script') %>
 </body>
+
 </html>

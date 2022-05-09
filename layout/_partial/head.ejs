@@ -1,45 +1,46 @@
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="<%= config.description %>">
-    <meta name="keywords" content="<%= config.keywords %>">
-    <meta name="author" content="<%= config.author %>">
+  <meta name="description" content="<%= config.description %>">
+  <meta name="keywords" content="<%= config.keywords %>">
+  <meta name="author" content="<%= config.author %>">
 
-    <meta name="generator" content="hexo">
-    <meta name="theme-color" content="#fafafa">
+  <meta name="generator" content="hexo">
+  <meta name="theme-color" content="#fafafa">
 
-    <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="light dark">
 
-    <meta name="creator" content="<%= theme.creator %>">
-    <meta name="publisher" content="<%= theme.publisher %>">
+  <meta name="creator" content="<%= theme.creator %>">
+  <meta name="publisher" content="<%= theme.publisher %>">
 
-    <%# test %> 
-    <title><%- page.title || config.title %></title>
-    <%# icon %> 
-    <%- favicon_tag(theme.icon) %>
+  <%# test %>
+  <title><%- page.title || config.title %></title>
+  <%# icon %>
+  <%- favicon_tag(theme.icon) %>
 
-    <%# css link %> 
-    <%- css('css/public.css') %>
-    <%- css('css/markdown.css') %>
-    <%- css('css/plugins.css') %>
-    <%- css('css/index.css') %>
-<%
+  <%# css link %>
+  <%- css('css/markdown.css') %>
+  <%- css('css/plugins.css') %>
+  <%- css('css/index.css') %>
+  <%
     var tableColor = theme.markdownColor.post.table;
     var table_tr_Color = theme.markdownColor.post.table_tr;
     var table_border_Color = theme.markdownColor.post.table_border;
 %>
-<style>
+  <style>
     .post>table thead {
-        background-color: <%= tableColor %>;
+      background-color: <%=tableColor %>;
     }
+
     .post>table tr td,
     .post>table tr th {
-        border: 1px solid <%= table_border_Color %>;
+      border: 1px solid <%=table_border_Color %>;
     }
+
     .post>table tbody tr:nth-child(2n) {
-        background-color: <%= table_tr_Color %>;
+      background-color: <%=table_tr_Color %>;
     }
-</style>
+  </style>
 
 </head>

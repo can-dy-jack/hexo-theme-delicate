@@ -1,40 +1,38 @@
 # --------------------------------------------------------- #
-# 
+#
 #                      head and footer
-# 
+#
 # --------------------------------------------------------- #
 ## meta
 # 当前文档的创建者
-creator: ''
+creator: ""
 # 当前文档的发布者/出版者
-publisher: ''
+publisher: ""
 
 ## link
 # icon
-icon: '/img/logo.ico'
+icon: "/img/logo.ico"
 # 导航栏上的图标
-icon128: '/img/logo128.ico'
+icon128: "/img/logo128.ico"
 
 # nav友情链接
-nav: 
-  friends: 
-    github: 'https://github.com/can-dy-jack/hexo-theme-delicate'
-    LeetCode: 'https://leetcode-cn.com/u/kartjim/'
-    CSDN: 'https://blog.csdn.net/qq_46590483'
-    掘金: 'https://juejin.cn/user/1389392813630526'
-    微博: 'https://weibo.com/p/1005057198677513/home'
-
+nav:
+  friends:
+    github: "https://github.com/can-dy-jack/hexo-theme-delicate"
+    LeetCode: "https://leetcode-cn.com/u/kartjim/"
+    CSDN: "https://blog.csdn.net/qq_46590483"
+    掘金: "https://juejin.cn/user/1389392813630526"
+    微博: "https://weibo.com/p/1005057198677513/home"
 
 ## footer - 建站起始时间
 # 格式：- "2021-11-01T00:00:00"（默认本地时区）
 # - "01 Nov 2021 00:00:00 +0800"（东八区，偏离格林威治8个小时）
 startTime: "2021-11-01T00:00:00"
 
-
 # --------------------------------------------------------- #
-# 
+#
 #                        styles
-# 
+#
 # --------------------------------------------------------- #
 
 # 未实现
@@ -43,28 +41,35 @@ mouseClick:
   # 点击出现文字效果
   showText:
     enable: false
-    text: ['富强','民主','文明','和谐','美丽']
-    color: 'red'
+    text: ["富强", "民主", "文明", "和谐", "美丽"]
+    color: "red"
   # 鼠标点击 - 心形
   # 心是随机颜色
   showHeart: false
 
 markdownColor:
   post:
-   table: 'rgb(248, 229, 175)'
-   table_tr: 'rgba(248, 229, 175, .1)'
-   table_border: 'rgba(248, 229, 175)'
+    table: "rgb(248, 229, 175)"
+    table_tr: "rgba(248, 229, 175, .1)"
+    table_border: "rgba(248, 229, 175)"
 
 # --------------------------------------------------------- #
-# 
-#                           index
-# 
+#
+#                   index and post
+#
 # --------------------------------------------------------- #
 # 主页配置
 index:
   # 首页标头文字
-  title: 'hexo主题之delicate'
+  title: "hexo主题之delicate"
   # 阅读更多按钮
   excerpt:
-    text: '阅读更多'
+    text: "阅读更多"
+
+# post页面
+post:
+  share:
+    qq: true
+    weibo: true
+
 

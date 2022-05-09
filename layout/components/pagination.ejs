@@ -1,0 +1,33 @@
+<aside class="excerpt-pagination">
+    <span class="excerpt-pagination-prev">
+    <% if (item.prev){ %>
+        <a class="page-link" href="<%- config.root %><%- item.prev_link %>"><%= __('index.pagination.prev') %></a>
+    <% } %>
+    </span>
+    <span class="excerpt-pagination-input">
+        <input type="text" id="pages" value="<%- item.current %>" onkeydown="jump_pages()" placeholder="jump">
+        <label for="pages">/<%- item.total %></label>
+    </span>
+    <span class="excerpt-pagination-prev">
+    <% if (item.next){ %>
+        <a class="page-link" href="<%- config.root %><%- item.next_link %>"><%= __('index.pagination.next') %></a>
+    <% } %>
+    </span>
+    <script>
+        /**
+        * 页面跳转
+        */
+        const index_pages = document.getElementById("pages");
+        const root_url = document.getElementById("root-url").textContent.trim();
+        function jump_pages(e){
+            let event = window.event || e;
+            if(event.keyCode === 13) { // enter键
+                if(index_pages.value === '1' || index_pages.value === '0') {
+                    window.location.href = root_url;
+                } else {
+                    window.location.href = root_url + '/page/' + index_pages.value;
+                }
+            }
+        }
+    </script>
+</aside>

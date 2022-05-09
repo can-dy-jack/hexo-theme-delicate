@@ -12,7 +12,7 @@
 <%# 文章列表 %> 
 <div class="article-container">
 <% page.posts.each(function(item){ %>
-<article class="excerpt-container blog-shadow">
+<article class="excerpt-container">
     <h1 class="excerpt-title">
         <a href="<%- config.root %><%- item.path %>">
             <%- item.title %>
@@ -38,40 +38,6 @@
 <% }); %>
 </div>
 
-<%# test %> 
 <%# 分页 %>
-<aside class="excerpt-pagination">
-    <span class="excerpt-pagination-prev">
-    <% if (page.prev){ %>
-        <a class="page-link" href="<%- config.root %><%- page.prev_link %>"><%= __('index.pagination.prev') %></a>
-    <% } %>
-    </span>
-    <span class="excerpt-pagination-input">
-        <input type="text" id="pages" value="<%- page.current %>" onkeydown="jump_pages()" placeholder="jump">
-        <label for="pages">/<%- page.total %></label>
-    </span>
-    <span class="excerpt-pagination-prev">
-    <% if (page.next){ %>
-        <a class="page-link" href="<%- config.root %><%- page.next_link %>"><%= __('index.pagination.next') %></a>
-    <% } %>
-    </span>
-    <span id="root-url" style="display: none;"><%- config.root %></span>
-    <script>
-        /**
-        * 主页面跳转
-        */
-        const index_pages = document.getElementById("pages");
-        const root_url = document.getElementById("root-url").textContent.trim();
-        function jump_pages(e){
-            let event = window.event || e;
-            if(event.keyCode === 13) { // enter键
-                if(index_pages.value === '1' || index_pages.value === '0') {
-                    window.location.href = root_url;
-                } else {
-                    window.location.href = root_url + '/page/' + index_pages.value;
-                }
-            }
-        }
-    </script>
-</aside>
-
+<span id="root-url" style="display: none;"><%- config.root %></span>
+<%- partial('components/pagination', {item: page}) %>

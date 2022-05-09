@@ -1,35 +1,21 @@
-<%# 归档 (archive)：与 index 布局相同! %> 
-<h2 class="archives-head">
-    <%= __('menu.archives') %>
-    <span><%- site.posts.length %> </span>
-</h2>
-<div class="post-list">
-    <% page.posts.each(function(item){ %>
-    <div class="post-archives">
-        <a href="<%- config.root %><%- item.path %>">
-            <%- item.title || item.link %>
+<section class="archive">
+
+    <h2 class="archives-head"><%= __('archive.title', site.posts.length ) %></h2>
+    <div class="post-list-group">
+    <% var dateCursor %>
+    <% page.posts.each(function (post) { %>
+        <% if(date(post.date, "YYYY") !== dateCursor) { %>
+            <% dateCursor = date(post.date, "YYYY") %>
+            <p class="post-list-year"><%= dateCursor %></p>
+        <% } %>
+        <a href="<%= url_for(post.path) %>" class="list-group-item transition">
+            <time><%= date(post.date, "MM-DD") %></time>
+            <span class="archive-post-title"><%= post.title %></span>
         </a>
-        <span>
-            <%= item.date.format(config.date_format) %>
-        </span>
+    <% }) %>
     </div>
-    <% }); %>
-</div>
 
-
-<%# test %> 
-<%# 分页 %>
-<aside class="excerpt-pagination">
-    <ul>
-        <% if (page.prev){ %>
-            <li class="page-item"><a class="page-link" href="<%- config.root %><%- page.prev_link %>">Previous</a></li>
-        <% } %>
-        <% if (page.next){ %>
-            <li class="page-item"><a class="page-link" href="<%- config.root %><%- page.next_link %>">Next</a></li>
-        <% } %>
-    </ul>
-    <div><%- page.total %></div>
-    <div>
-        <a href="<%- page.current_url %>">当前页数<%- page.current %></a>
-    </div>
-</aside>
+    <%# 分页 %>
+    <span id="root-url" style="display: none;"><%- config.root %>archives</span>
+    <%- partial('components/pagination', {item: page}) %>
+</section>

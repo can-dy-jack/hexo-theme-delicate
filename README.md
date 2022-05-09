@@ -12,6 +12,7 @@
 <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E%3D10.9.0-blue"></a>
 <a href="https://hexo.io"><img src="https://img.shields.io/badge/hexo-4.3.0-brightgreen"></a>
 <a href="https://github.com/can-dy-jack/hexo-theme-delicate/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-orange"></a>
+<a href="https://github.com/can-dy-jack/hexo-theme-delicate"><img src="https://img.shields.io/badge/delicate-3-%23f8e5af"></a>
 </div>
 ## 使用指南
 
@@ -69,7 +70,6 @@ theme: delicate
 
 leetcode竞赛 - 分享按钮
 
-
 适配：用户新建页面 + 页面地址导航
 
 结合官网的更多变量来实现更丰富的内容！
@@ -78,3 +78,12 @@ jump_pages函数用hexo内置方法重写，写到scripts/healper里？
 
 404页面
 
+### bug
+
+- archive页面：从文章tag点进去查看，总文章数不对
+- post页面：侧边toc长度不固定？
+
+### 计划
+- category页面
+- 标签云
+- 关于页面（用户有对应文件夹？）
