@@ -76,3 +76,5 @@ leetcode竞赛 - 分享按钮
 
 jump_pages函数用hexo内置方法重写，写到scripts/healper里？
 
+404页面
+

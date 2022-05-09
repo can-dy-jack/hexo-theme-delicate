@@ -267,6 +267,32 @@ figure::-webkit-scrollbar-thumb {
     background-color: rgba(120, 134, 150);
     border: 2px solid transparent;
 }
+figure figcaption {
+    color: white;
+    font-size: 14px;
+    padding: 5px 12px;
+}
+figure .code-info {
+    background-color: rgb(54, 52, 50);
+    position: sticky;
+    left: 0;
+    padding: 5px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    border-top: 1px solid #888;
+}
+figure .code-info .copy-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+}
+figure .code-info .copy-btn svg {
+    fill: white;
+    margin-right: 3px;
+}
 
 /* 代码高亮 */
 /*!
