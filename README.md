@@ -1,8 +1,6 @@
 # hexo-theme-delicate
 
-
-3.0版本 - 重构页面样式
-
+delicate3.0 版本大更新！ - 重构页面样式
 
 > 依据bootstrap设计的一款hexo主题  
 > [Demo site](https://kartjim.top/delicate)  
@@ -14,6 +12,7 @@
 <a href="https://github.com/can-dy-jack/hexo-theme-delicate/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-orange"></a>
 <a href="https://github.com/can-dy-jack/hexo-theme-delicate"><img src="https://img.shields.io/badge/delicate-3-%23f8e5af"></a>
 </div>
+
 ## 使用指南
 
 使用主题默认您已创建过[hexo](https://hexo.io)项目
@@ -47,51 +46,7 @@ git clone https://github.com/can-dy-jack/hexo-theme-delicate.git theme/delicate
 theme: delicate
 ```
 
-## 开发idea
-
-- 好康的颜色：aquamarine
-- 手机端侧边栏（nav、toc）变成小条状，浮在屏幕右边。（参考react官网）
-- 参考其他主题（尤其是默认主题）！
-
-搜索功能暂时不做：
-- google搜索：<%- search_form() %>
-- 站内搜索：search.xml
-
-页面：
-- tag
-- categories
-- ……
-
-参考其它主题的主题配置文件使用方式（默认主题等）！
-
-更多国际化（i18n）
-
-更新hexo图片
-
-leetcode竞赛 - 分享按钮
-
-适配：用户新建页面 + 页面地址导航
-
-结合官网的更多变量来实现更丰富的内容！
-
-jump_pages函数用hexo内置方法重写，写到scripts/healper里？
-
-404页面
-
-### bug
-
-- archive页面：从文章tag点进去查看，总文章数不对
-- post页面：侧边toc长度不固定？
-
-### 计划
-- tag + tags页面
-
-- category页面
-- 标签云
-- 关于页面（用户有对应文件夹？）
-
-
-### bug解决
+## bug解决
 
 1. 控制台报错
 ```bash
