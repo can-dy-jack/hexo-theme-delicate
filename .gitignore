@@ -1,0 +1,13 @@
+.DS_Store
+db.json
+package-lock.json
+
+*.log
+*.lock
+*.iml
+
+node_modules/
+public/
+.deploy*/
+.idea/
+.vscode/

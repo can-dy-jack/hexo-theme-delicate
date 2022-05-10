@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-delicate",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "delicate but simple theme for Hexo",
   "main": "package.js",
   "files": [
@@ -14,11 +14,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "can-dy-jack/hexo-theme-delicate",
-  "author": "kartjim",
+  "author": "can-dy-jack (https://github.com/can-dy-jack)",
   "keywords": [
     "hexo",
     "theme",
-    "delicate"
+    "delicate",
+    "simple"
   ],
   "license": "MIT",
   "bugs": {
@@ -27,5 +28,11 @@
   "homepage": "https://kartjim.cn/delicate",
   "devDependencies": {
     "hexo": "4.3.0"
+  },
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "peerDependencies": {
+    "nunjucks": "^3.0.0"
   }
 }

@@ -1,0 +1,48 @@
+div,nav,span,main,footer,body
+  margin: 0
+  padding: 0
+
+html
+  scroll-behavior: smooth
+
+.transition
+  transition: all 0.25s ease;
+
+::selection
+  background-color: antiquewhite;
+  color: #232323;
+
+body
+  font-family: microsoft yahei, Roboto Mono, JetBrains Mono, consolas, sans-serif;
+  background-color: #fcfcfc;
+  background-image: radial-gradient(#ddddeeaa 12%, #fcfcfcaa 12%);
+  background-size: 15px 15px;
+  font-size: 16px;
+
+a
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  &:hover 
+    color: #f8e5af;
+
+img
+  max-width: 100%;
+
+hr
+  border: none;
+  border-top: 3px double #aaa;
+  color: #aaa;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+  margin: 5px 0;
+  &:after
+    background: #fff;
+    content: '§';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+
+
+

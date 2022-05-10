@@ -1,14 +1,14 @@
-<aside class="excerpt-pagination">
-    <span class="excerpt-pagination-prev">
+<aside class="pagination">
+    <span class="pagination-prev">
     <% if (item.prev){ %>
         <a class="page-link" href="<%- config.root %><%- item.prev_link %>"><%= __('index.pagination.prev') %></a>
     <% } %>
     </span>
-    <span class="excerpt-pagination-input">
+    <span class="pagination-input">
         <input type="text" id="pages" value="<%- item.current %>" onkeydown="jump_pages()" placeholder="jump">
         <label for="pages">/<%- item.total %></label>
     </span>
-    <span class="excerpt-pagination-prev">
+    <span class="pagination-prev">
     <% if (item.next){ %>
         <a class="page-link" href="<%- config.root %><%- item.next_link %>"><%= __('index.pagination.next') %></a>
     <% } %>

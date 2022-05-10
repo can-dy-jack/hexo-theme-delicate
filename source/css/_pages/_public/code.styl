@@ -1,0 +1,171 @@
+/* 代码块 */
+figure {
+    background-color: #263238;
+    overflow: auto;
+    margin: 20px 0;
+
+    table {
+        tr td {
+            pre {
+                margin: 0;
+                padding: 0;
+            }
+            &.gutter pre {
+                padding: 1px 10px 2px 10px;
+                color: #aaa;
+                text-align: center;
+                border-right: 1px solid #aaa;
+                user-select: none;
+            }
+        }
+        // self
+        pre, pre code {
+            font-family: Roboto Mono, JetBrains Mono, consolas, microsoft yahei, sans-serif;
+        }
+    }
+    &::-webkit-scrollbar {
+        height: 10px;
+        width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-clip: padding-box;
+        height: 6px;
+        width: 6px;
+        border: 2px solid transparent;
+        background-color: rgb(120, 134, 150);
+    }
+    figcaption {
+        color: white;
+        font-size: 14px;
+        padding: 5px 12px;
+    }
+    .code-info {
+        background-color: rgb(54, 52, 50);
+        position: sticky;
+        left: 0;
+        padding: 5px 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        font-size: 14px;
+        border-top: 1px solid #888;
+        .copy-btn {
+            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            svg {
+                fill: white;
+                margin-right: 3px;
+            }
+        }
+    }
+}
+/* 代码高亮 */
+pre code.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 1em
+}
+
+code.hljs {
+    padding: 3px 5px
+}
+
+.hljs {
+    color: #cdd3de;
+    background: #263238;
+}
+
+.hljs-comment {
+    color: #707880
+}
+
+.hljs-tag {
+    color: #c9ccd3
+}
+
+.hljs-operator,
+.hljs-punctuation,
+.hljs-subst {
+    color: #cdd3de
+}
+
+.hljs-operator {
+    opacity: .7
+}
+
+.hljs-bullet,
+.hljs-deletion,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-template-variable,
+.hljs-variable {
+    color: #ec5f67
+}
+
+.hljs-attr,
+.hljs-link,
+.hljs-literal,
+.hljs-number,
+.hljs-symbol,
+.hljs-variable.constant_ {
+    color: #ea9560
+}
+
+.hljs-class .hljs-title,
+.hljs-title,
+.hljs-title.class_ {
+    color: #fc0
+}
+
+.hljs-strong {
+    font-weight: 700;
+    color: #fc0
+}
+
+.hljs-addition,
+.hljs-code,
+.hljs-string,
+.hljs-title.class_.inherited__ {
+    color: #8bd649
+}
+
+.hljs-built_in,
+.hljs-doctag,
+.hljs-keyword.hljs-atrule,
+.hljs-quote,
+.hljs-regexp {
+    color: #80cbc4
+}
+
+.hljs-attribute,
+.hljs-function .hljs-title,
+.hljs-section,
+.hljs-title.function_,
+.ruby .hljs-property {
+    color: #89ddff
+}
+
+.diff .hljs-meta,
+.hljs-keyword,
+.hljs-template-tag,
+.hljs-type {
+    color: #82aaff
+}
+
+.hljs-emphasis {
+    color: #82aaff;
+    font-style: italic
+}
+
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-meta .hljs-string {
+    color: #ec5f67
+}
+
+.hljs-meta .hljs-keyword,
+.hljs-meta-keyword {
+    font-weight: 700
+}

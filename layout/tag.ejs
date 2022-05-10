@@ -1,0 +1,13 @@
+<%
+page.layout = "tag"
+page.title = "tag"
+var tags = site.tags.find({name: page.tag});
+%>
+
+<section class="tag">
+
+
+    <%# 分页 %>
+    <span id="root-url" style="display: none;"><%- config.root %>tags/<%# currTag %></span>
+    <%- partial('components/pagination', {item: page}) %>
+</section>

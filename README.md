@@ -84,6 +84,34 @@ jump_pages函数用hexo内置方法重写，写到scripts/healper里？
 - post页面：侧边toc长度不固定？
 
 ### 计划
+- tag + tags页面
+
 - category页面
 - 标签云
 - 关于页面（用户有对应文件夹？）
+
+
+### bug解决
+
+1. 控制台报错
+```bash
+(node:8864) Warning: Accessing non-existent property 'lineno' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8864) Warning: Accessing non-existent property 'column' of module exports inside circular dependency
+(node:8864) Warning: Accessing non-existent property 'filename' of module exports inside circular dependency
+(node:8864) Warning: Accessing non-existent property 'lineno' of module exports inside circular dependency
+(node:8864) Warning: Accessing non-existent property 'column' of module exports inside circular dependency
+(node:8864) Warning: Accessing non-existent property 'filename' of module exports inside circular dependency
+```
+好像是`nib`库的问题，`node_modules\nib\node_modules\stylus\lib\nodes`里的文件与`node_modules\stylus\lib\nodes\index.js`的不一样导致的（缺了三行）
+
+解决：
+找到下面的文件：
+`node_modules\nib\node_modules\stylus\lib\nodes`
+在`index.js`文件中加上以下代码:
+```
+exports.lineno = null;
+exports.column = null;
+exports.filename = null;
+```
+

@@ -1,0 +1,22 @@
+<%
+page.layout = "tags"
+page.title = 'tag.title'
+
+var min_font = 15
+var max_font = 30
+var unit = 'px'
+var start_color = '#BBBBEE'
+var end_color = '#337ab7'
+%>
+
+<section class="tag">
+  <%- tagcloud({
+    min_font: min_font,
+    max_font: max_font,
+    amount: 999,
+    unit: unit,
+    color: true,
+    start_color,
+    end_color
+  }) %>
+</section>
