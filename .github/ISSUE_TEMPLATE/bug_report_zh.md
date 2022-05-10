@@ -2,8 +2,9 @@
 name: Bug 报告
 about: 创建一份 Bug 报告帮助我优化主题
 title: ''
-labels: ':bug: bug'
+labels: ''
 assignees: ''
+
 ---
 
 #### 请确认
