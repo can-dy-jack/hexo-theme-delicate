@@ -2,12 +2,20 @@ nav:
   home: home
   archives: archive
   about: about
+  tags: tags
+
 index:
   pagination:
     prev: prev
     next: next
     total: total
+
 archive:
-  title: "%d posts in total."
+  title: "%d post(s) in total."
+
 post:
   share: share
+
+tags:
+  title: tagcloud
+  len: "%d tag(s) in total."

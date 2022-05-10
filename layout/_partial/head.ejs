@@ -15,12 +15,12 @@
   <meta name="publisher" content="<%= theme.publisher %>">
 
   <%# test %>
-  <title><%- page.title || config.title %></title>
+  <title><%= page.title %></title>
   <%# icon %>
   <%- favicon_tag(theme.icon) %>
 
   <%# css link - stylus %>
-  <%- css('css/main.css') %>
+  <%- css('css/index.css') %>
 
   <%
     var tableColor = theme.markdownColor.post.table;

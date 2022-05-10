@@ -1,15 +1,18 @@
 <%
 page.layout = "tags"
-page.title = 'tag.title'
+page.title = theme.tags.title || __('stag.title')
 
-var min_font = 15
-var max_font = 30
-var unit = 'px'
-var start_color = '#BBBBEE'
-var end_color = '#337ab7'
+var min_font = theme.tags.min_font || 14,
+    max_font = theme.tags.max_font || 30,
+    unit = theme.tags.unit || 'px',
+    amount = theme.tags.amount || 900,
+    start_color = theme.tags.start_color || '#BBBBEE',
+    end_color = theme.tags.end_color || '#337ab7';
+
 %>
 
-<section class="tag">
+<section class="tags">
+<h1><%= __("tags.len", site.tags.length ) %></h1>
   <%- tagcloud({
     min_font: min_font,
     max_font: max_font,

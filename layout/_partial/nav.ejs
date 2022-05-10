@@ -13,6 +13,12 @@
       <a href="<%- config.root %>archives" class="nav-item">
         <%= __('nav.archives') %>
       </a>
+
+      <% if(theme.router.tags) { %>
+      <a href="<%- config.root %>tags" class="nav-item">
+        <%= __('nav.tags') %>
+      </a>
+      <% } %>
     </div>
   </div>
 
