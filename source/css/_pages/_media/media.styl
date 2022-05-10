@@ -1,12 +1,10 @@
-
-/* 
- ~ 适配大小不同屏幕
- */
+/*
+~ 适配大小不同屏幕
+*/
 @media screen and (min-width: 1200px) {
     /* .post-toc {
         width: 20%;
     } */
-
     .post {
         padding: 100px 50px 40px 50px;
     }
@@ -14,9 +12,18 @@
     main .article-container article {
         padding: 20px 8%;
     }
+
     section.archive {
         width: 80%;
         padding: 40px 100px;
+    }
+
+    section.tags {
+        width: 70%;
+        margin: 160px auto 120px auto;
+        h1 {
+            margin: 40px 0;
+        }
     }
 }
 
@@ -24,7 +31,6 @@
     /* .post-toc {
         width: 400px;
     } */
-
     .post {
         padding: 100px 40px 40px 40px;
     }
@@ -32,6 +38,7 @@
     main .article-container article {
         padding: 20px 60px;
     }
+
     section.archive {
         width: 800px;
         padding: 40px 80px;
@@ -42,7 +49,6 @@
     /* .post-toc {
         width: 400px;
     } */
-
     .post {
         padding: 100px 30px 30px 30px;
     }
@@ -50,11 +56,18 @@
     main .article-container article {
         padding: 20px 40px;
     }
+
     section.archive {
         width: 600px;
         padding: 30px 50px;
     }
-    
+    section.tags {
+        padding: 30px 50px 70px 50px;
+
+        h1 {
+            margin: 30px 0;
+        }
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -65,7 +78,7 @@
         bottom: 0;
         left: 0;
         padding: 10px 0 30px 0;
-        box-shadow: 0 -5px 20px 3px rgba(0, 0, 0, .1);
+        box-shadow: 0 -5px 20px 3px rgba(0, 0, 0, 0.1);
         z-index: 100;
         transform: scaleY(0);
         overflow: auto;
@@ -98,9 +111,17 @@
     main .article-container article {
         padding: 20px;
     }
+
     section.archive {
         width: 90%;
         padding: 20px 30px;
+    }
+    section.tags {
+        padding: 30px 50px 70px 50px;
+
+        h1 {
+            margin: 30px 0;
+        }
     }
 }
 
@@ -108,8 +129,18 @@
     nav .navbar .nav-left .nav-brand-text {
         display: none;
     }
+
     section.archive {
         width: 100%;
         border-radius: 0;
+    }
+    section.tags {
+        width: 100%;
+        margin: 120px auto 120px auto;
+        border-radius: 0;
+        padding: 20px 40px 100px 20px;
+        h1 {
+            margin: 30px 0;
+        }
     }
 }

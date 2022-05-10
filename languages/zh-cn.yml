@@ -3,6 +3,7 @@ nav:
   archives: 存档
   about: 关于
   tags: 标签
+  categories: 分类
 
 index:
   pagination:
@@ -19,3 +20,14 @@ post:
 tags:
   title: 标签云
   len: 共 %d 个标签
+
+tag:
+  title: 标签
+  h1: 共计 %d 篇文章
+
+categories:
+  title: 分类
+
+category:
+  title: 分类
+  h1: 共计 %d 篇文章

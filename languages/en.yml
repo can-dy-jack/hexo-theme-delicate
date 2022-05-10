@@ -3,6 +3,7 @@ nav:
   archives: archive
   about: about
   tags: tags
+  categories: categories
 
 index:
   pagination:
@@ -19,3 +20,14 @@ post:
 tags:
   title: tagcloud
   len: "%d tag(s) in total."
+
+tag:
+  title: tag
+  h1: "%d post(s) in total."
+
+categories:
+  title: categories
+
+category:
+  title: category
+  h1: "%d post(s) in total."

@@ -19,6 +19,11 @@
         <%= __('nav.tags') %>
       </a>
       <% } %>
+      <% if(theme.router.categories) { %>
+      <a href="<%- config.root %>categories" class="nav-item">
+        <%= __('nav.categories') %>
+      </a>
+      <% } %>
     </div>
   </div>
 

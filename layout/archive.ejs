@@ -1,23 +1,11 @@
 <%
-    page.title = "归档"
+    page.title = __("nav.archives")
 %>
 <section class="archive">
     <h2 class="archives-head"><%= __('archive.title', site.posts.length ) %></h2>
-    <div class="post-list-group">
-    <% var dateCursor %>
-    <% page.posts.each(function (post) { %>
-        <% if(date(post.date, "YYYY") !== dateCursor) { %>
-            <% dateCursor = date(post.date, "YYYY") %>
-            <p class="post-list-year"><%= dateCursor %></p>
-        <% } %>
-        <a href="<%= url_for(post.path) %>" class="list-group-item transition">
-            <time><%= date(post.date, "MM-DD") %></time>
-            <span class="archive-post-title"><%= post.title %></span>
-        </a>
-    <% }) %>
-    </div>
+    
+    <%- partial('components/list.ejs') %>
 
-    <%# 分页 %>
     <span id="root-url" style="display: none;"><%- config.root %>archives</span>
     <%- partial('components/pagination', {item: page}) %>
 </section>

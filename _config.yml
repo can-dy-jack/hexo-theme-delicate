@@ -5,6 +5,7 @@
 # --------------------------------------------------------- #
 router:
   tags: true
+  categories: true
   
 
 # --------------------------------------------------------- #
@@ -83,10 +84,11 @@ post:
 
 # --------------------------------------------------------- #
 #
-#                   tags页面
+#       tags | tag | archive | category | categories
 #
 # --------------------------------------------------------- #
-# 标签云 tagcloud
+# 标签云 tagcloud 
+## 前提：tags: true
 tags: 
   # 标签云页面title
   title: ''
@@ -103,5 +105,23 @@ tags:
   start_color: '#00eeee'
   end_color: '#004444'
 
+# 单个标签页面
+tag:
+  aBackground: rgb(242, 248, 244)
+  aHoverColor: rgb(54, 194, 200)
+  aBorderRadius: 5px
 
+# 归档页面
+archive:
+  aBackground: rgb(242, 248, 244)
+  aHoverColor: rgb(54, 194, 100)
+  aBorderRadius: 0
+  boxShadow: 0 5px 20px rgba(0,0,0,.1)
 
+categories:
+  title: ''
+
+category: 
+  aBackground: rgb(242, 248, 244)
+  aHoverColor: rgb(54, 194, 200)
+  aBorderRadius: 5px

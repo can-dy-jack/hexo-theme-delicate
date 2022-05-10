@@ -1,13 +1,16 @@
 <%
-page.layout = "tag"
-page.title = "tag"
-var tags = site.tags.find({name: page.tag});
+    page.layout = "tag"
+    page.title = [__('tag.title'), page.tag].join(" - ")
+
+    var tag = site.tags.find({name: page.tag}).filter(tag => tag.length).data[0]
+    var postTotal = tag ? tag.posts.length : 0;
 %>
 
 <section class="tag">
+    <h2 class="tag-head"><%= page.tag %> - <%= __('tag.h1', postTotal) %></h2>
+    
+    <%- partial('components/list.ejs') %>
 
-
-    <%# 分页 %>
-    <span id="root-url" style="display: none;"><%- config.root %>tags/<%# currTag %></span>
+    <span id="root-url" style="display: none;"><%- config.root %>tags/<%= page.tag %></span>
     <%- partial('components/pagination', {item: page}) %>
 </section>

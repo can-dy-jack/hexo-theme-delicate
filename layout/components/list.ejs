@@ -1,0 +1,13 @@
+<div class="post-list-group">
+  <% var dateCursor %>
+  <% page.posts.each(function (post) { %>
+  <% if(date(post.date, "YYYY") !== dateCursor) { %>
+    <% dateCursor = date(post.date, "YYYY") %>
+    <p class="post-list-year"><%= dateCursor %></p>
+  <% } %>
+    <a href="<%= url_for(post.path) %>" class="list-group-item transition">
+        <time><%= date(post.date, "MM-DD") %></time>
+        <span><%= post.title %></span>
+    </a>
+  <% }) %>
+</div>
