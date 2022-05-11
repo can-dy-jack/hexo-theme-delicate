@@ -1,9 +1,9 @@
-name: Bug Report
-description: File a bug report
+name: Bug Report - issue form
+description: create a issue form to help me
 title: "[Bug]: "
-labels: ["bug", "triage"]
+labels: [":bug: bug", "triage"]
 assignees:
-  - octocat
+  - can-dy-jack
 body:
   - type: markdown
     attributes:
@@ -32,8 +32,9 @@ body:
       label: Version
       description: What version of our software are you running?
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - newest (Default)
+        - 3.x.x
+        - 2.x.x
     validations:
       required: true
   - type: dropdown
