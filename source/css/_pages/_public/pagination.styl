@@ -1,52 +1,16 @@
-.pagination {
-    text-align: center;
-    padding: 20px;
-
-    span {
-        margin: 5px 10px;
-
-        a {
-            display: inline-block;
-            padding: 5px 8px;
-            border: 1px solid #454545;
-            border-radius: 5px;
-
-            &:hover {
-                background-color: #454545;
-            }
-        }
-    }
-}
-
-.pagination-input {
-    background-color: #fafafa;
-    height: 75px;
-    padding: 3px 8px;
-    border: 1px solid #454545;
-    border-radius: 5px;
-    transition: all 0.25s ease;
-
-    &:focus-within {
-        background-color: #454545;
-        color: white;
-    }
-
-    input {
-        outline: none;
-        border: none;
-        font-size: 1rem;
-        padding: 3px 5px;
-        width: 50px;
-        transition: all 0.25s ease;
-        background-color: #fafafa;
-
-        &:focus {
-            background-color: #454545;
-            color: white;
-        }
-    }
-
-    label {
-        font-size: 1rem;
-    }
-}
+.pagination
+    padding: 36px 0 20px 0
+    display: flex
+    justify-content: center
+    align-items: center
+    a,span
+        display: inline-block
+        padding: 0.5rem 0.75rem
+    .current
+        background: rgba(30, 177, 214, 0.1)
+    a
+        transition: all 0.25s ease
+        &:hover
+            background: rgba(30, 177, 214, 0.1)
+            color: rgb(30, 177, 214)
+            fill: rgb(30, 177, 214)
