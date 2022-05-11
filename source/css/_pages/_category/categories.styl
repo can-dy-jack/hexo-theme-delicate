@@ -1,2 +1,40 @@
+.category-list
+    background: #fff;
+    width: 80%
+    margin: 100px auto
+    box-shadow: 0 10px 30px rgba(0,0,0,.1)
+    box-sizing: border-box
+    padding: 40px 50px
+    border-radius: 20px
+    display: flex
+    flex-direction: column
+    .category
+        .list-group-item
+            display: flex
+            justify-content: space-between
+            font-size: 1.2rem
+            padding: 30px 0 10px 0
+            a
+                transform: all 0.25s ease
+                &:hover
+                    color: blue
+                    fill: blue
+        .category-collapse 
+            display: flex
+            flex-direction: column
+            .category-post-list
+                display: flex
+                flex-direction: column
+                a
+                    padding: 10px 20px
+                    overflow: hidden
+                    text-overflow: ellipsis
+                    white-space: nowrap
+                    &:hover
+                        background: rgba(50,100,230,.1)
+                        color: blue
+            .category-sub
+                margin-left: 20px
+
 
 

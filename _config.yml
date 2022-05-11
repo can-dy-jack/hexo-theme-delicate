@@ -119,7 +119,21 @@ archive:
   boxShadow: 0 5px 20px rgba(0,0,0,.1)
 
 categories:
-  title: ''
+  title: '分类'
+
+  # 单个分类中折叠展示文章数的最大值，超过限制会显示 More，设为 0 则不限制
+  post_limit: 5
+
+  # 分类的排序字段，前面带减号是倒序
+  # Options: length | name
+  order_by: "name"
+
+  # 层级的折叠深度，0 是全部折叠，大于 0 后如果存在子分类则默认展开
+  collapse_depth: 0
+
+  # 文章的排序字段，前面带减号是倒序，不带减号是正序
+  # Options: date | title | or other field of front-matter
+  post_order_by: "-date"
 
 category: 
   aBackground: rgb(242, 248, 244)
