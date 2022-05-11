@@ -47,17 +47,18 @@ body:
         - Chrome
         - Safari
         - Microsoft Edge
+        - other
   - type: textarea
     id: logs
     attributes:
       label: Relevant log output
-      description: Please copy and paste any relevant log output. 这将自动格式化为代码，因此无需背板。
-      render: shell
-  - type: checkboxes
-    id: terms
+      description: Please copy and paste any relevant log output. 
+      render: bash
+  - type: input
+    id: prevalence
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      label: Bug prevalence
+      description: "How often do you or others encounter this bug?"
+      placeholder: "Whenever I visit the user account page (1-2 times a week)"
+    validations:
+      required: true

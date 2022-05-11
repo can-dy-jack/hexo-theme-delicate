@@ -1,0 +1,84 @@
+name: Bug 报告 - issue 表单
+description: 创建一份 bug报告 帮助我优化主题(issue 表单模板)
+title: "[Bug]: "
+labels: [":bug: bug", "triage"]
+assignees:
+  - can-dy-jack
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您向我们提交错误报告！
+  - type: input
+    id: contact
+    attributes:
+      label: 联系方式
+      description: 留下您的联系方式（如果您愿意）
+      placeholder: 例如：email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 发生了什么？
+      description: 同时告诉我们，你期望发生什么？
+      placeholder: 描述bug
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 该bug是否能通过更新版本解决？
+      description: 请尝试更新版本去解决此bug
+      options:
+        - label: 已经更新到最新版本，bug依然存在
+          required: true
+        - label: 不是自己的markdown文件格式错误导致的bug
+          required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: 您使用的版本
+      options:
+        - 最新 (Default)
+        - 3.x.x
+        - 2.x.x
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: 您在哪些浏览器上看到问题？
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - opera
+        - 国产手机浏览器
+        - other
+  - type: input
+    id: browsers-details
+    attributes:
+      label: 浏览器具体信息
+      description: 填写other的，可以在这里补充；或者写详细的浏览器名字或版本
+      placeholder: 华为浏览器
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: 错误信息
+      description: 复制报错信息，不需加markdown语法，直接复制错误代码到上面即可。
+      render: bash
+  - type: input
+    id: prevalence
+    attributes:
+      label: Bug prevalence
+      description: 多久会遇到这种错误？
+      placeholder: 每当我访问用户帐户页面时（每周1-2次）
+    validations:
+      required: true
