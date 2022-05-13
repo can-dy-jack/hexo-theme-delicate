@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-delicate",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "delicate but simple theme for Hexo",
   "main": "package.js",
   "files": [
