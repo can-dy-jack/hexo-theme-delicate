@@ -142,5 +142,5 @@ category:
 
 # 分页
 pagination:
-  background: 'rgba(243, 151, 31, 0.1)'
-  color: 'rgb(243, 151, 31)'
+  background: 'rgba(19, 198, 100, 0.1)'
+  color: 'rgb(19, 198, 100)'

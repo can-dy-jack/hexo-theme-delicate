@@ -3,6 +3,7 @@ figure {
     background-color: #263238;
     overflow: auto;
     margin: 20px 0;
+    width: 100%
 
     table {
         tr td {
@@ -18,9 +19,13 @@ figure {
                 user-select: none;
             }
         }
-        // self
+        self
         pre, pre code {
             font-family: Roboto Mono, JetBrains Mono, consolas, microsoft yahei, sans-serif;
+        }
+        tr {
+            max-width: 100%;
+            overflow: hidden
         }
     }
     &::-webkit-scrollbar {

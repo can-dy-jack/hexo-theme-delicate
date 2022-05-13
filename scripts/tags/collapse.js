@@ -1,15 +1,11 @@
-// bootstrap collapse
-const collapse = (args,text)=>{
-
-    return `<div>
-            <button class="btn btn-${args[0]}" type="button" data-toggle="collapse" data-target="#${args[2]}" aria-expanded="false" aria-controls="${args[2]}">
-                ${args[1]}
-            </button>
-            </div>
-            <div class="collapse" id="${args[2]}">
-                <div class="card card-body">
-                ${text}
+hexo.extend.tag.register('collapse', (args, content) => {
+    var text = hexo.render.renderSync({ text: content, engine: 'markdown' }).split('\n').join('');
+    return `<div class="collapse collapse-${args[0]}">
+                <div class="collapse-btn">
+                    <button>${args[1]}</button>
                 </div>
+                <div class="collapse-text">${text}</div>
             </div>`;
-}
-hexo.extend.tag.register('collapse', collapse, {ends:true});
+}, {
+    ends: true
+});
