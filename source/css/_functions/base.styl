@@ -8,3 +8,14 @@
 get-config(config, default)
   convert(hexo-config(config) ? hexo-config(config) : default)
 
+fix-it()
+  position: arguments
+  z-index: 100 unless @z-index // 默认的 z-index
+
+// 供应商前缀
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  -o-{prop} args
+  -ms-{prop} args
+  {prop} args

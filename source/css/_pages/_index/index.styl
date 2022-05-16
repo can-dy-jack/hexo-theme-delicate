@@ -1,56 +1,58 @@
-main {
-    .index-header {
+@require "../_public/markdown"
+
+main
+    .index-header
         width: 100%;
         height: 160px;
         text-align: center;
         padding: 80px 0;
-    }
-
-    .index-title {
+    .index-title
         font-size: 40px;
         text-align: center;
-
-        div {
+        div
             position: relative;
             white-space: nowrap;
-
-            &::after {
+            &::after
                 content: 'I';
                 animation: index_title_after 1s infinite normal;
-            }
-        }
-    }
-
-    .index-description {
+    .index-description
         font-size: 34px;
-    }
-
-    .article-container {
+    .article-container
         width: 100%;
         box-sizing: border-box;
-
-        article {
+        article
             box-sizing: border-box;
             padding: 20px 50px;
-
-            &:nth-child(2n+1) {
+            &:nth-child(2n+1)
                 background-color: #fff;
-            }
-
-            &:nth-child(2n) {
+            &:nth-child(2n)
                 background-color: #ddd;
-            }
-        }
-    }
-}
 
 /* 模拟指针闪烁 */
-@keyframes index_title_after {
-    from {
+@keyframes index_title_after
+    from
         opacity: 1;
-    }
-
-    to {
+    to
         opacity: 0;
-    }
-}
+
+// index markdown
+.excerpt-title
+    font-size: 30px;
+    text-align: center;
+.excerpt-meta
+    text-align: center;
+    color: gray;
+    margin-bottom: 20px;
+.excerpt p
+    margin: 10px 0;
+.excerpt
+    @extend $markdown
+.excerpt-more
+    a
+        display: inline-block;
+        padding: 5px 12px;
+        border: 2px solid #454545;
+        border-radius: 5px;
+        margin: 10px 0;
+        &:hover
+            background-color: #454545;

@@ -26,7 +26,7 @@ icon: "/img/logo.ico"
 icon128: "/img/logo128.ico"
 
 # nav友情链接
-nav:
+nav: 
   friends:
     github: "https://github.com/can-dy-jack/hexo-theme-delicate"
     LeetCode: "https://leetcode-cn.com/u/kartjim/"

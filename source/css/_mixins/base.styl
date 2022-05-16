@@ -1,10 +1,6 @@
 // mixins
 border-radius()
-  -webkit-border-radius: arguments
-  -moz-border-radius: arguments
-  -o-border-radius: arguments
-  -ms-border-radius: arguments
-  border-radius: arguments
+  vendor('border-radius', arguments)
 
 box-shadow()
   -webkit-box-shadow arguments
@@ -16,6 +12,6 @@ box-shadow()
     border 2px solid arguments[length(arguments) - 1]
 
 transition()
-  -webkit-transition: arguments
-  transition: arguments
+  vendor('transition', arguments)
 
+// gradient  backdrop-filter ......

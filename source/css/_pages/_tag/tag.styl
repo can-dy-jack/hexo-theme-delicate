@@ -1,27 +1,12 @@
+@require "../_public/section"
+
 section.tag
-  background-color: #fff
-  width: 80%
-  margin: 100px auto 50px auto
+  @extend $section
   box-shadow: 0 5px 20px rgba(0,0,0,.04)
   border-radius: 10px
-  box-sizing: border-box
-  padding: 40px 100px
   .post-list-group
-    display: flex
-    flex-direction: column
-    .post-list-year
-      font: 1.2rem bold
     .list-group-item
-      background-color: #fff
-      box-sizing: border-box
-      padding: .75rem 1.25rem
-      width: 100%
-      overflow: hidden
-      white-space: nowrap
-      text-overflow: ellipsis
       border-radius: $tag-a-border-radius
       &:hover
         background-color: $tag-a-background
         color: $tag-a-hover-color
-      time
-        margin-right: 20px
