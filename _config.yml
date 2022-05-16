@@ -56,8 +56,8 @@ markdown_style:
     padding: "5px 12px"
     color: "gray"
   a:
-    background: '#eafafe'
-    hoverBackground: '#bbeffd'
+    background: ''
+    hoverBackground: ''
 
 
 
