@@ -8,6 +8,15 @@
 get-config(config, default)
   convert(hexo-config(config) ? hexo-config(config) : default)
 
+unquote-config(config)
+  unquote(hexo-config(config) ? hexo-config(config) : default)
+
+s-config(config)
+  s(hexo-config(config))
+
+s-defalut(config, default)
+  s(hexo-config(config) ? hexo-config(config) : default)
+
 fix-it()
   position: arguments
   z-index: 100 unless @z-index // 默认的 z-index

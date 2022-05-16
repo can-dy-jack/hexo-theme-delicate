@@ -1,0 +1,35 @@
+<%
+    page.layout = "404";
+    page.title = theme.page404.title || __('page404.title');
+    var subtitle = theme.page404.subtitle || __('page404.subtitle');
+    var warning = theme.page404.warning || __('page404.warning');
+    var startTime = theme.page404.startTime || 3;
+%>
+
+<div class="page-404">
+    <h1><%= page.title %></h1>
+    <h3><%= subtitle %></h3>
+    <p><%= warning %></p>
+    <p><%= __('page404.step1') %> <span id="page404-time"><%= startTime %></span> <%= __('page404.step2') %></p>
+</div>
+
+<script>
+    const time = document.getElementById("page404-time");
+
+    function redirect() {
+        location.href = "/";
+    }
+
+    function return2index(startTime = 3) {
+        for(let i = 1;i<startTime;i++){
+            setTimeout(()=>{
+                time.innerText = startTime - i;
+            },1000*i);
+        }
+        setTimeout(()=>{
+            redirect();
+        },1000*startTime);
+    }
+
+    return2index(+time.innerText);
+</script>

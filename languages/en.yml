@@ -33,3 +33,10 @@ category:
   h1: "%d post(s) in total."
 
 more: read more
+
+page404:
+  title: Page not found
+  subtitle: We could not find what you were looking for.
+  warning: Please contact the owner of the site that linked you to the original URL and let them know their link is broken.
+  step1: Will jump to the index page in 
+  step2: seconds

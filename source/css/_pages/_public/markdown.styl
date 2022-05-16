@@ -1,5 +1,5 @@
 // $markdown
-$markdown 
+.post, .excerpt
     h2
         font-size: 24px;
     h3
@@ -11,13 +11,14 @@ $markdown
         line-height: 24px;
     a
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-        background-color: rgba(248, 229, 175, 0.3);
+        background-color: $markdown-a-background;
         color: #1a1a1a;
         transition: all 0.25s ease;
         text-decoration: none;
         &:hover
-            background-color: #f8e5af;
+            background-color: $markdown-a-hoverBackground;
             border-bottom-color: #1a1a1a;
+            color: #1a1a1a;
         &[rel='noopener']::after
             content: '\1F517';
     ul, ol
@@ -29,24 +30,24 @@ $markdown
         border-radius: 10px;
         margin: 10px 0;
     blockquote
-        border-left: 4px solid #ccc;
+        border-left: $markdown-blockquote-borderLeftWidth solid $markdown-blockquote-borderLeftColor;
         margin: 10px 0;
-        padding: 8px 15px;
+        padding: $markdown-blockquote-padding;
         p
             margin: 0;
             padding: 0;
-            color: gray;
+            color: $markdown-blockquote-color;
     > table
         border-collapse: collapse;
         max-width: 100%;
         thead
-            background-color: #bbb;
+            background-color: $markdown-table-color;
         tr 
             td, th
-                border: 1px solid #bbb;
+                border: 1px solid $markdown-table-border-color;
                 padding: 5px;
             &:nth-child(2n)
-                background-color: #fafafa;
+                background-color: $markdown-table-tr-color;
     li>code, p code
         color: rgb(241, 42, 42);
         background-color: rgba(0, 0, 0, 0.05);
@@ -54,3 +55,4 @@ $markdown
         border-radius: 3px;
         font-family: consolas, sans-serif;
         margin: 0 2px;
+

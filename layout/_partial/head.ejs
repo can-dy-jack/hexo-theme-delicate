@@ -22,24 +22,4 @@
   <%# css link - stylus %>
   <%- css('css/index.css') %>
 
-  <%
-    var tableColor = theme.markdownColor.post.table;
-    var table_tr_Color = theme.markdownColor.post.table_tr;
-    var table_border_Color = theme.markdownColor.post.table_border;
-%>
-  <style>
-    .post>table thead {
-      background-color: <%=tableColor %>;
-    }
-
-    .post>table tr td,
-    .post>table tr th {
-      border: 1px solid <%=table_border_Color %>;
-    }
-
-    .post>table tbody tr:nth-child(2n) {
-      background-color: <%=table_tr_Color %>;
-    }
-  </style>
-
 </head>

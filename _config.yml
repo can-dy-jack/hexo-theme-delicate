@@ -1,3 +1,5 @@
+# 站点配置中的 zh-cn 是中文
+
 # --------------------------------------------------------- #
 #
 #                         router
@@ -6,7 +8,7 @@
 router:
   tags: true
   categories: true
-  
+  page404: true
 
 # --------------------------------------------------------- #
 #
@@ -44,24 +46,20 @@ startTime: "2021-11-01T00:00:00"
 #                        styles
 #
 # --------------------------------------------------------- #
+markdown_style:
+  table_color: "rgb(133, 214, 72)"
+  table_tr_color: "rgba(133, 214, 72, .1)"
+  table_border_color: "rgba(133, 214, 72)"
+  blockquote:
+    border_left_color: "#999"
+    border_left_width: "5px"
+    padding: "5px 12px"
+    color: "gray"
+  a:
+    background: '#eafafe'
+    hoverBackground: '#bbeffd'
 
-# 未实现
-# 鼠标点击效果；
-mouseClick:
-  # 点击出现文字效果
-  showText:
-    enable: false
-    text: ["富强", "民主", "文明", "和谐", "美丽"]
-    color: "red"
-  # 鼠标点击 - 心形
-  # 心是随机颜色
-  showHeart: false
 
-markdownColor:
-  post:
-    table: "rgb(248, 229, 175)"
-    table_tr: "rgba(248, 229, 175, .1)"
-    table_border: "rgba(248, 229, 175)"
 
 # --------------------------------------------------------- #
 #
@@ -144,3 +142,10 @@ category:
 pagination:
   background: 'rgba(19, 198, 100, 0.1)'
   color: 'rgb(19, 198, 100)'
+
+page404:
+  title: ''
+  subtitle: ''
+  warning: ''
+  # 几秒后跳转到主页
+  startTime: 10

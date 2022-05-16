@@ -33,3 +33,10 @@ category:
   h1: 共计 %d 篇文章
 
 more: 查看更多
+
+page404:
+  title: 页面走丢啦~
+  subtitle: 找不到您要找的页面。
+  warning: 请联系站点的所有者，告知他们链接已损坏。
+  step1: 将在
+  step2: 秒后跳转到主页面
