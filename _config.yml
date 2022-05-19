@@ -36,6 +36,7 @@ nav:
     掘金: "https://juejin.cn/user/1389392813630526"
     微博: "https://weibo.com/p/1005057198677513/home"
 
+
 ## footer - 建站起始时间
 # 格式：- "2021-11-01T00:00:00"（默认本地时区）
 # - "01 Nov 2021 00:00:00 +0800"（东八区，偏离格林威治8个小时）
@@ -59,7 +60,12 @@ markdown_style:
     background: ''
     hoverBackground: ''
 
-
+color:
+  # a标签颜色
+  a: "#34ae56"
+  # 选中的文本颜色
+  selection: "orange"
+  selectionTextColor: "#fff"
 
 # --------------------------------------------------------- #
 #

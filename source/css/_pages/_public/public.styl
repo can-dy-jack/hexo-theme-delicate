@@ -9,8 +9,8 @@ html
   transition: all 0.25s ease;
 
 ::selection
-  background-color: antiquewhite;
-  color: #232323;
+  background-color: $selection
+  color: $selection-text-color
 
 body
   font-family: microsoft yahei, Roboto Mono, JetBrains Mono, consolas, sans-serif;
@@ -24,7 +24,7 @@ a
   text-decoration: none;
   transition: all 0.25s ease;
   &:hover 
-    color: #f8e5af;
+    color: $a-hover-color
 
 img
   max-width: 100%;
@@ -55,4 +55,3 @@ hr
   #page404-time
     font-size: 1.4rem
     color: red
-

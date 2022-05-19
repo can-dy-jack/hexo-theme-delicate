@@ -8,7 +8,7 @@
 get-config(config, default)
   convert(hexo-config(config) ? hexo-config(config) : default)
 
-unquote-config(config)
+unquote-config(config, default)
   unquote(hexo-config(config) ? hexo-config(config) : default)
 
 s-config(config)

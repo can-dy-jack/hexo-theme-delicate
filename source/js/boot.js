@@ -3,6 +3,7 @@ delicate.boot = {}
 delicate.boot.init_markdown = function init_markdown(){
     delicate.markdown.collapse();
     delicate.markdown.init_codeCopy();
+    delicate.markdown.initPullquoteStyle();
 }
 
 delicate.boot.registerEvents  = function registerEvents() {
