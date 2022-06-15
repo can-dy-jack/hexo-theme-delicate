@@ -10,6 +10,7 @@ delicate.events = {
         now.setTime(now.getTime() + 1000);
         stime = new Date(startTime);
         interval = now.getTime() - stime.getTime();
+
         days = interval / 1000 / 60 / 60 / 24;
         dnum = Math.floor(days);
         hours = interval / 1000 / 60 / 60 - 24 * dnum;
@@ -22,7 +23,13 @@ delicate.events = {
         if (mnum.toString().length == 1) {
             mnum = '0' + mnum;
         }
-        document.getElementById("times").innerHTML = "本站已运行 " + dnum + " 天 " + hnum + " 小时 " + mnum + " 分，共" + Math.floor(interval / 1000 / 60 / 60) + "小时";
+
+        const lang = document.documentElement.lang;
+        if(lang === "zh-cn" || lang === "zh-CN" || lang === "zh-TW" || lang === "zh-tw") {
+            document.getElementById("times").innerHTML = "本站已运行 " + dnum + " 天 " + hnum + " 小时 " + mnum + " 分，共 " + Math.round(days*24) + " 小时";
+        } else {
+            document.getElementById("times").innerHTML = "The station has been running for " + dnum + " days, " + hnum + " hours and " + mnum + " minutes, a total of " + Math.round(days*24) + " hours";
+        }
     },
 
     registerType: function registerType() {
@@ -85,5 +92,15 @@ delicate.events = {
         })
     },
 
-    
+    consoleLogo: function consoleLogo() {
+        if (!window.hasOwnProperty("console")) {
+            return;
+        }
+        const lang = document.documentElement.lang;
+        if(lang === "zh-cn" || lang === "zh-CN" || lang === "zh-TW" || lang === "zh-tw") {
+            console.log("%c感谢您使用delicate！","color: #34ae56;padding: 5px 10px;border: 1px solid #34ae56;border-radius: 3px;font: 1rem 楷体;");
+        } else {
+            console.log("%cThank you for using delicate!","color: #34ae56;padding: 5px 10px;border: 1px solid #34ae56;border-radius: 3px;font: 1rem Time new Roman;");
+        }
+    }
 }
