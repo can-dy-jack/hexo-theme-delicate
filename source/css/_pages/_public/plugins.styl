@@ -110,26 +110,37 @@
         background-color: #faf5f0;
 
 .collapse
+    background: #f4f4f4
     border: 1px solid #eee
+    border-radius: 3px
+    margin 10px 0
     .collapse-btn
-        border-bottom: 1px solid #eee
-        background: #fff
+        background: #f4f4f4
         position: sticky
         top: 50px
-        text-align: center
+        cursor: pointer
+        padding: 10px 15px
+        user-select: none
+        display: flex
+        align-items: center
+        svg
+            width: 16px
+            height: 16px
+            transition: all 0.25s ease
         button
             outline: none
             background: none
-            font-size: 1rem
-            cursor: pointer
-            width: 100%
+            font-weight: bold
+            font-size: 1em
             border: none
-            border-top: 3px solid rgb(12, 197, 197)
-            padding: 15px
-            background: #fff
+            cursor: pointer
     .collapse-text
-        padding: 10px 20px
-        display: non
+        padding: 5px 15px
+        // border-top: 1px solid #eee
+        background: #fafafa
+        transition: all 0.25s ease
+        overflow: hidden
+
 
 .codepen
     height: 300px

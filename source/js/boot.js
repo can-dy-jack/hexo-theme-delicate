@@ -1,5 +1,7 @@
 delicate.boot = {}
 
+const $ = document.querySelectorAll.bind(document);
+
 delicate.boot.init_markdown = function init_markdown(){
     delicate.markdown.collapse();
     delicate.markdown.init_codeCopy();

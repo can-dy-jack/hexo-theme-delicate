@@ -1,17 +1,27 @@
 delicate.markdown = {
     collapse: function collapse() {
-        const collapses = document.querySelectorAll(".collapse");
-        for (let i = 0; i < collapses.length; i++) {
-            const collapse_btn = collapses[i].children[0];
-            const collapse_text = collapses[i].children[1];
-            let collapse_text_is_open = false;
-            collapse_btn.onclick = function () {
-                if (collapse_text_is_open) {
-                    collapse_text.style.display = "none";
-                    collapse_text_is_open = false;
+        const collapses = $(".collapse"),
+            collapseBtns = $(".collapse-btn"),
+            collapseSvgs = $(".collapse-btn svg"),
+            collapseTexts = $(".collapse-text"),
+            n = collapses.length;
+        let isOpen = new Array(n).fill(false);
+        let heights = new Array(n).fill(0);
+        for(let i = 0;i < n;i++) {
+            heights[i] = collapseTexts[i].clientHeight;
+            collapseTexts[i].style.height = "0";
+            collapseTexts[i].style.padding = "0";
+            collapseBtns[i].onclick = () => {
+                if(isOpen[i]) {
+                    collapseTexts[i].style.height = "0";
+                    collapseTexts[i].style.padding = "0";
+                    collapseSvgs[i].style.transform = "rotate(0)";
+                    isOpen[i] = false;
                 } else {
-                    collapse_text.style.display = "block";
-                    collapse_text_is_open = true;
+                    collapseTexts[i].style.height = heights[i] + "px";
+                    collapseTexts[i].style.padding = "5px 15px";
+                    collapseSvgs[i].style.transform = "rotate(90deg)";
+                    isOpen[i] = true;
                 }
             }
         }
@@ -19,8 +29,8 @@ delicate.markdown = {
 
     init_codeCopy: function init_codeCopy() {
         // 为代码块添加 代码信息
-        const code = document.querySelectorAll("figure.highlight table tr td.code");
-        const code_block = document.querySelectorAll("figure.highlight");
+        const code = $("figure.highlight table tr td.code");
+        const code_block = $("figure.highlight");
 
         for (let i = 0; i < code_block.length; i++) {
             const code_info = document.createElement('div');
@@ -60,7 +70,7 @@ delicate.markdown = {
     },
 
     initPullquoteStyle: function() {
-        const pullquote = document.querySelectorAll(".pullquote");
+        const pullquote = $(".pullquote");
         for(let j = 0;j<pullquote.length;j++) {
             const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="28" height="28"><path d="M96 96C42.98 96 0 138.1 0 192s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192C192 138.1 149 96 96 96zM448 192c0-53.02-42.98-96-96-96s-96 42.98-96 96s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192z"/></svg>'
             const span = document.createElement("span");
