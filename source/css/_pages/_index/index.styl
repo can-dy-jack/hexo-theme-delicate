@@ -16,15 +16,16 @@ main
     .index-description
         font-size: 34px;
     .article-container
-        width: 100%;
+        background-color: #fff;
+        margin: 0 auto;
         box-sizing: border-box;
+        box-shadow: 0 -5px 10px rgba(0,0,0,.12)
+        border-radius: 10px
         article
             box-sizing: border-box;
             padding: 20px 50px;
-            &:nth-child(2n+1)
-                background-color: #fff;
-            &:nth-child(2n)
-                background-color: #ddd;
+    .pagination
+        background-color: #fff
 
 /* 模拟指针闪烁 */
 @keyframes index_title_after
@@ -44,11 +45,26 @@ main
 .excerpt p
     margin: 10px 0;
 .excerpt-more
+    text-align: right
     a
         display: inline-block;
-        padding: 5px 12px;
-        border: 2px solid #454545;
-        border-radius: 5px;
+        padding: 4px;
+        border-bottom: 1px solid #aaa;
+        border-radius: 2px;
         margin: 10px 0;
-        &:hover
-            background-color: #454545;
+        position: relative
+        &::after
+            content: ""
+            position: absolute
+            top: 0
+            bottom: 0
+            right: 0
+            left: 0
+            background-color: rgba(0,0,0,.1)
+            transition: transform 0.6s ease
+            transform: scaleY(0)
+            transform-origin: top
+        &:hover::after
+            transform: scaleY(1)
+            transform-origin: bottom
+
