@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-delicate",
-  "version": "3.1.2",
+  "version": "3.1.3",
   "description": "delicate but simple theme for Hexo",
   "main": "package.js",
   "files": [
@@ -11,7 +11,10 @@
     "_config.yml"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cl": "hexo cl",
+    "g": "hexo g",
+    "d": "hexo d"
   },
   "repository": "can-dy-jack/hexo-theme-delicate",
   "author": "can-dy-jack (https://github.com/can-dy-jack)",

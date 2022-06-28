@@ -48,9 +48,9 @@ startTime: "2021-11-01T00:00:00"
 #
 # --------------------------------------------------------- #
 markdown_style:
-  table_color: "rgb(133, 214, 72)"
-  table_tr_color: "rgba(133, 214, 72, .1)"
-  table_border_color: "rgba(133, 214, 72)"
+  table_color: "#f6f6f6"
+  table_tr_color: "rgb(246, 253, 253)"
+  table_border_color: "#f6f6f6"
   blockquote:
     border_left_color: "#999"
     border_left_width: "5px"
