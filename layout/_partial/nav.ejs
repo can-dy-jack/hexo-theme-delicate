@@ -1,12 +1,20 @@
-<div class="navbar">
-  <div class="nav-left">
-    <div class="nav-brand">
-      <a href="<%- config.root %>">
-        <img src="<%- config.root %><%- theme.icon128 %>" width="30" height="30" alt="logo">
-        <span class="nav-brand-text"><%= config.title %></span>
-      </a>
-    </div> 
-    <div class="nav-link">
+<div class="nav-box transition" id="nav-box">
+  <div class="nav-brand">
+    <span class="friends-more transition" id="friends-more" title="<%= __("nav.more") %>">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20">
+        <path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/>
+      </svg>
+    </span>
+    <a href="<%- config.root %>" class="nav-brand-img">
+      <img class="nav-brand-img" src="<%- config.root %><%- theme.icon128 %>" width="30" height="30" alt="logo">
+    </a>
+    <a href="<%- config.root %>"  class="nav-brand-text">
+      <span class="nav-brand-text"><%= config.title %></span>
+    </a>
+  </div>
+
+  <div class="nav-container transition" id="nav-container">
+    <div class="nav-pages">
       <a href="<%- config.root %>" class="nav-item">
         <%= __('nav.home') %>
       </a>
@@ -25,33 +33,34 @@
       </a>
       <% } %>
     </div>
+    <div class="nav-link">
+      <% for(friend in theme.nav.friends) { %>
+        <a href="<%= theme.nav.friends[friend] %>">
+          <%= friend %>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16"><path d="M256 64C256 46.33 270.3 32 288 32H415.1C415.1 32 415.1 32 415.1 32C420.3 32 424.5 32.86 428.2 34.43C431.1 35.98 435.5 38.27 438.6 41.3C438.6 41.35 438.6 41.4 438.7 41.44C444.9 47.66 447.1 55.78 448 63.9C448 63.94 448 63.97 448 64V192C448 209.7 433.7 224 416 224C398.3 224 384 209.7 384 192V141.3L214.6 310.6C202.1 323.1 181.9 323.1 169.4 310.6C156.9 298.1 156.9 277.9 169.4 265.4L338.7 96H288C270.3 96 256 81.67 256 64V64zM0 128C0 92.65 28.65 64 64 64H160C177.7 64 192 78.33 192 96C192 113.7 177.7 128 160 128H64V416H352V320C352 302.3 366.3 288 384 288C401.7 288 416 302.3 416 320V416C416 451.3 387.3 480 352 480H64C28.65 480 0 451.3 0 416V128z"/></svg>
+        </a>
+      <% } %>
+    </div>
   </div>
 
-  <div class="nav-right friends-link">
-  <% for(friend in theme.nav.friends) { %>
-    <a href="<%= theme.nav.friends[friend] %>">
-      <%= friend %>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16"><path d="M256 64C256 46.33 270.3 32 288 32H415.1C415.1 32 415.1 32 415.1 32C420.3 32 424.5 32.86 428.2 34.43C431.1 35.98 435.5 38.27 438.6 41.3C438.6 41.35 438.6 41.4 438.7 41.44C444.9 47.66 447.1 55.78 448 63.9C448 63.94 448 63.97 448 64V192C448 209.7 433.7 224 416 224C398.3 224 384 209.7 384 192V141.3L214.6 310.6C202.1 323.1 181.9 323.1 169.4 310.6C156.9 298.1 156.9 277.9 169.4 265.4L338.7 96H288C270.3 96 256 81.67 256 64V64zM0 128C0 92.65 28.65 64 64 64H160C177.7 64 192 78.33 192 96C192 113.7 177.7 128 160 128H64V416H352V320C352 302.3 366.3 288 384 288C401.7 288 416 302.3 416 320V416C416 451.3 387.3 480 352 480H64C28.65 480 0 451.3 0 416V128z"/></svg>
-    </a>
-  <% } %>
-    <span class="friends-more transition" id="friends-more">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20">
-        <path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/>
-      </svg>
-    </span>
+  <div class="nav-search">
+      <a href="#delicate-search" title="<%= __("search.localsearch") %>">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height=20 weight=20 >
+          <path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"/>
+        </svg>
+      </a>
+    </div>
+</div>
+
+<div id="delicate-search" class="search">
+  <div class="search-wrap">
+    <div class="search-head"><%= __("search.localsearch") %></div>
+    <form class="search-form">
+      <input type="text" placeholder="<%= __("search.placehlder") %>" id="local-search" name="search" />
+      <label for="local-search"><%= __("search.text") %></label>
+    </form>
+    <a href="#" class="close">X</a>
+    <hr/>
+    <div class="search-result" id="local-search-result"></div>
   </div>
 </div>
-
-<div id="phone-nav-link" class="transition">
-<% for(friend in theme.nav.friends) { %>
-  <a href="<%= theme.nav.friends[friend] %>">
-    <%= friend %>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16">
-      <path d="M256 64C256 46.33 270.3 32 288 32H415.1C415.1 32 415.1 32 415.1 32C420.3 32 424.5 32.86 428.2 34.43C431.1 35.98 435.5 38.27 438.6 41.3C438.6 41.35 438.6 41.4 438.7 41.44C444.9 47.66 447.1 55.78 448 63.9C448 63.94 448 63.97 448 64V192C448 209.7 433.7 224 416 224C398.3 224 384 209.7 384 192V141.3L214.6 310.6C202.1 323.1 181.9 323.1 169.4 310.6C156.9 298.1 156.9 277.9 169.4 265.4L338.7 96H288C270.3 96 256 81.67 256 64V64zM0 128C0 92.65 28.65 64 64 64H160C177.7 64 192 78.33 192 96C192 113.7 177.7 128 160 128H64V416H352V320C352 302.3 366.3 288 384 288C401.7 288 416 302.3 416 320V416C416 451.3 387.3 480 352 480H64C28.65 480 0 451.3 0 416V128z"/>
-    </svg>
-  </a>
-<% } %>
-</div>
-
-
-

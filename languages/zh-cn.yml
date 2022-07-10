@@ -4,6 +4,7 @@ nav:
   about: 关于
   tags: 标签
   categories: 分类
+  more: 菜单栏
 
 index:
   pagination:
@@ -40,3 +41,8 @@ page404:
   warning: 请联系站点的所有者，告知他们链接已损坏。
   step1: 将在
   step2: 秒后跳转到主页面
+
+search:
+  placehlder: 搜索
+  text: 输入内容搜索
+  localsearch: 本地搜索

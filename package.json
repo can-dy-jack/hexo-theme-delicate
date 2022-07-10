@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-delicate",
-  "version": "3.1.3",
+  "version": "3.2.0",
   "description": "delicate but simple theme for Hexo",
   "main": "package.js",
   "files": [
@@ -29,9 +29,6 @@
     "url": "https://github.com/can-dy-jack/hexo-theme-delicate/issues"
   },
   "homepage": "https://kartjim.cn/delicate",
-  "devDependencies": {
-    "hexo": "4.3.0"
-  },
   "engines": {
     "node": ">=8.10.0"
   },

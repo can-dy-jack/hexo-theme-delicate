@@ -35,12 +35,26 @@ delicate.markdown = {
         for (let i = 0; i < code_block.length; i++) {
             const code_info = document.createElement('div');
             code_info.classList.add('code-info');
-
-            const text = document.createElement("span");
+            
+            // left 
+            const left = document.createElement("div"),
+                text = document.createElement("span"),
+                mac_circle1 = document.createElement("span"),
+                mac_circle2 = document.createElement("span"),
+                mac_circle3 = document.createElement("span");
             text.textContent = code_block[i].classList[1];
             text.classList.add("code-type");
+            mac_circle1.classList.add("mac-circle1")
+            mac_circle2.classList.add("mac-circle2")
+            mac_circle3.classList.add("mac-circle3")
+            left.appendChild(mac_circle1);
+            left.appendChild(mac_circle2);
+            left.appendChild(mac_circle3);
+            left.appendChild(text);
+            left.className = "left";
 
-            const copy_btn = document.createElement("span");
+            // right 
+            const copy_btn = document.createElement("div");
             const copy_text = document.createElement("span");
             const copy_svg = document.createElement("span");
             copy_btn.classList.add("copy-btn");
@@ -62,10 +76,10 @@ delicate.markdown = {
                     })
             }
 
-            code_info.appendChild(text);
+            code_info.appendChild(left);
             code_info.appendChild(copy_btn);
 
-            code_block[i].appendChild(code_info);
+            code_block[i].insertBefore(code_info, code_block[i].childNodes[0]);
         }
     },
 

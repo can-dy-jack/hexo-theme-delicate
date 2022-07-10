@@ -4,6 +4,7 @@ nav:
   about: about
   tags: tags
   categories: categories
+  more: menu
 
 index:
   pagination:
@@ -40,3 +41,8 @@ page404:
   warning: Please contact the owner of the site that linked you to the original URL and let them know their link is broken.
   step1: Will jump to the index page in 
   step2: seconds
+
+search:
+  placehlder: "enter to search"
+  text: "type to search"
+  localsearch: "local search"

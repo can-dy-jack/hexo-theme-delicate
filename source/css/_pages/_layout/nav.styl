@@ -1,106 +1,114 @@
-nav {
-    background-color: #20232a;
-    height: 50px;
-    width: 100%;
+.nav-box
+    background: #fff
+    display: flex
+    justify-content: space-between
+    height 40px
+    width: 100%
+    z-index: 90
+    border-bottom: 1px solid #eee
+    position: fixed
+    top: 0
+    left: 0
+    .nav-brand
+        height 40px
+        background: #fff
+        display: flex
+        align-items: center
+        box-sizing: border-box
+        padding: 0 10px
+        .friends-more
+            cursor: pointer
+            padding: 5px 10px
+            fill: $a-hover-color
+        .nav-brand-img
+            margin-right: 5px
+    .nav-container
+        flex: 1
+        // background: #fff
+        display: flex
+        align-items: center
+        box-sizing: border-box
+        padding: 0 10px
+        .nav-pages
+            flex: 1
+            font-size: 1rem
+            a
+                margin: 0 8px
+        .nav-link
+            a
+                margin: 0 2px
+    .nav-search
+        cursor: pointer
+        margin: 10px 20px 10px 10px
+
+
+
+
+
+
+
+
+
+.search
+    display: none;
+    z-index: 200
+.search:target
     position: fixed;
-    top: 0;
     left: 0;
-    box-sizing: border-box;
-    z-index: 200;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        .nav-left {
-            display: flex;
-            flex-direction: row;
-            height: 50px;
-            align-items: center;
-
-            .nav-brand {
-                height: 50px;
-                line-height: 50px;
-                margin: 0 10px;
-
-                a {
-                    display: flex;
-                    align-items: center;
-                    color: $a-hover-color;
-                    height: 50px;
-                }
-
-                img {
-                    margin: 0 5px;
-                }
-            }
-
-            .nav-link a {
-                box-sizing: border-box;
-                padding: 0 8px;
-                height: 50px;
-                line-height: 50px;
-                display: inline-block;
-                color: white;
-
-                &:hover {
-                    color: $a-hover-color;
-                }
-            }
-        }
-
-        .nav-right {
-            display: flex;
-            flex-direction: row;
-            color: white;
-            padding: 0 10px;
-            display: flex;
-            align-items: center;
-
-            .friends-more {
-                cursor: pointer;
-                display: none;
-            }
-
-            .friends-more:hover svg {
-                fill: $a-hover-color;
-            }
-            .friends-more:active {
-                box-shadow: 0 0 0 3px rgb(51, 63, 235)
-            }
-
-            a {
-                display: flex;
-                align-items: center;
-                margin: 0 5px;
-
-                &:hover {
-                    color: $a-hover-color;
-                }
-            }
-
-            & svg {
-                fill: #ddd;
-                margin-left: 3px;
-            }
-        }
-    }
-
-    #phone-nav-link {
-        background-color: #fff;
-        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.05);
-        padding: 10px 20px;
-        transform: scaleX(0);
-        transform-origin: right;
-
-        & a {
-            margin: 10px;
-
-            &:hover {
-                color: $a-hover-color;
-            }
-        }
-    }
-}
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0,0,0,.2)
+.search .search-wrap
+    width 600px
+    margin: 20px auto
+    position: relative
+    background: #fff;
+    padding-top: 10px
+    box-shadow: 0 10px 10px rgba(0,0,0,.3)
+    .search-head
+        margin: 8px 20px
+    .search-form
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 24px
+        margin-bottom 15px
+        box-sizing: border-box
+        padding: 10px 20px
+        label
+            background: rgb(33, 167, 33)
+            color: #fff
+            cursor: pointer
+            height: 24px
+            padding: 2px 5px
+        input
+            margin 0
+            flex: 1
+            height: 24px
+            outline: none
+            padding: 1px 6px
+            border: 1px solid #aaa
+            border-radius: 2px 0 0 2px
+            transition: all 0.25s ease
+            &:focus
+                border: 1px solid rgb(0, 200, 0)
+                box-shadow: 0 0 0 3px rgba(0, 200, 0 ,.3)
+    .close
+        user-select: none
+        background: #222
+        color: #fff
+        width 28px
+        height 28px
+        line-height: 28px
+        text-align: center
+        margin: 10px
+        border-radius: 50%
+        position: absolute
+        right: -20px
+        top: -20px
+    .search-result
+        background: #f8f8f8
+        max-height: 400px
+        overflow: auto

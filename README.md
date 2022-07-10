@@ -1,10 +1,8 @@
 # hexo-theme-delicate
 
-delicate3.0 版本大更新！ - 重构页面样式
-
-> 依据bootstrap设计的一款hexo主题  
+> 这时一款很随意的hexo主题，会经常随心所欲变化风格。
 > [Demo site](https://kartjim.top/delicate)  
-> 加入QQ交流群：`499080703`
+> 欢迎加入QQ交流群：`499080703`
 
 <div style="display:flex;justify-content: space-evenly;">
 <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E%3D10.9.0-blue"></a>
@@ -46,6 +44,10 @@ git clone https://github.com/can-dy-jack/hexo-theme-delicate.git theme/delicate
 theme: delicate
 ```
 
+### 搜索
+
+如果您想避免具体某一篇文章或页面被本地搜索引擎搜索到，在`front-matter`里添加 `indexing: false` 即可。
+
 ## bug解决
 
 1. 控制台报错
@@ -71,3 +73,17 @@ exports.filename = null;
 ```
 
 > 更多bug，可以创建issue，或者邮件联系我
+
+## 最新更新
+
+- [x] 搜索功能！🎉
+- [x] 搜索样式 💫
+- [x] 移动端适配 ⭐
+- [x] 导航栏样式重构🧭
+- [x] code块样式优化！🎊
+
+### 计划
+
+- [ ] 更多文章分享
+- [ ] **关于页面**
+- [ ] 整理配置文件

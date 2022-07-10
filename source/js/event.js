@@ -1,7 +1,7 @@
-const tocBox = document.getElementById("post-toc");
-const tocBtn = document.getElementById("open-toc");
-const friends_more = document.getElementById("friends-more");
-const phone_nav_link = document.getElementById("phone-nav-link");
+const tocBox = _("post-toc");
+const tocBtn = _("open-toc");
+const friends_more = _("friends-more");
+const nav_container = _("nav-container"); 
 
 delicate.events = {
     calculateTime: function calculateTime(startTime = "2022-05-01T00:00:00") {
@@ -70,37 +70,29 @@ delicate.events = {
                 if (window.innerWidth <= 800) {
                     toc_open = false;
                     tocBox.style.transform = 'scaleY(0)';
+                    nav_container.style.transform = "translateX(-100%)";
                 } else {
                     toc_open = true;
                     tocBox.style.transform = 'scaleY(1)';
-                    phone_nav_link.style.transform = 'scaleX(0)';
+                    nav_container.style.transform = "translateX(0)";
                 }
             }
         }
     },
 
     registerFriendsMore: function registerFriendsMore() {
-        // nav  friends-more
-        let phone_nav_link_is_open = false;
-        friends_more.addEventListener('click', () => {
-            if (phone_nav_link_is_open) {
-                phone_nav_link.style.transform = 'scaleX(0)';
-            } else {
-                phone_nav_link.style.transform = 'scaleX(1)';
+        let isOpen = false;
+        if(window.innerWidth <= 1000) {
+            nav_container.style.transform = "translateX(-100%)";
+            friends_more.onclick = (e) => {
+                if(isOpen) {
+                    nav_container.style.transform = "translateX(-100%)";
+                    isOpen = false;
+                } else {
+                    nav_container.style.transform = "translateX(0)";
+                    isOpen = true;
+                }
             }
-            phone_nav_link_is_open = !phone_nav_link_is_open;
-        })
-    },
-
-    consoleLogo: function consoleLogo() {
-        if (!window.hasOwnProperty("console")) {
-            return;
-        }
-        const lang = document.documentElement.lang;
-        if(lang === "zh-cn" || lang === "zh-CN" || lang === "zh-TW" || lang === "zh-tw") {
-            console.log("%c感谢您使用delicate！","color: #34ae56;padding: 5px 10px;border: 1px solid #34ae56;border-radius: 3px;font: 1rem 楷体;");
-        } else {
-            console.log("%cThank you for using delicate!","color: #34ae56;padding: 5px 10px;border: 1px solid #34ae56;border-radius: 3px;font: 1rem Time new Roman;");
         }
     }
 }
