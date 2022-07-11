@@ -181,12 +181,13 @@ comments:
   # 畅言：http://changyan.kuaizhan.com/
   changyan:
     enable: false
-    appid: 'cywauc17c'
-    conf: 'prod_2a66ec8f42616f5d4232179c8ed63bc9'
+    appid: ''
+    conf: ''
+  # https://valine.js.org
   valine:
-    enable: true
-    app_id: "Wk9vQoRxLk28Q2uj976gWn1v-gzGzoHsz"
-    app_key: "fgWmsNLv5wYNO8jdAXf5hvrG"
+    enable: false
+    app_id: ""
+    app_key: ""
     avatar: wavatar # 头像样式(https://valine.js.org/avatar.html)
     visitor: true, # 阅读量统计
     placeholder: "参与评论"
