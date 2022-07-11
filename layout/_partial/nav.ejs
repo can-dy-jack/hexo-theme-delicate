@@ -32,6 +32,14 @@
         <%= __('nav.categories') %>
       </a>
       <% } %>
+
+      <% if(theme.router.custom_pages) { %>
+        <% for(custom_page in theme.router.custom_pages) { %>
+          <a class="nav-item" href="<%- config.root %><%= theme.router.custom_pages[custom_page].link %>">
+            <%= theme.router.custom_pages[custom_page].text %>
+          </a>
+        <% } %>
+      <% } %>
     </div>
     <div class="nav-link">
       <% for(friend in theme.nav.friends) { %>

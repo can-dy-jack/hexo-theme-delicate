@@ -9,6 +9,14 @@ router:
   tags: true
   categories: true
   page404: true
+  # 可自定义页面: 在`source`文件夹下新建页面同名文件夹，文件夹下新建index.md文件
+  custom_pages:
+    about: 
+      link: "about"
+      text: "关于我"
+    message:
+      link: "message"
+      text: "留言板"
 
 # --------------------------------------------------------- #
 #
@@ -31,10 +39,10 @@ icon128: "/img/logo128.ico"
 nav: 
   friends:
     github: "https://github.com/can-dy-jack/hexo-theme-delicate"
+    dev.to: https://dev.to/kartjim
     LeetCode: "https://leetcode-cn.com/u/kartjim/"
     CSDN: "https://blog.csdn.net/qq_46590483"
     掘金: "https://juejin.cn/user/1389392813630526"
-    微博: "https://weibo.com/p/1005057198677513/home"
 
 
 ## footer - 建站起始时间
@@ -155,3 +163,31 @@ page404:
   warning: ''
   # 几秒后跳转到主页
   startTime: 10
+
+# --------------------------------------------------------- #
+#
+#          comments    评论功能
+#
+# --------------------------------------------------------- #
+comments:
+  # 参见：https://utteranc.es/
+  utteranc: 
+    # 打开评论  utteranc 不需要手动初始化
+    enable: true
+    # 设定仓库的地址，使用该仓库的issue作为评论的后台数据库
+    repo: "can-dy-jack/delicate"
+    # 可以指定主题
+    theme: "github-light"
+  # 畅言：http://changyan.kuaizhan.com/
+  changyan:
+    enable: false
+    appid: 'cywauc17c'
+    conf: 'prod_2a66ec8f42616f5d4232179c8ed63bc9'
+  valine:
+    enable: true
+    app_id: "Wk9vQoRxLk28Q2uj976gWn1v-gzGzoHsz"
+    app_key: "fgWmsNLv5wYNO8jdAXf5hvrG"
+    avatar: wavatar # 头像样式(https://valine.js.org/avatar.html)
+    visitor: true, # 阅读量统计
+    placeholder: "参与评论"
+

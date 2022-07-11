@@ -5,9 +5,9 @@ const header2 = $('.post>h2');
 // toc tags
 const tocLinks = $('.toc>.toc-item>.toc-link');
 // to_top
-const to_top = _('to_top');
+const to_top = document.getElementById('to_top');
 // nav_box
-const nav_box = _("nav-box");
+const nav_box = document.getElementById("nav-box");
 
 function clearActive(nodes) {
     nodes.forEach(item => {
@@ -78,8 +78,8 @@ var searchFunc = function(path, search_id, content_id) {
             }
         }
 
-        var $input = _(search_id);
-        var $resultContent = _(content_id);
+        var $input = document.getElementById(search_id);
+        var $resultContent = document.getElementById(content_id);
         if (!$input || !$resultContent) return;
 
         $input.addEventListener("input",()=>{

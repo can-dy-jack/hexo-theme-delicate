@@ -16,6 +16,11 @@
 
         <%- page.content %>
 
+        <div class="blog-tag-and-cate">
+            <%- partial('components/tags', {item: page}) %>
+            <%- partial('components/categories', {item: page}) %>
+        </div>
+
         <div class="post-share">
         <%= __('post.share') %>:
             <% if(theme.post.share.qq){ %>
@@ -36,12 +41,43 @@
 
         <div class="post-alert">本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> 协议 ，转载请注明出处。</div>
         <hr />
-        
-        <div class="blog-tag-and-cate">
-            <%- partial('components/tags', {item: page}) %>
-            <%- partial('components/categories', {item: page}) %>
-        </div>
 
+        <% if(page.comments) { %>
+            <% if(theme.comments.utteranc.enable) { %>
+            <script src="https://utteranc.es/client.js"
+                repo="<%= theme.comments.utteranc.repo %>"
+                issue-term="<%= page.title %>"
+                theme="<%= theme.comments.utteranc.theme %>"
+                crossorigin="anonymous"
+                async>
+            </script>
+            <% } %>
+            <% if(theme.comments.changyan.enable) { %>
+            <div id="SOHUCS" sid="<%= hash(page.title) %>"></div>
+            <script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
+            <script type="text/javascript">
+                window.changyan.api.config({
+                    appid: '<%= theme.comments.changyan.appid %>',
+                    conf: '<%= theme.comments.changyan.conf %>'
+                });
+            </script>
+            <% } %>
+            <% if(theme.comments.valine.enable) { %>
+            <div id="vcomments"></div>
+            <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+            <script>
+                new Valine({
+                    el: "#vcomments",
+                    app_id: "<%= theme.comments.valine.app_id %>",
+                    app_key: "<%= theme.comments.valine.app_key %>",
+                    avatar: "<%= theme.comments.valine.avatar %>",
+                    placeholder: "<%= theme.comments.valine.placeholderr %>",
+                    visitor: "<%= theme.comments.valine.visitor %>", // 阅读量统计
+                });
+            </script>
+            <% } %>
+        <% } %>
+        
         <div class="post-change">
             <div class="post-pre">
                 <% if (page.prev){ %>

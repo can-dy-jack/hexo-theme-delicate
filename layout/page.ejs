@@ -1,48 +1,51 @@
 <div class="page-body page-shadow">
     <section class="page">
-        <div class="page-title">
+        <div class="page-title" <% if(page.font) { %> style="font: <%= page.font %> <% } %>">
             <%- page.title || page.link %>
         </div>
-
         <p class="blog-page-info">
-        <span><%= page.date.format(config.date_format) %></span>
-        <% if(page.author) { %>
-            <span><%- page.author %></span>  
-        <% } %>
+            <span><%= page.date.format(config.date_format) %></span>
+            <% if(page.author) { %>
+            | <span><%- page.author %></span>  
+            <% } %>
         </p>
-
         <%- page.content %>
 
-        <hr />
+        <% if(page.comments) { %>
+            <% if(theme.comments.utteranc.enable) { %>
+            <script src="https://utteranc.es/client.js"
+                repo="<%= theme.comments.utteranc.repo %>"
+                issue-term="<%= page.title %>"
+                theme="<%= theme.comments.utteranc.theme %>"
+                crossorigin="anonymous"
+                async>
+            </script>
+            <% } %>
+            <% if(theme.comments.changyan.enable) { %>
+            <div id="SOHUCS" sid="<%= hash(page.title) %>"></div>
+            <script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
+            <script type="text/javascript">
+                window.changyan.api.config({
+                    appid: '<%= theme.comments.changyan.appid %>',
+                    conf: '<%= theme.comments.changyan.conf %>'
+                });
+            </script>
+            <% } %>
+            <% if(theme.comments.valine.enable) { %>
+            <div id="vcomments"></div>
+            <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+            <script>
+                new Valine({
+                    el: "#vcomments",
+                    app_id: "<%= theme.comments.valine.app_id %>",
+                    app_key: "<%= theme.comments.valine.app_key %>",
+                    avatar: "<%= theme.comments.valine.avatar %>",
+                    placeholder: "<%= theme.comments.valine.placeholderr %>",
+                    visitor: "<%= theme.comments.valine.visitor %>", // 阅读量统计
+                });
+            </script>
+            <% } %>
+        <% } %>
 
-        <div class="blog-tag-and-cate">
-            <%- partial('components/tags', {item: page}) %>
-            <%- partial('components/categories', {item: page}) %>
-        </div>
-
-        <div class="page-change">
-            <div class="page-pre">
-                <% if (page.prev){ %>
-                    <span class="page-pre-icon">
-                    <svg viewBox="0 0 1024 1024" version="1.1" width="20" height="20">
-                        <path d="M561.92 832a47.36 47.36 0 0 0 0-64l-256-256 256-256a47.36 47.36 0 1 0-64-64l-288.64 288.64A50.56 50.56 0 0 0 192 512a47.36 47.36 0 0 0 14.08 33.28L494.72 832a47.36 47.36 0 0 0 67.2 0z"></path>
-                        <path d="M817.92 832a47.36 47.36 0 0 0 0-64.00000001l-256-255.99999999 256-255.99999999a47.36 47.36 0 1 0-64.00000001-64.00000001l-291.83999999 286.08A50.56 50.56 0 0 0 447.99999999 512a47.36 47.36 0 0 0 14.08000001 33.28L750.72 831.99999999a47.36 47.36 0 0 0 67.2 1e-8z"></path>
-                    </svg>
-                    </span>
-                    <a href="<%- url_for(page.prev.path) %>"> <%- page.prev.title %></a>
-                <% } %>
-            </div>
-            <div class="page-next">
-                <% if (page.next){ %>
-                    <a href="<%- url_for(page.next.path) %>"> <%- page.next.title %></a>
-                    <span class="page-next-icon">
-                    <svg viewBox="0 0 1024 1024" version="1.1" width="20" height="20">
-                        <path d="M462.08 192a47.36 47.36 0 0 0 0 64l256 256-256 256a47.36 47.36 0 1 0 64 64l288.64-288.64A50.56 50.56 0 0 0 832 512a47.36 47.36 0 0 0-14.08-33.28L529.28 192a47.36 47.36 0 0 0-67.2 0z"></path>
-                        <path d="M206.08 192a47.36 47.36 0 0 0 0 64l256 256-256 256a47.36 47.36 0 1 0 64 64l291.84-286.08A50.56 50.56 0 0 0 576 512a47.36 47.36 0 0 0-14.08-33.28L273.28 192a47.36 47.36 0 0 0-67.2 0z"></path>
-                    </svg>
-                    </span>
-                <% } %>
-            </div>
-        </div>
     </section>
 </div>
