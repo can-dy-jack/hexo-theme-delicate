@@ -11,9 +11,14 @@ router:
   page404: true
   # 可自定义页面: 在`source`文件夹下新建页面同名文件夹，文件夹下新建index.md文件
   custom_pages:
+    # new file "index.md" in new folder "about"
     about: 
       link: "about"
       text: "关于我"
+    # also, you can create a new file "other.md" in folder "about" and configure it
+    # other: 
+      # link: "about/other"
+      # text: "other"
     message:
       link: "message"
       text: "留言板"
@@ -56,9 +61,9 @@ startTime: "2021-11-01T00:00:00"
 #
 # --------------------------------------------------------- #
 markdown_style:
-  table_color: "#f6f6f6"
-  table_tr_color: "rgb(246, 253, 253)"
-  table_border_color: "#f6f6f6"
+  table_color: "#eee"
+  table_tr_color: "#fafafa"
+  table_border_color: "#eee"
   blockquote:
     border_left_color: "#999"
     border_left_width: "5px"
@@ -72,8 +77,14 @@ color:
   # a标签颜色
   a: "#34ae56"
   # 选中的文本颜色
-  selection: "orange"
-  selectionTextColor: "#fff"
+  selection: "rgba(255, 165, 0, .2)"
+  selectionTextColor: "inherif"
+
+mermaid: 
+  theme: forest
+  # true or false
+  startOnLoad: true
+  arrowMarkerAbsolute: false
 
 # --------------------------------------------------------- #
 #
@@ -191,4 +202,15 @@ comments:
     avatar: wavatar # 头像样式(https://valine.js.org/avatar.html)
     visitor: true, # 阅读量统计
     placeholder: "参与评论"
+
+# --------------------------------------------------------- #
+#
+#                         CDN
+#
+# --------------------------------------------------------- #
+CDN:
+  # mathjax: true
+  mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML
+  mermaid: https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
+
 

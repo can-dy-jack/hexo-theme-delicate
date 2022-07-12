@@ -43,6 +43,41 @@ git clone https://github.com/can-dy-jack/hexo-theme-delicate.git theme/delicate
 ```yml
 theme: delicate
 ```
+### markdown扩展
+
+#### mathjax
+为了避免加载时间过长，需要在文章的 Front-matter 中添加 `mathjax: true` 才能开启 mathjax
+
+#### mermaid
+首先：安装插件：
+```bash
+npm install hexo-filter-mermaid-diagrams
+# or yarn
+yarn add hexo-filter-mermaid-diagrams
+```
+
+在文章的 Front-matter 中添加 `mermaid: true` , 开启 mermaid。
+
+#### 思维导图
+
+首先，需要安装插件：
+
+```bash
+npm install hexo-simple-mindmap
+```
+
+然后插入思维导图：
+
+```markdown
+{% pullquote mindmap mindmap-md %}
+- [在 Hexo 中使用思维导图](https://hunterx.xyz/use-mindmap-in-hexo.html)
+  - 前言
+  - 操作指南
+    - 准备需要的文件
+    - 为主题添加 CSS/JS 文件
+  - 使用方法
+{% endpullquote %}
+```
 
 ### 搜索
 
@@ -76,17 +111,13 @@ exports.filename = null;
 
 ## 最新更新
 
-- [x] 导航栏移动端适配bug + resize bug 🎊
-- [x] 自建页面样式`page.ejs` 🌈
-- [x] 评论系统 💫
-  - [x] utteranc 🔖
-  - [x] 畅言 📑
-  - [x] Valine 🍕
+- [x] table-style and selection-color and code-scrollbar ⭐
+- [x] mathjax支持 🎉
+- [x] mermaid 🥳
+- [x] 思维导图 ⭐
 
 ### 计划
 
 - [ ] Valine更多配置
-- [ ] 更多文章分享
-- [ ] **关于页面**
-- [ ] 整理配置文件
 - [ ] SEO
+- [ ] 更多评论系统
