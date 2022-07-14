@@ -43,6 +43,5 @@ page404:
   step2: 秒后跳转到主页面
 
 search:
-  placehlder: 搜索
-  text: 输入内容搜索
+  search: 输入内容搜索
   localsearch: 本地搜索

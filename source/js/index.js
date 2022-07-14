@@ -62,7 +62,20 @@ to_top.addEventListener('click', () => {
 
 
 // search code
-var searchFunc = function(path, search_id, content_id) {
+var searchFunc = function(path) {
+    const nav_search_icon = document.getElementById("nav-search-icon");
+    const delicate_search_bg = document.getElementById("delicate-search-bg");
+    const delicate_search_wrap = document.getElementById("delicate-search-wrap");
+
+    nav_search_icon.onclick = (e) => {
+        delicate_search_bg.style.display = "block";
+        delicate_search_wrap.style.display = "block";
+    }
+    delicate_search_bg.onclick = (e) => {
+        delicate_search_bg.style.display = "none";
+        delicate_search_wrap.style.display = "none";
+    }
+
     fetch(path)
     .then(response => response.text())
     .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
@@ -78,12 +91,12 @@ var searchFunc = function(path, search_id, content_id) {
             }
         }
 
-        var $input = document.getElementById(search_id);
-        var $resultContent = document.getElementById(content_id);
+        var $input = document.getElementById("local-search");
+        var $resultContent = document.getElementById("local-search-result");
         if (!$input || !$resultContent) return;
 
         $input.addEventListener("input",()=>{
-            let str = '<ol class=\"search-result-list\">';
+            let str = '<article class=\"search-result-list\">';
             let keywords = $input.value.trim().toLowerCase().split(/[\s\-\+]+/); // 以 空格、-、+ 分割关键词
             $resultContent.innerHTML = ""; // 清除上一次搜素的结果
             if($input.value.trim().length <= 0) { // 全是空格就不需要搜索
@@ -124,7 +137,7 @@ var searchFunc = function(path, search_id, content_id) {
                 }
                 // show search results
                 if(isMatch) {
-                    str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                    str += "<section class='search-result-item'><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
                     let content = data.content.trim().replace(/<[^>]+>/g, "");
                     if(first_occur >= 0) {
                         // cut out 100 characters
@@ -144,12 +157,12 @@ var searchFunc = function(path, search_id, content_id) {
                             var regS = new RegExp(keyword, "gi");
                             match_content = match_content.replace(regS, "<mark class=\"search-keyword\">" + keyword + "</mark>");
                         });
-                        str += "<p class=\"search-result\">" + match_content + "...</p>";
+                        str += "<div class=\"search-result-text\">" + match_content + "...</div>";
                     }
-                    str += "</li>";
+                    str += "</section>";
                 }
             })
-            str += "</ol>";
+            str += "</article>";
             $resultContent.innerHTML = str;
         })
     })

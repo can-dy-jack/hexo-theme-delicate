@@ -43,6 +43,5 @@ page404:
   step2: seconds
 
 search:
-  placehlder: "enter to search"
-  text: "type to search"
+  search: "type text to search"
   localsearch: "local search"
