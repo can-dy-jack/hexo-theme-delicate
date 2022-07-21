@@ -64,21 +64,28 @@ markdown_style:
   table_color: "#eee"
   table_tr_color: "#fafafa"
   table_border_color: "#eee"
+  # 代码块样式 
+  ## 可选：one light | one dark | github | github dark | monokai | solarized light | solarized dark
+  ## 想要更多样式？提交issue：https://github.com/can-dy-jack/hexo-theme-delicate
+  code_styles: "solarized light"
   blockquote:
     border_left_color: "#999"
     border_left_width: "5px"
     padding: "5px 12px"
     color: "gray"
   a:
-    background: ''
-    hoverBackground: ''
+    background: '#eafafe'
+    hoverBackground: '#bbeffd'
+  inline_code:
+    bgcolor: '#f4f4f4'
+    color: '#ff1212'
 
 color:
   # a标签颜色
   a: "#34ae56"
   # 选中的文本颜色
   selection: "rgba(255, 165, 0, .2)"
-  selectionTextColor: "inherif"
+  selectionTextColor: "inherit"
 
 mermaid: 
   theme: forest
@@ -125,7 +132,7 @@ tags:
   amount: 900
   # 开始的颜色和结束的颜色
   ## 您可使用十六进位值（#b700ff），rgba（rgba(183, 0, 255, 1)），hsla（hsla(283, 100%, 50%, 1)）或 [颜色关键字]
-  start_color: '#00eeee'
+  start_color: '#00ff00'
   end_color: '#004444'
 
 # 单个标签页面

@@ -1,48 +1,46 @@
 // $markdown
 .post, .excerpt, .page
     h2
-        font-size: 24px;
+        font-size: 24px
     h3
-        font-size: 20px;
+        font-size: 20px
     h4, h5, h6
-        font-size: 18px;
+        font-size: 18px
     p
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 16px
+        line-height: 24px
     a
-        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-        background-color: $markdown-a-background;
-        color: #1a1a1a;
-        transition: all 0.25s ease;
-        text-decoration: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+        background-color: $markdown-a-background
+        color: #1a1a1a
+        transition: all 0.25s ease
+        text-decoration: none
         &:hover
-            background-color: $markdown-a-hoverBackground;
-            border-bottom-color: #1a1a1a;
-            color: #1a1a1a;
-        &[rel='noopener']::after
-            content: '\1F517';
+            background-color: $markdown-a-hoverBackground
+            border-bottom-color: #1a1a1a
+            color: #1a1a1a
     ul, ol
-        padding-left: 25px;
-        li
-            margin-bottom: 3px;
+        padding-left: 25px
+    li
+        line-height: 1.6em
     img
-        box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.03);
-        border-radius: 10px;
-        margin: 10px 0;
+        box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.03)
+        border-radius: 10px
+        margin: 10px 0
     blockquote:not(.pullquote)
-        border-left: $markdown-blockquote-borderLeftWidth solid $markdown-blockquote-borderLeftColor;
-        margin: 10px 0;
-        padding: $markdown-blockquote-padding;
+        border-left: $markdown-blockquote-borderLeftWidth solid $markdown-blockquote-borderLeftColor
+        margin: 10px 0
+        padding: $markdown-blockquote-padding
         p
-            margin: 0;
-            padding: 0;
-            color: $markdown-blockquote-color;
+            margin: 0
+            padding: 0
+            color: $markdown-blockquote-color
         footer
             margin: 10px 0
             text-align: right
             &::before
-                content: "--"
-    .pullquote 
+                content: '--'
+    .pullquote
         background: #f2f2f2
         margin: 20px 0
         padding: 5px 20px
@@ -76,28 +74,27 @@
         width: 100%
         box-sizing: border-box
         svg
-            font-family: Roboto Mono, JetBrains Mono, microsoft yahei, consolas, sans-serif;
+            font-family: Roboto Mono, JetBrains Mono, microsoft yahei, consolas, sans-serif
     > table
-        border-collapse: collapse;
-        max-width: 100%;
-        // margin: 10px auto;
+        border-collapse: collapse
+        max-width: 100%
+        margin: 10px auto
         thead
-            background-color: $markdown-table-color;
-        tr 
+            background-color: $markdown-table-color
+        tr
             td, th
-                border: 1px solid $markdown-table-border-color;
-                padding: 5px;
+                border: 1px solid $markdown-table-border-color
+                padding: 5px
             &:nth-child(2n)
-                background-color: $markdown-table-tr-color;
-    li>code, p code
-        color: rgb(241, 42, 42);
-        background-color: rgba(0, 0, 0, 0.05);
-        padding: 1px 3px;
-        border-radius: 3px;
-        font-family: consolas, sans-serif;
-        margin: 0 2px;
+                background-color: $markdown-table-tr-color
+    li>code, p code, &>table code
+        color: $inline-code-color
+        background-color: $inline-code-bg-color
+        padding: 1px 3px
+        border-radius: 3px
+        font-family: consolas, sans-serif
+        margin: 0 2px
     .center
         text-align: center
     .mermaid
         text-align: center
-
