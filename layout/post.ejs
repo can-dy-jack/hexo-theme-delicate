@@ -10,9 +10,21 @@
         <% if(page.author) { %>
             <span><%- page.author %></span>  
         <% } %>
+
         <span class="post-count"><%= wordcount(page.content) %>字</span>
         <span class="post-count"><%= min2read(page.content) %>分钟</span>
         </p>
+
+        <% if(page.reprint) { %>
+        <p class="reprint post-alert">
+            <span class="reprint-badge transition">
+                <%= __("reprint.reprint_info") %>
+            </span>
+            <% if(page.reprintLink) { %>
+                <a href="<%= page.reprintLink %>"><%= __("reprint.reprint_link") %></a>
+            <% } %>
+        </p>
+        <% } %>
 
         <%- page.content %>
 
@@ -39,7 +51,13 @@
             <% } %>
         </div>
 
-        <div class="post-alert">本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> 协议 ，转载请注明出处。</div>
+        <% if(!page.reprint) { %>
+            <div class="post-alert">本博客所有文章均采用 
+            <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
+             协议 ，转载请注明出处。
+            </div>
+        <% } %>
+        
         <hr />
 
         <% if(page.comments) { %>
@@ -75,6 +93,26 @@
                     visitor: "<%= theme.comments.valine.visitor %>", // 阅读量统计
                 });
             </script>
+            <% } %>
+
+            <% if(theme.comments.disqus.enable) { %>
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = document.URL;
+                        this.page.identifier = document.title;
+                    };
+                    (function() { 
+                        var d = document, s = d.createElement('script');
+                        s.src = '<%= theme.comments.disqus.mainJs %>';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+                <a class="disqus-comment-count"></a>
+                <script id="dsq-count-scr" src="<%= theme.comments.disqus.countJs %>" async></script>
             <% } %>
         <% } %>
         

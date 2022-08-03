@@ -1,58 +1,51 @@
 // _variables
 empty = ()
 $empty = ()
-
 /*
- ! color
+! color
+*/
+$a-hover-color = get-config('color.a', '#34ae56')
+$selection = unquote-config('color.selection', 'blue')
+$selection-text-color = get-config('color.selectionTextColor', '#fff')
+/*
+ * tag
  */
-$a-hover-color = get-config("color.a", "#34ae56"); 
-$selection = unquote-config("color.selection", "blue")
-$selection-text-color = get-config("color.selectionTextColor", "#fff")
-
-
-/*
- * tag 
- */ 
-$tag-a-background = get-config("tag.aBackground", "rgb(242, 248, 244)");
-$tag-a-hover-color = get-config("tag.aHoverColor", "rgb(54, 194, 200)"); 
-$tag-a-border-radius = get-config("tag.aBorderRadius", "0"); 
-
+$tag-a-background = get-config('tag.aBackground', 'rgb(242, 248, 244)')
+$tag-a-hover-color = get-config('tag.aHoverColor', 'rgb(54, 194, 200)')
+$tag-a-border-radius = get-config('tag.aBorderRadius', '0')
 /*
  * archive
  */
-$archive-a-background = get-config("archive.aBackground", "rgb(242, 248, 244)");
-$archive-a-hover-color = get-config("archive.aHoverColor", "rgb(54, 194, 200)"); 
-$archive-a-border-radius = get-config("archive.aBorderRadius", "0"); 
-$archive-box-shadow = get-config("archive.boxShadow", "0 5px 20px rgba(0,0,0,.04)"); 
-
+$archive-a-background = get-config('archive.aBackground', 'rgb(242, 248, 244)')
+$archive-a-hover-color = get-config('archive.aHoverColor', 'rgb(54, 194, 200)')
+$archive-a-border-radius = get-config('archive.aBorderRadius', '0')
+$archive-box-shadow = get-config('archive.boxShadow', '0 5px 20px rgba(0,0,0,.04)')
 /*
  * category
  */
-$category-a-background = get-config("category.aBackground", "rgb(242, 248, 244)");
-$category-a-hover-color = get-config("category.aHoverColor", "rgb(54, 194, 200)"); 
-$category-a-border-radius = get-config("category.aBorderRadius", "0"); 
-
-
+$category-a-background = get-config('category.aBackground', 'rgb(242, 248, 244)')
+$category-a-hover-color = get-config('category.aHoverColor', 'rgb(54, 194, 200)')
+$category-a-border-radius = get-config('category.aBorderRadius', '0')
 /*
  * pagination
  */
-$pagination-background = get-config("pagination.background", "rgba(30, 177, 214, 0.1)");
-$pagination-color = get-config("pagination.color", "rgb(30, 177, 214)");  
-
-
+$pagination-background = get-config('pagination.background', 'rgba(30, 177, 214, 0.1)')
+$pagination-color = get-config('pagination.color', 'rgb(30, 177, 214)')
 /*
  * markdown
  */
-$markdown-table-color = s-config("markdown_style.table_color");
-$markdown-table-tr-color = s-config("markdown_style.table_tr_color");
-$markdown-table-border-color = s-config("markdown_style.table_border_color"); 
-$markdown-blockquote-borderLeftColor = get-config("markdown_style.blockquote.border_left_color", "#ccc");
-$markdown-blockquote-borderLeftWidth = get-config("markdown_style.blockquote.border_left_width", "4px");
-$markdown-blockquote-padding = get-config("markdown_style.blockquote.padding", "5px 12px"); 
-$markdown-blockquote-color = get-config("markdown_style.blockquote.color", "gray"); 
-$markdown-a-background = s-defalut("markdown_style.a.background", "rgba(248, 229, 175, 0.3)"); 
-$markdown-a-hoverBackground = s-defalut("markdown_style.a.hoverBackground", "#f8e5af"); 
-$inline-code-bg-color = get-config("markdown_style.inline_code.bgcolor", "rgba(0, 0, 0, 0.05)")
-$inline-code-color = get-config("markdown_style.inline_code.color", "rgb(241, 42, 42)")
-$code-style = s-defalut("markdown_style.code_styles", "one light")
+$markdown-table-color = s-config('markdown_style.table_color')
+$markdown-table-tr-color = s-config('markdown_style.table_tr_color')
+$markdown-table-border-color = s-config('markdown_style.table_border_color')
+$markdown-blockquote-borderLeftColor = get-config('markdown_style.blockquote.border_left_color', '#ccc')
+$markdown-blockquote-borderLeftWidth = get-config('markdown_style.blockquote.border_left_width', '4px')
+$markdown-blockquote-padding = get-config('markdown_style.blockquote.padding', '5px 12px')
+$markdown-blockquote-color = get-config('markdown_style.blockquote.color', 'gray')
+$markdown-a-background = s-defalut('markdown_style.a.background', 'rgba(248, 229, 175, 0.3)')
+$markdown-a-hoverBackground = s-defalut('markdown_style.a.hoverBackground', '#f8e5af')
+$inline-code-bg-color = get-config('markdown_style.inline_code.bgcolor', 'rgba(0, 0, 0, 0.05)')
+$inline-code-color = get-config('markdown_style.inline_code.color', 'rgb(241, 42, 42)')
+$code-style = s-defalut('markdown_style.code_styles', 'one light')
+
+
 

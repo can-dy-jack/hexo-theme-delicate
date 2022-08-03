@@ -78,7 +78,7 @@ markdown_style:
     hoverBackground: '#bbeffd'
   inline_code:
     bgcolor: '#f4f4f4'
-    color: '#ff1212'
+    color: '#27c93f'
 
 color:
   # a标签颜色
@@ -191,7 +191,7 @@ comments:
   # 参见：https://utteranc.es/
   utteranc: 
     # 打开评论  utteranc 不需要手动初始化
-    enable: true
+    enable: ftrue
     # 设定仓库的地址，使用该仓库的issue作为评论的后台数据库
     repo: "can-dy-jack/delicate"
     # 可以指定主题
@@ -209,6 +209,12 @@ comments:
     avatar: wavatar # 头像样式(https://valine.js.org/avatar.html)
     visitor: true, # 阅读量统计
     placeholder: "参与评论"
+  # https://disqus.com/profile/signup/
+  disqus:
+    enable: false
+    mainJs: "//hexozhu-ti-zhi-delicate.disqus.com/embed.js"
+    countJs: "//hexozhu-ti-zhi-delicate.disqus.com/count.js"
+
 
 # --------------------------------------------------------- #
 #

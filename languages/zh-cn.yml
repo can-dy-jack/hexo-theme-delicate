@@ -45,3 +45,7 @@ page404:
 search:
   search: 输入内容搜索
   localsearch: 本地搜索
+
+reprint:
+  reprint_info: 本文章是转载  
+  reprint_link: 原文地址

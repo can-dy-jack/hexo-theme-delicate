@@ -79,6 +79,15 @@ npm install hexo-simple-mindmap
 {% endpullquote %}
 ```
 
+### 转载文章
+如果你的文章不是原创，而是转载他人的文章时，可以进行标注。需要在文章的 `Front-matter` 中添加以下
+``` yml
+# 开启标注转载
+reprint: true
+# 指明转载的文章的原地址
+reprintLink: https://xxx.xxx
+```
+
 ### 搜索
 
 如果您想避免具体某一篇文章或页面被本地搜索引擎搜索到，在`front-matter`里添加 `indexing: false` 即可。
@@ -111,17 +120,23 @@ exports.filename = null;
 
 ## 最新更新
 
-- [x] 界面优化
-- [x] 可选的多种代码块样式
-- [x] 统一stylus代码样式
+- [x] 解决上下文 文字可能溢出的问题
+- [x] 解决`page`页面`padding`太大问题
+- [x] 新增spoiler 和 search 两个 tag
+- [x] disque
 
 ### 计划
 
 - [ ] 置顶文章功能
+- [ ] emoji支持？
 - [ ] Valine更多配置
 - [ ] SEO
 - [ ] atom.xml
 - [ ] 字体
 - [ ] 整理stylus代码：将变量名剔出 - 黑暗模式
+
 - [ ] 更多评论系统
 - [ ] 更多代码块样式
+- [ ] 优化disque
+
+

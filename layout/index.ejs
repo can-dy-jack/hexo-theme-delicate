@@ -19,7 +19,7 @@
     <h1 class="excerpt-title">
         <a href="<%- config.root %><%- item.path %>">
             <%- item.title %>
-        </a> 
+        </a>
     </h1>
     <p class="excerpt-meta">
         <span><%= item.date.format(config.date_format) %></span>
@@ -31,6 +31,17 @@
         <span class="post-count"><%= wordcount(item.content) %>字</span>
         <span class="post-count"><%= min2read(item.content) %>分钟</span>
     </p>
+    <% if(item.reprint) { %>
+        <p class="reprint post-alert">
+            <span class="reprint-badge transition">
+                <%= __("reprint.reprint_info") %> 
+            </span>
+            <% if(item.reprintLink) { %>
+                <a href="<%= item.reprintLink %>"><%= __("reprint.reprint_link") %></a>
+            <% } %>
+        </p>
+    <% } %>
+    
     <div class="excerpt"> <%- item.excerpt || item.content %> </div>
     <div class="excerpt-more transition">
         <a href="<%- config.root %><%- item.path %>">

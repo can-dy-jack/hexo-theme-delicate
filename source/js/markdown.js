@@ -9,6 +9,7 @@ delicate.markdown = {
     let heights = new Array(n).fill(0);
     for (let i = 0; i < n; i++) {
       heights[i] = collapseTexts[i].clientHeight;
+      let childs = collapseTexts[i].childNodes.length;
       collapseTexts[i].style.height = "0";
       collapseTexts[i].style.padding = "0";
       collapseBtns[i].onclick = () => {
@@ -18,7 +19,7 @@ delicate.markdown = {
           collapseSvgs[i].style.transform = "rotate(0)";
           isOpen[i] = false;
         } else {
-          collapseTexts[i].style.height = heights[i] + "px";
+          collapseTexts[i].style.height = heights[i] + (childs-1)*10 + "px";
           collapseTexts[i].style.padding = "5px 15px";
           collapseSvgs[i].style.transform = "rotate(90deg)";
           isOpen[i] = true;

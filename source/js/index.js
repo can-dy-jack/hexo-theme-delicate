@@ -60,7 +60,6 @@ to_top.addEventListener('click', () => {
     }, 1000);
 });
 
-
 // search code
 var searchFunc = function(path) {
     const nav_search_icon = document.getElementById("nav-search-icon");
