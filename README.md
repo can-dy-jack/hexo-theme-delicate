@@ -132,7 +132,7 @@ exports.filename = null;
 - [ ] Valine更多配置
 - [ ] SEO
 - [ ] atom.xml
-- [ ] 字体
+- [ ] 字体 + 行高 + 行距 等，优化文章显示样式！！！
 - [ ] 整理stylus代码：将变量名剔出 - 黑暗模式
 
 - [ ] 更多评论系统

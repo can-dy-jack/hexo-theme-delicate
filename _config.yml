@@ -195,7 +195,7 @@ comments:
     # 设定仓库的地址，使用该仓库的issue作为评论的后台数据库
     repo: "can-dy-jack/delicate"
     # 可以指定主题
-    theme: "github-light"
+    theme: "github-dark"
   # 畅言：http://changyan.kuaizhan.com/
   changyan:
     enable: false

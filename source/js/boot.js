@@ -10,6 +10,7 @@ delicate.boot = {
         delicate.events.registerType();
         delicate.events.registerPhoneToc();
         delicate.events.registerFriendsMore();
+        delicate.events.registerDarkMode();
     }
 }
 document.addEventListener('DOMContentLoaded', function() {

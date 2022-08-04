@@ -1,17 +1,17 @@
 .nav-box
-    background: #fff
+    background: var(--main-bg)
     display: flex
     justify-content: space-between
     height: 40px
     width: 100%
     z-index: 90
-    border-bottom: 1px solid #eee
+    border-bottom: 1px solid var(--main-border-color)
     position: fixed
     top: 0
     left: 0
     .nav-brand
         height: 40px
-        background: #fff
+        background: var(--main-bg)
         display: flex
         align-items: center
         box-sizing: border-box
@@ -29,17 +29,41 @@
         align-items: center
         box-sizing: border-box
         padding: 0 10px
+        svg
+            fill: var(--text-color)
+            transition: fill 0.25s ease
         .nav-pages
             flex: 1
             font-size: 1rem
             a
-                margin: 0 8px
+                padding 0 5px
+                height 40px
+                margin 0
+                line-height: 40px
+                display: inline-block
+                &:hover
+                    background-color: var(--main-hover-bg)
         .nav-link
             a
                 margin: 0 2px
-    .nav-search
-        cursor: pointer
-        margin: 10px 20px 10px 10px
+    .nav-control
+        // background-color: pink
+        display: flex;
+        .nav-search
+            padding: 8px 5px 2px 5px
+        div
+            height 30px
+            line-height: 30px
+            cursor: pointer
+            &:hover
+                background-color: var(--main-hover-bg)
+            svg
+                fill: var(--text-color)
+                transition: all 0.25s ease
+        .dark-light
+            padding: 8px 8px 2px 8px
+            #dark-show
+                display: none
 
 .delicate-search-bg
     display: none
@@ -59,16 +83,16 @@
     z-index: 130
     transform: translateX(-50%)
     .search-box
-        background: #fafafa
+        background: var(--body-bg)
         padding: 10px
-        border: 1px solid #aaa
+        border: 1px solid var(--main-border-color2)
         border-radius: 10px
         form
             .search-input
                 display: flex
                 width: 100%
                 box-sizing: border-box
-                border: 1px solid #aaa
+                border: 1px solid var(--main-border-color2)
                 border-radius: 5px
                 padding: 5px 6px
                 margin-bottom: 10px
@@ -79,30 +103,30 @@
                 input
                     outline: none
                     flex: 1
-                    background: #fafafa
+                    background: var(--body-bg)
                     position: relative
                     font-size: 1rem
                     border: none
                     padding: 5px
                     &:focus
-                        background: #eee
+                        background: var(--main-border-color)
                     &::placeholder
                         color: $a-hover-color
                         opacity: 0.5
                     caret-color: $a-hover-color
                     color: $a-hover-color
                 &:focus-within
-                    background: #eee
+                    background: var(--main-border-color)
                     box-shadow: 0 0 0 3px rgba($a-hover-color, 0.6)
                     border-color: $a-hover-color
         .search-result
-            border-top: 1px solid #eee
+            border-top: 1px solid var(--main-border-color)
             overflow: auto
             max-height: 80vh
             &::-webkit-scrollbar
                 height: 5px
                 width: 5px
-                background: #fafafa
+                background: var(--body-bg)
             &::-webkit-scrollbar-thumb
                 height: 4px
                 width: 4px
@@ -118,4 +142,4 @@
                     padding: 2px 5px
                     color: gray
         .search-result-text
-            border-top: 1px solid #eee
+            border-top: 1px solid var(--main-border-color)
