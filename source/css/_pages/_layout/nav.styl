@@ -29,6 +29,7 @@
         align-items: center
         box-sizing: border-box
         padding: 0 10px
+        z-index: 50
         svg
             fill: var(--text-color)
             transition: fill 0.25s ease
@@ -48,7 +49,9 @@
                 margin: 0 2px
     .nav-control
         // background-color: pink
+        position: relative
         display: flex;
+        z-index: 10
         .nav-search
             padding: 8px 5px 2px 5px
         div

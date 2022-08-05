@@ -74,15 +74,15 @@ markdown_style:
     padding: "5px 12px"
     color: "gray"
   a:
-    background: 'rgba(187, 239, 253, .3)'
+    background: 'rgba(217, 249, 253)'
     hoverBackground: 'rgb(187, 239, 253)'
   inline_code:
-    bgcolor: '#f4f4f4'
+    bgcolor: 'rgba(0, 0, 0, .1)'
     color: '#27c93f'
   toc:
-    color: rgb(20, 163, 255)
-    list_bg: rgba(20, 163, 255, 0.3)
-    item_bg: rgba(20, 163, 255, .2)
+    color: rgb(37, 175, 243)
+    list_bg: rgba(37, 175, 243, 0.2)
+    item_bg: rgba(37, 175, 243, 0.1)
 
 color:
   # a标签颜色

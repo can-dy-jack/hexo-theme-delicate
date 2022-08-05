@@ -4,43 +4,43 @@
   --text-color: #1a1a1a
   --body-bg: #fcfcfc
   --body-bg-image: radial-gradient(#ddddeeaa 12%, #fcfcfcaa 12%)
-  --main-bg: #fff;
-  --main-border-color: #eee;
-  --main-border-color2: #aaa;
-  --main-hover-bg: #eceef2;
-  --main-box-shadow-color: rgba(15, 14, 14, 0.12);
-  --main-bg2: #fafafa;
-  --blur-color: rgba(0, 0, 0, 0.2);
-  --full-color: #2a2a2a;
+  --main-bg: #fff
+  --main-border-color: #eee
+  --main-border-color2: #aaa
+  --main-hover-bg: #eceef2
+  --main-box-shadow-color: rgba(15, 14, 14, 0.12)
+  --main-bg2: #fafafa
+  --blur-color: rgba(0, 0, 0, 0.2)
+  --full-color: #2a2a2a
 
 @media (prefers-color-scheme: dark)
   :root
     --color-mode: 'dark'
   :root:not([data-user-color-scheme])
-    --text-color: #dedede
+    --text-color: #fff
     --body-bg: #181c27
     --body-bg-image: radial-gradient(#565656aa 12%, #181c27aa 12%)
-    --main-bg: #313335;
-    --main-border-color: #666;
-    --main-border-color2: #444;
-    --main-hover-bg: #1a1b1d;
-    --main-box-shadow-color: rgba(99, 91, 91, 0.2);
-    --main-bg2: #181717;
-    --blur-color: rgba(200, 200, 200, .3);
-    --full-color: rgb(200, 200, 200);
+    --main-bg: #313335
+    --main-border-color: #666
+    --main-border-color2: #444
+    --main-hover-bg: #1a1b1d
+    --main-box-shadow-color: rgba(99, 91, 91, 0.2)
+    --main-bg2: #181717
+    --blur-color: rgba(200, 200, 200, 0.3)
+    --full-color: rgb(200, 200, 200)
 
 [data-user-color-scheme='dark']
-  --text-color: #dedede
+  --text-color: #fff
   --body-bg: #181c27
   --body-bg-image: radial-gradient(#565656aa 12%, #181c27aa 12%)
-  --main-bg: #313335;
-  --main-border-color: #666;
-  --main-border-color2: #444;
-  --main-hover-bg: #1a1b1d;
-  --main-box-shadow-color: rgba(99, 91, 91, 0.2);
-  --main-bg2: #181717;
-  --blur-color: rgba(200, 200, 200, .3);
-  --full-color: rgb(200, 200, 200);
+  --main-bg: #313335
+  --main-border-color: #666
+  --main-border-color2: #444
+  --main-hover-bg: #1a1b1d
+  --main-box-shadow-color: rgba(99, 91, 91, 0.2)
+  --main-bg2: #181717
+  --blur-color: rgba(200, 200, 200, 0.3)
+  --full-color: rgb(200, 200, 200)
 
 div, nav, span, main, body
   margin: 0
@@ -48,6 +48,7 @@ div, nav, span, main, body
 
 html
   scroll-behavior: smooth
+  font-smooth: grayscale
 
 .transition
   transition: all 0.25s ease
@@ -95,9 +96,10 @@ hr
   width: 100%
   box-sizing: border-box
   padding: 100px 20%
-  background: #fff
+  background: var(--main-bg)
   h1
-    color: red
+    color: rgb(243, 85, 85)
   #page404-time
     font-size: 1.4rem
-    color: red
+    color: rgb(243, 85, 85)
+

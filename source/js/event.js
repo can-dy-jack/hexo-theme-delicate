@@ -135,6 +135,7 @@ delicate.events = {
   registerDarkMode: function registerDarkMode() {
     const dark_svg = document.getElementById("dark-show");
     const light_svg = document.getElementById("light-show");
+    const dark_bg = document.getElementById("dark-bg");
 
     const darkModeStorageKey = "user-color-scheme"; // 作为 localStorage 的 key
     const rootDarkMode = "data-user-color-scheme";
