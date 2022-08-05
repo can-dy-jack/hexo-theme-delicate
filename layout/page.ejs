@@ -13,26 +13,26 @@
 
         <% if(page.comments) { %>
             <% if(theme.comments.utteranc.enable) { %>
-            <script src="https://utteranc.es/client.js"
-                repo="<%= theme.comments.utteranc.repo %>"
-                issue-term="<%= page.title %>"
-                theme="<%= theme.comments.utteranc.theme %>"
-                crossorigin="anonymous"
-                async>
-            </script>
+                <script src="https://utteranc.es/client.js"
+                    repo="<%= theme.comments.utteranc.repo %>"
+                    issue-term="<%= page.title %>"
+                    theme="<%= theme.comments.utteranc.theme %>"
+                    crossorigin="anonymous"
+                    async>
+                </script>
             <% } %>
             <% if(theme.comments.changyan.enable) { %>
-            <div id="SOHUCS" sid="<%= hash(page.title) %>"></div>
-            <script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
-            <script type="text/javascript">
-                window.changyan.api.config({
-                    appid: '<%= theme.comments.changyan.appid %>',
-                    conf: '<%= theme.comments.changyan.conf %>'
-                });
-            </script>
+                <div id="SOHUCS" sid="<%= hash(page.title) %>" class="clear-markdwon-a"></div>
+                <script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
+                <script type="text/javascript">
+                    window.changyan.api.config({
+                        appid: '<%= theme.comments.changyan.appid %>',
+                        conf: '<%= theme.comments.changyan.conf %>'
+                    });
+                </script>
             <% } %>
             <% if(theme.comments.valine.enable) { %>
-            <div id="vcomments"></div>
+            <div id="vcomments" class="clear-markdwon-a"></div>
             <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
             <script>
                 new Valine({
@@ -46,7 +46,7 @@
             </script>
             <% } %>
             <% if(theme.comments.disqus.enable) { %>
-                <div id="disqus_thread"></div>
+                <div id="disqus_thread" class="clear-markdwon-a"></div>
                 <script>
                     var disqus_config = function () {
                         this.page.url = document.URL;
@@ -63,6 +63,60 @@
 
                 <a class="disqus-comment-count"></a>
                 <script id="dsq-count-scr" src="<%= theme.comments.disqus.countJs %>" async></script>
+            <% } %>
+            <% if(theme.comments.gitalk.enable) { %>
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                <div id="gitalk-container" class="clear-markdwon-a"></div>
+                <script>
+                    var gitalk = new Gitalk({
+                        clientID: '<%= theme.comments.gitalk.clientID %>',
+                        clientSecret: '<%= theme.comments.gitalk.clientID %>',
+                        repo: '<%= theme.comments.gitalk.repo %>',
+                        owner: '<%= theme.comments.gitalk.owner %>',
+                        admin: ['<%= theme.comments.gitalk.owner %>'],
+                        id: location.pathname,
+                        distractionFreeMode: false,
+                        labels: ['Gitalk'],
+                        language: "<%= theme.comments.gitalk.language %>"
+                    })
+                    gitalk.render('gitalk-container')
+                </script>
+            <% } %>
+            <% if(theme.comments.gitment.enable) { %>
+                <div id="gitment-container" class="clear-markdwon-a"></div>
+                <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+                <script>
+                    var gitment = new Gitment({
+                        id: location.pathname,
+                        owner: '<%= theme.comments.gitalk.owner %>',
+                        repo: '<%= theme.comments.gitalk.repo %>',
+                        oauth: {
+                            client_id: '<%= theme.comments.gitalk.clientID %>',
+                            client_secret: '<%= theme.comments.gitalk.clientID %>',
+                        },
+                    })
+                    gitment.render('gitment-container')
+                </script>
+            <% } %>
+            <% if(theme.comments.vssue.enable) { %>
+                <div id="vssue"></div>
+                <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+                <script src="https://unpkg.com/vssue@1.4.8/dist/vssue.<%= theme.comments.vssue.platform %>.min.js"></script>
+                <script>
+                new Vue({
+                    el: '#vssue',
+                    data: {
+                    title: location.pathname,
+                    options: {
+                        clientId: '<%= theme.comments.gitalk.clientID %>',
+                        clientSecret: '<%= theme.comments.gitalk.clientID %>',
+                        repo: '<%= theme.comments.gitalk.repo %>',
+                        owner: '<%= theme.comments.gitalk.owner %>',
+                    },
+                    },
+                    template: `<vssue :title="title" :options="options"></vssue>`,
+                })
+                </script>
             <% } %>
         <% } %>
 

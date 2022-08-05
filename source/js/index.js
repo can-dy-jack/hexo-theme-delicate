@@ -166,5 +166,3 @@ var searchFunc = function(path) {
         })
     })
 }
-
-  

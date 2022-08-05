@@ -21,4 +21,14 @@
 
   <%# css link - stylus %>
   <%- css('css/index.css') %>
+
+  <% if(theme.comments.gitalk.enable) { %>
+    <link rel="stylesheet" href="<%= theme.CDN.gitalkStyle %>">
+  <% } %>
+  <% if(theme.comments.gitment.enable) { %>
+    <link rel="stylesheet" href="<%= theme.CDN.gitmentStyle %>">
+  <% } %>
+  <% if(theme.comments.vssue.enable) { %>
+    <link rel="stylesheet" href="<%= theme.CDN.vssueStyle %>">
+  <% } %>
 </head>

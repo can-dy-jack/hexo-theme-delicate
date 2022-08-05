@@ -88,6 +88,12 @@ reprint: true
 reprintLink: https://xxx.xxx
 ```
 
+### 文章内目录
+
+需要在文章的 `Front-matter` 中添加以下
+```yml
+toc: true
+```
 ### 搜索
 
 如果您想避免具体某一篇文章或页面被本地搜索引擎搜索到，在`front-matter`里添加 `indexing: false` 即可。
@@ -120,12 +126,13 @@ exports.filename = null;
 
 ## 最新更新
 
-- [x] 解决上下文 文字可能溢出的问题
-- [x] 解决`page`页面`padding`太大问题
-- [x] 新增spoiler 和 search 两个 tag
-- [x] disque
+ class="clear-markdwon-a"
 
 ### 计划
+
+- [ ] 自制聊天系统
+- [ ] table样式优化
+- [ ] 更改 a标签样式 方案
 
 - [ ] 置顶文章功能
 - [ ] emoji支持？

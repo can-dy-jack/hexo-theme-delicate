@@ -195,7 +195,7 @@ comments:
   # 参见：https://utteranc.es/
   utteranc: 
     # 打开评论  utteranc 不需要手动初始化
-    enable: ftrue
+    enable: false
     # 设定仓库的地址，使用该仓库的issue作为评论的后台数据库
     repo: "can-dy-jack/delicate"
     # 可以指定主题
@@ -218,6 +218,37 @@ comments:
     enable: false
     mainJs: "//hexozhu-ti-zhi-delicate.disqus.com/embed.js"
     countJs: "//hexozhu-ti-zhi-delicate.disqus.com/count.js"
+  gitalk:
+    # 首先，您需要选择一个公共github存储库（已存在或创建一个新的github存储库）用于存储评论
+    # 然后需要创建 GitHub Application，如果没有 点击 https://github.com/settings/applications/new 申请
+    # Authorization callback URL 填写当前使用插件页面的域名。
+    # 获取生成的 clientID 、clientSecret
+    enable: true
+    clientID: 3840ec0cdaaa9b3a1965
+    clientSecret: 906226e5e16a43936cfa9e0c4566d541ef95ecd3
+    repo: delicate
+    owner: can-dy-jack
+    # 支持 [en, zh-CN, zh-TW, es-ES, fr, ru, de, pl, ko, fa, ja]
+    language: zh-CN
+  gitment:
+    enable: false
+    clientID: 
+    clientSecret: 
+    repo: delicate
+    owner: can-dy-jack
+  vssue:
+    # 依赖 vue，需要加载vue，可能会使页面加载变慢
+    enable: false
+    # github https://vssue.js.org/zh/guide/github.html 
+    # | gitlab https://vssue.js.org/zh/guide/gitlab.html
+    # | bitbucket https://vssue.js.org/zh/guide/bitbucket.html
+    # | gitee https://vssue.js.org/zh/guide/gitee.html
+    # | gitea https://vssue.js.org/zh/guide/gitea.html
+    platform: "github"
+    clientID: 
+    clientSecret: 
+    repo: delicate
+    owner: can-dy-jack
 
 
 # --------------------------------------------------------- #
@@ -226,8 +257,9 @@ comments:
 #
 # --------------------------------------------------------- #
 CDN:
-  # mathjax: true
   mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML
   mermaid: https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
-
+  gitalkStyle: https://unpkg.com/gitalk/dist/gitalk.css
+  gitmentStyle: https://imsun.github.io/gitment/style/default.css
+  vssueStyle: https://unpkg.com/vssue/dist/vssue.min.css
 
