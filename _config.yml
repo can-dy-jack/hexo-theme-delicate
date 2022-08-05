@@ -74,11 +74,15 @@ markdown_style:
     padding: "5px 12px"
     color: "gray"
   a:
-    background: '#eafafe'
-    hoverBackground: '#bbeffd'
+    background: 'rgba(187, 239, 253, .3)'
+    hoverBackground: 'rgb(187, 239, 253)'
   inline_code:
     bgcolor: '#f4f4f4'
     color: '#27c93f'
+  toc:
+    color: rgb(20, 163, 255)
+    list_bg: rgba(20, 163, 255, 0.3)
+    item_bg: rgba(20, 163, 255, .2)
 
 color:
   # a标签颜色
@@ -137,14 +141,14 @@ tags:
 
 # 单个标签页面
 tag:
-  aBackground: rgb(242, 248, 244)
+  aBackground: rgba(54, 194, 200, .1)
   aHoverColor: rgb(54, 194, 200)
   aBorderRadius: 5px
 
 # 归档页面
 archive:
-  aBackground: rgb(242, 248, 244)
-  aHoverColor: rgb(54, 194, 100)
+  aBackground: rgba(250, 12, 12, .1)
+  aHoverColor: red
   aBorderRadius: 0
   boxShadow: 0 5px 20px rgba(0,0,0,.1)
 
@@ -166,8 +170,8 @@ categories:
   post_order_by: "-date"
 
 category: 
-  aBackground: rgb(242, 248, 244)
-  aHoverColor: rgb(54, 194, 200)
+  aBackground: rgba(242, 248, 0, .1)
+  aHoverColor: rgb(242, 248, 0)
   aBorderRadius: 5px
 
 # 分页
@@ -195,7 +199,7 @@ comments:
     # 设定仓库的地址，使用该仓库的issue作为评论的后台数据库
     repo: "can-dy-jack/delicate"
     # 可以指定主题
-    theme: "github-dark"
+    theme: "github-light"
   # 畅言：http://changyan.kuaizhan.com/
   changyan:
     enable: false

@@ -1,6 +1,6 @@
 /* note */
 .note
-    background-color: #fafafa
+    background-color: rgba(0, 0, 0, .1)
     border-left: 8px solid #333
     padding: 10px 20px
     margin: 10px 0
@@ -74,6 +74,7 @@
 .toasts
     margin: 10px 0
     box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1)
+    color: #2a2a2a
     .toasts-title
         background-color: #333
         color: #fff
@@ -145,12 +146,14 @@
             font-size: 1em
             border: none
             cursor: pointer
+            color: #2a2a2a
     .collapse-text
         padding: 5px 15px
         // border-top: 1px solid #eee
         background: #fafafa
         transition: all 0.25s ease
         overflow: hidden
+        color: #2a2a2a
 
 .collapse-info
     border: 1px solid #eee
@@ -253,7 +256,7 @@
     color: $a-hover-color
     cursor: pointer
     &:hover, &:active
-        background-color: #fff
+        background-color: inherit
 
 .search::after
     content: "\1F50D";

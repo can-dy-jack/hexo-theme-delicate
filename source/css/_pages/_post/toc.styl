@@ -2,7 +2,7 @@
     width: 25%
     padding-top: 100px
     background-color: var(--main-bg2)
-    border-left: 1px solid #eee
+    border-left: 1px solid var(--main-border-color)
     .toc
         position: sticky
         width: 100%
@@ -11,7 +11,7 @@
         top: 80px
         list-style-type: none
         padding-left: 0
-        background-color: #fafafa
+        background-color: var(--main-bg2)
         transition: all 0.25s ease
         &::-webkit-scrollbar
             width: 10px
@@ -34,7 +34,7 @@
         a
             text-decoration: none
             box-sizing: border-box
-            color: #232323
+            color: var(--text-color)
             padding: 6px 10px
             width: 100%
             display: block
@@ -43,11 +43,11 @@
                 text-decoration: none
                 color: gray
             &.active
-                color: blue
-                border-left: 2px solid blue
-                background-color: rgb(221, 235, 248)
+                color: $markdown-toc-color
+                border-left: 2px solid $markdown-toc-color
+                background-color: $markdown-toc-list-bg
                 &+ol
-                    background-color: rgb(238, 243, 248)
+                    background-color: $markdown-toc-item-bg
 
 .open-toc
     fix-it(fixed)
