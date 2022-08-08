@@ -126,20 +126,30 @@ exports.filename = null;
 
 ## 最新更新
 
- class="clear-markdwon-a"
+- [x] 优化黑暗模式
+  - [x] table
+  - [x] plugins
+  - [x] more...
+- [x] table样式优化
+  - [x] 适配黑暗模式
+- [x] 新增giscus评论系统
+  - [x] 排查到拼写错误
+- [x] 多语言优化
+- [x] 页面展示优化
+- [x] 字体 + 行高 + 行距 等，优化文章显示样式
+  - [x] 文章内（.post）直属下的 p 标签 ，在不影响排版的情况下，都加上了首行缩进(text-indent = 2em)
 
 ### 计划
 
 - [ ] 自制聊天系统
-- [ ] table样式优化
-- [ ] 更改 a标签样式 方案
-
+- [ ] 整理 _congfig.yml 文件
+- [ ] 页面title 逻辑
 - [ ] 置顶文章功能
 - [ ] emoji支持？
 - [ ] Valine更多配置
 - [ ] SEO
 - [ ] atom.xml
-- [ ] 字体 + 行高 + 行距 等，优化文章显示样式！！！
+- [ ] 更改 a标签样式 方案？
 - [ ] 整理stylus代码：将变量名剔出 - 黑暗模式
 
 - [ ] 更多评论系统

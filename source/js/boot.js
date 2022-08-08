@@ -3,6 +3,7 @@ delicate.boot = {
         delicate.markdown.collapse();
         delicate.markdown.init_codeCopy();
         delicate.markdown.initPullquoteStyle();
+        delicate.markdown.initPostTextIndex();
     },
     registerEvents: function registerEvents() {
         const start_time = document.getElementById("start-time");

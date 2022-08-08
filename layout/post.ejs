@@ -1,28 +1,36 @@
+<% 
+    page.updated.locale(config.language);
+    page.date.locale(config.language);
+%>
 <div class="post-body">
     <section class="post">
         <div class="post-title">
-            <%- page.title || page.link %>
+            <h1><%- page.title || page.link %></h1>
         </div>
-
-        <p class="blog-post-info">
-        <span><%= page.date.format(config.date_format) %></span>
-        <% if(page.author) { %>
-            <span><%- page.author %></span>  
-        <% } %>
-
-        <span class="post-count"><%= wordcount(page.content) %>字</span>
-        <span class="post-count"><%= min2read(page.content) %>分钟</span>
-        </p>
-
-        <% if(page.toc) { %>
-            <div class="post-in-toc">
-                <span class="post-in-toc-title"><%- __("contents") %></span>
-                <%- toc(page.content, { 
-                    max_depth: 3,
-                    class: "post-in-toc-list"
-                }) %>
+        <div class="blog-post-info">
+            <div class="post-author-count">
+            <% if(page.author) { %>
+                <%= page.author %>  ·
+            <% } %>
+            <%= __("postInfo.count", wordcount(page.content)) %>,  
+            <%= __("postInfo.need", min2read(page.content)) %>
             </div>
-        <% } %>
+
+            <% if(page.date) { %>
+                <div class="post-publish-date">
+                    <%= __("postInfo.publish") %>：
+                    <%= page.date.format(config.date_format) %>
+                    <%= page.date.format(config.time_format) %>
+                </div>
+            <% } %>
+            <% if(page.updated) { %>
+                <div class="post-update-date">
+                    <%= __("postInfo.update") %>：
+                    <%= page.updated.format(config.date_format) %> 
+                    <%= page.updated.format(config.time_format) %>
+                </div> 
+            <% } %>
+        </div>
 
         <% if(page.reprint) { %>
         <p class="reprint post-alert">
@@ -34,9 +42,18 @@
             <% } %>
         </p>
         <% } %>
+        <% if(page.toc) { %>
+            <div class="post-in-toc">
+                <span class="post-in-toc-title"><%- __("contents") %></span>
+                <%- toc(page.content, { 
+                    max_depth: 3,
+                    class: "post-in-toc-list"
+                }) %>
+            </div>
+        <% } %>
 
         <%- page.content %>
-
+        
         <div class="blog-tag-and-cate">
             <%- partial('components/tags', {item: page}) %>
             <%- partial('components/categories', {item: page}) %>
@@ -61,9 +78,9 @@
         </div>
 
         <% if(!page.reprint) { %>
-            <div class="post-alert">本博客所有文章均采用 
+            <div class="post-alert"><%= __("statement.left") %> 
             <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
-             协议 ，转载请注明出处。
+            <%= __("statement.right") %>
             </div>
         <% } %>
         
@@ -180,6 +197,42 @@
                 })
                 </script>
             <% } %>
+
+            <% if(theme.comments.livere.enable) { %>
+            <div id="lv-container" data-id="city" data-uid="<%= theme.comments.livere.dataUid %>">
+                <script type="text/javascript">
+                    (function(d, s) {
+                        var j, e = d.getElementsByTagName(s)[0];
+                        if (typeof LivereTower === 'function') { return; }
+                        j = d.createElement(s);
+                        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                        j.async = true;
+                        e.parentNode.insertBefore(j, e);
+                    })(document, 'script');
+                </script>
+            <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+            </div>
+            <% } %>
+
+            <% if(theme.comments.giscus.enable) { %>
+            <script src="https://giscus.app/client.js"
+                data-repo="<%= theme.comments.giscus.repo %>"
+                data-repo-id="<%= theme.comments.giscus.repoId %>"
+                data-category="<%= theme.comments.giscus.repoId %>"
+                data-category-id="<%= theme.comments.giscus.categoryId %>"
+                data-mapping="<%= theme.comments.giscus.mapping %>"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="<%= theme.comments.giscus.inputPosition %>"
+                data-theme="<%= theme.comments.giscus.theme %>"
+                data-lang="<%= theme.comments.giscus.lang %>"
+                crossorigin="anonymous"
+                async>
+            </script>
+            <% } %>
+
+
         <% } %>
         
         <div class="post-change">

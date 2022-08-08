@@ -1,23 +1,22 @@
 // $markdown
 .post, .excerpt, .page
+    font-size: 16px
+    line-height: 24px
     h2
         font-size: 24px
     h3
         font-size: 20px
     h4, h5, h6
         font-size: 18px
-    p
-        font-size: 16px
-        line-height: 24px
     a
-        border-bottom: 1px solid var(--blur-color)
+        border-bottom: 1px solid rgba(0,0,0,.2)
         background-color: $markdown-a-background
         transition: all 0.25s ease
         text-decoration: none
         color: #4a4a4a
         &:hover
             background-color: $markdown-a-hoverBackground
-            border-bottom-color: var(--full-color)
+            border-bottom-color: #333
             color: #333
     .clear-markdwon-a
         a
@@ -91,18 +90,21 @@
         svg
             font-family: Roboto Mono, JetBrains Mono, microsoft yahei, consolas, sans-serif
     > table
-        border-collapse: collapse
-        max-width: 100%
+        // border-collapse: collapse
+        width: 100%
         margin: 10px auto
-        color: #1a1a1a
+        color: var(--text-color)
+        border: 1px solid var(--table-border-color)
+        border-radius: 5px
         thead
-            background-color: $markdown-table-color
+            background-color: var(--table-thead-bg)
         tr
+            th
+                text-align: center
             td, th
-                border: 1px solid $markdown-table-border-color
                 padding: 5px
             &:nth-child(2n)
-                background-color: $markdown-table-tr-color
+                background-color: var(--table-tr-bg)
     li>code, p code, &>table code, h1>code, h2>code, h3>code, h4>code,h5>code
         color: $inline-code-color
         background-color: $inline-code-bg-color

@@ -1,14 +1,28 @@
+<% 
+    page.date.locale(config.language);
+%>
 <div class="page-body page-shadow">
     <section class="page">
         <div class="page-title" <% if(page.font) { %> style="font: <%= page.font %> <% } %>">
-            <%- page.title || page.link %>
+            <h1><%- page.title || page.link %></h1>
         </div>
-        <p class="blog-page-info">
-            <span><%= page.date.format(config.date_format) %></span>
+        <div class="blog-post-info">
+            <div class="post-author-count">
             <% if(page.author) { %>
-            | <span><%- page.author %></span>  
+                <%= page.author %>  ·
             <% } %>
-        </p>
+            <%= __("postInfo.count", wordcount(page.content)) %>,  
+            <%= __("postInfo.need", min2read(page.content)) %>
+            </div>
+
+            <% if(page.date) { %>
+                <div class="post-publish-date">
+                    <%= __("postInfo.publish") %>：
+                    <%= page.date.format(config.date_format) %>
+                    <%= page.date.format(config.time_format) %>
+                </div>
+            <% } %>
+        </div>
         <%- page.content %>
 
         <% if(page.comments) { %>
@@ -117,6 +131,38 @@
                     template: `<vssue :title="title" :options="options"></vssue>`,
                 })
                 </script>
+            <% } %>
+            <% if(theme.comments.livere.enable) { %>
+                <div id="lv-container" data-id="city" data-uid="<%= theme.comments.livere.dataUid %>">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+                            if (typeof LivereTower === 'function') { return; }
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+            <% } %>
+            <% if(theme.comments.giscus.enable) { %>
+            <script src="https://giscus.app/client.js"
+                    data-repo="<%= theme.comments.giscus.repo %>"
+                    data-repo-id="<%= theme.comments.giscus.repoId %>"
+                    data-category="<%= theme.comments.giscus.category %>"
+                    data-category-id="<%= theme.comments.giscus.categoryId %>"
+                    data-mapping="<%= theme.comments.giscus.mapping %>"
+                    data-strict="0"
+                    data-reactions-enabled="1"
+                    data-emit-metadata="0"
+                    data-input-position="<%= theme.comments.giscus.inputPosition %>"
+                    data-theme="<%= theme.comments.giscus.theme %>"
+                    data-lang="<%= theme.comments.giscus.lang %>"
+                    crossorigin="anonymous"
+                    async>
+            </script>
             <% } %>
         <% } %>
 

@@ -61,9 +61,6 @@ startTime: "2021-11-01T00:00:00"
 #
 # --------------------------------------------------------- #
 markdown_style:
-  table_color: "#eee"
-  table_tr_color: "#fafafa"
-  table_border_color: "#eee"
   # 代码块样式 
   ## 可选：one light | one dark | github | github dark | monokai | solarized light | solarized dark
   ## 想要更多样式？提交issue：https://github.com/can-dy-jack/hexo-theme-delicate
@@ -80,12 +77,12 @@ markdown_style:
     bgcolor: 'rgba(0, 0, 0, .1)'
     color: '#27c93f'
   toc:
-    color: rgb(37, 175, 243)
-    list_bg: rgba(37, 175, 243, 0.2)
-    item_bg: rgba(37, 175, 243, 0.1)
+    color: rgb(208, 0, 88)
+    list_bg: rgba(255, 213, 228, .5)
+    item_bg: rgba(255, 213, 228, .3)
 
 color:
-  # a标签颜色
+  # a标签颜色, 基本色
   a: "#34ae56"
   # 选中的文本颜色
   selection: "rgba(255, 165, 0, .2)"
@@ -223,9 +220,9 @@ comments:
     # 然后需要创建 GitHub Application，如果没有 点击 https://github.com/settings/applications/new 申请
     # Authorization callback URL 填写当前使用插件页面的域名。
     # 获取生成的 clientID 、clientSecret
-    enable: true
-    clientID: 3840ec0cdaaa9b3a1965
-    clientSecret: 906226e5e16a43936cfa9e0c4566d541ef95ecd3
+    enable: false
+    clientID: 
+    clientSecret: 
     repo: delicate
     owner: can-dy-jack
     # 支持 [en, zh-CN, zh-TW, es-ES, fr, ru, de, pl, ko, fa, ja]
@@ -249,6 +246,27 @@ comments:
     clientSecret: 
     repo: delicate
     owner: can-dy-jack
+  livere:
+    # https://livere.com/ 来必力City版
+    enable: false
+    dataUid:
+  giscus: 
+    # A comment system powered by GitHub Discussions. 
+    # https://giscus.app/
+    # 确保： 
+    ## 此仓库是公开的
+    ## 此仓库 giscus app 已安装
+    ## Discussions功能已在你的仓库中启用。 
+    enable: true
+    # 注意：JSON Viewer相关浏览器插件会影响该评论系统的显示
+    repo: can-dy-jack/delicate
+    repoId: R_kgDOGVfGBw
+    category: Q&A
+    categoryId: DIC_kwDOGVfGB84CQqqh
+    mapping: title
+    inputPosition: top # top | bottom
+    theme: light
+    lang: zh-CN
 
 
 # --------------------------------------------------------- #
@@ -262,4 +280,3 @@ CDN:
   gitalkStyle: https://unpkg.com/gitalk/dist/gitalk.css
   gitmentStyle: https://imsun.github.io/gitment/style/default.css
   vssueStyle: https://unpkg.com/vssue/dist/vssue.min.css
-

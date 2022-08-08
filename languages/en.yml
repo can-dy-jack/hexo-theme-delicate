@@ -51,3 +51,12 @@ reprint:
   reprint_link: here is the original address.
 
 contents: contents
+statement: 
+  left: All articles in this blog are based on 
+  right: protocol. Please indicate the source for reprinting.
+postInfo: 
+  author: author
+  count: "%s words in total"
+  need: It takes %s minutes
+  publish: Posted on
+  update: Updated on

@@ -87,7 +87,7 @@ delicate.markdown = {
     }
   },
 
-  initPullquoteStyle: function () {
+  initPullquoteStyle: function initPullquoteStyle() {
     const pullquote = $(".pullquote");
     for (let j = 0; j < pullquote.length; j++) {
       const svg =
@@ -96,6 +96,15 @@ delicate.markdown = {
       span.classList.add("pullquote-icon");
       span.innerHTML = svg;
       pullquote[j].appendChild(span);
+    }
+  },
+
+  initPostTextIndex: function initTextIndex() {
+    const pNodes = document.querySelectorAll(".post>p");
+    for(const p of pNodes) {
+      if(p.classList.length === 0 && (p.children.item(0) == null || p.getElementsByTagName("img").length === 0)) {
+        p.style.textIndent = "2em";
+      }
     }
   }
 };

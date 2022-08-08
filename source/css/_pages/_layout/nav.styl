@@ -24,7 +24,6 @@
             margin-right: 5px
     .nav-container
         flex: 1
-        // background: #fff
         display: flex
         align-items: center
         box-sizing: border-box
@@ -41,14 +40,18 @@
                 height 40px
                 margin 0
                 line-height: 40px
+                color: var(--text-color)
                 display: inline-block
                 &:hover
                     background-color: var(--main-hover-bg)
+                    color: $a-hover-color
         .nav-link
             a
+                color: var(--text-color)
                 margin: 0 2px
+                &:hover
+                    color: $a-hover-color
     .nav-control
-        // background-color: pink
         position: relative
         display: flex;
         z-index: 10

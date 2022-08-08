@@ -22,14 +22,18 @@
         </a>
     </h1>
     <p class="excerpt-meta">
-        <span><%= item.date.format(config.date_format) %></span>
+        <span>
+            <% item.date.locale(config.language) %>
+            <%= item.date.format(config.date_format) %>
+            | 
+        </span>
         <span>
             <% if(item.author) { %>
-                | <%- item.author %>
+                <%- item.author %> · 
             <% } %>
         </span>
-        <span class="post-count"><%= wordcount(item.content) %>字</span>
-        <span class="post-count"><%= min2read(item.content) %>分钟</span>
+        <span class="post-count"><%= __("postInfo.count", wordcount(item.content)) %>, </span>
+        <span class="post-count"><%= __("postInfo.need", min2read(item.content)) %></span>  
     </p>
     <% if(item.reprint) { %>
         <p class="reprint post-alert">

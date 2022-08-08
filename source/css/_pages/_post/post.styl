@@ -82,10 +82,6 @@
             width: 6px
             height: 6px
             border-radius: 50%
-        &:hover::before
-            border-right-color: var(--main-border-color)
-        &:hover
-            background-color: var(--main-border-color)
 
 .glyphicon-tags
     fill: rgb(12, 197, 12)
@@ -122,10 +118,6 @@
             width: 6px
             height: 6px
             border-radius: 50%
-        &:hover::before
-            border-right-color: var(--main-border-color)
-        &:hover
-            background-color: var(--main-border-color)
 
 .glyphicon-folder-open
     fill: blue
@@ -162,12 +154,12 @@
     .post-next
         margin-left: auto
 
-/* post markdown */
-.post
+.post, .page
     .post-title
-        font-size: 26px
         text-align: center
+        h1
+            font-size: 2em
     .blog-post-info
+        color: var(--text-color)
         text-align: center
-        color: gray
-        margin-bottom: 20px
+        margin 20px
