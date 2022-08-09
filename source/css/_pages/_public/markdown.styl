@@ -37,9 +37,10 @@
     li
         line-height: 1.6em
     img
-        box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.03)
+        // box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.03)
         border-radius: 10px
         margin: 10px 0
+        cursor: zoom-in
     blockquote:not(.pullquote)
         border-left: $markdown-blockquote-borderLeftWidth solid $markdown-blockquote-borderLeftColor
         margin: 10px 0
@@ -89,13 +90,14 @@
         box-sizing: border-box
         svg
             font-family: Roboto Mono, JetBrains Mono, microsoft yahei, consolas, sans-serif
-    > table
+    >table, .collapse-text>table, .toasts-content>table
         // border-collapse: collapse
         width: 100%
         margin: 10px auto
         color: var(--text-color)
         border: 1px solid var(--table-border-color)
         border-radius: 5px
+        background-color: var(--main-bg)
         thead
             background-color: var(--table-thead-bg)
         tr
@@ -103,8 +105,11 @@
                 text-align: center
             td, th
                 padding: 5px
-            &:nth-child(2n)
+        tbody
+            tr:nth-child(2n)
                 background-color: var(--table-tr-bg)
+            tr:nth-child(2n+1)
+                background-color: var(--main-bg)
     li>code, p code, &>table code, h1>code, h2>code, h3>code, h4>code,h5>code
         color: $inline-code-color
         background-color: $inline-code-bg-color
@@ -116,3 +121,41 @@
         text-align: center
     .mermaid
         text-align: center
+
+.img-container
+    position: fixed;
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 1000
+    display: none
+    transform-origin: center
+    .img-bg
+        position: fixed;
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 1001
+        cursor: zoom-out
+        background-color: rgba(0,0,0,.5)
+    .img-inner-box
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        padding 20px
+        box-sizing: border-box
+        cursor: zoom-out
+        img
+            cursor: move
+            transition: all 0.5s cubic-bezier(1,0,0,1)
+            transform: scale(0)
+            z-index: 1002
+            max-height: calc(100% - 40px)
+            max-width: 95%

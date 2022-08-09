@@ -4,6 +4,7 @@ delicate.boot = {
         delicate.markdown.init_codeCopy();
         delicate.markdown.initPullquoteStyle();
         delicate.markdown.initPostTextIndex();
+        delicate.markdown.initZoomImages();
     },
     registerEvents: function registerEvents() {
         const start_time = document.getElementById("start-time");

@@ -53,22 +53,16 @@ main
     text-align: right
     a
         display: inline-block
-        padding: 4px
-        border-bottom: 1px solid #aaa
-        border-radius: 2px
-        margin: 10px 0
-        position: relative
-        &::after
-            content: ''
-            position: absolute
-            top: 0
-            bottom: 0
-            right: 0
-            left: 0
-            background-color: rgba(0, 0, 0, 0.2)
-            transition: transform 0.6s ease
-            transform: scaleY(0)
-            transform-origin: top
-        &:hover::after
-            transform: scaleY(1)
-            transform-origin: bottom
+        letter-spacing: 2px
+        color: $a-hover-color
+        padding 5px 10px
+        font-weight: 900
+        background-color: var(--main-bg);
+        border: 3px solid $a-hover-color
+        box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0;
+        position: relative;
+        border-radius: 5px
+        &:active
+            top: 3px;
+            left: 3px;
+            box-shadow:0 0 0 0;
