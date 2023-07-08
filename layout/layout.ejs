@@ -1,11 +1,49 @@
 <!DOCTYPE html>
+
 <html lang="<%- config.language %>">
+
 <%- include('partial/head') %>
+
 <body id="delicate-app">
-    <header></header>
     <main>
-        <%- body %>
+        <div class="container">
+            <section class="page-top-badge">
+                <a href="#">
+                    <%# TODO %>
+                    <span title="change mode"><i class="fa fa-sun-o" aria-hidden="true"></i></span>
+                    <!-- <span title="change mode"><i class="fa fa-moon-o" aria-hidden="true"></i></span> -->
+                </a>
+                <a href="<%- theme.github %>">
+                    <span title="github"><i class="fa fa-github" aria-hidden="true"></i></span>
+                </a>
+            </section>
+            <%- body %>
+            <section class="article-bottom flex-between">
+                <div class="flex-center">
+                    <%- image_tag('imgs/logo.png', {
+                        class: 'logo'
+                    }) %>
+                    <span><%- theme.poem %></span>
+                </div>
+                <div class="flex-center">
+                    <a href="#" style="margin-right: 10px;">
+                        <%# TODO %>
+                        <span><i class="fa fa-envelope" aria-hidden="true"></i> 联系</span>
+                    </a>
+                    <a href="#">
+                        <%# TODO %>
+                        <span><i class="fa fa-rss" aria-hidden="true"></i> RSS</span>
+                    </a>
+                </div>
+            </section>
+        </div>
     </main>
-    <footer></footer>
+
+    <footer>
+        <%- include('partial/footer') %>
+    </footer>
+
+    <%- include('partial/foot') %>
 </body>
+
 </html>

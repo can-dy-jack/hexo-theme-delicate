@@ -1,9 +1,35 @@
-menus: 
-  主页: /
-  关于: /about
+### ----------------------------------------------------
+#  通用配置
+### ----------------------------------------------------
+# 右上角github地址
+github: https://github.com/can-dy-jack/hexo-theme-delicate
+# 主题颜色
+color: "#0aa344"
+# 页面slogan
+poem: "长风破浪会有时，直挂云帆济沧海"
 
-links:
-  博客园: https://www.cnblogs.com/yyhh/
-  github: https://github.com
+### ----------------------------------------------------
+#  首页配置
+### ----------------------------------------------------
+# 首页图片地址
+imgURL: imgs/beach.jpg
+
+### ----------------------------------------------------
+#  markdown配置
+### ----------------------------------------------------
+code:
+  # 需要先在根配置文件里开启highlight
+  highlight:
+    enable: true
+    bg: "#fff"
+
+### ----------------------------------------------------
+#  CDN
+### ----------------------------------------------------
+CDN:
+  fontawesome: https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css
+  # 需要在根配置文件里开启highlight，并在本文件里开启highlight
+  ## 需要自己根据CDN内的文件进行根目录下和主题下的 highlight 相关配置。例如 hljs、bg等
+  highlight: https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/github.css
 
 

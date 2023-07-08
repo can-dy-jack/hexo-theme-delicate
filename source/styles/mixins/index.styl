@@ -1,0 +1,19 @@
+border-radius()
+  vendor('border-radius', arguments)
+
+box-shadow()
+  -webkit-box-shadow arguments
+  -moz-box-shadow arguments
+  box-shadow arguments
+  html.ie8 &,
+  html.ie7 &,
+  html.ie6 &
+    border 2px solid arguments[length(arguments) - 1]
+
+transition()
+  vendor('transition', arguments)
+
+text-size-adjust()
+    -webkit-text-size-adjust arguments
+    -ms-text-size-adjust arguments
+    text-size-adjust arguments

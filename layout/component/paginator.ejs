@@ -1,0 +1,12 @@
+<div class="pagination">
+    <div class="paginator">
+        <%- paginator({
+            prev_text: '<i class="fa fa-caret-left" aria-hidden="true"></i>',
+            next_text: '<i class="fa fa-caret-right" aria-hidden="true"></i>',
+            escape: false
+        }) %>
+    </div>
+    <div class="paginator-info">
+        <span class="gray"><%- __('paginator.total', total) %></span>
+    </div>
+</div>

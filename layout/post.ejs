@@ -1,1 +1,37 @@
-post page
+<article class="markdown-container">
+    <section>
+        <h1><%- page.title %></h1>
+    </section>
+    <section class="article">
+        <%- page.content %>
+    </section>
+
+    <section style="background-color: #f3cd63; padding: 20px;margin: 20px 0;">
+        本博客所有文章均采用 CC BY-SA 4.0 协议 ，转载请注明出处。 
+    </section>
+
+    <section class="flex-between" style="margin: 20px 0;">
+        <div class="pre">
+            <% if (page.prev){ %>
+                <a href="<%- url_for(page.prev.path) %>" class="change-link">
+                    <span class="icon"><i class="fa fa-angle-double-left"></i></span>
+                    <span class="text">
+                        <span class="identify">上一篇</span>
+                        <span class="text-title"><%- page.prev.title %></span>
+                    </span>
+                </a>
+            <% } %>
+        </div>
+        <div class="next">
+            <% if (page.next){ %>
+                <a href="<%- url_for(page.next.path) %>" class="change-link">
+                    <span class="text">
+                        <span class="identify" style="text-align: right;">下一篇</span>
+                        <span class="text-title" style="text-align: right;"><%- page.next.title %></span>
+                    </span>
+                    <span class="icon"><i class="fa fa-angle-double-right"></i></span>
+                </a>
+            <% } %>
+        </div>
+    </section>
+</article>
