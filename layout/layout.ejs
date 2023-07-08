@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<html lang="<%= config.language %>">
-<%- partial('_partial/head') %>
-
-<body>
-  <nav>
-    <%- partial('_partial/nav') %>
-  </nav>
-  <main>
-    <%- body %>
-  </main>
-  <footer class="foot">
-    <%- partial('_partial/footer') %>
-  </footer>
-  <%- partial('_partial/script') %>
+<html lang="<%- config.language %>">
+<%- include('partial/head') %>
+<body id="delicate-app">
+    <header></header>
+    <main>
+        <%- body %>
+    </main>
+    <footer></footer>
 </body>
-
 </html>
