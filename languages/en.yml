@@ -1,62 +1,8 @@
-nav:
-  home: home
-  archives: archive
-  about: about
-  tags: tags
-  categories: categories
-  more: menu
+# paginator
+paginator:
+  total: "%d articles in total"
 
-index:
-  pagination:
-    prev: prev
-    next: next
-    total: total
-
-archive:
-  title: "%d post(s) in total."
-
-post:
-  share: share
-
-tags:
-  title: tagcloud
-  len: "%d tag(s) in total."
-
-tag:
-  title: tag
-  h1: "%d post(s) in total."
-
-categories:
-  title: categories
-
-category:
-  title: category
-  h1: "%d post(s) in total."
-
-more: read more
-
-page404:
-  title: Page not found
-  subtitle: We could not find what you were looking for.
-  warning: Please contact the owner of the site that linked you to the original URL and let them know their link is broken.
-  step1: Will jump to the index page in 
-  step2: seconds
-
-search:
-  search: "type text to search"
-  localsearch: "local search"
-
-reprint:
-  reprint_info: This article is reprinted  
-  reprint_link: here is the original address.
-
-contents: contents
-statement: 
-  left: All articles in this blog are based on 
-  right: protocol. Please indicate the source for reprinting.
-postInfo: 
-  author: author
-  count: "%s words in total"
-  need: It takes %s minutes
-  publish: Posted on
-  update: Updated on
+# index
+home: home
+archive: archive
+tag: tag

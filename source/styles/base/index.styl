@@ -1,0 +1,170 @@
+// 基础样式
+body, html
+    padding 0
+    margin 0
+    font font-size font-family
+    line-height font-line
+    display flex
+    flex-direction column
+    min-height 100vh
+    background #e8e0c9
+
+img
+    max-width 100%
+    margin: 10px 0
+
+a
+    color $color
+    text-decoration none
+    transition 260ms
+    &:hover
+        color #080808
+        text-decoration none
+
+.flex-between
+    display flex
+    align-items center
+    justify-content space-between
+    flex-wrap wrap
+
+.flex-center
+    display flex
+    align-items center
+    gap 10px
+
+.logo
+    width: 22px
+
+.gray
+    color: gray
+
+.fa-envelope
+    margin-right 10px
+    &::before
+        margin-right 5px
+
+// 布局样式
+main 
+    margin 10px
+    flex 1
+    display flex
+
+footer
+    flex 0 0 50px
+    text-align center
+    margin 10px
+    font-size 0.9em
+
+.container
+    width clamp(400px, 70%, 800px)
+    margin 0 auto
+    background: #fbf4e2
+    min-height 100%
+    padding 20px 0 80px 0
+    box-sizing border-box
+    border-radius 6px
+    box-shadow 0 0 15px 5px rgba(0, 0, 0, 0.16)
+    position: relative
+
+.page-top-badge 
+    position: absolute
+    top 10px
+    right 20px
+    font-size 1.2rem
+
+// change-link
+.change-link
+    display: inline-block
+    padding 8px 16px
+    border 1px solid #bbb
+    border-radius 5px
+    display flex
+    align-items center
+    gap 10px
+    max-width 200px
+    min-width 100px
+    &:hover
+        border-color $color
+    .icon
+        font-size 1.2rem
+    .text
+        display flex
+        flex-direction column
+        line-height 1.5
+        .text-title
+            overflow hidden
+            text-overflow ellipsis
+            white-space nowrap
+            max-width 180px
+        .identify
+            font-size 0.6rem
+            color #999
+
+// paginator
+.paginator
+    display flex
+    align-items center
+    margin 10px
+    justify-content center
+    :first-child
+        border-radius 2px 0 0 2px
+    :last-child
+        border-radius 0 2px 2px 0
+    a, span
+        display inline-block
+        padding 4px 12px
+        transition: all 300ms
+    .current
+        background rgba($color, .2)
+        color $color
+    .page-number:hover, .extend:hover
+        background rgba($color, .2)
+.paginator-info
+    text-align center
+    font-size 0.8em
+
+// animation
+.fancy-color {
+    animation: changeColor 30s infinite both;
+}
+@keyframes changeColor {
+    0% {
+        color: #ED5564;
+    }
+
+    10% {
+        color: #FB6E52;
+    }
+
+    20% {
+        color: #FFCE55;
+    }
+
+    30% {
+        color: #A0D468;
+    }
+
+    40% {
+        color: #48CFAE;
+    }
+
+    50% {
+        color: #4FC0E8;
+    }
+
+    60% {
+        color: #5D9CEC;
+    }
+
+    70% {
+        color: #AC92ED;
+    }
+
+    80% {
+        color: #EC87BF;
+    }
+
+    90% {
+        color: #ED5564;
+    }
+}

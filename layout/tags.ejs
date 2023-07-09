@@ -1,24 +1,26 @@
-<%
-  page.layout = "tags"
-  page.title = theme.tags.title || __('tags.title')
+<% 
+    page.layout = "tags";
+    page.title = "Tags";
 
-  var min_font = theme.tags.min_font || 14,
-      max_font = theme.tags.max_font || 30,
-      unit = theme.tags.unit || 'px',
-      amount = theme.tags.amount || 900,
-      start_color = theme.tags.start_color || '#BBBBEE',
-      end_color = theme.tags.end_color || '#337ab7';
+    let min_font = 14,
+      max_font = 30,
+      unit = 'px',
+      amount = 900,
+      start_color = "#70f3ff",
+      end_color = "#003472";
 %>
 
 <section class="tags">
-<h1><%= __("tags.len", site.tags.length ) %></h1>
-  <%- tagcloud({
-    min_font: min_font,
-    max_font: max_font,
-    amount: 999,
-    unit: unit,
-    color: true,
-    start_color,
-    end_color
-  }) %>
+    <h1>共<%= site.tags.length %>个标签</h1>
+    <div class="tags-list">
+        <%- tagcloud({
+            min_font: min_font,
+            max_font: max_font,
+            amount: 999,
+            unit: unit,
+            color: true,
+            start_color,
+            end_color
+        }) %>
+    </div>
 </section>

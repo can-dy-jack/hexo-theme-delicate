@@ -1,35 +1,11 @@
-<%
-    page.layout = "404";
-    page.title = theme.page404.title || __('page404.title');
-    var subtitle = theme.page404.subtitle || __('page404.subtitle');
-    var warning = theme.page404.warning || __('page404.warning');
-    var startTime = theme.page404.startTime || 3;
-%>
-
-<div class="page-404">
-    <h1><%= page.title %></h1>
-    <h3><%= subtitle %></h3>
-    <p><%= warning %></p>
-    <p><%= __('page404.step1') %> <span id="page404-time"><%= startTime %></span> <%= __('page404.step2') %></p>
-</div>
-
-<script>
-    const time = document.getElementById("page404-time");
-
-    function redirect() {
-        location.href = "/";
-    }
-
-    function return2index(startTime = 3) {
-        for(let i = 1;i<startTime;i++){
-            setTimeout(()=>{
-                time.innerText = startTime - i;
-            },1000*i);
-        }
-        setTimeout(()=>{
-            redirect();
-        },1000*startTime);
-    }
-
-    return2index(+time.innerText);
-</script>
+<section class="page404" style="margin: 50px 0;">
+    <h1 style="text-align: center;font-size: 3rem;" class="fancy-color">404</h1>
+    <p style="text-align: center;">
+        <span> Ops! Page is not found! </span>
+        |
+        <a href="<%- url_for("/") %>">go back to home!</a>
+    </p>
+    <p>
+        <%- image_tag("imgs/404.png") %>
+    </p>
+</section>

@@ -1,0 +1,8 @@
+# paginator
+paginator:
+  total: "共%d篇文章"
+
+# index
+home: "首页"
+archive: "归档"
+tag: 标签

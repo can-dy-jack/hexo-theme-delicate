@@ -1,0 +1,26 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%- page.title || config.title %></title>
+
+    <%# meta info %>
+    <meta name="description" content="<%= config.description %>">
+    <meta name="keywords" content="<%= config.keywords.join(",") %>">
+    <meta name="author" content="<%= config.author %>">
+
+    <meta name="color-scheme" content="light dark">
+
+    <%# style %>
+    <%- css('styles/index.css') %>
+    <%# favicon %>
+    <%- favicon_tag('imgs/logo.png') %>
+
+    <%# CDN %>
+    <link rel="stylesheet" href="<%- theme.CDN.fontawesome %>">
+    <%# 代码高亮 %>
+    <% if (config.highlight.enable) { %>
+        <link rel="stylesheet" href="<%- theme.CDN.highlight %>">
+    <% } else if (config.prismjs.enable) { %>
+        <link rel="stylesheet" href="<%- theme.CDN.prismjs %>">
+    <% } %>
+</head>

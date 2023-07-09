@@ -1,16 +1,1 @@
-<%
-    page.layout = "category"
-    page.title = [__('category.title'), page.category].join(" - ")
-
-    var cat = site.categories.find({name: page.category}).filter(cat => cat.length).data[0];
-    var postTotal = cat ? cat.posts.length : 0
-%>
-
-<section class="category">
-    <h2 class="category-head"><%= page.category %> - <%= __('category.h1', postTotal) %></h2>
-    
-    <%- partial('components/list.ejs') %>
-
-    <%- partial('components/pagination', {item: page}) %>
-</section>
-
+category pages

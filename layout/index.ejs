@@ -1,60 +1,34 @@
-<%
-    page.title = config.title
-%>
-<div class="index-header">
-    <h1 class="index-title">
-        <div id="index-title-box"><%= theme.index.title %></div>
-    </h1>
-    <p class="index-description">
-        <% if (config.subtitle){ %>
-            <%- config.subtitle %>
+<section class="index-title">
+    <h2><%- config.title %></h2>
+    <div class="description"><%- config.description %></h3>
+</section>
+<header>
+    <%# TODO %>
+    <nav>
+        <a href="/"><%- __('home') %></a>
+        <% for(link in theme.index.links) { %>
+             | <a href="<%- url_for(theme.index.links[link]) %>"><%- __(link) %></a>
         <% } %>
-    </p>
+    </nav>
+</header>
+<div class="head-img">
+    <%- image_tag('imgs/beach.jpg') %>
 </div>
+<article class="index-article">
+    <ul>
+        <% for (post of page.posts.data) { %>
+            <li>
+                <div class="flex-between">
+                    <span>
+                        <a href="<%- url_for(post.path) %>">
+                            <%= post.title %>
+                        </a>
+                    </span>
+                    <span class="gray"><%= post.date.format("YYYY/MM/DD") %></span>
+                </div>
+            </li>
+        <% } %>
+    </ul>
 
-<%# 文章列表 %> 
-<div class="article-container">
-<% page.posts.each(function(item){ %>
-<article class="excerpt-container">
-    <h1 class="excerpt-title">
-        <a href="<%- config.root %><%- item.path %>">
-            <%- item.title %>
-        </a>
-    </h1>
-    <p class="excerpt-meta">
-        <span>
-            <% item.date.locale(config.language) %>
-            <%= item.date.format(config.date_format) %>
-            | 
-        </span>
-        <span>
-            <% if(item.author) { %>
-                <%- item.author %> · 
-            <% } %>
-        </span>
-        <span class="post-count"><%= __("postInfo.count", wordcount(item.content)) %>, </span>
-        <span class="post-count"><%= __("postInfo.need", min2read(item.content)) %></span>  
-    </p>
-    <% if(item.reprint) { %>
-        <p class="reprint post-alert">
-            <span class="reprint-badge transition">
-                <%= __("reprint.reprint_info") %> 
-            </span>
-            <% if(item.reprintLink) { %>
-                <a href="<%= item.reprintLink %>"><%= __("reprint.reprint_link") %></a>
-            <% } %>
-        </p>
-    <% } %>
-    
-    <div class="excerpt"> <%- item.excerpt || item.content %> </div>
-    <div class="excerpt-more transition">
-        <a href="<%- config.root %><%- item.path %>">
-            <%= theme.index.excerpt.text %> 
-        </a>
-    </div>
+    <%- partial('component/paginator', { total: site.posts.length }) %>
 </article>
-<hr/>
-<% }); %>
-</div>
-<%# 分页 %>
-<%- partial('components/pagination', {item: page}) %>

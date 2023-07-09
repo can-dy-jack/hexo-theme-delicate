@@ -1,15 +1,13 @@
-<%
-    page.layout = "tag"
-    page.title = [__('tag.title'), page.tag].join(" - ")
-
-    var tag = site.tags.find({name: page.tag}).filter(tag => tag.length).data[0]
-    var postTotal = tag ? tag.posts.length : 0;
-%>
-
-<section class="tag">
-    <h2 class="tag-head"><%= page.tag %> - <%= __('tag.h1', postTotal) %></h2>
-    
-    <%- partial('components/list.ejs') %>
-
-    <%- partial('components/pagination', {item: page}) %>
+<section class="tag-container">
+    <h1 class="tag-title"><%- page.tag %> - 共<%- page.posts.length %>篇文章</h1>
+    <article class="tag-list">
+        <% for (post of page.posts.data) { %>
+            <a href="<%- url_for(post.path) %>" class="tag-item">
+                <div class="flex-between" title="<%- post.title %>">
+                    <span><%- post.title %></span>
+                    <span><%- post.date.format("YYYY/MM/DD") %></span>
+                </div>
+            </a>
+        <% } %>
+    </article>
 </section>

@@ -1,0 +1,56 @@
+.description
+    color gray
+
+nav
+    text-align end
+
+.index-title, .index-article, nav 
+    margin 0 50px
+
+.article-bottom
+    border-top 1px solid #cecece
+    padding 10px 50px
+    position absolute
+    bottom 20px
+    left 0
+    width 100%
+    box-sizing border-box
+
+.post-cc
+    background rgba(255, 0, 0, .1)
+    color red
+    padding 10px 20px
+    margin 20px 0
+    border-radius 5px
+    text-align center
+
+$tag-color = #177cb0
+.post-tag
+    margin-top 40px
+    display flex
+    flex-wrap wrap
+    gap 20px
+    a
+        color $tag-color
+    .tag-item
+        background rgba($tag-color, .1)
+        position relative
+        display inline-block
+        height 26px
+        line-height 26px
+        padding 0 10px 0 5px
+        &::before
+            content ""
+            position absolute
+            top 0
+            left -26px
+            width 0
+            height 0
+            background transparent
+            border 13px solid transparent
+            border-right 13px solid rgba($tag-color, .1)
+        &:hover
+            background rgba($tag-color, .2)
+            &::before
+                border-right-color rgba($tag-color, .2)
+

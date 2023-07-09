@@ -1,0 +1,31 @@
+-pos(type, args)
+  i = 0
+  position: unquote(type)
+  {args[i]}: args[i + 1] is a 'unit' ? args[i += 1] : 0
+  {args[i += 1]}: args[i + 1] is a 'unit' ? args[i += 1] : 0
+
+// 封装 hexo-config() - 用于导入主题配置 _config.yml
+get-config(config, default)
+  convert(hexo-config(config) ? hexo-config(config) : default)
+
+unquote-config(config, default)
+  unquote(hexo-config(config) ? hexo-config(config) : default)
+
+s-config(config)
+  s(hexo-config(config))
+
+s-defalut(config, default)
+  s(hexo-config(config) ? hexo-config(config) : default)
+
+fix-it()
+  position: arguments
+  z-index: 100 unless @z-index // 默认的 z-index
+
+// 供应商前缀
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  -o-{prop} args
+  -ms-{prop} args
+  {prop} args
+

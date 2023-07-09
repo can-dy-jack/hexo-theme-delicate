@@ -1,18 +1,51 @@
 <!DOCTYPE html>
-<html lang="<%= config.language %>">
-<%- partial('_partial/head') %>
 
-<body>
-  <nav>
-    <%- partial('_partial/nav') %>
-  </nav>
-  <main>
-    <%- body %>
-  </main>
-  <footer class="foot">
-    <%- partial('_partial/footer') %>
-  </footer>
-  <%- partial('_partial/script') %>
+<html lang="<%- config.language %>">
+
+<%- include('partial/head') %>
+
+<body id="delicate-app">
+    <main>
+        <div class="container">
+            <section class="page-top-badge">
+                <a href="<%- url_for("/") %>">
+                    <span title="github"><i class="fa fa-home" aria-hidden="true"></i></span>
+                </a>
+                <a href="#">
+                    <%# TODO %>
+                    <span title="change mode"><i class="fa fa-sun-o" aria-hidden="true"></i></span>
+                    <!-- <span title="change mode"><i class="fa fa-moon-o" aria-hidden="true"></i></span> -->
+                </a>
+                <a href="<%- theme.github %>">
+                    <span title="github"><i class="fa fa-github" aria-hidden="true"></i></span>
+                </a>
+            </section>
+            <%- body %>
+            <section class="article-bottom flex-between">
+                <div class="flex-center">
+                    <%- image_tag('imgs/logo.png', {
+                        class: 'logo'
+                    }) %>
+                    <span><%- theme.poem %></span>
+                </div>
+                <div class="flex-center">
+                    <%- mail_to(theme.email, 'Email', {
+                        class: 'fa fa-envelope'
+                    }) %>
+                    <a href="#">
+                        <%# TODO %>
+                        <span><i class="fa fa-rss" aria-hidden="true"></i> RSS</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('partial/footer') %>
+    </footer>
+
+    <%- include('partial/foot') %>
 </body>
 
 </html>
