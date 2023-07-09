@@ -114,15 +114,36 @@
         //     display table
         //     clear both
         //     content ""
-        // table 
-        //     border-spacing 0
-        //     border-collapse collapse
-        //     display block
-        //     width max-content
-        //     max-width 100%
-        //     overflow auto
-        // td, th 
-        //     padding 0
+        table 
+            border-spacing 0
+            border-collapse collapse
+            // display block
+            width 100%
+            max-width 100%
+            overflow auto
+        table th 
+            font-weight 600
+        table th,
+        table td 
+            padding 6px 13px
+            border 1px solid #d0d7de
+        table tr 
+            background-color #fbf4e2
+            border-top 1px solid hsla(210,18%,87%,1)
+        table tr:nth-child(2n) 
+            background-color #f3edd9
+        table img 
+            background-color transparent
+        // 避免影响代码块 
+        .highlight 
+            table td 
+                padding 0
+                border none
+            table tr 
+                border none
+                background none
+        td, th 
+            padding 0
         details summary 
             cursor pointer
         details:not([open])>*:not(summary) 
@@ -333,19 +354,6 @@
         dl dd 
             padding 0 16px
             margin-bottom 16px
-        // table th 
-        //     font-weight 600
-        // table th,
-        // table td 
-        //     padding 6px 13px
-        //     border 1px solid #d0d7de
-        // table tr 
-        //     background-color #ffffff
-        //     border-top 1px solid hsla(210,18%,87%,1)
-        // table tr:nth-child(2n) 
-        //     background-color #f6f8fa
-        // table img 
-        //     background-color transparent
         img[align=right] 
             padding-left 20px
         img[align=left] 
