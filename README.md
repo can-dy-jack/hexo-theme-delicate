@@ -7,5 +7,6 @@
 
 ## TODO
 - 样式整理，颜色变量、黑暗模式
-- stylus函数、基本样式、mixins
-- 
+- stylus 函数、基本样式、mixins
+- 代码块复制按钮，mac样式
+- 各个页面的 title

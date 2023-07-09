@@ -6,8 +6,17 @@
         <%- page.content %>
     </section>
 
-    <section style="background-color: #f3cd63; padding: 20px;margin: 20px 0;">
-        本博客所有文章均采用 CC BY-SA 4.0 协议 ，转载请注明出处。 
+    <section class="post-tag">
+        <a href="<%- url_for('tags') %>"><i class="fa fa-tags"></i></a>
+        <% for (tag of page.tags.data) { %>
+            <a href="<%- url_for(tag.path) %>" class="tag-item">
+                <%- tag.name %>
+            </a>
+        <% } %>
+    </section>
+
+    <section class="post-cc">
+        本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> 协议 ，转载请注明出处。 
     </section>
 
     <section class="flex-between" style="margin: 20px 0;">

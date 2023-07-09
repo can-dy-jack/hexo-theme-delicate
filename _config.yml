@@ -7,6 +7,8 @@ github: https://github.com/can-dy-jack/hexo-theme-delicate
 color: "#0aa344"
 # 页面slogan
 poem: "长风破浪会有时，直挂云帆济沧海"
+# email 地址
+email: jjack_chen3@163.com
 
 ### ----------------------------------------------------
 #  首页配置
@@ -16,6 +18,7 @@ imgURL: imgs/beach.jpg
 index:
   links: 
     archive: /archives/
+    tag: /tags/
 
 ### ----------------------------------------------------
 #  markdown配置

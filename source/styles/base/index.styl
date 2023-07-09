@@ -37,6 +37,12 @@ a
 
 .gray
     color: gray
+
+.fa-envelope
+    margin-right 10px
+    &::before
+        margin-right 5px
+
 // 布局样式
 main 
     margin 10px
@@ -116,3 +122,49 @@ footer
 .paginator-info
     text-align center
     font-size 0.8em
+
+// animation
+.fancy-color {
+    animation: changeColor 30s infinite both;
+}
+@keyframes changeColor {
+    0% {
+        color: #ED5564;
+    }
+
+    10% {
+        color: #FB6E52;
+    }
+
+    20% {
+        color: #FFCE55;
+    }
+
+    30% {
+        color: #A0D468;
+    }
+
+    40% {
+        color: #48CFAE;
+    }
+
+    50% {
+        color: #4FC0E8;
+    }
+
+    60% {
+        color: #5D9CEC;
+    }
+
+    70% {
+        color: #AC92ED;
+    }
+
+    80% {
+        color: #EC87BF;
+    }
+
+    90% {
+        color: #ED5564;
+    }
+}

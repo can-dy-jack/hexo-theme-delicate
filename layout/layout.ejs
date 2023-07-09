@@ -29,10 +29,9 @@
                     <span><%- theme.poem %></span>
                 </div>
                 <div class="flex-center">
-                    <a href="#" style="margin-right: 10px;">
-                        <%# TODO %>
-                        <span><i class="fa fa-envelope" aria-hidden="true"></i> 联系</span>
-                    </a>
+                    <%- mail_to(theme.email, 'Email', {
+                        class: 'fa fa-envelope'
+                    }) %>
                     <a href="#">
                         <%# TODO %>
                         <span><i class="fa fa-rss" aria-hidden="true"></i> RSS</span>

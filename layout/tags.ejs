@@ -1,0 +1,26 @@
+<% 
+    page.layout = "tags";
+    page.title = "Tags";
+
+    let min_font = 14,
+      max_font = 30,
+      unit = 'px',
+      amount = 900,
+      start_color = "#70f3ff",
+      end_color = "#003472";
+%>
+
+<section class="tags">
+    <h1>共<%= site.tags.length %>个标签</h1>
+    <div class="tags-list">
+        <%- tagcloud({
+            min_font: min_font,
+            max_font: max_font,
+            amount: 999,
+            unit: unit,
+            color: true,
+            start_color,
+            end_color
+        }) %>
+    </div>
+</section>
