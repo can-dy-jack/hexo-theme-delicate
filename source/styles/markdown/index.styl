@@ -67,7 +67,9 @@
             font-family monospace
             font-size 1em
         figure 
-            margin 1em 40px
+            margin 1em 0
+            padding 0
+            width 100%
         hr 
             box-sizing content-box
             overflow hidden
@@ -435,16 +437,31 @@
             background transparent
             border 0
         .highlight 
-            margin-bottom 16px
+            background-color $code-bg
+            color $code-color
+            border-radius 5px
+            table
+                margin 0
+                max-width 100%
+                overflow auto
+                display block
+                .gutter
+                    pre
+                        padding 0 15px
+                        color #959da7
+                        border-right 1px solid #959da7
+                        border-radius 0
+        pre.line-numbers
+            background-color $code-bg
+            color $code-color
         .highlight pre 
             margin-bottom 0
             word-break normal
         .highlight pre, pre 
-            padding 16px
+            padding 10px 15px
             overflow auto
             font-size 85%
             line-height 1.45
-            background-color $code-bg
             border-radius 6px
         pre code, pre tt 
             display inline

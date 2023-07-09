@@ -3,14 +3,12 @@
     <div class="description"><%- config.description %></h3>
 </section>
 <header>
+    <%# TODO %>
     <nav>
-        <%# for(link in theme.links) { %>
-            <%# link %>
-        <%# } %>
-        <%# TODO %>
-        <a href="/">文章</a></li>
-        |
-        <a href="/about">关于</a></li>
+        <a href="/"><%- __('home') %></a>
+        <% for(link in theme.index.links) { %>
+             | <a href="<%- url_for(theme.index.links[link]) %>"><%- __(link) %></a>
+        <% } %>
     </nav>
 </header>
 <div class="head-img">

@@ -1,3 +1,7 @@
 # paginator
 paginator:
   total: "%d articles in total"
+
+# index
+home: home
+archive: archive

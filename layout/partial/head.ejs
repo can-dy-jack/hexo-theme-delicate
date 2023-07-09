@@ -17,9 +17,10 @@
 
     <%# CDN %>
     <link rel="stylesheet" href="<%- theme.CDN.fontawesome %>">
-    <%# highligt %>
-
-    <% if (theme.code.highlight.enable) { %>
+    <%# 代码高亮 %>
+    <% if (config.highlight.enable) { %>
         <link rel="stylesheet" href="<%- theme.CDN.highlight %>">
+    <% } else if (config.prismjs.enable) { %>
+        <link rel="stylesheet" href="<%- theme.CDN.prismjs %>">
     <% } %>
 </head>

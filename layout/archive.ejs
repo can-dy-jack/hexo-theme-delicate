@@ -1,1 +1,33 @@
-archive pages
+<% 
+    let posts = page.posts.data;
+    let year = posts[0].date.year();
+    let month = posts[0].date.month() + 1;
+%>
+
+<section class="archive">
+    <article class="archive-list">
+        <h2 class="year-group"><%- year %> 年</h2>
+        <h3 class="month-group"><%- month %> 月</h3>
+        <% for (let post of posts) { %>
+            <% 
+                let nowYear = post.date.year();
+                let nowMonth = post.date.month() + 1;
+            %>
+            <% if (year !== nowYear) { %>
+                <h2 class="year-group"><%- nowYear %> 年</h2>
+                <h3 class="month-group"><%- nowMonth %> 月</h3>
+            <% } else if (month !== nowMonth) { %>
+                <h3 class="month-group"><%- nowMonth %> 月</h3>
+            <% } %>
+            <a href="<%- url_for(post.path) %>" class="post-item">
+                <div class="flex-between">
+                    <span><%- post.title %></span>
+                    <span><%- post.date.format("YYYY-MM-DD") %></span>
+                </div>
+            </a>
+            <% year = nowYear; month = nowMonth; %>
+        <% } %>
+    </article>
+
+    <%- partial('component/paginator', { total: site.posts.length }) %>
+</section>
