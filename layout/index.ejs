@@ -15,20 +15,46 @@
     <%- image_tag('imgs/beach.jpg') %>
 </div>
 <article class="index-article">
-    <ul>
-        <% for (post of page.posts.data) { %>
-            <li>
-                <div class="flex-between">
-                    <span>
+    <div class="article-list">
+        <% for (idx in page.posts.data) { %>
+            <% let post = page.posts.data[idx] %>
+            <% if(idx > 0) { %>
+                <hr>
+            <% } %>
+            <div class="article-item"> 
+                <div class="article-item-title">
+                    <h1>
                         <a href="<%- url_for(post.path) %>">
                             <%= post.title %>
                         </a>
-                    </span>
-                    <span class="gray"><%= post.date.format("YYYY/MM/DD") %></span>
+                    </h1>
+                    <div class="info">
+                        <% if (post.author) { %>
+                            <span>
+                                <%= post.author %> | 
+                            </span>
+                        <% } %>
+                        <% if (post.date) { %>
+                            <span>
+                                <%= post.date.format("YYYY/MM/DD") %>
+                            </span>
+                        <% } %>
+                    </div>
                 </div>
-            </li>
+                <div class="article-item-excerpt article">
+                    <div>
+                        <%- post.excerpt || post.content %>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: right;">
+                <button type="button" class="read-more">
+                    <a href="<%- url_for(post.path) %>">阅读更多</a>
+                </button>
+            </div>
         <% } %>
-    </ul>
+    </div>
 
     <%- partial('component/paginator', { total: site.posts.length }) %>
 </article>
