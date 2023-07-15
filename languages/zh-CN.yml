@@ -3,6 +3,10 @@ paginator:
   total: "共%d篇文章"
 
 # index
-home: "首页"
-archive: "归档"
+home: 首页
+archive: 文章列表
 tag: 标签
+tags: 标签云
+categories: 归档
+category: 分组
+

@@ -448,16 +448,22 @@ hr
         background-color $code-bg
         color $code-color
         border-radius 5px
+        if $code-border
+            border 1px dashed #bfbfbf
+        // border-image
         table
             margin 0
             max-width 100%
             overflow auto
             display block
             .gutter
+                position sticky
+                left 0
+                background $code-bg
                 pre
                     padding 0 15px
-                    color #959da7
-                    border-right 1px solid #959da7
+                    color #bfbfbf
+                    border-right 1px dashed #bfbfbf
                     border-radius 0
     pre.line-numbers
         background-color $code-bg

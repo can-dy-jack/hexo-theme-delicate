@@ -10,4 +10,10 @@
             </a>
         <% } %>
     </article>
+
+    <% 
+        let tags = site.tags.data;
+        let len = tags.filter(tag => tag.name === page.tag)[0].length
+    %>
+    <%- partial('component/paginator', { total: len }) %>
 </section>

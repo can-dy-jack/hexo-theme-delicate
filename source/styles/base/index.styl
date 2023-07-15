@@ -10,6 +10,22 @@ body, html
     background #e8e0c9
     scroll-behavior smooth
 
+::selection
+    background $color
+    color #fff
+
+::-webkit-scrollbar
+    width 6px
+    height 6px
+
+::-webkit-scrollbar-thumb
+    border-radius 6px
+    background $color
+
+::-webkit-scrollbar-track
+    border-radius 0
+    background transparent
+
 img
     max-width 100%
     margin: 10px 0

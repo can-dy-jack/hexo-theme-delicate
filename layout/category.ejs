@@ -1,1 +1,19 @@
-category pages
+<section class="cates-container">
+    <h1 class="cate-title"><%- page.category %></h1>
+    <article class="cate-list">
+        <% for (post of page.posts.data) { %>
+            <a href="<%- url_for(post.path) %>" class="cate-item">
+                <div class="flex-between" title="<%- post.title %>">
+                    <span><%- post.title %></span>
+                    <span><%- post.date.format("YYYY/MM/DD") %></span>
+                </div>
+            </a>
+        <% } %>
+    </article>
+
+    <% 
+        let cates = site.categories.data;
+        let len = cates.filter(cate => cate.name === page.category)[0].length
+    %>
+    <%- partial('component/paginator', { total: len }) %>
+</section>

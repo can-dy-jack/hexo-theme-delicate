@@ -1,0 +1,23 @@
+.cates-container
+    margin 50px 50px 10px 50px
+    h1
+        text-align center
+    ul, ol
+        list-style circle
+    li
+        a
+            margin-right 10px
+        span
+            &::before
+                content: '<'
+                margin-left 10px
+            &::after
+                content: '>'
+                margin-right 10px
+    .cate-list
+        .cate-item
+            display block
+            padding 10px 20px
+            border-radius 5px
+            &:hover
+                background rgba($color, .1)

@@ -39,10 +39,9 @@ nav
             color gray
             font-size 0.8rem
 
-
-$tag-color = #177cb0
+$tag-color = rgb(255, 47, 161)
 .post-tag
-    margin-top 40px
+    margin 40px 0 10px 0
     display flex
     flex-wrap wrap
     gap 20px
@@ -69,4 +68,32 @@ $tag-color = #177cb0
             background rgba($tag-color, .2)
             &::before
                 border-right-color rgba($tag-color, .2)
-
+$cate-color = #f0a71f
+.post-cate
+    margin 10px 0 40px 0
+    display flex
+    flex-wrap wrap
+    gap 20px
+    a
+        color $cate-color
+    .cate-item
+        background rgba($cate-color, .1)
+        position relative
+        display inline-block
+        height 26px
+        line-height 26px
+        padding 0 10px 0 5px
+        &::before
+            content ""
+            position absolute
+            top 0
+            left -26px
+            width 0
+            height 0
+            background transparent
+            border 13px solid transparent
+            border-right 13px solid rgba($cate-color, .1)
+        &:hover
+            background rgba($cate-color, .2)
+            &::before
+                border-right-color rgba($cate-color, .2)
