@@ -8,6 +8,23 @@ body, html
     flex-direction column
     min-height 100vh
     background #e8e0c9
+    scroll-behavior smooth
+
+::selection
+    background $color
+    color #fff
+
+::-webkit-scrollbar
+    width 6px
+    height 6px
+
+::-webkit-scrollbar-thumb
+    border-radius 6px
+    background $color
+
+::-webkit-scrollbar-track
+    border-radius 0
+    background transparent
 
 img
     max-width 100%
@@ -43,6 +60,14 @@ a
     &::before
         margin-right 5px
 
+.read-more
+    border none
+    outline none
+    padding 5px 12px
+    cursor pointer
+    border-radius 3px
+    transition all 250ms ease-in-out
+
 // 布局样式
 main 
     margin 10px
@@ -60,7 +85,7 @@ footer
     margin 0 auto
     background: #fbf4e2
     min-height 100%
-    padding 20px 0 80px 0
+    padding 20px 0 100px 0
     box-sizing border-box
     border-radius 6px
     box-shadow 0 0 15px 5px rgba(0, 0, 0, 0.16)
