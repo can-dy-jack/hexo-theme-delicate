@@ -11,6 +11,18 @@
 ### 公式支持
 > 使用CDN支持 `mathjax` 和 `katex`
 
+开启方式：在文档的 Front-matter 里加入:
+```yml
+mathjax: true
+```
+或
+```yml
+katex: true
+```
+即可。
+
+不需要渲染公式的文章请不要开启！避免影响页面加载速度！
+
 `katex`渲染示例：
 ```katex
 $$\begin{pmatrix}a_{11} & a_{12} & a_{13}\ a_{21} & a_{22} & a_{23}\ a_{31} & a_{32} & a_{33}\end{pmatrix}$$

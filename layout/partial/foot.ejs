@@ -1,7 +1,7 @@
-<% if (theme.math.mathjax) { %>
+<% if (page.mathjax) { %>
     <script src="<%- theme.CDN.mathjax %>"></script>
 <% } %>
-<% if (theme.math.katex) { %>
+<% if (page.katex) { %>
     <% for (let js of theme.CDN.katexJS) { %>
         <script src="<%- js %>"></script>
     <% } %>
