@@ -67,6 +67,9 @@ $$a^2+b^2=c^2$$
 ### In progress
 - [ ] 样式整理，颜色变量、黑暗模式
 - [ ] stylus 函数、基本样式、mixins
+- [ ] page.ejs
+- [ ] category 多级、父子
+- [ ] markdown 脚注
 <!-- - [ ] 代码块复制按钮，mac样式 -->
 - [ ] 页面 title
 - [ ] i18n
@@ -78,4 +81,7 @@ $$a^2+b^2=c^2$$
 
 ### Planning ~
 - [ ] 广告支持
+
+## 推荐插件
+- [hexo-reference](https://github.com/kchen0x/hexo-reference) markdown脚注
 
