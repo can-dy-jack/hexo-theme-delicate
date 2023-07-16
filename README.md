@@ -4,7 +4,7 @@
 
 ## 使用
 ### 方法一
-使用：
+npm 下载使用：
 ```bash
 npm i hexo-theme-delicate
 ```
@@ -12,15 +12,17 @@ npm i hexo-theme-delicate
 然后在根目录的 `_config.yml` 下配置 `theme: delicate` 并重启项目
 
 ### 方法二 **推荐**
-到 `themes` 目录下，clone 本主题的文件：
+git clone 本主题的文件：
 ```bash
-https://github.com/can-dy-jack/hexo-theme-delicate.git
+git clone https://github.com/can-dy-jack/hexo-theme-delicate.git themes/delicate
 ```
 
 然后在根目录的 `_config.yml` 下配置 `theme: delicate` 并重启项目
 
 ### 主题配置
-到主题下的配置文件 `_config.yml` 进行配置。如果您是使用方法一进行安装的，需要新建 `_config.delicate.yml` 文件，并将主题仓库下的配置文件复制进行进行配置。
+到主题下的配置文件 `_config.yml` 进行配置。
+
+如果您是使用方法一进行安装的，需要新建 `_config.delicate.yml` 文件，并将主题仓库下的配置文件复制进去进行配置。这种方式的缺点就是**每次更新主题配置并不会热更新，需要重启项目**，所以推荐方式二进行主题安装！
 
 ## 使用注意事项
 本主题支持的语言如下
