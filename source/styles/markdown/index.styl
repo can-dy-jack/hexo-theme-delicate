@@ -15,7 +15,7 @@ hr
     border 0
 .article
     text-size-adjust 100%
-    color #24292f
+    color var(--markdown-color)
     font-family -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"
     font-size 16px
     word-wrap break-word
@@ -175,6 +175,7 @@ hr
         margin-bottom 16px
         font-weight 600
         line-height 1.25
+        scroll-margin-top 20px
     h1
         margin .67em 0
         font-weight 600
@@ -465,6 +466,7 @@ hr
                     color #bfbfbf
                     border-right 1px dashed #bfbfbf
                     border-radius 0
+                    text-align right
     pre.line-numbers
         background-color $code-bg
         color $code-color

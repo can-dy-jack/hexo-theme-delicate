@@ -7,8 +7,10 @@ body, html
     display flex
     flex-direction column
     min-height 100vh
-    background #e8e0c9
+    background var(--bg)
     scroll-behavior smooth
+    color var(--color)
+    transition background 260ms ease, color 260ms ease
 
 ::selection
     background $color
@@ -55,6 +57,10 @@ a
 .gray
     color: gray
 
+.w100
+    width 100%
+    box-sizing border-box
+
 .fa-envelope
     margin-right 10px
     &::before
@@ -83,7 +89,7 @@ footer
 .container
     width clamp(400px, 70%, 800px)
     margin 0 auto
-    background: #fbf4e2
+    background: var(--container-bg)
     min-height 100%
     padding 20px 0 100px 0
     box-sizing border-box
@@ -93,9 +99,10 @@ footer
 
 .page-top-badge 
     position: absolute
-    top 10px
-    right 20px
+    top 15px
+    right 0
     font-size 1.2rem
+    padding 0 20px
 
 // change-link
 .change-link
@@ -193,3 +200,7 @@ footer
         color: #ED5564;
     }
 }
+
+// mode btn
+#mode-btn-icon-sun
+    display none

@@ -44,7 +44,7 @@ $tag-color = rgb(255, 47, 161)
     margin 40px 0 10px 0
     display flex
     flex-wrap wrap
-    gap 20px
+    gap 23px
     a
         color $tag-color
     .tag-item
@@ -54,6 +54,7 @@ $tag-color = rgb(255, 47, 161)
         height 26px
         line-height 26px
         padding 0 10px 0 5px
+        // margin-right 13px
         &::before
             content ""
             position absolute
@@ -63,37 +64,87 @@ $tag-color = rgb(255, 47, 161)
             height 0
             background transparent
             border 13px solid transparent
+            transition 260ms
             border-right 13px solid rgba($tag-color, .1)
         &:hover
             background rgba($tag-color, .2)
             &::before
                 border-right-color rgba($tag-color, .2)
-$cate-color = #f0a71f
+$cate-color = #19ceb0
 .post-cate
     margin 10px 0 40px 0
     display flex
     flex-wrap wrap
-    gap 20px
+    gap 13px
     a
         color $cate-color
+    :first-child
+        margin-right 5px
     .cate-item
         background rgba($cate-color, .1)
         position relative
         display inline-block
         height 26px
         line-height 26px
-        padding 0 10px 0 5px
+        padding 0 10px 0 18px
+        transform translateX(-8px)
         &::before
             content ""
             position absolute
             top 0
-            left -26px
+            left 0
             width 0
             height 0
             background transparent
             border 13px solid transparent
-            border-right 13px solid rgba($cate-color, .1)
+            border-left 13px solid #fbf4e2
+        &::after
+            content ""
+            position absolute
+            top 0
+            right -26px
+            width 0
+            height 0
+            background transparent
+            border 13px solid transparent
+            transition 260ms
+            border-left 13px solid rgba($cate-color, .1)
         &:hover
             background rgba($cate-color, .2)
-            &::before
-                border-right-color rgba($cate-color, .2)
+            &::after
+                border-left-color rgba($cate-color, .2)
+
+.toc-container
+    position sticky
+    top 20px
+    left 100%
+    transform translateX(calc(100% + 15px))
+    width calc((100vw - 100%) / 2 - 30px)
+    z-index 10
+    height 0
+    .toc
+        height fit-content
+        line-height 1.3
+        font-size 0.9rem
+        max-height 90vh
+        overflow-y auto
+        .toc-child
+            padding-left 10px
+        .toc-link
+            display inline-block
+            max-width 100%
+            text-overflow ellipsis
+            overflow hidden
+            white-space nowrap
+            &::after
+                content attr(title)
+        a
+            color #c4c4c4
+            &:hover
+                color $color !important
+        &:hover a
+            color gray
+    ul, ol
+        list-style none
+        padding-left 0
+
