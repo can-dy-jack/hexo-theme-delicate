@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-delicate",
-  "version": "4.0.0-alpha1",
+  "version": "4.0.0-alpha3",
   "description": "simple but delicate theme for Hexo",
   "main": "package.js",
   "files": [
