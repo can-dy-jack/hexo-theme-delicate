@@ -23,4 +23,8 @@
     <% } else if (config.prismjs.enable) { %>
         <link rel="stylesheet" href="<%- theme.CDN.prismjs %>">
     <% } %>
+
+    <% if (page.katex) { %>
+        <link rel="stylesheet" href="<%- theme.CDN.katexStyle %>"></link>
+    <% } %>
 </head>
