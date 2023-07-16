@@ -2,6 +2,26 @@
 
 > ! 本主题处于 version4 重构开发阶段 !
 
+## 使用
+### 方法一
+使用：
+```bash
+npm i hexo-theme-delicate
+```
+
+然后在根目录的 `_config.yml` 下配置 `theme: delicate` 并重启项目
+
+### 方法二 **推荐**
+到 `themes` 目录下，clone 本主题的文件：
+```bash
+https://github.com/can-dy-jack/hexo-theme-delicate.git
+```
+
+然后在根目录的 `_config.yml` 下配置 `theme: delicate` 并重启项目
+
+### 主题配置
+到主题下的配置文件 `_config.yml` 进行配置。如果您是使用方法一进行安装的，需要新建 `_config.delicate.yml` 文件，并将主题仓库下的配置文件复制进行进行配置。
+
 ## 使用注意事项
 本主题支持的语言如下
 - 中文简体 `zh-CN`
