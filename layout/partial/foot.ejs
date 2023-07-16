@@ -1,2 +1,14 @@
-
+<% if (theme.math.mathjax) { %>
+    <script src="<%- theme.CDN.mathjax %>"></script>
+<% } %>
+<% if (theme.math.katex) { %>
+    <% for (let js of theme.CDN.katexJS) { %>
+        <script src="<%- js %>"></script>
+    <% } %>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body);
+        });
+    </script>
+<% } %>
 <%- js("js/index.js") %>

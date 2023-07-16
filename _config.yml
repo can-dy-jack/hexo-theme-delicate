@@ -35,6 +35,11 @@ code:
   # 代码块是否显示边框线
   border: true
 
+math:
+  # mathjax 和 katex 二选一 
+  mathjax: false
+  katex: true
+
 ### ----------------------------------------------------
 #  CDN
 ### ----------------------------------------------------
@@ -46,4 +51,12 @@ CDN:
   # highlight: https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/base16/solarized-dark.css
   prismjs: https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css
 
+  # mathjax
+  mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML
+
+  # katex
+  katexStyle: https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css
+  katexJS: 
+    - https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.js
+    - https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/contrib/auto-render.min.js
 
