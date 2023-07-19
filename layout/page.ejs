@@ -1,2 +1,12 @@
-page pages
+<section class="page-img-container" style="height: <%- page.imgHeight %>;">
+    <%- image_tag(page.imgURL, {
+        alt: page.imgAlt || "",
+        width: "100%"
+    }) %>
+</section>
 
+<article class="markdown-container page-container">
+    <div class="article">
+        <%- page.content %>
+    </div>
+</article>
