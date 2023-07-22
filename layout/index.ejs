@@ -3,11 +3,11 @@
     <div class="description"><%- config.description %></h3>
 </section>
 <header>
-    <%# TODO %>
     <nav>
-        <a href="/"><%- __('home') %></a>
+        <% let nav_idx = 0; %>
         <% for(link in theme.index.links) { %>
-             | <a href="<%- url_for(theme.index.links[link]) %>"><%- __(link) %></a>
+            <% nav_idx++ %>
+            <%- nav_idx > 1 ? " | " : "" %><a href="<%- url_for(theme.index.links[link]) %>"><%- __(link) %></a>
         <% } %>
     </nav>
 </header>

@@ -36,6 +36,25 @@ code:
   # 代码块是否显示边框线
   border: true
 
+### ----------------------------------------------------
+#  评论配置
+### ----------------------------------------------------
+# 参数设置参考 giscus 官网：https://giscus.app
+giscus:
+  js: https://giscus.app/client.js
+  repo: can-dy-jack/delicate
+  repoId: R_kgDOGVfGBw
+  category: General
+  categoryId: DIC_kwDOGVfGB84CQqqg
+  mapping: pathname
+  strict: 0
+  reactionsEnabled: 1
+  emitMetadata: 0
+  inputPosition: top
+  selfTheme: false # 设置为true时，下面的theme才会生效，否则使用本主题自制的样式
+  theme: light
+  lang: zh-CN
+  loading: lazy
 
 ### ----------------------------------------------------
 #  CDN
