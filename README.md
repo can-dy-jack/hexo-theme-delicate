@@ -30,6 +30,14 @@ git clone https://github.com/can-dy-jack/hexo-theme-delicate.git themes/delicate
 - English `en`
 
 ## 近期更新
+### Giscus 评论功能
+只有在文档的 Front-matter 里加入
+```yml
+giscus: true
+```
+才会在本页面开启 Giscus
+
+
 ### 公式支持
 > 使用CDN支持 `mathjax` 和 `katex`
 
@@ -67,15 +75,21 @@ $$a^2+b^2=c^2$$
 ### In progress
 - [ ] 样式整理，颜色变量、黑暗模式
 - [ ] stylus 函数、基本样式、mixins
+- [ ] 置顶文章功能
+- [ ] category 多级、父子
 <!-- - [ ] 代码块复制按钮，mac样式 -->
 - [ ] 页面 title
 - [ ] i18n
 - [ ] 黑暗模式
-- [ ] 公式支持
-    - [ ] latex
-    - [ ] mathjax
 - [ ] 移动适配
+- [ ] 更新hexo官网主题图片
 
 ### Planning ~
 - [ ] 广告支持
+
+## 推荐插件
+- [hexo-reference](https://github.com/kchen0x/hexo-reference) markdown脚注
+
+## 主题扩展
+- [giscus-theme-delicate](https://github.com/can-dy-jack/giscus-theme-delicate) A theme for giscus, using in hexo-theme-delicate
 

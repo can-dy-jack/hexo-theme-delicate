@@ -33,7 +33,18 @@
     <% } %>
 
     <section class="post-cc">
-        本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> 协议 ，转载请注明出处。 
+        <div class="post-cc-author">
+            <span class="bold">作者：</span><%- mail_to(theme.email, config.author) %>
+        </div>
+        <div class="post-cc-link">
+            <span class="bold">链接：</span><a href="<%- url_for(page.path) %>"><%- decodeURIComponent(page.permalink) %></a>
+        </div>
+        <div class="post-cc-source">
+            <span class="bold">来源：</span><a href="<%- url_for('/') %>"><%- config.title %></a>
+        </div>
+        <div class="ppost-cc-declare">
+            <span class="bold">版权声明: </span>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> 许可协议。著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 
+        </div>
     </section>
 
     <section class="flex-between" style="margin: 20px 0;">
@@ -60,4 +71,30 @@
             <% } %>
         </div>
     </section>
+
+    <!-- comment -->
+    <section class="comment-container">
+        <!-- giscus -->
+        <% if (page.giscus) { %>
+            <script src="<%- theme.giscus.js %>"
+                data-repo="<%- theme.giscus.repo %>"
+                data-repo-id="<%- theme.giscus.repoId %>"
+                data-category="<%- theme.giscus.category %>"
+                data-category-id="<%- theme.giscus.categoryId %>"
+                data-mapping="<%- theme.giscus.mapping %>"
+                data-strict="<%- theme.giscus.strict %>"
+                data-reactions-enabled="<%- theme.giscus.reactionsEnabled %>"
+                data-emit-metadata="<%- theme.giscus.emitMetadata %>"
+                data-input-position="<%- theme.giscus.inputPosition %>"
+                data-theme="<%- theme.giscus.selfTheme ? theme.giscus.theme : 'https://cdn.jsdelivr.net/gh/can-dy-jack/giscus-theme-delicate@master/index.min.css' %>"
+                data-lang="<%- theme.giscus.lang %>"
+                data-loading="<%- theme.giscus.loading %>"
+                crossorigin="anonymous"
+                async>
+            </script>
+        <% } %>
+    </section>
 </article>
+
+
+

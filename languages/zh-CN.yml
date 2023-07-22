@@ -4,9 +4,9 @@ paginator:
 
 # index
 home: 首页
-archive: 文章列表
+archive: 存档
 tag: 标签
 tags: 标签云
-categories: 归档
-category: 分组
+categories: 分类
+category: 分类
 

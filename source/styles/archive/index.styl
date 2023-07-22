@@ -1,15 +1,53 @@
+$line-color = #ccc
 .archive
-    margin 20px 50px
+    margin 40px
     .archive-list
-        margin 20px 0
+        margin 30px 0
     .year-group
-        margin-top 40px
+        position relative
+        margin-top 20px
+        display flex
+        align-items center
+        gap 10px
+        font-size 1.2rem
+        height 3rem
+        .circle
+            height 14px
+            width 14px
+            background $line-color
+            border-radius 50%
     .month-group
-        padding-left 20px
-    .post-item
-        padding 10px 20px
+        margin-left 40px
+        position relative
+        width fit-content
+        // padding 0 8px
+        font-size 1rem
+        // border 1px solid $line-color
         border-radius 5px
+        &::before
+            content ''
+            height calc(100% + 40px)
+            width 2px
+            background $line-color 
+            position absolute
+            left -34px
+            top -20px
+    .post-item
+        margin-left 60px
+        padding 10px 20px
         display block
+        position relative
+        &::before
+            content ''
+            height 100%
+            width 2px
+            background $line-color 
+            position absolute
+            left -54px
+            top 0
         transition all 250ms ease
         &:hover
             background rgba($color, .1)  
+
+
+
