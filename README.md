@@ -90,3 +90,6 @@ $$a^2+b^2=c^2$$
 ## 推荐插件
 - [hexo-reference](https://github.com/kchen0x/hexo-reference) markdown脚注
 
+## 主题扩展
+- [giscus-theme-delicate](https://github.com/can-dy-jack/giscus-theme-delicate) A theme for giscus, using in hexo-theme-delicate
+
