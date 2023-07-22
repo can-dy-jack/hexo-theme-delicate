@@ -4,11 +4,17 @@
 # 右上角github地址
 github: https://github.com/can-dy-jack/hexo-theme-delicate
 # 主题颜色
-color: "#0ac3a4"
+color: "#2eacd2"
 # 页面slogan
 poem: "长风破浪会有时，直挂云帆济沧海"
 # email 地址
 email: jjack_chen3@163.com
+# archive line color
+archiveLineColor: "#dedede"
+# tags color
+tagColor: "#2323ef"
+# categories color
+categoryColor: "#23ef23"
 
 ### ----------------------------------------------------
 #  首页配置

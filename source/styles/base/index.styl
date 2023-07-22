@@ -11,6 +11,7 @@ body, html
     scroll-behavior smooth
     color var(--color)
     transition background 260ms ease, color 260ms ease
+    text-size-adjust auto
 
 ::selection
     background $color
@@ -37,7 +38,7 @@ a
     text-decoration none
     transition 260ms
     &:hover
-        color #080808
+        color #323232
         text-decoration none
 
 .flex-between
@@ -52,7 +53,7 @@ a
     gap 10px
 
 .logo
-    width: 22px
+    width 1.6rem
 
 .gray
     color: gray
@@ -60,19 +61,6 @@ a
 .w100
     width 100%
     box-sizing border-box
-
-.fa-envelope
-    margin-right 10px
-    &::before
-        margin-right 5px
-
-.read-more
-    border none
-    outline none
-    padding 5px 12px
-    cursor pointer
-    border-radius 3px
-    transition all 250ms ease-in-out
 
 // 布局样式
 main 
@@ -200,7 +188,3 @@ footer
         color: #ED5564;
     }
 }
-
-// mode btn
-#mode-btn-icon-sun
-    display none

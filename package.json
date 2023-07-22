@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-delicate",
-  "version": "4.0.0-alpha3",
+  "version": "4.0.1",
   "description": "simple but delicate theme for Hexo",
   "main": "package.js",
   "files": [
@@ -22,7 +22,10 @@
     "theme",
     "delicate",
     "simple",
-    "hexo-delicate"
+    "hexo-delicate",
+    "giscus",
+    "mathjax",
+    "katex"
   ],
   "license": "MIT",
   "bugs": {

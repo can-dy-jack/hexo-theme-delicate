@@ -1,7 +1,5 @@
 # hexo-theme-delicate
 
-> ! 本主题处于 version4 重构开发阶段 !
-
 ## 使用
 ### 方法一
 npm 下载使用：
@@ -30,6 +28,13 @@ git clone https://github.com/can-dy-jack/hexo-theme-delicate.git themes/delicate
 - English `en`
 
 ## 近期更新
+### done
+- [x] stylus mixins 和 functions
+- [x] 标签和分组颜色支持自定义
+- [x] 优化阅读更多按钮设计
+- [x] 页面 title 信息
+- [x] 更新hexo官网主题图片
+
 ### Giscus 评论功能
 只有在文档的 Front-matter 里加入
 ```yml
@@ -68,24 +73,23 @@ $$a^2+b^2=c^2$$
 **您可以在博客根目录下安装[`hexo-filter-mathjax`](https://github.com/next-theme/hexo-filter-mathjax)或`hexo-math`等插件来支持公式，这样就可以在打包的时候就完成公式的渲染，加快请求速度。（使用插件的话记得关闭主题的公式支持）**
 
 ## TODOs
+- [ ] 代码块复制按钮，mac样式
+- [ ] i18n
+- [ ] 更新文章
 
 ### BUGs 🐛
 - [ ] 首页无公式渲染
 
 ### In progress
-- [ ] 样式整理，颜色变量、黑暗模式
-- [ ] stylus 函数、基本样式、mixins
+- [ ] scripts
 - [ ] 置顶文章功能
-- [ ] category 多级、父子
-<!-- - [ ] 代码块复制按钮，mac样式 -->
-- [ ] 页面 title
-- [ ] i18n
-- [ ] 黑暗模式
 - [ ] 移动适配
-- [ ] 更新hexo官网主题图片
 
 ### Planning ~
+- [ ] 接入更多评论系统
 - [ ] 广告支持
+- [ ] 黑暗模式
+- [ ] RSS
 
 ## 推荐插件
 - [hexo-reference](https://github.com/kchen0x/hexo-reference) markdown脚注
