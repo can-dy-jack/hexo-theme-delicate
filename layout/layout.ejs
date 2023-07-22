@@ -26,15 +26,13 @@
                     <span><%- theme.poem %></span>
                 </div>
                 <div class="flex-center">
-                    <%- mail_to(theme.email, ' ', {
-                        class: 'fa fa-envelope'
-                    }) %>
-                    <!-- <a href="#">
-                        <%# TODO %>
-                        <span><i class="fa fa-rss" aria-hidden="true"></i></span>
-                    </a> -->
+                    <a href="mailto:<%- theme.email %>">
+                        <span title="envelope">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                    </a>
                     <a href="<%- theme.github %>">
-                        <span title="github">
+                        <span title="github" style="font-size: 18px;">
                             <i class="fa fa-github" aria-hidden="true"></i>
                         </span>
                     </a>

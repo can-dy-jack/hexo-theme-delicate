@@ -1,3 +1,26 @@
+.read-more
+    outline none
+    padding 5px 10px
+    cursor pointer
+    border-radius 5px
+    transition all 300ms ease
+    display inline-block
+    font-size 14px
+    font-weight bold
+    text-decoration none
+    background-color var(--container-bg)
+    border 2px solid $color
+    box-shadow 3px 3px 0 $color
+    scale: 0.9
+    a 
+        color $color
+        text-decoration none
+    &:hover
+        scale 1
+    &:active
+        box-shadow none
+        transform translateY(3px)
+
 .description
     color gray
 
@@ -41,7 +64,6 @@ nav
             color gray
             font-size 0.8rem
 
-$tag-color = rgb(255, 47, 161)
 .post-tag
     margin 40px 0 10px 0
     display flex
@@ -72,7 +94,7 @@ $tag-color = rgb(255, 47, 161)
             background rgba($tag-color, .2)
             &::before
                 border-right-color rgba($tag-color, .2)
-$cate-color = #19ceb0
+
 .post-cate
     margin 10px 0 40px 0
     display flex
