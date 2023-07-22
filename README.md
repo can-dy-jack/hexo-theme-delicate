@@ -1,7 +1,5 @@
 # hexo-theme-delicate
 
-> ! 本主题处于 version4 重构开发阶段 !
-
 ## 使用
 ### 方法一
 npm 下载使用：
