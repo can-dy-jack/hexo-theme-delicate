@@ -73,6 +73,7 @@ $$a^2+b^2=c^2$$
 **您可以在博客根目录下安装[`hexo-filter-mathjax`](https://github.com/next-theme/hexo-filter-mathjax)或`hexo-math`等插件来支持公式，这样就可以在打包的时候就完成公式的渲染，加快请求速度。（使用插件的话记得关闭主题的公式支持）**
 
 ## TODOs
+- [ ] 顶部加载进度条
 - [ ] 代码块复制按钮，mac样式
 - [ ] i18n
 - [ ] 更新文章
